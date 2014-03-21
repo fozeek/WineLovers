@@ -52,3 +52,36 @@ Request URL: /js/jquery-2.0.3.min.map
 Stack Trace:
 #0 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2014-01-05 11:39:42 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery-2.0.3.min.map
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-01-05 11:43:08 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery-2.0.3.min.map
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-21 11:15:40 Error: [MissingViewException] View file "/Users/qdeneuve/Projets/WineLovers/app/View/Pages/wine.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/Users/qdeneuve/Projets/WineLovers/app/View/Pages/wine.ctp',
+)
+Request URL: /pages/wine/
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/lib/Cake/View/View.php(457): View->_getViewFileName('wine')
+#1 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Controller/Controller.php(952): View->render('wine', NULL)
+#2 /Users/qdeneuve/Projets/WineLovers/app/Controller/PagesController.php(68): Controller->render('wine')
+#3 [internal function]: PagesController->display('wine')
+#4 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#6 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#7 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
