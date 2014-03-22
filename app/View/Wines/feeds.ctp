@@ -2,9 +2,9 @@
 	<div class="col-md-3">	
 		<img src="http://lorempixel.com/500/500" class="img-responsive img-rounded" alt="Responsive image" style="margin-bottom: 15px;"/>
 		<ul class="nav nav-pills nav-stacked">
-		  <li class="active"><a href="#">Actualités</a></li>
-		  <li><a href="#">Informations</a></li>
-		  <li><a href="#">Événements</a></li>
+		  <li class="active"><a href="<?php echo $this->Html->url(array('controller' => 'wines', 'action' => 'feeds', 'name' => 'le-rouge-sang')) ?>">Feeds</a></li>
+		  <li><a href="<?php echo $this->Html->url(array('controller' => 'wines', 'action' => 'about', 'name' => 'le-rouge-sang')) ?>">About</a></li>
+		  <li><a href="<?php echo $this->Html->url(array('controller' => 'wines', 'action' => 'events', 'name' => 'le-rouge-sang')) ?>">Events</a></li>
 		</ul>
 	</div>
 	<div class="col-md-9">	
@@ -13,9 +13,9 @@
 			Un vin d'exception
 		</p>
 		<div class="btn-group">
-		  <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-plus-sign"></span> Ajouter à ma Cave</button>
-		  <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-heart-empty"></span> Ajouter à ma Whishlist</button>
-		  <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-glass"></span> Créer un Événement</button>
+		  <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-plus-sign"></span> Add to my Cellar</button>
+		  <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-heart-empty"></span> Add to my Whishlist</button>
+		  <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-glass"></span> Create a Event</button>
 		</div>
 		<hr />
 		<textarea class="form-control" rows="5" style="margin-bottom: 5px;">Laisse un comm' Bro !</textarea>

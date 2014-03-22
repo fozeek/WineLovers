@@ -382,3 +382,671 @@ Request URL: /js/jquery-2.0.3.min.map
 Stack Trace:
 #0 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2014-03-22 12:33:30 Error: [MissingActionException] Action PagesController::compte() could not be found.
+Exception Attributes: array (
+  'controller' => 'PagesController',
+  'action' => 'compte',
+)
+Request URL: /pages/compte/
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-03-22 12:43:59 Error: [MissingActionException] Action HomeController::index() could not be found.
+Exception Attributes: array (
+  'controller' => 'HomeController',
+  'action' => 'index',
+)
+Request URL: /
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(HomeController), Object(CakeRequest), Object(CakeResponse))
+#2 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-03-22 12:46:31 Error: [MissingViewException] View file "/Users/qdeneuve/Projets/WineLovers/app/View/Home/home/index.ctp.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/Users/qdeneuve/Projets/WineLovers/app/View/Home/home/index.ctp.ctp',
+)
+Request URL: /
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/lib/Cake/View/View.php(457): View->_getViewFileName('home/index.ctp')
+#1 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Controller/Controller.php(952): View->render('home/index.ctp', NULL)
+#2 /Users/qdeneuve/Projets/WineLovers/app/Controller/HomeController.php(54): Controller->render('home/index.ctp')
+#3 [internal function]: HomeController->index()
+#4 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(HomeController), Array)
+#5 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#6 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(HomeController), Object(CakeRequest), Object(CakeResponse))
+#7 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2014-03-22 12:47:01 Error: [MissingViewException] View file "/Users/qdeneuve/Projets/WineLovers/app/View/home/index.ctp.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/Users/qdeneuve/Projets/WineLovers/app/View/home/index.ctp.ctp',
+)
+Request URL: /
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/lib/Cake/View/View.php(457): View->_getViewFileName('/home/index.ctp')
+#1 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Controller/Controller.php(952): View->render('/home/index.ctp', NULL)
+#2 /Users/qdeneuve/Projets/WineLovers/app/Controller/HomeController.php(54): Controller->render('/home/index.ctp')
+#3 [internal function]: HomeController->index()
+#4 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(HomeController), Array)
+#5 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#6 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(HomeController), Object(CakeRequest), Object(CakeResponse))
+#7 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2014-03-22 12:47:03 Error: [MissingViewException] View file "/Users/qdeneuve/Projets/WineLovers/app/View/home/index.ctp.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/Users/qdeneuve/Projets/WineLovers/app/View/home/index.ctp.ctp',
+)
+Request URL: /
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/lib/Cake/View/View.php(457): View->_getViewFileName('/home/index.ctp')
+#1 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Controller/Controller.php(952): View->render('/home/index.ctp', NULL)
+#2 /Users/qdeneuve/Projets/WineLovers/app/Controller/HomeController.php(54): Controller->render('/home/index.ctp')
+#3 [internal function]: HomeController->index()
+#4 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(HomeController), Array)
+#5 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#6 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(HomeController), Object(CakeRequest), Object(CakeResponse))
+#7 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2014-03-22 12:59:31 Error: [MissingActionException] Action PagesController::messagerie() could not be found.
+Exception Attributes: array (
+  'controller' => 'PagesController',
+  'action' => 'messagerie',
+)
+Request URL: /pages/messagerie/
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-03-22 13:06:18 Error: [MissingActionException] Action UsersController::coucou() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'coucou',
+)
+Request URL: /users/coucou/
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-03-22 13:06:24 Error: [MissingActionException] Action UsersController::coucou() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'coucou',
+)
+Request URL: /users/coucou
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-03-22 13:06:29 Error: [MissingActionException] Action UsersController::coucou() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'coucou',
+)
+Request URL: /users/coucou/feeds
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-03-22 13:06:37 Error: [MissingViewException] View file "/Users/qdeneuve/Projets/WineLovers/app/View/home/feeds.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/Users/qdeneuve/Projets/WineLovers/app/View/home/feeds.ctp',
+)
+Request URL: /user/coucou/feeds
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/lib/Cake/View/View.php(457): View->_getViewFileName('/home/feeds')
+#1 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Controller/Controller.php(952): View->render('/home/feeds', NULL)
+#2 /Users/qdeneuve/Projets/WineLovers/app/Controller/UsersController.php(56): Controller->render('/home/feeds')
+#3 [internal function]: UsersController->feeds()
+#4 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#5 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#6 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#7 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2014-03-22 13:07:25 Error: [MissingActionException] Action PagesController::messagerie() could not be found.
+Exception Attributes: array (
+  'controller' => 'PagesController',
+  'action' => 'messagerie',
+)
+Request URL: /pages/messagerie/
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-03-22 13:08:04 Error: [MissingActionException] Action UsersController::user() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'user',
+)
+Request URL: /user/coucou
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-03-22 13:08:10 Error: [MissingActionException] Action UsersController::user() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'user',
+)
+Request URL: /user/coucou/
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-03-22 13:12:33 Error: [MissingControllerException] Controller class WinesController could not be found.
+Exception Attributes: array (
+  'class' => 'WinesController',
+  'plugin' => NULL,
+)
+Request URL: /wines
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-22 13:12:52 Error: [MissingViewException] View file "/Users/qdeneuve/Projets/WineLovers/app/View/wines/index.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/Users/qdeneuve/Projets/WineLovers/app/View/wines/index.ctp',
+)
+Request URL: /wines
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/lib/Cake/View/View.php(457): View->_getViewFileName('/wines/index')
+#1 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Controller/Controller.php(952): View->render('/wines/index', NULL)
+#2 /Users/qdeneuve/Projets/WineLovers/app/Controller/WinesController.php(50): Controller->render('/wines/index')
+#3 [internal function]: WinesController->index()
+#4 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(WinesController), Array)
+#5 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#6 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(WinesController), Object(CakeRequest), Object(CakeResponse))
+#7 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2014-03-22 13:15:05 Error: [MissingActionException] Action WinesController::wine() could not be found.
+Exception Attributes: array (
+  'controller' => 'WinesController',
+  'action' => 'wine',
+)
+Request URL: /wine/le-rouge-sang
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(WinesController), Object(CakeRequest), Object(CakeResponse))
+#2 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-03-22 13:18:28 Error: [MissingViewException] View file "/Users/qdeneuve/Projets/WineLovers/app/View/wines/feeds.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/Users/qdeneuve/Projets/WineLovers/app/View/wines/feeds.ctp',
+)
+Request URL: /wine/le-sang-rouge/feeds
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/lib/Cake/View/View.php(457): View->_getViewFileName('/wines/feeds')
+#1 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Controller/Controller.php(952): View->render('/wines/feeds', NULL)
+#2 /Users/qdeneuve/Projets/WineLovers/app/Controller/WinesController.php(62): Controller->render('/wines/feeds')
+#3 [internal function]: WinesController->feeds()
+#4 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(WinesController), Array)
+#5 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#6 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(WinesController), Object(CakeRequest), Object(CakeResponse))
+#7 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2014-03-22 13:18:33 Error: [MissingViewException] View file "/Users/qdeneuve/Projets/WineLovers/app/View/wines/feeds.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/Users/qdeneuve/Projets/WineLovers/app/View/wines/feeds.ctp',
+)
+Request URL: /wine/le-sang-rouge/feeds
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/lib/Cake/View/View.php(457): View->_getViewFileName('/wines/feeds')
+#1 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Controller/Controller.php(952): View->render('/wines/feeds', NULL)
+#2 /Users/qdeneuve/Projets/WineLovers/app/Controller/WinesController.php(62): Controller->render('/wines/feeds')
+#3 [internal function]: WinesController->feeds()
+#4 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(WinesController), Array)
+#5 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#6 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(WinesController), Object(CakeRequest), Object(CakeResponse))
+#7 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2014-03-22 13:19:21 Error: [MissingActionException] Action WinesController::about() could not be found.
+Exception Attributes: array (
+  'controller' => 'WinesController',
+  'action' => 'about',
+)
+Request URL: /wine/le-rouge-sang/about
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(WinesController), Object(CakeRequest), Object(CakeResponse))
+#2 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-03-22 13:19:50 Error: [MissingViewException] View file "/Users/qdeneuve/Projets/WineLovers/app/View/wines/about.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/Users/qdeneuve/Projets/WineLovers/app/View/wines/about.ctp',
+)
+Request URL: /wine/le-rouge-sang/about
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/lib/Cake/View/View.php(457): View->_getViewFileName('/wines/about')
+#1 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Controller/Controller.php(952): View->render('/wines/about', NULL)
+#2 /Users/qdeneuve/Projets/WineLovers/app/Controller/WinesController.php(68): Controller->render('/wines/about')
+#3 [internal function]: WinesController->about()
+#4 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(WinesController), Array)
+#5 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#6 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(WinesController), Object(CakeRequest), Object(CakeResponse))
+#7 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2014-03-22 13:20:42 Error: [MissingViewException] View file "/Users/qdeneuve/Projets/WineLovers/app/View/wines/feeds.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/Users/qdeneuve/Projets/WineLovers/app/View/wines/feeds.ctp',
+)
+Request URL: /wine/le-rouge-sang/feeds
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/lib/Cake/View/View.php(457): View->_getViewFileName('/wines/feeds')
+#1 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Controller/Controller.php(952): View->render('/wines/feeds', NULL)
+#2 /Users/qdeneuve/Projets/WineLovers/app/Controller/WinesController.php(62): Controller->render('/wines/feeds')
+#3 [internal function]: WinesController->feeds()
+#4 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(WinesController), Array)
+#5 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#6 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(WinesController), Object(CakeRequest), Object(CakeResponse))
+#7 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2014-03-22 13:21:30 Error: [MissingViewException] View file "/Users/qdeneuve/Projets/WineLovers/app/View/wines/events.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/Users/qdeneuve/Projets/WineLovers/app/View/wines/events.ctp',
+)
+Request URL: /wine/le-rouge-sang/events
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/lib/Cake/View/View.php(457): View->_getViewFileName('/wines/events')
+#1 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Controller/Controller.php(952): View->render('/wines/events', NULL)
+#2 /Users/qdeneuve/Projets/WineLovers/app/Controller/WinesController.php(74): Controller->render('/wines/events')
+#3 [internal function]: WinesController->events()
+#4 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(WinesController), Array)
+#5 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#6 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(WinesController), Object(CakeRequest), Object(CakeResponse))
+#7 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2014-03-22 13:28:30 Error: [MissingControllerException] Controller class PagesController could not be found.
+Exception Attributes: array (
+  'class' => 'PagesController',
+  'plugin' => NULL,
+)
+Request URL: /pages/feeds/
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-22 13:28:31 Error: [MissingControllerException] Controller class PagesController could not be found.
+Exception Attributes: array (
+  'class' => 'PagesController',
+  'plugin' => NULL,
+)
+Request URL: /pages/wines/
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-22 13:28:32 Error: [MissingControllerException] Controller class PagesController could not be found.
+Exception Attributes: array (
+  'class' => 'PagesController',
+  'plugin' => NULL,
+)
+Request URL: /pages/feeds/
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-22 13:28:33 Error: [MissingControllerException] Controller class PagesController could not be found.
+Exception Attributes: array (
+  'class' => 'PagesController',
+  'plugin' => NULL,
+)
+Request URL: /pages/wines/
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-22 13:30:19 Error: [MissingControllerException] Controller class PagesController could not be found.
+Exception Attributes: array (
+  'class' => 'PagesController',
+  'plugin' => NULL,
+)
+Request URL: /pages/wines/
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-22 13:30:39 Error: [MissingControllerException] Controller class PagesController could not be found.
+Exception Attributes: array (
+  'class' => 'PagesController',
+  'plugin' => NULL,
+)
+Request URL: /pages/feeds/
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-22 13:30:40 Error: [MissingControllerException] Controller class PagesController could not be found.
+Exception Attributes: array (
+  'class' => 'PagesController',
+  'plugin' => NULL,
+)
+Request URL: /pages/feeds/
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-22 13:30:41 Error: [MissingControllerException] Controller class PagesController could not be found.
+Exception Attributes: array (
+  'class' => 'PagesController',
+  'plugin' => NULL,
+)
+Request URL: /pages/feeds/
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-22 13:30:43 Error: [MissingControllerException] Controller class PagesController could not be found.
+Exception Attributes: array (
+  'class' => 'PagesController',
+  'plugin' => NULL,
+)
+Request URL: /pages/wines/
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-22 13:30:44 Error: [MissingControllerException] Controller class PagesController could not be found.
+Exception Attributes: array (
+  'class' => 'PagesController',
+  'plugin' => NULL,
+)
+Request URL: /pages/wines/
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-22 13:32:23 Error: [MissingControllerException] Controller class PagesController could not be found.
+Exception Attributes: array (
+  'class' => 'PagesController',
+  'plugin' => NULL,
+)
+Request URL: /pages/wines/
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-22 13:32:55 Error: [MissingControllerException] Controller class PagesController could not be found.
+Exception Attributes: array (
+  'class' => 'PagesController',
+  'plugin' => NULL,
+)
+Request URL: /pages/wines/
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-22 13:33:22 Error: [MissingControllerException] Controller class PagesController could not be found.
+Exception Attributes: array (
+  'class' => 'PagesController',
+  'plugin' => NULL,
+)
+Request URL: /pages/wines/
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-22 13:33:42 Error: [MissingActionException] Action CompteController::cellar() could not be found.
+Exception Attributes: array (
+  'controller' => 'CompteController',
+  'action' => 'cellar',
+)
+Request URL: /me/cellar
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(CompteController), Object(CakeRequest), Object(CakeResponse))
+#2 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-03-22 13:33:44 Error: [MissingActionException] Action CompteController::whishlist() could not be found.
+Exception Attributes: array (
+  'controller' => 'CompteController',
+  'action' => 'whishlist',
+)
+Request URL: /me/whishlist
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(CompteController), Object(CakeRequest), Object(CakeResponse))
+#2 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-03-22 13:33:45 Error: [MissingActionException] Action CompteController::calendar() could not be found.
+Exception Attributes: array (
+  'controller' => 'CompteController',
+  'action' => 'calendar',
+)
+Request URL: /me/calendar
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(CompteController), Object(CakeRequest), Object(CakeResponse))
+#2 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-03-22 13:33:50 Error: [MissingActionException] Action CompteController::inbox() could not be found.
+Exception Attributes: array (
+  'controller' => 'CompteController',
+  'action' => 'inbox',
+)
+Request URL: /me/inbox
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(CompteController), Object(CakeRequest), Object(CakeResponse))
+#2 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-03-22 13:33:52 Error: [MissingActionException] Action CompteController::profil() could not be found.
+Exception Attributes: array (
+  'controller' => 'CompteController',
+  'action' => 'profil',
+)
+Request URL: /compte/profil
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(CompteController), Object(CakeRequest), Object(CakeResponse))
+#2 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-03-22 13:33:53 Error: [MissingActionException] Action CompteController::inbox() could not be found.
+Exception Attributes: array (
+  'controller' => 'CompteController',
+  'action' => 'inbox',
+)
+Request URL: /me/inbox
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(CompteController), Object(CakeRequest), Object(CakeResponse))
+#2 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-03-22 13:33:54 Error: [MissingActionException] Action CompteController::calendar() could not be found.
+Exception Attributes: array (
+  'controller' => 'CompteController',
+  'action' => 'calendar',
+)
+Request URL: /me/calendar
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(CompteController), Object(CakeRequest), Object(CakeResponse))
+#2 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-03-22 13:33:54 Error: [MissingActionException] Action CompteController::cellar() could not be found.
+Exception Attributes: array (
+  'controller' => 'CompteController',
+  'action' => 'cellar',
+)
+Request URL: /me/cellar
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(CompteController), Object(CakeRequest), Object(CakeResponse))
+#2 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-03-22 13:33:55 Error: [MissingActionException] Action CompteController::whishlist() could not be found.
+Exception Attributes: array (
+  'controller' => 'CompteController',
+  'action' => 'whishlist',
+)
+Request URL: /me/whishlist
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(CompteController), Object(CakeRequest), Object(CakeResponse))
+#2 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-03-22 13:33:56 Error: [MissingActionException] Action CompteController::calendar() could not be found.
+Exception Attributes: array (
+  'controller' => 'CompteController',
+  'action' => 'calendar',
+)
+Request URL: /me/calendar
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(CompteController), Object(CakeRequest), Object(CakeResponse))
+#2 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-03-22 13:33:58 Error: [MissingActionException] Action CompteController::profil() could not be found.
+Exception Attributes: array (
+  'controller' => 'CompteController',
+  'action' => 'profil',
+)
+Request URL: /compte/profil
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(CompteController), Object(CakeRequest), Object(CakeResponse))
+#2 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-03-22 13:35:03 Error: [MissingViewException] View file "/Users/qdeneuve/Projets/WineLovers/app/View/compte/profil.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/Users/qdeneuve/Projets/WineLovers/app/View/compte/profil.ctp',
+)
+Request URL: /compte/profil
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/lib/Cake/View/View.php(457): View->_getViewFileName('/compte/profil')
+#1 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Controller/Controller.php(952): View->render('/compte/profil', NULL)
+#2 /Users/qdeneuve/Projets/WineLovers/app/Controller/CompteController.php(85): Controller->render('/compte/profil')
+#3 [internal function]: CompteController->profil()
+#4 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(CompteController), Array)
+#5 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#6 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(CompteController), Object(CakeRequest), Object(CakeResponse))
+#7 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2014-03-22 13:35:07 Error: [MissingViewException] View file "/Users/qdeneuve/Projets/WineLovers/app/View/compte/cellar.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/Users/qdeneuve/Projets/WineLovers/app/View/compte/cellar.ctp',
+)
+Request URL: /me/cellar
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/lib/Cake/View/View.php(457): View->_getViewFileName('/compte/cellar')
+#1 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Controller/Controller.php(952): View->render('/compte/cellar', NULL)
+#2 /Users/qdeneuve/Projets/WineLovers/app/Controller/CompteController.php(73): Controller->render('/compte/cellar')
+#3 [internal function]: CompteController->cellar()
+#4 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(CompteController), Array)
+#5 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#6 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(CompteController), Object(CakeRequest), Object(CakeResponse))
+#7 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2014-03-22 13:35:22 Error: [MissingViewException] View file "/Users/qdeneuve/Projets/WineLovers/app/View/compte/cellar.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/Users/qdeneuve/Projets/WineLovers/app/View/compte/cellar.ctp',
+)
+Request URL: /me/cellar
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/lib/Cake/View/View.php(457): View->_getViewFileName('/compte/cellar')
+#1 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Controller/Controller.php(952): View->render('/compte/cellar', NULL)
+#2 /Users/qdeneuve/Projets/WineLovers/app/Controller/CompteController.php(73): Controller->render('/compte/cellar')
+#3 [internal function]: CompteController->cellar()
+#4 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(CompteController), Array)
+#5 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#6 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(CompteController), Object(CakeRequest), Object(CakeResponse))
+#7 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2014-03-22 13:35:56 Error: [MissingViewException] View file "/Users/qdeneuve/Projets/WineLovers/app/View/compte/inbox.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/Users/qdeneuve/Projets/WineLovers/app/View/compte/inbox.ctp',
+)
+Request URL: /me/inbox
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/lib/Cake/View/View.php(457): View->_getViewFileName('/compte/inbox')
+#1 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Controller/Controller.php(952): View->render('/compte/inbox', NULL)
+#2 /Users/qdeneuve/Projets/WineLovers/app/Controller/CompteController.php(91): Controller->render('/compte/inbox')
+#3 [internal function]: CompteController->inbox()
+#4 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(CompteController), Array)
+#5 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#6 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(CompteController), Object(CakeRequest), Object(CakeResponse))
+#7 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2014-03-22 13:36:11 Error: [MissingViewException] View file "/Users/qdeneuve/Projets/WineLovers/app/View/compte/profil.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/Users/qdeneuve/Projets/WineLovers/app/View/compte/profil.ctp',
+)
+Request URL: /compte/profil
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/lib/Cake/View/View.php(457): View->_getViewFileName('/compte/profil')
+#1 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Controller/Controller.php(952): View->render('/compte/profil', NULL)
+#2 /Users/qdeneuve/Projets/WineLovers/app/Controller/CompteController.php(85): Controller->render('/compte/profil')
+#3 [internal function]: CompteController->profil()
+#4 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(CompteController), Array)
+#5 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#6 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(CompteController), Object(CakeRequest), Object(CakeResponse))
+#7 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2014-03-22 13:37:15 Error: [MissingControllerException] Controller class EventsController could not be found.
+Exception Attributes: array (
+  'class' => 'EventsController',
+  'plugin' => NULL,
+)
+Request URL: /events
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-22 13:37:29 Error: [MissingControllerException] Controller class EventsController could not be found.
+Exception Attributes: array (
+  'class' => 'EventsController',
+  'plugin' => NULL,
+)
+Request URL: /events
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-22 13:37:35 Error: [MissingControllerException] Controller class EventsController could not be found.
+Exception Attributes: array (
+  'class' => 'EventsController',
+  'plugin' => NULL,
+)
+Request URL: /events
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-22 13:37:41 Error: [MissingActionException] Action WinesController::wine() could not be found.
+Exception Attributes: array (
+  'controller' => 'WinesController',
+  'action' => 'wine',
+)
+Request URL: /wines/wine/name:le-rouge-sang
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(WinesController), Object(CakeRequest), Object(CakeResponse))
+#2 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-03-22 13:37:47 Error: [MissingActionException] Action WinesController::wine() could not be found.
+Exception Attributes: array (
+  'controller' => 'WinesController',
+  'action' => 'wine',
+)
+Request URL: /wines/wine/name:le-rouge-sang
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(WinesController), Object(CakeRequest), Object(CakeResponse))
+#2 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-03-22 13:42:00 Error: [MissingViewException] View file "/Users/qdeneuve/Projets/WineLovers/app/View/users/callar.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/Users/qdeneuve/Projets/WineLovers/app/View/users/callar.ctp',
+)
+Request URL: /user/qdeneuve/cellar
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/lib/Cake/View/View.php(457): View->_getViewFileName('/users/callar')
+#1 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Controller/Controller.php(952): View->render('/users/callar', NULL)
+#2 /Users/qdeneuve/Projets/WineLovers/app/Controller/UsersController.php(68): Controller->render('/users/callar')
+#3 [internal function]: UsersController->cellar()
+#4 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#5 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#6 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#7 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2014-03-22 13:44:37 Error: [MissingActionException] Action UsersController::about() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'about',
+)
+Request URL: /user/qdeneuve/about
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}

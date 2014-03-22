@@ -24,11 +24,45 @@
  * its action called 'display', and we pass a param to select the view file
  * to use (in this case, /app/View/Pages/home.ctp)...
  */
-	Router::connect('/', array('controller' => 'pages', 'action' => 'display', 'home'));
+	Router::connect('/', array('controller' => 'home', 'action' => 'index'));
+	Router::connect('/about', array('controller' => 'home', 'action' => 'about'));
+	Router::connect('/contact', array('controller' => 'home', 'action' => 'contact'));
+	Router::connect('/signin', array('controller' => 'home', 'action' => 'signin'));
+	Router::connect('/login', array('controller' => 'home', 'action' => 'login'));
+	Router::connect('/logout', array('controller' => 'home', 'action' => 'logout', '[method]' => 'POST'));
+
+	Router::connect('/me', array('controller' => 'compte', 'action' => 'feeds'));
+	Router::connect('/me/inbox', array('controller' => 'compte', 'action' => 'inbox'));
+	Router::connect('/me/profil', array('controller' => 'compte', 'action' => 'profils'));
+	Router::connect('/me/friends', array('controller' => 'compte', 'action' => 'friends'));
+	Router::connect('/me/settings', array('controller' => 'compte', 'action' => 'settings'));
+	Router::connect('/me/calendar', array('controller' => 'compte', 'action' => 'calendar'));
+	Router::connect('/me/cellar', array('controller' => 'compte', 'action' => 'cellar'));
+	Router::connect('/me/whishlist', array('controller' => 'compte', 'action' => 'whishlist'));
+
+	Router::connect('/users', array('controller' => 'users', 'action' => 'index'));
+	Router::connect('/user/:pseudo', array('controller' => 'users', 'action' => 'feeds'), array('pseudo' => '[a-zA-Z0-9\-]+'));
+	Router::connect('/user/:pseudo/cellar', array('controller' => 'users', 'action' => 'cellar'), array('pseudo' => '[a-zA-Z0-9\-]+'));
+	Router::connect('/user/:pseudo/friends', array('controller' => 'users', 'action' => 'friends'), array('pseudo' => '[a-zA-Z0-9\-]+'));
+	Router::connect('/user/:pseudo/about', array('controller' => 'users', 'action' => 'about'), array('pseudo' => '[a-zA-Z0-9\-]+'));
+	Router::connect('/user/:pseudo/events', array('controller' => 'users', 'action' => 'events'), array('pseudo' => '[a-zA-Z0-9\-]+'));
+	Router::connect('/user/:pseudo/whishlist', array('controller' => 'users', 'action' => 'whishlist'), array('pseudo' => '[a-zA-Z0-9\-]+'));
+
+	Router::connect('/wines', array('controller' => 'wines', 'action' => 'index'));
+	Router::connect('/wine/:name', array('controller' => 'wines', 'action' => 'feeds'), array('name' => '[a-zA-Z0-9\-]+'));
+	Router::connect('/wine/:name/about', array('controller' => 'wines', 'action' => 'about'), array('name' => '[a-zA-Z0-9\-]+'));
+	Router::connect('/wine/:name/events', array('controller' => 'wines', 'action' => 'events'), array('name' => '[a-zA-Z0-9\-]+'));
+	Router::connect('/wine/:name/likes', array('controller' => 'wines', 'action' => 'likes'), array('name' => '[a-zA-Z0-9\-]+'));
+
+	Router::connect('/events', array('controller' => 'events', 'action' => 'index'));
+	Router::connect('/event/:name', array('controller' => 'events', 'action' => 'feeds'), array('name' => '[a-zA-Z0-9\-]+'));
+	Router::connect('/event/:name/about', array('controller' => 'events', 'action' => 'about'), array('name' => '[a-zA-Z0-9\-]+'));
+	Router::connect('/event/:name/likes', array('controller' => 'events', 'action' => 'likes'), array('name' => '[a-zA-Z0-9\-]+'));
+	Router::connect('/event/:name/medias', array('controller' => 'events', 'action' => 'medias'), array('name' => '[a-zA-Z0-9\-]+'));
 /**
  * ...and connect the rest of 'Pages' controller's URLs.
  */
-	Router::connect('/pages/*', array('controller' => 'pages', 'action' => 'display'));
+	//Router::connect('/pages/*', array('controller' => 'pages', 'action' => 'display'));
 
 /**
  * Load all plugin routes. See the CakePlugin documentation on

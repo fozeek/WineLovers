@@ -2,12 +2,12 @@
 	<div class="col-md-3">	
 		<img src="http://lorempixel.com/500/500" class="img-responsive img-rounded" alt="Responsive image" style="margin-bottom: 15px;"/>
 		<ul class="nav nav-pills nav-stacked">
-		  <li class="active"><a href="#">Actualités</a></li>
-		  <li><a href="#">Cave</a></li>
-		  <li><a href="#">Informations</a></li>
-		  <li><a href="#">Événements</a></li>
-		  <li><a href="#">Amis</a></li>
-		  <li><a href="#">Whishlist</a></li>
+		  <li><a href="<?php echo $this->Html->url(array('controller' => 'users', 'action' => 'feeds', 'pseudo' => 'qdeneuve')) ?>">Feeds</a></li>
+		  <li class="active"><a href="<?php echo $this->Html->url(array('controller' => 'users', 'action' => 'cellar', 'pseudo' => 'qdeneuve')) ?>">Cellar</a></li>
+		  <li><a href="<?php echo $this->Html->url(array('controller' => 'users', 'action' => 'about', 'pseudo' => 'qdeneuve')) ?>">About</a></li>
+		  <li><a href="<?php echo $this->Html->url(array('controller' => 'users', 'action' => 'events', 'pseudo' => 'qdeneuve')) ?>">Events</a></li>
+		  <li><a href="<?php echo $this->Html->url(array('controller' => 'users', 'action' => 'friends', 'pseudo' => 'qdeneuve')) ?>">Friends</a></li>
+		  <li><a href="<?php echo $this->Html->url(array('controller' => 'users', 'action' => 'whishlist', 'pseudo' => 'qdeneuve')) ?>">Whishlist</a></li>
 		</ul>
 	</div>
 	<div class="col-md-9">	

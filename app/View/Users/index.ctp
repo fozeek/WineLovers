@@ -8,8 +8,8 @@
     <div class="thumbnail">
       <img src="http://lorempixel.com/500/500/" alt="...">
       <div class="caption">
-        <h3><a href="/pages/wine/">Le Rouge Sang</a></h3>
-        <p>Un vin d'exception</p>
+        <h3><a href="<?php echo $this->Html->url(array('controller' => 'users', 'action' => 'user', 'pseudo' => 'qdeneuve')); ?>">Quentin Deneuve</a></h3>
+        <p>Un mec hors norme !</p>
       </div>
     </div>
   </div>
