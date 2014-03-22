@@ -1,47 +1,60 @@
-<div style="float: left;width: 300px;margin: 5px;margin-right: 20px;">
-	<img src="http://lorempixel.com/300/300/"/>
-	<hr/>
-	<a href="/pages/compte/">Cave</a>
-	<hr/>
-	<a href="/pages/compte/">Informations</a>
-	<hr/>
-	<a href="/pages/compte/">Evenements</a>
-	<hr/>
-	<a href="/pages/compte/">Amis</a>
-	<hr/>
-	<a href="/pages/compte/">Evenements</a>
-	<hr/>
-	<a href="/pages/compte/">Whishlist</a>
-	<hr/>
-</div>
-<div style="overflow: hidden;">
-	<h2>Quentin Deneuve <button type="button" class="btn btn-default btn-xs">Inviter en ami</button> <small>inscrit le lundi 12 juillet 1976</small></h2>
+<div class="row">
+	<div class="col-md-3">	
+		<img src="http://lorempixel.com/500/500" class="img-responsive img-rounded" alt="Responsive image" style="margin-bottom: 15px;"/>
+		<ul class="nav nav-pills nav-stacked">
+		  <li class="active"><a href="#">Actualités</a></li>
+		  <li><a href="#">Cave</a></li>
+		  <li><a href="#">Informations</a></li>
+		  <li><a href="#">Événements</a></li>
+		  <li><a href="#">Amis</a></li>
+		  <li><a href="#">Whishlist</a></li>
+		</ul>
+	</div>
+	<div class="col-md-9">	
+		<h2>Quentin Deneuve <small>inscrit le lundi 12 juillet 1976</small></h2>
+		<p class="lead">
+			Un aventurier des vins !
+		</p>
+		<div class="btn-group">
+		  <button type="button" class="btn btn-default">Ajouter en ami</button>
+		  <button type="button" class="btn btn-default">Envoyer un message</button>
 
-	<hr />
-	<textarea class="form-control" rows="5">Laisse un comm' Bro !</textarea>
+		  <div class="btn-group">
+		    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+		      Autre
+		      <span class="caret"></span>
+		    </button>
+		    <ul class="dropdown-menu">
+		      <li><a href="#">Signaler</a></li>
+		      <li><a href="#">Proposer un vin</a></li>
+		    </ul>
+		  </div>
+		</div>
+		<hr />
+		<textarea class="form-control" rows="5" style="margin-bottom: 5px;">Laisse un comm' Bro !</textarea>
+		<button type="submit" class="btn btn-default pull-right">Publier</button>
+		<div class="clearfix"></div>
+		<?php for ($cpt=0;$cpt<8;$cpt++): ?>
+			<div class="media">
+			  <a class="pull-left" href="#">
+			    <img class="media-object" src="http://lorempixel.com/64/64/" alt="...">
+			  </a>
+			  <div class="media-body">
+			    <h4 class="media-heading">Quentin Deneuve</h4>
+			    À écrit un article
+			    <br /><br />
+			    <blockquote>
+			    	<p>Ut enim ad minim veniam,
+			    	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			    	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			    	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			    	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			    	<footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+			    </blockquote>
+			  </div>
+			</div>
 
-	<hr/><hr/>
-	<form role="form">
-	  <div class="form-group">
-	    <label for="exampleInputEmail1">Email address</label>
-	    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-	  </div>
-	  <div class="form-group">
-	    <label for="exampleInputPassword1">Password</label>
-	    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-	  </div>
-	  <div class="form-group">
-	    <label for="exampleInputFile">File input</label>
-	    <input type="file" id="exampleInputFile">
-	    <p class="help-block">Example block-level help text here.</p>
-	  </div>
-	  <div class="checkbox">
-	    <label>
-	      <input type="checkbox"> Check me out
-	    </label>
-	  </div>
-	  <button type="submit" class="btn btn-default">Submit</button>
-	</form>
-</div>
-<div style="clear: both;">
+		<?php endfor ?>
+	</div>
+
 </div>

@@ -1,23 +1,26 @@
 
-<h2>Feeds</h2>
+<div class="page-header">
+  <h1>Feeds <small>Subtext for header</small></h1>
+</div>
 
-<?php for ($cpt=0;$cpt<4;$cpt++): ?>
-	<hr/>
-	<div>
-		<div style="float: left;width: 75px;margin: 5px;margin-right: 10px;">
-			<img src="http://lorempixel.com/75/75/"/>
-		</div>
-		<div style="overflow: hidden;">
-			<h4>Quentin Deneuve <small>lundi 12 juillet 1976</small></h4>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-		</div>
-		<div style="clear: both;">
-		</div>
-	</div>
+<?php for ($cpt=0;$cpt<8;$cpt++): ?>
+			<div class="media">
+			  <a class="pull-left" href="#">
+			    <img class="media-object" src="http://lorempixel.com/64/64/" alt="...">
+			  </a>
+			  <div class="media-body">
+			    <h4 class="media-heading">Quentin Deneuve</h4>
+			    À écrit un article
+			    <br /><br />
+			    <blockquote>
+			    	<p>Ut enim ad minim veniam,
+			    	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			    	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			    	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			    	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			    	<footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+			    </blockquote>
+			  </div>
+			</div>
 
-<?php endfor ?>
+		<?php endfor ?>

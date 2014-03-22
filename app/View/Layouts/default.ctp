@@ -44,57 +44,40 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 <body>
 	<div id="container" class="container">
 		<div id="header">
-			<nav class="navbar navbar-inverse" role="navigation">
-			  <!-- Brand and toggle get grouped for better mobile display -->
-			  <div class="navbar-header">
-			    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-			      <span class="sr-only">Toggle navigation</span>
-			      <span class="icon-bar"></span>
-			      <span class="icon-bar"></span>
-			      <span class="icon-bar"></span>
-			    </button>
-			    <a class="navbar-brand" href="#">Brand</a>
-			  </div>
+			
 
-			  <!-- Collect the nav links, forms, and other content for toggling -->
-			  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-			    <ul class="nav navbar-nav">
-			      <li class="active"><a href="#">Link</a></li>
-			      <li><a href="#">Link</a></li>
-			      <li class="dropdown">
-			        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-			        <ul class="dropdown-menu">
-			          <li><a href="#">Action</a></li>
-			          <li><a href="#">Another action</a></li>
-			          <li><a href="#">Something else here</a></li>
-			          <li class="divider"></li>
-			          <li><a href="#">Separated link</a></li>
-			          <li class="divider"></li>
-			          <li><a href="#">One more separated link</a></li>
-			        </ul>
-			      </li>
-			    </ul>
-			    <form class="navbar-form navbar-left" role="search">
-			      <div class="form-group">
-			        <input type="text" class="form-control" placeholder="Search">
-			      </div>
-			      <button type="submit" class="btn btn-default">Submit</button>
-			    </form>
-			    <ul class="nav navbar-nav navbar-right">
-			      <li><a href="#">Link</a></li>
-			      <li class="dropdown">
-			        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-			        <ul class="dropdown-menu">
-			          <li><a href="#">Action</a></li>
-			          <li><a href="#">Another action</a></li>
-			          <li><a href="#">Something else here</a></li>
-			          <li class="divider"></li>
-			          <li><a href="#">Separated link</a></li>
-			        </ul>
-			      </li>
-			    </ul>
-			  </div><!-- /.navbar-collapse -->
-			</nav>
+			<div class="page-header" style="position: relative;">
+				<ul class="nav nav-pills" style="position: absolute;right: 0px;top: 0px;">
+				  <li class="pull-right">
+				    <a href="#">
+				      <span class="glyphicon glyphicon-cog"></span>
+				    </a>
+				  </li>
+				  <li class="active pull-right">
+				    <a href="/pages/compte/">
+				      Compte
+				    </a>
+				  </li>
+				  <li class="pull-right">
+				    <a href="/pages/messagerie/">
+				      <span class="badge pull-right">42</span>
+				      Messagerie
+				    </a>
+				  </li>
+				  <li class="pull-right">
+				    <a href="/pages/feeds/">
+				      Feeds
+				    </a>
+				  </li>
+				  <li class="pull-right">
+				    <a href="/pages/wines/">
+				      Wines
+				    </a>
+				  </li>
+				</ul>
+			  <h1 style><a href="/" style="text-decoration: none;">La Bonne Cave </a><small> Come for a wine !</small></h1>
+			</div>
+			
 		</div>
 		<div id="content">
 
@@ -102,6 +85,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 
 			<?php echo $this->fetch('content'); ?>
 		</div>
+		<hr />
 		<div id="footer">
 			&copy; La bonne cave 2014
 		</div>
