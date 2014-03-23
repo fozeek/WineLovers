@@ -36,6 +36,8 @@ class UsersController extends AppController {
  */
 	public $uses = array();
 
+	public $scaffold;
+
 /**
  * Displays a view
  *
@@ -46,7 +48,8 @@ class UsersController extends AppController {
  */
 
 	public function index() {
-
+		$users = $this->User->find('all');
+		$this->set(compact('users'));
 		$this->render('/users/index');
 		
 	}
@@ -58,7 +61,8 @@ class UsersController extends AppController {
 	}
 
 	public function feeds() {
-
+		$user = $this->User->findByPseudo($this->request->params['pseudo']);
+		$this->set(compact('user'));
 		$this->render('/users/feeds');
 		
 	}

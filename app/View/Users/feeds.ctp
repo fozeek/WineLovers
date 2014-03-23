@@ -11,9 +11,9 @@
 		</ul>
 	</div>
 	<div class="col-md-9">	
-		<h2>Quentin Deneuve <small>inscrit le lundi 12 juillet 1976</small></h2>
+		<h2><?= $user['User']['firstname'] ?> <?= $user['User']['lastname'] ?> <small>inscrit le <?= $user['User']['created'] ?></small></h2>
 		<p class="lead">
-			Un aventurier des vins !
+			<?= $user['User']['description'] ?>
 		</p>
 		<div class="btn-group">
 		  <button type="button" class="btn btn-default">Ajouter en ami</button>
