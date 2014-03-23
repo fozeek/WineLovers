@@ -53,6 +53,33 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 				      <span class="glyphicon glyphicon-cog"></span>
 				    </a>
 				  </li>
+				  <li class="dropdown pull-right">
+				    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+				      Compte <span class="caret"></span>
+				    </a>
+				    <ul class="dropdown-menu">
+				      <li>
+					    <a href="<?php echo $this->Html->url(array('controller' => 'compte', 'action' => 'feeds')) ?>">
+					      Feeds
+					    </a>
+					  </li>
+					  <li>
+					    <a href="<?php echo $this->Html->url(array('controller' => 'compte', 'action' => 'calendar')) ?>">
+					      Calendar
+					    </a>
+					  </li>
+					  <li>
+					    <a href="<?php echo $this->Html->url(array('controller' => 'compte', 'action' => 'whishlist')) ?>">
+					      My Whishlist
+					    </a>
+					  </li>
+					  <li>
+					    <a href="<?php echo $this->Html->url(array('controller' => 'compte', 'action' => 'cellar')) ?>">
+					      My Cellar
+					    </a>
+					  </li>
+				    </ul>
+				  </li>
 				  <li class="active pull-right">
 				    <a href="<?php echo $this->Html->url(array('controller' => 'compte', 'action' => 'profil')) ?>">
 				      Profil
@@ -64,27 +91,6 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 				      Messagerie
 				    </a>
 				  </li>
-				  <li class="pull-right">
-				    <a href="<?php echo $this->Html->url(array('controller' => 'compte', 'action' => 'feeds')) ?>">
-				      Feeds
-				    </a>
-				  </li>
-				  <li class="pull-right">
-				    <a href="<?php echo $this->Html->url(array('controller' => 'compte', 'action' => 'calendar')) ?>">
-				      Calendar
-				    </a>
-				  </li>
-				  <li class="pull-right">
-				    <a href="<?php echo $this->Html->url(array('controller' => 'compte', 'action' => 'whishlist')) ?>">
-				      My Whishlist
-				    </a>
-				  </li>
-				  <li class="pull-right">
-				    <a href="<?php echo $this->Html->url(array('controller' => 'compte', 'action' => 'cellar')) ?>">
-				      My Cellar
-				    </a>
-				  </li>
-
 				</ul>
 			  <h1 style><a href="/" style="text-decoration: none;">La Bonne Cave </a><small> Come for a wine !</small></h1>
 			</div>
