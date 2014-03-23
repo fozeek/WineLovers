@@ -51,43 +51,41 @@ class UsersController extends AppController {
 		$users = $this->User->find('all');
 		$this->set(compact('users'));
 		$this->render('/users/index');
-		
 	}
 
 	public function about() {
-
+		$user = $this->User->findByPseudo($this->request->params['pseudo']);
+		$this->set(compact('user'));
 		$this->render('/users/about');
-		
 	}
 
 	public function feeds() {
 		$user = $this->User->findByPseudo($this->request->params['pseudo']);
 		$this->set(compact('user'));
 		$this->render('/users/feeds');
-		
 	}
 
 	public function cellar() {
-
+		$user = $this->User->findByPseudo($this->request->params['pseudo']);
+		$this->set(compact('user'));
 		$this->render('/users/cellar');
-		
 	}
 
 	public function friends() {
-
+		$user = $this->User->findByPseudo($this->request->params['pseudo']);
+		$this->set(compact('user'));
 		$this->render('/users/friends');
-		
 	}
 
 	public function events() {
-
+		$user = $this->User->findByPseudo($this->request->params['pseudo']);
+		$this->set(compact('user'));
 		$this->render('/users/events');
-		
 	}
 
 	public function whishlist() {
-
+		$user = $this->User->findByPseudo($this->request->params['pseudo']);
+		$this->set(compact('user'));
 		$this->render('/users/whishlist');
-		
 	}
 }
