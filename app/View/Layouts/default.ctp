@@ -44,57 +44,85 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 <body>
 	<div id="container" class="container">
 		<div id="header">
-			
-
-			<div class="page-header" style="position: relative;">
-				<ul class="nav nav-pills" style="position: absolute;right: 0px;top: 0px;">
-				  <li class="pull-right">
-				    <a href="<?php echo $this->Html->url(array('controller' => 'compte', 'action' => 'settings')) ?>">
-				      <span class="glyphicon glyphicon-cog"></span>
+			<ul class="nav nav-pills pull-right">
+			  <li class="pull-right">
+			    <a href="<?php echo $this->Html->url(array('controller' => 'compte', 'action' => 'settings')) ?>">
+			      <span class="glyphicon glyphicon-cog"></span>
+			    </a>
+			  </li>
+			  <li class="dropdown pull-right">
+			    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+			      Compte <span class="caret"></span>
+			    </a>
+			    <ul class="dropdown-menu">
+			      <li>
+				    <a href="<?php echo $this->Html->url(array('controller' => 'compte', 'action' => 'feeds')) ?>">
+				      Feeds
 				    </a>
 				  </li>
-				  <li class="dropdown pull-right">
-				    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-				      Compte <span class="caret"></span>
-				    </a>
-				    <ul class="dropdown-menu">
-				      <li>
-					    <a href="<?php echo $this->Html->url(array('controller' => 'compte', 'action' => 'feeds')) ?>">
-					      Feeds
-					    </a>
-					  </li>
-					  <li>
-					    <a href="<?php echo $this->Html->url(array('controller' => 'compte', 'action' => 'calendar')) ?>">
-					      Calendar
-					    </a>
-					  </li>
-					  <li>
-					    <a href="<?php echo $this->Html->url(array('controller' => 'compte', 'action' => 'whishlist')) ?>">
-					      My Whishlist
-					    </a>
-					  </li>
-					  <li>
-					    <a href="<?php echo $this->Html->url(array('controller' => 'compte', 'action' => 'cellar')) ?>">
-					      My Cellar
-					    </a>
-					  </li>
-				    </ul>
-				  </li>
-				  <li class="active pull-right">
-				    <a href="<?php echo $this->Html->url(array('controller' => 'compte', 'action' => 'profil')) ?>">
-				      Profil
-				    </a>
-				  </li>
-				  <li class="pull-right">
+				  <li>
 				    <a href="<?php echo $this->Html->url(array('controller' => 'compte', 'action' => 'inbox')) ?>">
 				      <span class="badge pull-right">42</span>
 				      Messagerie
 				    </a>
 				  </li>
-				</ul>
-			  <h1 style><a href="/" style="text-decoration: none;">La Bonne Cave </a><small> Come for a wine !</small></h1>
-			</div>
-			
+				  <li>
+				    <a href="<?php echo $this->Html->url(array('controller' => 'compte', 'action' => 'calendar')) ?>">
+				      Calendar
+				    </a>
+				  </li>
+				  <li>
+				    <a href="<?php echo $this->Html->url(array('controller' => 'compte', 'action' => 'whishlist')) ?>">
+				      My Whishlist
+				    </a>
+				  </li>
+				  <li>
+				    <a href="<?php echo $this->Html->url(array('controller' => 'compte', 'action' => 'cellar')) ?>">
+				      My Cellar
+				    </a>
+				  </li>
+				  <li>
+				    <a href="<?php echo $this->Html->url(array('controller' => 'compte', 'action' => 'stats')) ?>">
+				      Stats
+				    </a>
+				  </li>
+			    </ul>
+			  </li>
+			  <li class="active pull-right">
+			    <a href="<?php echo $this->Html->url(array('controller' => 'compte', 'action' => 'profil')) ?>">
+			      Profil
+			    </a>
+			  </li>
+			  <li class="dropdown pull-right">
+			    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+			      Discover <span class="caret"></span>
+			    </a>
+			    <ul class="dropdown-menu">
+			      <li>
+				    <a href="<?php echo $this->Html->url(array('controller' => 'discover', 'action' => 'oenology')) ?>">
+				      Œnology
+				    </a>
+				  </li>
+				  <li>
+				    <a href="<?php echo $this->Html->url(array('controller' => 'discover', 'action' => 'producers')) ?>">
+				      Producers
+				    </a>
+				  </li>
+				  <li>
+				    <a href="<?php echo $this->Html->url(array('controller' => 'discover', 'action' => 'training')) ?>">
+				      Training
+				    </a>
+				  </li>
+				  <li>
+				    <a href="<?php echo $this->Html->url(array('controller' => 'discover', 'action' => 'stores')) ?>">
+				      Stores
+				    </a>
+				  </li>
+			    </ul>
+			  </li>
+			</ul>
+		  <h1 style><a href="/" style="text-decoration: none;">La Bonne Cave </a><small> Come for a wine !</small></h1>
+		  <hr>
 		</div>
 		<div id="content">
 
@@ -112,5 +140,6 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 	<?php echo $this->Html->script('jquery.min'); ?>
 	<?php echo $this->Html->script('bootstrap.min'); ?>
 	<?php echo $this->fetch('scriptBottom'); ?>
+	<?php echo $this->Html->script('script'); ?>
 </body>
 </html>

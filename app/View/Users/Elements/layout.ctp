@@ -12,11 +12,13 @@
 	</div>
 	<div class="col-md-9">	
 		<h2><?= $user['User']['firstname'] ?> <?= $user['User']['lastname'] ?> <small>inscrit le <?= $user['User']['created'] ?></small></h2>
+		<?php if($this->fetch('active.feeds')) : ?>
 		<p class="lead">
 			<?= $user['User']['description'] ?>
 		</p>
+		<?php endif ?>
 		<div class="btn-group">
-		  <button type="button" class="btn btn-default">Add as Friend</button>
+		  <button type="button" class="btn btn-default add-as-friend"><span class="glyphicon glyphicon-ok hidden"></span> <span data-original="Add as friend" data-replace="Friend" data-over="Remove as friend" data-remove="Friend removed">Add as friend</span></button>
 		  <button type="button" class="btn btn-default">Send a message</button>
 
 		  <div class="btn-group">
@@ -28,7 +30,7 @@
 		      <li><a href="#">Propose a Wine</a></li>
 		      <li><a href="#">Propose an Event</a></li>
 		    	<li class="divider"></li>
-		      <li><a href="#">Signal</a></li>
+		      <li><a href="#">Report</a></li>
 		    </ul>
 		  </div>
 		</div>
