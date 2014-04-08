@@ -1,36 +1,57 @@
-<form role="form">
+<form role="form-horizontal" action="<?php echo $this->Html->url(array('controller' => 'home', 'action' => 'signin')) ?>" method="post">
   <div class="form-group">
-    <label for="pseudo">Pseudo</label>
-    <input type="text" class="form-control" id="pseudo">
-  </div>
-   <div class="form-group">
-    <label for="password">Mot de Passe</label>
-    <input type="password" class="form-control" id="password" placeholder="Mot de passe">
-    <input type="password" class="form-control" id="confirmpassword" placeholder="Confirmation mot de passe">
+    <label for="pseudo" class="col-sm-2 control-label">Pseudo</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" name="pseudo" placeholder="Pseudo">
+    </div>
   </div>
   <div class="form-group">
-    <label for="lastname">Nom</label>
-    <input type="text" class="form-control" id="lastname" placeholder="Nom">
+    <label for="password" class="col-sm-2 control-label">Mot de Passe</label>
+    <div class="col-sm-10">
+      <input type="password" class="form-control" name="password" placeholder="Mot de passe">
+    </div>
   </div>
   <div class="form-group">
-    <label for="firstname">Prénom</label>
-    <input type="text" class="form-control" id="firstname">
+    <label for="confirmpwd" class="col-sm-2 control-label">Confirmation</label>
+    <div class="col-sm-10">
+      <input type="password" class="form-control" name="confirmpwd" placeholder="Confirmer le mot de passe">
+    </div>
   </div>
   <div class="form-group">
-    <label for="email">Adresse email</label>
-    <input type="text" class="form-control" id="email">
+    <label for="lastname" class="col-sm-2 control-label">Nom</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" name="lastname" placeholder="Nom">
+    </div>
   </div>
   <div class="form-group">
-    <label for="address">Adresse</label>
-    <input type="text" class="form-control" id="address">
+    <label for="firstname" class="col-sm-2 control-label">Prénom</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" name="firstname" placeholder="Prénom">
+    </div>
   </div>
   <div class="form-group">
-    <label for="zip">Code Postal</label>
-    <input type="password" class="form-control" id="zip">
+    <label for="email" class="col-sm-2 control-label">Adresse email</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" name="email" placeholder="Adresse email">
+    </div>
   </div>
   <div class="form-group">
-    <label for="city">Ville</label>
-    <input type="text" class="form-control" id="city">
+    <label for="address" class="col-sm-2 control-label">Adresse</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" name="address" placeholder="Adresse">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="zip" class="col-sm-2 control-label">Code Postal</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" name="zip" placeholder="Code postal">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="city" class="col-sm-2 control-label">Ville</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" name="city" placeholder="Ville">
+    </div>
   </div>
   <button type="submit" class="btn btn-default">Submit</button>
 </form>
