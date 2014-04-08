@@ -6,7 +6,8 @@
   <a class="btn btn-default" href="<?php echo $this->Html->url(array('controller' => 'home', 'action' => 'signin')) ?>" role="button">Sign in</a>
   <br /><br />
   <a href="<?php echo $this->Html->url(array('controller' => 'wines', 'action' => 'index')) ?>">Wines</a> •
-  <a href="<?php echo $this->Html->url(array('controller' => 'users', 'action' => 'index')) ?>">Users</a>
+  <a href="<?php echo $this->Html->url(array('controller' => 'users', 'action' => 'index')) ?>">Users</a> •
+  <a href="<?php echo $this->Html->url(array('controller' => 'events', 'action' => 'index')) ?>">Events</a>
 </div>
 
 

@@ -6,7 +6,7 @@
     </div> 
     <div class="col-md-7"> 
       <div class="caption">
-        <h3><a href="<?php echo $this->Html->url(array('controller' => 'users', 'action' => 'feeds', 'pseudo' => $user['User']['pseudo'])); ?>"><?= $user['User']['firstname'] ?> <?= $user['User']['lastname'] ?></a></h3>
+        <h3><a href="<?php echo $this->Html->url(array('controller' => 'users', 'action' => 'feeds', 'pseudo' => $user['User']['slug'])); ?>"><?= $user['User']['firstname'] ?> <?= $user['User']['lastname'] ?></a></h3>
       </div>
     </div>
   </div>
