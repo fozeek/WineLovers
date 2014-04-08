@@ -3,7 +3,7 @@
 </div>
 
 <div class="row">
-  <?php for($cpt = 0;$cpt<10;$cpt++) : ?>
-    <?= $this->element('cards/wine') ?>
-  <?php endfor ?>
+  <?php foreach($wines as $wine) : ?>
+    <?= $this->element('cards/wine', ['wine' => $wine, 'size' => 3]) ?>
+  <?php endforeach ?>
 </div>

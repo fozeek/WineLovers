@@ -2608,3 +2608,33 @@ Stack Trace:
 #4 [internal function]: App::shutdown()
 #5 {main}
 >>>>>>> FETCH_HEAD
+2014-04-08 09:55:35 Error: Fatal Error (64): Cannot redeclare class Wines in [/Users/qdeneuve/Projets/WineLovers/app/Model/Wine.php, line 17]
+2014-04-08 09:55:35 Error: [FatalErrorException] Cannot redeclare class Wines
+Request URL: /wines
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(64, 'Cannot redeclar...', '/Users/qdeneuve...', 17)
+#1 [internal function]: ErrorHandler::handleError(64, 'Cannot redeclar...', '/Users/qdeneuve...', 17, Array)
+#2 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 64, 'Cannot redeclar...', '/Users/qdeneuve...', 17, Array)
+#3 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-04-08 10:01:23 Error: Fatal Error (4): syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ']' in [/Users/qdeneuve/Projets/WineLovers/app/View/wines/index.ctp, line 7]
+2014-04-08 10:01:23 Error: [FatalErrorException] syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ']'
+Request URL: /wines
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Users/qdeneuve...', 7)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Users/qdeneuve...', 7, Array)
+#2 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Users/qdeneuve...', 7, Array)
+#3 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-04-08 10:01:53 Error: Fatal Error (4): syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ']' in [/Users/qdeneuve/Projets/WineLovers/app/View/wines/index.ctp, line 7]
+2014-04-08 10:01:53 Error: [FatalErrorException] syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ']'
+Request URL: /wines
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Users/qdeneuve...', 7)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Users/qdeneuve...', 7, Array)
+#2 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Users/qdeneuve...', 7, Array)
+#3 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
