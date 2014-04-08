@@ -47,6 +47,11 @@ class UsersController extends AppController {
  *	or MissingViewException in debug mode.
  */
 
+	public function beforeFilter(){
+		$this->loadModel("User");
+		$this->Auth->allow('signin');
+	}
+
 	public function index() {
 		$users = $this->User->find('all');
 		$this->set(compact('users'));
@@ -87,5 +92,35 @@ class UsersController extends AppController {
 		$user = $this->User->findBySlug($this->request->params['pseudo']);
 		$this->set(compact('user'));
 		$this->render('/users/whishlist');
+	}
+
+	public function login() {
+		if($this->request->is("post")){
+			if ($this->Auth->login()) {
+	            return $this->redirect($this->Auth->redirectUrl());
+	        } else {
+	            $this->Session->setFlash('Username ou password est incorrect');
+	        }
+
+		}
+
+		$this->render('/users/login');	
+	}
+
+	public function signin() {
+		if($this->request->is("post")){
+			$user = new User();
+			$user->create($this->request->data);
+			$user->save();
+
+			$this->redirect(array('controller' => 'Home', 'action' => 'index'));
+		}
+
+		$this->render('/users/signin');
+	}
+
+	public function logout() {
+    	$this->redirect($this->Auth->logout());
+		$this->render('/users/logout');	
 	}
 }

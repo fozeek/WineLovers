@@ -44,10 +44,7 @@ class HomeController extends AppController {
  * @throws NotFoundException When the view file could not be found
  *	or MissingViewException in debug mode.
  */
-	public function beforeFilter(){
-		$this->loadModel("User");
-	}
-
+	
 	public function index() {
 
 		$this->render('/home/index');
@@ -63,45 +60,6 @@ class HomeController extends AppController {
 	public function contact() {
 
 		$this->render('/home/contact');
-		
-	}
-
-	public function signin() {
-		if($this->request->is("post")){
-			$user = new User();
-			$user->create($this->data);
-			$user->save();
-
-			$this->redirect(array('controller' => 'Home', 'action' => 'index'));
-		}
-
-		$this->render('/home/signin');
-		
-	}
-
-	public function login() {
-		if($this->request->is("post")){
-			$user = $this->User->findByEmail($this->data["email"]);
-			if(empty($user)){
-				$this->Session->setFlash("Utilisateur non trouvé.");
-			}
-			else{
-				if($user["User"]["password"] == $this->data["password"]){
-					$this->redirect(array('controller' => 'Users', 'action' => 'feeds'));
-				}
-				else{
-					$this->Session->setFlash("Mot de passe incorrecte.");
-				}
-			}
-		}
-
-		$this->render('/home/login');
-		
-	}
-
-	public function logout() {
-
-		$this->render('/home/logout');
 		
 	}
 }

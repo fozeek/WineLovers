@@ -31,7 +31,15 @@ App::uses('Controller', 'Controller');
  */
 class AppController extends Controller {
 
-	public $components = array('DebugKit.Toolbar', 'Session');
+	public $components = array('DebugKit.Toolbar', 'Session', 
+		'Auth' => array(
+        	'authenticate' => array(
+            	'Form' => array(
+                	'fields' => array('username' => 'email', 'password' => 'password'),
+               		'passwordHasher' => array('className' => 'Simple', 'hashType' => 'md5')
+            	)
+        	)
+    ));
 
 	
 }

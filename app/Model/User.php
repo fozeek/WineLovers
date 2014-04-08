@@ -1,5 +1,7 @@
 <?php
 
+App::uses('SimplePasswordHasher', 'Controller/Component/Auth');
+
 class User extends AppModel {
 
 	public $displayField = 'name';
@@ -17,4 +19,13 @@ class User extends AppModel {
 		return $results;
 	}
 
+	 public function beforeSave($options = array()) {
+        if (!empty($this->data['User']['password'])) {
+            $passwordHasher = new SimplePasswordHasher(array('hashType' => 'md5'));
+            $this->data['User']['password'] = $passwordHasher->hash(
+                $this->data['User']['password']
+            );
+        }
+        return true;
+    }
 }
