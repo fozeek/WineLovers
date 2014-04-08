@@ -93,33 +93,6 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 			      Profil
 			    </a>
 			  </li>
-			  <li class="dropdown pull-right">
-			    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-			      Discover <span class="caret"></span>
-			    </a>
-			    <ul class="dropdown-menu">
-			      <li>
-				    <a href="<?php echo $this->Html->url(array('controller' => 'discover', 'action' => 'oenology')) ?>">
-				      Œnology
-				    </a>
-				  </li>
-				  <li>
-				    <a href="<?php echo $this->Html->url(array('controller' => 'discover', 'action' => 'producers')) ?>">
-				      Producers
-				    </a>
-				  </li>
-				  <li>
-				    <a href="<?php echo $this->Html->url(array('controller' => 'discover', 'action' => 'training')) ?>">
-				      Training
-				    </a>
-				  </li>
-				  <li>
-				    <a href="<?php echo $this->Html->url(array('controller' => 'discover', 'action' => 'stores')) ?>">
-				      Stores
-				    </a>
-				  </li>
-			    </ul>
-			  </li>
 			</ul>
 		  <h1 style><a href="/" style="text-decoration: none;">La Bonne Cave </a><small> Come for a wine !</small></h1>
 		  <hr>
