@@ -44,6 +44,11 @@ class HomeController extends AppController {
  * @throws NotFoundException When the view file could not be found
  *	or MissingViewException in debug mode.
  */
+
+	public function beforeFilter() {
+		parent::beforeFilter();
+		$this->Auth->allow(array('index', 'about', 'contact'));
+	}
 	
 	public function index() {
 
