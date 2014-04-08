@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client: localhost
--- Généré le: Mar 08 Avril 2014 à 10:04
+-- Généré le: Mar 08 Avril 2014 à 10:34
 -- Version du serveur: 5.5.33
 -- Version de PHP: 5.5.3
 
@@ -26,6 +26,10 @@ CREATE TABLE `users` (
   `password` varchar(200) NOT NULL,
   `firstname` varchar(255) NOT NULL,
   `lastname` varchar(255) NOT NULL,
+  `email` varchar(200) NOT NULL,
+  `address` varchar(300) NOT NULL,
+  `zip` int(5) NOT NULL,
+  `city` varchar(200) NOT NULL,
   `created` datetime NOT NULL,
   `updated` datetime NOT NULL,
   `image` varchar(255) NOT NULL,
@@ -37,10 +41,10 @@ CREATE TABLE `users` (
 -- Contenu de la table `users`
 --
 
-INSERT INTO `users` (`id`, `pseudo`, `password`, `firstname`, `lastname`, `created`, `updated`, `image`, `description`) VALUES
-(1, 'qdeneuve', '', 'Quentin', 'Deneuve', '2014-03-23 00:00:00', '2014-03-23 00:00:00', '', ''),
-(2, 'luc', '', 'Luc', 'Notsnad', '2014-03-23 00:00:00', '2014-03-23 00:00:00', '', 'Bounjour'),
-(3, 'HappyLo', '', 'Happy', 'Lo', '2014-03-17 00:00:00', '2014-03-23 00:00:00', '', 'Whesh !');
+INSERT INTO `users` (`id`, `pseudo`, `password`, `firstname`, `lastname`, `email`, `address`, `zip`, `city`, `created`, `updated`, `image`, `description`) VALUES
+(1, 'qdeneuve', '', 'Quentin', 'Deneuve', '', '', 0, '', '2014-03-23 00:00:00', '2014-03-23 00:00:00', '', ''),
+(2, 'luc', '', 'Luc', 'Notsnad', '', '', 0, '', '2014-03-23 00:00:00', '2014-03-23 00:00:00', '', 'Bounjour'),
+(3, 'HappyLo', '', 'Happy', 'Lo', '', '', 0, '', '2014-03-17 00:00:00', '2014-03-23 00:00:00', '', 'Whesh !');
 
 -- --------------------------------------------------------
 
