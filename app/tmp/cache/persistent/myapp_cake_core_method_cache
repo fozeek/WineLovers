@@ -1,7 +1,2 @@
-<<<<<<< HEAD
-1396976581
-a:2:{s:4:"name";a:10:{s:32:"4da6f3fd1e2012885e88de75b74b1e9c";s:12:"`winelovers`";s:32:"c0f35f142b55fd045f94b1dc2eb73da8";s:8:"`events`";s:32:"ca807423168688b45cd6a682b74ccf6f";s:12:"`Event`.`id`";s:32:"aab8cb5eae65ee5174b7b40fe4bf4066";s:17:"`Event`.`created`";s:32:"a74bc059f94b5ab4d8fc19d8f32d8be2";s:17:"`Event`.`updated`";s:32:"cccf73d9d6e39e399a3d82961f26f729";s:14:"`Event`.`name`";s:32:"7e6d5f62d0333f7b6cb594c9d0a31fdd";s:14:"`Event`.`slug`";s:32:"45ff6366f331d3d19efe4c52650cb6b8";s:14:"`Event`.`date`";s:32:"00483eb99c3bd68a7d2932679a14dcae";s:21:"`Event`.`description`";s:32:"3678e4d00527da9e7bb9d6c30e971928";s:7:"`Event`";}s:6:"fields";a:1:{s:32:"4123daeb72c6701d652fc5d12cae3ad5";a:7:{i:0;s:12:"`Event`.`id`";i:1;s:17:"`Event`.`created`";i:2;s:17:"`Event`.`updated`";i:3;s:14:"`Event`.`name`";i:4;s:14:"`Event`.`slug`";i:5;s:14:"`Event`.`date`";i:6;s:21:"`Event`.`description`";}}}
-=======
-1396979831
+1396988624
 a:1:{s:4:"name";a:2:{s:32:"4da6f3fd1e2012885e88de75b74b1e9c";s:12:"`winelovers`";s:32:"f94a437fb7858e092079378f93ef2c71";s:7:"`users`";}}
->>>>>>> FETCH_HEAD

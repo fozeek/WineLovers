@@ -1,1 +1,1 @@
-profil.ctp
+<?php var_dump($auth) ?>

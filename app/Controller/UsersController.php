@@ -48,6 +48,7 @@ class UsersController extends AppController {
  */
 
 	public function beforeFilter(){
+		parent::beforeFilter();
 		$this->loadModel("User");
 		$this->Auth->allow('signin');
 	}

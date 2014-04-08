@@ -44,6 +44,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 <body>
 	<div id="container" class="container">
 		<div id="header">
+			<?php if($auth) : ?>
 			<ul class="nav nav-pills pull-right">
 			  <li class="pull-right">
 			    <a href="<?php echo $this->Html->url(array('controller' => 'compte', 'action' => 'settings')) ?>">
@@ -88,12 +89,13 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 				  </li>
 			    </ul>
 			  </li>
-			  <li class="active pull-right">
+			  <li class="pull-right">
 			    <a href="<?php echo $this->Html->url(array('controller' => 'compte', 'action' => 'profil')) ?>">
-			      Profil
+			      <?= $auth['pseudo'] ?>
 			    </a>
 			  </li>
 			</ul>
+			<?php endif ?>
 		  <h1 style><a href="/" style="text-decoration: none;">La Bonne Cave </a><small> Come for a wine !</small></h1>
 		  <hr>
 		</div>
