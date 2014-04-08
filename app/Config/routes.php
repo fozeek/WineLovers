@@ -57,6 +57,7 @@
 	Router::connect('/events', array('controller' => 'events', 'action' => 'index'));
 	Router::connect('/event/:name', array('controller' => 'events', 'action' => 'feeds'), array('name' => '[a-zA-Z0-9\-]+'));
 	Router::connect('/event/:name/about', array('controller' => 'events', 'action' => 'about'), array('name' => '[a-zA-Z0-9\-]+'));
+	Router::connect('/event/:name/guests', array('controller' => 'events', 'action' => 'guests'), array('name' => '[a-zA-Z0-9\-]+'));
 	Router::connect('/event/:name/likes', array('controller' => 'events', 'action' => 'likes'), array('name' => '[a-zA-Z0-9\-]+'));
 	Router::connect('/event/:name/medias', array('controller' => 'events', 'action' => 'medias'), array('name' => '[a-zA-Z0-9\-]+'));
 /**

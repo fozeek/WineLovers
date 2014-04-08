@@ -2,7 +2,10 @@
 
 class User extends AppModel {
 
-	public $displayField = 'pseudo';
+	public $displayField = 'name';
+	public $virtualFields = array(
+	    'name' => "CONCAT(User.firstname, ' ', User.lastname)"
+	);
 
 	public function afterFind($results, $primary = false) {
 		foreach ($results as $key => $result) {
