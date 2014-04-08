@@ -6,10 +6,10 @@ class Event extends AppModel {
 
 	public function afterFind($results, $primary = false) {
 		foreach ($results as $key => $result) {
-			$created = new DateTime($results[$key]['User']['created']);
-			$updated = new DateTime($results[$key]['User']['updated']);
-			$results[$key]['User']['created_print'] = $created->format('l j F Y');
-			$results[$key]['User']['updated_print'] = $updated->format('l j F Y');
+			$created = new DateTime($results[$key]['Event']['created']);
+			$updated = new DateTime($results[$key]['Event']['updated']);
+			$results[$key]['Event']['created_print'] = $created->format('l j F Y');
+			$results[$key]['Event']['updated_print'] = $updated->format('l j F Y');
 		}
 		return $results;
 	}

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client: localhost
--- Généré le: Mar 08 Avril 2014 à 10:34
+-- Généré le: Mar 08 Avril 2014 à 10:45
 -- Version du serveur: 5.5.33
 -- Version de PHP: 5.5.3
 
@@ -13,6 +13,30 @@ SET time_zone = "+00:00";
 --
 -- Base de données: `winelovers`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `events`
+--
+
+CREATE TABLE `events` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `created` datetime NOT NULL,
+  `updated` datetime NOT NULL,
+  `name` varchar(200) NOT NULL,
+  `date` datetime NOT NULL,
+  `description` varchar(500) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+
+--
+-- Contenu de la table `events`
+--
+
+INSERT INTO `events` (`id`, `created`, `updated`, `name`, `date`, `description`) VALUES
+(1, '2014-04-08 00:00:00', '2014-04-09 00:00:00', 'Pouêt', '2014-04-23 00:00:00', 'Ça va ?'),
+(2, '2014-04-18 00:00:00', '2014-04-25 00:00:00', 'Go go go !', '2014-04-22 00:00:00', 'Coucou');
 
 -- --------------------------------------------------------
 
