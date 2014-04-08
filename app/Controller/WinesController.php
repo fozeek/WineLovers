@@ -46,31 +46,36 @@ class WinesController extends AppController {
  */
 
 	public function index() {
-
+		$wines = $this->Wine->find('all');
+		$this->set(compact('wines'));
 		$this->render('/wines/index');
 		
 	}
 
 	public function feeds() {
-
+		$wine = $this->Wine->findByName($this->request->params['name']);
+		$this->set(compact('wine'));
 		$this->render('/wines/feeds');
 		
 	}
 
 	public function about() {
-
+		$wine = $this->Wine->findByName($this->request->params['name']);
+		$this->set(compact('wine'));
 		$this->render('/wines/about');
 		
 	}
 
 	public function events() {
-
+		$wine = $this->Wine->findByName($this->request->params['name']);
+		$this->set(compact('wine'));
 		$this->render('/wines/events');
 		
 	}
 
 	public function likes() {
-
+		$wine = $this->Wine->findByName($this->request->params['name']);
+		$this->set(compact('wine'));
 		$this->render('/wines/likes');
 		
 	}
