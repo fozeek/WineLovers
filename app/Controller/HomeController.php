@@ -34,7 +34,7 @@ class HomeController extends AppController {
  *
  * @var array
  */
-	public $uses = array();
+	public $uses = array('Event');
 
 /**
  * Displays a view
@@ -47,6 +47,8 @@ class HomeController extends AppController {
 	
 	public function index() {
 
+		$events = $this->Event->find('all', array('limit' => 3));
+		$this->set(compact('events'));
 		$this->render('/home/index');
 		
 	}

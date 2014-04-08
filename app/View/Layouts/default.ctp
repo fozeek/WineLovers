@@ -87,6 +87,13 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 				      Stats
 				    </a>
 				  </li>
+				  <li class="divider"></li>
+				  <li>
+				    <a href="<?php echo $this->Html->url(array('controller' => 'users', 'action' => 'logout')) ?>">
+				      Logout
+				    </a>
+				  </li>
+				  
 			    </ul>
 			  </li>
 			  <li class="pull-right">
