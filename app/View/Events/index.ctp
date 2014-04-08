@@ -1,9 +1,9 @@
 <div class="page-header">
-  <h1>Users <small>Find some friends</small></h1>
+  <h1>Events <small>Find some events</small></h1>
 </div>
 
 <div class="row">
-  <?php foreach($users as $user) : ?>
-    <?= $this->element('cards/user', ['user' => $user, 'size' => 3]) ?>
+  <?php foreach($events as $event) : ?>
+    <?= $this->element('cards/event', ['event' => $event, 'size' => 3]) ?>
   <?php endforeach ?>
 </div>

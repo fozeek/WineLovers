@@ -6,13 +6,9 @@ class Event extends AppModel {
 
 	public function afterFind($results, $primary = false) {
 		foreach ($results as $key => $result) {
-			$created = new DateTime($results[$key][$this->alias]['created']);
-			$updated = new DateTime($results[$key][$this->alias]['updated']);
-			$date = new DateTime($results[$key][$this->alias]['date']);
-			$results[$key][$this->alias]['created_print'] = $created->format('l j F Y');
-			$results[$key][$this->alias]['updated_print'] = $updated->format('l j F Y');
-			$results[$key][$this->alias]['date_print'] = $date->format('l j F Y');
-			$results[$key][$this->alias]['date'] = $date;
+			$results[$key][$this->alias]['created'] = new DateTime($results[$key][$this->alias]['created']);
+			$results[$key][$this->alias]['updated'] = new DateTime($results[$key][$this->alias]['updated']);
+			$results[$key][$this->alias]['date'] = new DateTime($results[$key][$this->alias]['date']);
 		}
 		return $results;
 	}
