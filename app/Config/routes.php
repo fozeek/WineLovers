@@ -27,9 +27,6 @@
 	Router::connect('/', array('controller' => 'home', 'action' => 'index'));
 	Router::connect('/about', array('controller' => 'home', 'action' => 'about'));
 	Router::connect('/contact', array('controller' => 'home', 'action' => 'contact'));
-	Router::connect('/signin', array('controller' => 'home', 'action' => 'signin'));
-	Router::connect('/login', array('controller' => 'home', 'action' => 'login'));
-	Router::connect('/logout', array('controller' => 'home', 'action' => 'logout', '[method]' => 'POST'));
 
 	Router::connect('/me', array('controller' => 'compte', 'action' => 'feeds'));
 	Router::connect('/me/inbox', array('controller' => 'compte', 'action' => 'inbox'));
@@ -47,6 +44,9 @@
 	Router::connect('/user/:pseudo/about', array('controller' => 'users', 'action' => 'about'), array('pseudo' => '[a-zA-Z0-9\-]+'));
 	Router::connect('/user/:pseudo/events', array('controller' => 'users', 'action' => 'events'), array('pseudo' => '[a-zA-Z0-9\-]+'));
 	Router::connect('/user/:pseudo/whishlist', array('controller' => 'users', 'action' => 'whishlist'), array('pseudo' => '[a-zA-Z0-9\-]+'));
+	Router::connect('/signin', array('controller' => 'users', 'action' => 'signin'));
+	Router::connect('/login', array('controller' => 'users', 'action' => 'login'));
+	Router::connect('/logout', array('controller' => 'users', 'action' => 'logout', '[method]' => 'POST'));
 
 	Router::connect('/wines', array('controller' => 'wines', 'action' => 'index'));
 	Router::connect('/wine/:name', array('controller' => 'wines', 'action' => 'feeds'), array('name' => '[a-zA-Z0-9\-]+'));
