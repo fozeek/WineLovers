@@ -36,6 +36,8 @@ class WinesController extends AppController {
  */
 	public $uses = array();
 
+	public $apiUrl = "http://api.wine-searcher.com/wine-select-api.lml?Xkey=bchxjn531137&Xformat=J&Xversion=5&Xautoexpand=Y&Xcurrencycode=eur&Xkeyword_mode=A&Xvintage=&Xlocation=fr&Xwinename=";
+
 /**
  * Displays a view
  *
