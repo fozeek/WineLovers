@@ -95,9 +95,13 @@ class UsersController extends AppController {
 	}
 
 	public function login() {
+		if($this->Auth->loggedIn()){
+			return $this->redirect(array('controller' => 'compte', 'action' => 'feeds'));
+		}
+
 		if($this->request->is("post")){
 			if ($this->Auth->login()) {
-	            return $this->redirect($this->Auth->redirectUrl());
+	            return $this->redirect(array('controller' => 'compte', 'action' => 'feeds'));
 	        } else {
 	            $this->Session->setFlash('Username ou password est incorrect');
 	        }
