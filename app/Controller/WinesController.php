@@ -36,7 +36,20 @@ class WinesController extends AppController {
  */
 	public $uses = array();
 
-	public $apiUrl = "http://api.wine-searcher.com/wine-select-api.lml?Xkey=bchxjn531137&Xformat=J&Xversion=5&Xautoexpand=Y&Xcurrencycode=eur&Xkeyword_mode=A&Xvintage=&Xlocation=fr&Xwinename=";
+	public $apiUrl = "http://api.wine-searcher.com/wine-select-api.lml?Xkey=bchxjn531137&Xformat=J&Xversion=5Y&Xcurrencycode=eur&Xlocation=fr";
+
+	public $vintage = "&Xvintage=";
+	public $wineName = "&Xwinename=";
+	public $autoExpand = "&Xautoexpand=Y";
+	public $keywordModeWineList = "&Xkeyword_mode=A";
+	public $keywordModeWineNamesList = "&Xkeyword_mode=X";
+	public $keywordModeWineListExcludeAuctions = "&Xkeyword_mode=U";
+	public $keywordModeWineListAuctionsOnly = "&Xkeyword_mode=T";
+	public $limit = "&Xwinecount=";
+
+	public $widesearchClosest = "&Xwidesearch=N";
+	public $widesearchStrict = "&Xwidesearch=Y";
+	public $widesearchValuation = "&Xwidesearch=V";
 
 /**
  * Displays a view
@@ -48,6 +61,9 @@ class WinesController extends AppController {
  */
 
 	public function index() {
+		echo '<pre>';
+		var_dump(file_get_contents($this->apiUrl . $this->wineName . 'Yquem+Sauternes+Bordeaux+France' . $this->vintage . $this->limit . 5 . $this->autoExpand . $this->keywordModeWineList));
+		echo '</pre>';
 		$wines = $this->Wine->find('all');
 		$this->set(compact('wines'));
 		$this->render('/wines/index');
