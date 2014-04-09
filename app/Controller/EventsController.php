@@ -53,28 +53,35 @@ class EventsController extends AppController {
 	}
 
 	public function feeds() {
-		$event = $this->Event->findByName($this->request->params['name']);
+		$event = $this->Event->findBySlug($this->request->params['name']);
 		$this->set(compact('event'));
 		$this->render('/events/feeds');
 		
 	}
 
 	public function about() {
-		$event = $this->Event->findByName($this->request->params['name']);
+		$event = $this->Event->findBySlug($this->request->params['name']);
 		$this->set(compact('event'));
 		$this->render('/events/about');
 		
 	}
 
+	public function guests() {
+		$event = $this->Event->findBySlug($this->request->params['name']);
+		$this->set(compact('event'));
+		$this->render('/events/guests');
+		
+	}
+
 	public function medias() {
-		$event = $this->Event->findByName($this->request->params['name']);
+		$event = $this->Event->findBySlug($this->request->params['name']);
 		$this->set(compact('event'));
 		$this->render('/events/medias');
 		
 	}
 
 	public function likes() {
-		$event = $this->Event->findByName($this->request->params['name']);
+		$event = $this->Event->findBySlug($this->request->params['name']);
 		$this->set(compact('event'));
 		$this->render('/events/likes');
 		

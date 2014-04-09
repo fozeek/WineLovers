@@ -6,12 +6,19 @@ class Wine extends AppModel {
 
 	public function afterFind($results, $primary = false) {
 		foreach ($results as $key => $result) {
-			$created = new DateTime($results[$key]['Wine']['created']);
-			$updated = new DateTime($results[$key]['Wine']['updated']);
-			$results[$key]['Wine']['created_print'] = $created->format('l j F Y');
-			$results[$key]['Wine']['updated_print'] = $updated->format('l j F Y');
+			$created = new DateTime($results[$key][$this->alias]['created']);
+			$updated = new DateTime($results[$key][$this->alias]['updated']);
+			$results[$key][$this->alias]['created_print'] = $created->format('l j F Y');
+			$results[$key][$this->alias]['updated_print'] = $updated->format('l j F Y');
 		}
 		return $results;
 	}
+
+	public function beforeSave($options = array()) {
+        if (!empty($this->data[$this->alias]['name'])) {
+            $this->data[$this->alias]['slug'] = Inflector::slug($this->data[$this->alias]['name'], '-');
+        }
+        return true;
+    }
 
 }

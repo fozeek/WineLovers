@@ -1,4 +1,4 @@
-<div class="col-md-<?= ($size) ? $size : 4 ?>">
+<div class="col-md-<?= (isset($size)) ? $size : 4 ?>">
 	<div class="thumbnail" style="position: relative;">
 		<a href="<?php echo $this->Html->url(array('controller' => 'wines', 'action' => 'feeds', 'name' => $wine['Wine']['slug'])); ?>">
 			<img src="http://lorempixel.com/500/500/" alt="...">

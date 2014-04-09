@@ -31,7 +31,7 @@ App::uses('Controller', 'Controller');
  */
 class AppController extends Controller {
 
-	public $components = array('DebugKit.Toolbar', 'Session', 
+	public $components = array('DebugKit.Toolbar', 'Session', 'Security', 
 		'Auth' => array(
         	'authenticate' => array(
             	'Form' => array(
@@ -40,6 +40,13 @@ class AppController extends Controller {
             	)
         	)
     ));
+
+    public function beforeFilter() {
+        parent::beforeFilter();
+
+        $auth = $this->Auth->user();
+        $this->set(compact('auth'));
+    }
 
 	
 }

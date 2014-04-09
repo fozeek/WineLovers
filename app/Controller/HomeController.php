@@ -34,7 +34,7 @@ class HomeController extends AppController {
  *
  * @var array
  */
-	public $uses = array();
+	public $uses = array('Event');
 
 /**
  * Displays a view
@@ -44,9 +44,16 @@ class HomeController extends AppController {
  * @throws NotFoundException When the view file could not be found
  *	or MissingViewException in debug mode.
  */
+
+	public function beforeFilter() {
+		parent::beforeFilter();
+		$this->Auth->allow(array('index', 'about', 'contact'));
+	}
 	
 	public function index() {
 
+		$events = $this->Event->find('all', array('limit' => 3));
+		$this->set(compact('events'));
 		$this->render('/home/index');
 		
 	}

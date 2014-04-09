@@ -48,7 +48,7 @@ class UsersController extends AppController {
  */
 
 	public function beforeFilter(){
-		$this->loadModel("User");
+		parent::beforeFilter();
 		$this->Auth->allow('signin');
 	}
 
@@ -59,37 +59,37 @@ class UsersController extends AppController {
 	}
 
 	public function about() {
-		$user = $this->User->findByPseudo($this->request->params['pseudo']);
+		$user = $this->User->findBySlug($this->request->params['pseudo']);
 		$this->set(compact('user'));
 		$this->render('/users/about');
 	}
 
 	public function feeds() {
-		$user = $this->User->findByPseudo($this->request->params['pseudo']);
+		$user = $this->User->findBySlug($this->request->params['pseudo']);
 		$this->set(compact('user'));
 		$this->render('/users/feeds');
 	}
 
 	public function cellar() {
-		$user = $this->User->findByPseudo($this->request->params['pseudo']);
+		$user = $this->User->findBySlug($this->request->params['pseudo']);
 		$this->set(compact('user'));
 		$this->render('/users/cellar');
 	}
 
 	public function friends() {
-		$user = $this->User->findByPseudo($this->request->params['pseudo']);
+		$user = $this->User->findBySlug($this->request->params['pseudo']);
 		$this->set(compact('user'));
 		$this->render('/users/friends');
 	}
 
 	public function events() {
-		$user = $this->User->findByPseudo($this->request->params['pseudo']);
+		$user = $this->User->findBySlug($this->request->params['pseudo']);
 		$this->set(compact('user'));
 		$this->render('/users/events');
 	}
 
 	public function whishlist() {
-		$user = $this->User->findByPseudo($this->request->params['pseudo']);
+		$user = $this->User->findBySlug($this->request->params['pseudo']);
 		$this->set(compact('user'));
 		$this->render('/users/whishlist');
 	}

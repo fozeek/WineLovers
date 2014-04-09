@@ -2,12 +2,12 @@
 	<div class="col-md-3">	
 		<img src="http://lorempixel.com/500/500" class="img-responsive img-rounded" alt="Responsive image" style="margin-bottom: 15px;"/>
 		<ul class="nav nav-pills nav-stacked">
-		  <li class="<?= $this->fetch('active.feeds') ?>"><a href="<?php echo $this->Html->url(array('controller' => 'users', 'action' => 'feeds', 'pseudo' => $user['User']['pseudo'])) ?>">Feeds</a></li>
-		  <li class="<?= $this->fetch('active.cellar') ?>"><a href="<?php echo $this->Html->url(array('controller' => 'users', 'action' => 'cellar', 'pseudo' => $user['User']['pseudo'])) ?>">Cellar</a></li>
-		  <li class="<?= $this->fetch('active.about') ?>"><a href="<?php echo $this->Html->url(array('controller' => 'users', 'action' => 'about', 'pseudo' => $user['User']['pseudo'])) ?>">About</a></li>
-		  <li class="<?= $this->fetch('active.events') ?>"><a href="<?php echo $this->Html->url(array('controller' => 'users', 'action' => 'events', 'pseudo' => $user['User']['pseudo'])) ?>">Events</a></li>
-		  <li class="<?= $this->fetch('active.friends') ?>"><a href="<?php echo $this->Html->url(array('controller' => 'users', 'action' => 'friends', 'pseudo' => $user['User']['pseudo'])) ?>">Friends</a></li>
-		  <li class="<?= $this->fetch('active.whishlist') ?>"><a href="<?php echo $this->Html->url(array('controller' => 'users', 'action' => 'whishlist', 'pseudo' => $user['User']['pseudo'])) ?>">Whishlist</a></li>
+		  <li class="<?= $this->fetch('active.feeds') ?>"><a href="<?php echo $this->Html->url(array('controller' => 'users', 'action' => 'feeds', 'pseudo' => $user['User']['slug'])) ?>">Feeds</a></li>
+		  <li class="<?= $this->fetch('active.cellar') ?>"><a href="<?php echo $this->Html->url(array('controller' => 'users', 'action' => 'cellar', 'pseudo' => $user['User']['slug'])) ?>">Cellar</a></li>
+		  <li class="<?= $this->fetch('active.about') ?>"><a href="<?php echo $this->Html->url(array('controller' => 'users', 'action' => 'about', 'pseudo' => $user['User']['slug'])) ?>">About</a></li>
+		  <li class="<?= $this->fetch('active.events') ?>"><a href="<?php echo $this->Html->url(array('controller' => 'users', 'action' => 'events', 'pseudo' => $user['User']['slug'])) ?>">Events</a></li>
+		  <li class="<?= $this->fetch('active.friends') ?>"><a href="<?php echo $this->Html->url(array('controller' => 'users', 'action' => 'friends', 'pseudo' => $user['User']['slug'])) ?>">Friends</a></li>
+		  <li class="<?= $this->fetch('active.whishlist') ?>"><a href="<?php echo $this->Html->url(array('controller' => 'users', 'action' => 'whishlist', 'pseudo' => $user['User']['slug'])) ?>">Whishlist</a></li>
 		</ul>
 	</div>
 	<div class="col-md-9">
@@ -38,7 +38,7 @@
 			
 		<?php endif ?>
 		
-		<h2><?= $user['User']['firstname'] ?> <?= $user['User']['lastname'] ?> <small>inscrit le <?= $user['User']['created_print'] ?></small></h2>
+		<h2><?= $user['User']['name'] ?> <small>inscrit le <?= $user['User']['created_print'] ?></small></h2>
 		
 		<?php if($this->fetch('active.feeds')) : ?>
 		<p class="lead">
