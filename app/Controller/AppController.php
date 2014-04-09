@@ -33,6 +33,7 @@ class AppController extends Controller {
 
 	public $components = array('DebugKit.Toolbar', 'Session', 'Security', 
 		'Auth' => array(
+			'loginRedirect' => 'compte/feeds',
         	'authenticate' => array(
             	'Form' => array(
                 	'fields' => array('username' => 'email', 'password' => 'password'),
