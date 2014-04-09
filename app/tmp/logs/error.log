@@ -5499,3 +5499,171 @@ Stack Trace:
 #2 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
 >>>>>>> FETCH_HEAD
+2014-04-09 08:47:30 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery-2.0.3.min.map
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-09 09:12:31 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery-2.0.3.min.map
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-09 09:13:09 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery-2.0.3.min.map
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-09 09:13:41 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery-2.0.3.min.map
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-09 09:17:54 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery-2.0.3.min.map
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-09 09:18:54 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery-2.0.3.min.map
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-09 09:18:58 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery-2.0.3.min.map
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-09 09:19:03 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery-2.0.3.min.map
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-09 09:19:06 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery-2.0.3.min.map
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-09 09:19:39 Error: Fatal Error (1): Class 'User' not found in [/Users/jonathanbicheux/Documents/Project/WineLovers/app/Controller/UsersController.php, line 116]
+2014-04-09 09:19:39 Error: [FatalErrorException] Class 'User' not found
+Request URL: /signin
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Class 'User' no...', '/Users/jonathan...', 116)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'User' no...', '/Users/jonathan...', 116, Array)
+#2 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Class 'User' no...', '/Users/jonathan...', 116, Array)
+#3 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-04-09 09:19:39 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery-2.0.3.min.map
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-09 09:21:04 Error: [BadRequestException] The request has been black-holed
+Request URL: /signin
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Controller/Component/SecurityComponent.php(242): SecurityComponent->blackHole(Object(UsersController), 'csrf')
+#1 [internal function]: SecurityComponent->startup(Object(UsersController))
+#2 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Utility/ObjectCollection.php(132): call_user_func_array(Array, Array)
+#3 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#4 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Event/CakeEventManager.php(247): call_user_func(Array, Object(CakeEvent))
+#5 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Controller/Controller.php(675): CakeEventManager->dispatch(Object(CakeEvent))
+#6 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Routing/Dispatcher.php(182): Controller->startupProcess()
+#7 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#8 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2014-04-09 09:21:05 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery-2.0.3.min.map
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-09 09:21:17 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery-2.0.3.min.map
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-09 09:21:26 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery-2.0.3.min.map
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-09 09:21:29 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery-2.0.3.min.map
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-09 09:21:48 Error: Fatal Error (1): Class 'User' not found in [/Users/jonathanbicheux/Documents/Project/WineLovers/app/Controller/UsersController.php, line 116]
+2014-04-09 09:21:48 Error: [FatalErrorException] Class 'User' not found
+Request URL: /signin
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Class 'User' no...', '/Users/jonathan...', 116)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'User' no...', '/Users/jonathan...', 116, Array)
+#2 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Class 'User' no...', '/Users/jonathan...', 116, Array)
+#3 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-04-09 09:21:48 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery-2.0.3.min.map
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
