@@ -17,7 +17,7 @@ class User extends AppModel {
                 'message'  => 'Saisir uniquement des chiffres ou des lettres.'
             ),
             'size' => array(
-                'rule'    => array('beteween', 6, 200),
+                'rule'    => array('between', 6, 200),
                 'message' => '6 caractères minimum.'
             )
         ),
@@ -26,16 +26,16 @@ class User extends AppModel {
             'message' => 'Saisir entre 5 et 15 caractères.'
         ),
         'email' => array(
-        	'rule'		=> array('/^[a-zA-Z0-9\._-]+@[a-zA-Z0-9\.-]{2,}[\.][a-zA-Z]{2,}$/i'),
-        	'message'	=> 'Saisir une adresse email valide.'
-       	),
-        'zip'	=> array(
-        	'sizemax'	=> array(
-        		'rule'	=> array('maxLength', 5)
-        	),
-        	'sizemin'	=> array(
-        		'rule'	=> array('minLength', 5)
-        	)
+            'rule'      => '/^[a-zA-Z0-9\._-]+@[a-zA-Z0-9\.-]{2,}[\.][a-zA-Z]{2,}$/i',
+            'message'   => 'Saisir une adresse email valide.'
+        ),
+        'zip'   => array(
+            'sizemax'   => array(
+                'rule'  => array('maxLength', 5)
+            ),
+            'sizemin'   => array(
+                'rule'  => array('minLength', 5)
+            )
         )
     );
 
