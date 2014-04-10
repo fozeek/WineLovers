@@ -16,7 +16,7 @@
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 
-$cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework');
+$cakeDescription = __d('cake_dev', 'La Bonne Cave');
 ?>
 <!DOCTYPE html>
 <html>
@@ -58,7 +58,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 			    <ul class="dropdown-menu">
 			      <li>
 				    <a href="<?php echo $this->Html->url(array('controller' => 'compte', 'action' => 'feeds')) ?>">
-				      Feeds
+				      Actualités
 				    </a>
 				  </li>
 				  <li>
@@ -69,28 +69,28 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 				  </li>
 				  <li>
 				    <a href="<?php echo $this->Html->url(array('controller' => 'compte', 'action' => 'calendar')) ?>">
-				      Calendar
+				      Calendrier
 				    </a>
 				  </li>
 				  <li>
 				    <a href="<?php echo $this->Html->url(array('controller' => 'compte', 'action' => 'whishlist')) ?>">
-				      My Whishlist
+				      Ma Wishlist
 				    </a>
 				  </li>
 				  <li>
 				    <a href="<?php echo $this->Html->url(array('controller' => 'compte', 'action' => 'cellar')) ?>">
-				      My Cellar
+				      Ma Cave
 				    </a>
 				  </li>
 				  <li>
 				    <a href="<?php echo $this->Html->url(array('controller' => 'compte', 'action' => 'stats')) ?>">
-				      Stats
+				      Statistiques
 				    </a>
 				  </li>
 				  <li class="divider"></li>
 				  <li>
 				    <a href="<?php echo $this->Html->url(array('controller' => 'users', 'action' => 'logout')) ?>">
-				      Logout
+				      Déconnexion
 				    </a>
 				  </li>
 				  
@@ -116,7 +116,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 		<div id="footer">
 			&copy; La bonne cave 2014 • 
 			<a href="<?php echo $this->Html->url(array('controller' => 'home', 'action' => 'contact')) ?>">Contact</a> • 
-			<a href="<?php echo $this->Html->url(array('controller' => 'home', 'action' => 'about')) ?>">about</a>
+			<a href="<?php echo $this->Html->url(array('controller' => 'home', 'action' => 'about')) ?>">A propos</a>
 		</div>
 	</div>
 	<?php echo $this->Html->script('jquery.min'); ?>
