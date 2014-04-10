@@ -18,7 +18,7 @@ margin: -2px auto 0 auto;"><?= $event['Event']['date']->format('M') ?></span><br
 font-weight: 500;
 margin: -2px auto -6px auto;"><?= $event['Event']['date']->format('d') ?></span>
 		</div>
-		<h2><?= $event['Event']['name'] ?><small style=""> par Moïse</small></h2>
+		<h2><?= $event['Event']['name'] ?><small style=""> par <a href="<?= $this->Html->url(array('controller' => 'users', 'action' => 'feeds', 'pseudo' => 'qdeneuve')) ?>">qdeneuve</a></small></h2>
 		<br />
 
 		<div class="btn-group">

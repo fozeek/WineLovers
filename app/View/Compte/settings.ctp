@@ -1,3 +1,1 @@
-<div class="table-responsive">
-  
-</div>
+<div class="alert alert-warning">Bientôt...</div>

@@ -11,18 +11,13 @@
 
 
 	<div class="col-md-8">
-		<a href="<?php echo $this->Html->url(array('controller' => 'wines', 'action' => 'index')) ?>"><h3>Découvrez des vins</h3></a>
+		<h3>Découvrez des vins<small class="pull-right" style="margin-top: 8px;"><a href="<?php echo $this->Html->url(array('controller' => 'wines', 'action' => 'index')) ?>">Voir tous</a></small></h3>
 		<div class="row">
 		  <?php foreach($wines as $wine) : ?>
-		    <?= $this->element('cards/wine', ['wine' => $wine, 'size' => 4]) ?>
+		    <?= $this->element('cards/wine', ['wine' => $wine, 'size' => 6]) ?>
 		  <?php endforeach ?>
 		</div>
-		<a href="<?php echo $this->Html->url(array('controller' => 'users', 'action' => 'index')) ?>"><h3>Rencontrez des amis</h3></a>
-		<div class="row">
-		  <?php foreach($users as $user) : ?>
-		    <?= $this->element('cards/user', ['user' => $user, 'size' => 4]) ?>
-		  <?php endforeach ?>
-		</div>
+
 	</div>
 	<div class="col-md-4">
 		<h3>Evênements<small class="pull-right" style="margin-top: 8px;"><a href="<?php echo $this->Html->url(array('controller' => 'events', 'action' => 'index')) ?>">Voir tous</a></small></h3>
@@ -34,9 +29,22 @@
 
 			<a href="<?= $this->Html->url(array('controller' => 'events', 'action' => 'feeds', 'name' => $event['Event']['slug'])) ?>"><h4 style="display: block;padding-top: 5px;margin-top: 0px;"><?= $event['Event']['name'] ?></a>
 			<br />
-			<small class="pull-right" style="margin-top: 5px;"> 598 Invités</a></small><small> par <a href="<?= $this->Html->url(array('controller' => 'users', 'action' => 'feeds', 'pseudo' => 1)) ?>">qdeneuve</a></small></h4>
+			<small class="pull-right" style="margin-top: 5px;"> 598 Invités</a></small><small> par <a href="<?= $this->Html->url(array('controller' => 'users', 'action' => 'feeds', 'pseudo' => 'qdeneuve')) ?>">qdeneuve</a></small></h4>
 			<div style="clear: both;height: 5px;"></div>
 		<?php endforeach ?>
+	</div>
+
+</div>
+<div class="row">
+
+
+	<div class="col-md-12">
+		<h3>Rencontrez des amis<small class="pull-right" style="margin-top: 8px;"><a href="<?php echo $this->Html->url(array('controller' => 'users', 'action' => 'index')) ?>">Voir tous</a></small></h3>
+		<div class="row">
+		  <?php foreach($users as $user) : ?>
+		    <?= $this->element('cards/user', ['user' => $user, 'size' => 3]) ?>
+		  <?php endforeach ?>
+		</div>
 	</div>
 
 </div>

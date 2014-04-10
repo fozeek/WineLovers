@@ -34,7 +34,7 @@ class EventsController extends AppController {
  *
  * @var array
  */
-	public $uses = array();
+	public $uses = array('Event', 'User');
 
 /**
  * Displays a view
@@ -67,8 +67,9 @@ class EventsController extends AppController {
 	}
 
 	public function guests() {
+		$users = $this->User->find('all', array('limit' => 8));
 		$event = $this->Event->findBySlug($this->request->params['name']);
-		$this->set(compact('event'));
+		$this->set(compact('event', 'users'));
 		$this->render('/events/guests');
 		
 	}

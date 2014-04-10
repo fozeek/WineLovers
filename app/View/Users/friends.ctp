@@ -7,19 +7,19 @@
   <div class="input-group-btn">
     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Filters <span class="caret"></span></button>
     <ul class="dropdown-menu pull-right">
-      <li><a href="#">Mutual friends</a></li>
-      <li><a href="#">Recents add</a></li>
-      <li><a href="#">Remove all Filters</a></li>
+      <li><a href="#">Amis en commun</a></li>
+      <li><a href="#">Ajouter récemment</a></li>
+      <li><a href="#">Enlever les filtres</a></li>
     </ul>
   </div><!-- /btn-group -->
 </div><!-- /input-group -->
 <br />
 
 <div class="row">
-  <?php for($cpt = 0;$cpt < 10;$cpt++) : ?>
+  <?php foreach($friends as $friend) : ?>
     <?= $this->element('cards/user', [
-    	'user' => ['User' => ['pseudo' => 'Pseudo', 'firstname' => 'Ami', 'lastname' => $cpt, 'description' => 'Description']],
+    	'user' => $friend,
     	'size' => 4
     ]) ?>
-  <?php endfor ?>
+  <?php endforeach ?>
 </div>

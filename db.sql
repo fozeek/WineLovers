@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client: localhost
--- Généré le: Jeu 10 Avril 2014 à 11:06
+-- Généré le: Jeu 10 Avril 2014 à 15:31
 -- Version du serveur: 5.5.33
 -- Version de PHP: 5.5.3
 
@@ -67,22 +67,28 @@ CREATE TABLE `events` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `created` datetime NOT NULL,
   `updated` datetime NOT NULL,
-  `name` varchar(200) NOT NULL,
+  `name` varchar(200) CHARACTER SET utf8 NOT NULL,
   `slug` varchar(200) NOT NULL,
   `date` datetime NOT NULL,
   `description` varchar(500) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
 
 --
 -- Contenu de la table `events`
 --
 
 INSERT INTO `events` (`id`, `created`, `updated`, `name`, `slug`, `date`, `description`) VALUES
-(1, '2014-04-08 00:00:00', '2014-04-09 00:00:00', ' MISS LATINA @ MIXCLUB  | DJ DIMS', 'Pouet', '2014-04-23 00:00:00', 'Ça va ?'),
-(2, '2014-04-18 00:00:00', '2014-04-25 00:00:00', 'Go go go !', 'Go-go-go', '2014-04-22 00:00:00', 'Coucou'),
+(1, '2014-04-08 00:00:00', '2014-04-09 00:00:00', 'La foire aux vins', 'La-foire-aux-vins', '2014-04-23 00:00:00', 'Une foire comme on les aime !'),
+(2, '2014-04-18 00:00:00', '2014-04-25 00:00:00', 'Degustation de Chateau-Lapompe', 'Degustation-de-Chateau-Lapompe', '2014-04-22 00:00:00', 'Venez nombreux'),
 (3, '2014-04-09 00:00:00', '2014-04-17 00:00:00', 'Viens boire un vin', 'Viens-boire-un-vin', '2014-04-17 00:00:00', 'Amenez vos vins !'),
-(4, '2014-04-18 00:00:00', '2014-04-12 00:00:00', 'Le salon du vin', 'Le-salon-du-vin', '2014-04-30 00:00:00', 'Venez au salon du vin !');
+(4, '2014-04-18 00:00:00', '2014-04-12 00:00:00', 'Le salon du vin', 'Le-salon-du-vin', '2014-04-30 00:00:00', 'Venez au salon du vin !'),
+(5, '2014-04-09 00:00:00', '2014-04-09 00:00:00', 'La traditionnelle St Vincent', 'La-traditionnelle-St-Vincent', '2014-04-26 00:00:00', 'La traditionnelle St Vincent'),
+(6, '2014-04-09 00:00:00', '2014-04-17 00:00:00', 'La Route des Vins', 'La-Route-des-Vins', '2014-04-24 00:00:00', 'La Route des Vins'),
+(7, '2014-04-08 00:00:00', '2014-04-25 00:00:00', 'Vinitech', 'Vinitech', '2014-04-30 00:00:00', 'Vinitech'),
+(8, '2014-04-07 00:00:00', '2014-04-09 00:00:00', 'Jazz and Wine', 'Jazz-and-Wine', '2014-04-04 00:00:00', 'Jazz and Win'),
+(9, '2014-04-08 00:00:00', '2014-04-02 00:00:00', 'Week-end des Grands Crus', 'Week-end-des-Grands-Crus', '2014-04-08 00:00:00', 'Week-end des Grands Crus'),
+(10, '2014-04-08 00:00:00', '2014-04-01 00:00:00', 'Salon des vins des vignerons indépendants', 'Salon-des-vins-des-vignerons-indépendants', '2014-04-08 00:00:00', 'Salon des vins des vignerons indépendants');
 
 -- --------------------------------------------------------
 
@@ -254,13 +260,18 @@ CREATE TABLE `wines` (
   `name` varchar(200) NOT NULL,
   `slug` varchar(200) NOT NULL,
   `description` varchar(500) NOT NULL,
+  `image` varchar(500) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
 
 --
 -- Contenu de la table `wines`
 --
 
-INSERT INTO `wines` (`id`, `created`, `updated`, `name`, `slug`, `description`) VALUES
-(1, '2014-04-09 00:00:00', '2014-04-10 00:00:00', 'Un vin', 'Un-Vin', 'De bourgeois !'),
-(2, '2014-04-25 00:00:00', '2014-04-30 00:00:00', 'Deux vin', 'Deux-Vin', 'Qui pique !');
+INSERT INTO `wines` (`id`, `created`, `updated`, `name`, `slug`, `description`, `image`) VALUES
+(1, '2014-04-09 00:00:00', '2014-04-10 00:00:00', 'Santa Rita Reserva Sauvignon Blanc', 'Santa-Rita-Reserva-Sauvignon-Blanc', 'Santa Rita Reserva Sauvignon Blanc', 'http://static.wine-searcher.net/images/labels/29/14/santa-rita-reserva-sauvignon-blanc-casablanca-valley-chile-10122914.jpg'),
+(2, '2014-04-25 00:00:00', '2014-04-30 00:00:00', 'Penfolds Koonunga Hill Chardonnay', 'Penfolds-Koonunga-Hill-Chardonnay', 'Penfolds Koonunga Hill Chardonnay', 'http://static.wine-searcher.net/images/labels/54/76/penfolds-koonunga-hill-chardonnay-south-australia-10365476.jpg'),
+(3, '2014-04-15 00:00:00', '2014-04-17 00:00:00', 'Domaine Leflaive Montrachet Grand Cru', 'Domaine-Leflaive-Montrachet-Grand-Cru', 'Domaine Leflaive Montrachet Grand Cru', 'http://static.wine-searcher.net/images/labels/05/83/domaine-leflaive-montrachet-grand-cru-cote-de-beaune-france-10580583.jpg'),
+(4, '2014-04-16 00:00:00', '2014-04-11 00:00:00', 'Petrus', 'Petrus', 'Pomerol, France', 'http://static.wine-searcher.net/images/labels/71/27/petrus-pomerol-france-10187127.jpg'),
+(5, '2014-04-10 00:00:00', '2014-04-10 00:00:00', 'Chateau Margaux', 'Chateau-Margaux', 'Margaux, France', 'http://static.wine-searcher.net/images/labels/47/28/chateau-margaux-margaux-france-10474728.jpg'),
+(6, '2014-04-10 00:00:00', '2014-04-11 00:00:00', 'Vignobles Andre Lurton Chateau de Cruzeau', 'Vignobles-Andre-Lurton-Chateau-de-Cruzeau', 'Pessac-Leognan, France', 'http://static.wine-searcher.net/images/labels/10/89/vignobles-andre-lurton-chateau-de-cruzeau-pessac-leognan-france-10311089.jpg');
