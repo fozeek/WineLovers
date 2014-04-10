@@ -11,7 +11,17 @@
 
 	<div class="col-md-8">
 		<a href="<?php echo $this->Html->url(array('controller' => 'wines', 'action' => 'index')) ?>"><h3>Discover some Wines</h3></a>
+		<div class="row">
+		  <?php foreach($wines as $wine) : ?>
+		    <?= $this->element('cards/wine', ['wine' => $wine, 'size' => 4]) ?>
+		  <?php endforeach ?>
+		</div>
 		<a href="<?php echo $this->Html->url(array('controller' => 'users', 'action' => 'index')) ?>"><h3>Meet some Friends</h3></a>
+		<div class="row">
+		  <?php foreach($users as $user) : ?>
+		    <?= $this->element('cards/user', ['user' => $user, 'size' => 4]) ?>
+		  <?php endforeach ?>
+		</div>
 	</div>
 	<div class="col-md-4">
 		<h3>Featured Events<small class="pull-right" style="margin-top: 8px;"><a href="<?php echo $this->Html->url(array('controller' => 'events', 'action' => 'index')) ?>">All events</a></small></h3>
