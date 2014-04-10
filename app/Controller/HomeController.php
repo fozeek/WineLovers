@@ -34,7 +34,7 @@ class HomeController extends AppController {
  *
  * @var array
  */
-	public $uses = array('Event');
+	public $uses = array('Event', 'User', 'Wine');
 
 /**
  * Displays a view
@@ -52,7 +52,7 @@ class HomeController extends AppController {
 	
 	public function index() {
 
-		$friends = $this->Friend->find('all', array('limit' => 3));
+		$wines = $this->Wine->find('all', array('limit' => 3));
 		$users = $this->User->find('all', array('limit' => 3));
 		$events = $this->Event->find('all', array('limit' => 3));
 		$this->set(compact('events', 'users', 'wines'));
