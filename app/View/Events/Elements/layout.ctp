@@ -2,9 +2,9 @@
 	<div class="col-md-3">	
 		<img src="http://placekitten.com/500/500" class="img-responsive img-rounded" alt="Responsive image" style="margin-bottom: 15px;"/>
 		<ul class="nav nav-pills nav-stacked">
-		  <li class="<?= $this->fetch('active.feeds') ?>"><a href="<?php echo $this->Html->url(array('controller' => 'events', 'action' => 'feeds', 'name' => $event['Event']['slug'])) ?>">Feeds</a></li>
-		  <li class="<?= $this->fetch('active.guests') ?>"><a href="<?php echo $this->Html->url(array('controller' => 'events', 'action' => 'guests', 'name' => $event['Event']['slug'])) ?>">Guests</a></li>
-		  <li class="<?= $this->fetch('active.about') ?>"><a href="<?php echo $this->Html->url(array('controller' => 'events', 'action' => 'about', 'name' => $event['Event']['slug'])) ?>">About</a></li>
+		  <li class="<?= $this->fetch('active.feeds') ?>"><a href="<?php echo $this->Html->url(array('controller' => 'events', 'action' => 'feeds', 'name' => $event['Event']['slug'])) ?>">Actualités</a></li>
+		  <li class="<?= $this->fetch('active.guests') ?>"><a href="<?php echo $this->Html->url(array('controller' => 'events', 'action' => 'guests', 'name' => $event['Event']['slug'])) ?>">Invités</a></li>
+		  <li class="<?= $this->fetch('active.about') ?>"><a href="<?php echo $this->Html->url(array('controller' => 'events', 'action' => 'about', 'name' => $event['Event']['slug'])) ?>">À propos</a></li>
 		  <li class="<?= $this->fetch('active.likes') ?>"><a href="<?php echo $this->Html->url(array('controller' => 'events', 'action' => 'likes', 'name' => $event['Event']['slug'])) ?>">Likes</a></li>
 		  <li class="<?= $this->fetch('active.medias') ?>"><a href="<?php echo $this->Html->url(array('controller' => 'events', 'action' => 'medias', 'name' => $event['Event']['slug'])) ?>">Medias</a></li>
 		</ul>
@@ -22,8 +22,8 @@ margin: -2px auto -6px auto;"><?= $event['Event']['date']->format('d') ?></span>
 		<br />
 
 		<div class="btn-group">
-		  <button type="button" class="btn btn-default add-as-friend"><span class="glyphicon glyphicon-ok hidden"></span> <span data-original="Come" data-replace="I'm comin'" data-over="I don't want to go there !" data-remove="Removed from the list">Come</span></button>
-		  <button type="button" class="btn btn-default">Propose to friends</button>
+		  <button type="button" class="btn btn-default add-as-friend"><span class="glyphicon glyphicon-ok hidden"></span> <span data-original="Venir" data-replace="Je viens" data-over="Je ne veux plus venir" data-remove="Inscription annulée">Venir</span></button>
+		  <button type="button" class="btn btn-default">Proposer à un ami</button>
 
 		  <div class="btn-group">
 		    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">

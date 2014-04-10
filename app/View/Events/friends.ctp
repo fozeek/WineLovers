@@ -7,9 +7,9 @@
   <div class="input-group-btn">
     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Filters <span class="caret"></span></button>
     <ul class="dropdown-menu pull-right">
-      <li><a href="#">Mutual friends</a></li>
-      <li><a href="#">Recents add</a></li>
-      <li><a href="#">Remove all Filters</a></li>
+      <li><a href="#">Amis communs</a></li>
+      <li><a href="#">Ajouts récents</a></li>
+      <li><a href="#">Supprimer les filtres</a></li>
     </ul>
   </div><!-- /btn-group -->
 </div><!-- /input-group -->

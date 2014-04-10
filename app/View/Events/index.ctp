@@ -1,5 +1,5 @@
 <div class="page-header">
-  <h1>Events <small>Find some events</small></h1>
+  <h1>Events <small>Trouver un évênement</small></h1>
 </div>
 
 <div class="row">

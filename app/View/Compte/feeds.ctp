@@ -1,6 +1,6 @@
 
 <div class="page-header">
-  <h1>Feeds <small>Subtext for header</small></h1>
+  <h1>Actualités</h1>
 </div>
 
 <?php for ($cpt=0;$cpt<8;$cpt++): ?>

@@ -1,9 +1,9 @@
 <div class="btn-group pull-right">
-  <button type="button" class="btn btn-default"><span>Add a wine</span></button>
-  <button type="button" class="btn btn-default">Share</button>
+  <button type="button" class="btn btn-default"><span>Ajouter un vin</span></button>
+  <button type="button" class="btn btn-default">Partager</button>
 </div>
 <h2>
-	My Whishlist
+	Ma Whishlist
 </h2>
 <div class="clearfix"></div>
 
