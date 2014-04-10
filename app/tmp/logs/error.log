@@ -5904,6 +5904,17 @@ Stack Trace:
 #1 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(CompteController), Object(CakeRequest), Object(CakeResponse))
 #2 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
+<<<<<<< HEAD
+2014-04-10 11:03:04 Error: [MissingControllerException] Controller class TestWpController could not be found.
+Exception Attributes: array (
+  'class' => 'TestWpController',
+  'plugin' => NULL,
+)
+Request URL: /Test_wp/wordpress%202/wp-admin/admin-ajax.php
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+=======
 2014-04-10 11:01:20 Error: Fatal Error (1): Call to a member function find() on a non-object in [/Users/qdeneuve/Projets/WineLovers/app/Controller/HomeController.php, line 55]
 2014-04-10 11:01:20 Error: [FatalErrorException] Call to a member function find() on a non-object
 Request URL: /
@@ -5934,6 +5945,7 @@ Stack Trace:
 #3 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Core/App.php(902): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+<<<<<<< HEAD
 2014-04-10 11:12:06 Error: [MissingControllerException] Controller class JsController could not be found.
 Exception Attributes: array (
   'class' => 'JsController',
@@ -5970,3 +5982,6 @@ Request URL: /js/jquery-2.0.3.min.map
 Stack Trace:
 #0 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+=======
+>>>>>>> FETCH_HEAD
+>>>>>>> FETCH_HEAD
