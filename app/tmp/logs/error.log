@@ -5893,3 +5893,14 @@ Request URL: /js/jquery-2.0.3.min.map
 Stack Trace:
 #0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2014-04-10 10:50:48 Error: [MissingActionException] Action CompteController::stats() could not be found.
+Exception Attributes: array (
+  'controller' => 'CompteController',
+  'action' => 'stats',
+)
+Request URL: /compte/stats
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(CompteController), Object(CakeRequest), Object(CakeResponse))
+#2 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}

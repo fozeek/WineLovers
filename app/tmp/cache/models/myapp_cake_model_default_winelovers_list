@@ -1,2 +1,7 @@
+<<<<<<< HEAD
 1397120287
 a:3:{i:0;s:6:"events";i:1;s:5:"users";i:2;s:5:"wines";}
+=======
+1397120083
+a:15:{i:0;s:11:"cellar_wine";i:1;s:7:"cellars";i:2;s:8:"comments";i:3;s:10:"event_post";i:4;s:10:"event_user";i:5;s:10:"event_wine";i:6;s:6:"events";i:7;s:9:"post_wine";i:8;s:5:"posts";i:9;s:9:"user_post";i:10;s:9:"user_user";i:11;s:5:"users";i:12;s:14:"whishlist_wine";i:13;s:10:"whishlists";i:14;s:5:"wines";}
+>>>>>>> FETCH_HEAD

@@ -105,9 +105,7 @@ class UsersController extends AppController {
 	        } else {
 	            $this->Session->setFlash('Username ou password est incorrect');
 	        }
-
 		}
-
 		$this->render('/users/login');	
 	}
 
