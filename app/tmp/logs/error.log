@@ -5904,3 +5904,12 @@ Stack Trace:
 #1 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(CompteController), Object(CakeRequest), Object(CakeResponse))
 #2 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
+2014-04-10 11:03:04 Error: [MissingControllerException] Controller class TestWpController could not be found.
+Exception Attributes: array (
+  'class' => 'TestWpController',
+  'plugin' => NULL,
+)
+Request URL: /Test_wp/wordpress%202/wp-admin/admin-ajax.php
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
