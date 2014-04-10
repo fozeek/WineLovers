@@ -9,6 +9,36 @@ class User extends AppModel {
 	    'name' => "CONCAT(User.firstname, ' ', User.lastname)"
 	);
 
+	public $validate = array(
+        'pseudo' => array(
+            'alphaNumeric' => array(
+                'rule'     => 'alphaNumeric',
+                'required' => true,
+                'message'  => 'Saisir uniquement des chiffres ou des lettres.'
+            ),
+            'size' => array(
+                'rule'    => array('between', 6, 200),
+                'message' => '6 caractères minimum.'
+            )
+        ),
+        'password' => array(
+            'rule'    => array('between', 5, 15),
+            'message' => 'Saisir entre 5 et 15 caractères.'
+        ),
+        'email' => array(
+            'rule'      => '/^[a-zA-Z0-9\._-]+@[a-zA-Z0-9\.-]{2,}[\.][a-zA-Z]{2,}$/i',
+            'message'   => 'Saisir une adresse email valide.'
+        ),
+        'zip'   => array(
+            'sizemax'   => array(
+                'rule'  => array('maxLength', 5)
+            ),
+            'sizemin'   => array(
+                'rule'  => array('minLength', 5)
+            )
+        )
+    );
+
 	public function afterFind($results, $primary = false) {
 		foreach ($results as $key => $result) {
 			$created = new DateTime($results[$key][$this->alias]['created']);
