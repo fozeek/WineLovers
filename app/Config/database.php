@@ -66,7 +66,7 @@ class DATABASE_CONFIG {
 		'persistent' => false,
 		'host' => 'localhost',
 		'login' => 'root',
-		'password' => 'root',
+		'password' => '',
 		'database' => 'winelovers',
 		'prefix' => '',
 		//'encoding' => 'utf8',
