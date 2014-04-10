@@ -34,7 +34,7 @@ class CompteController extends AppController {
  *
  * @var array
  */
-	public $uses = array();
+	public $uses = array('User', 'Wine');
 
 /**
  * Displays a view
@@ -68,14 +68,22 @@ class CompteController extends AppController {
 		
 	}
 
-	public function cellar() {
+	public function stats() {
 
+		$this->render('/compte/stats');
+		
+	}
+
+	public function cellar() {
+		$wines = $this->Wine->find('all', array('limit' => 10));
+		$this->set(compact('wines'));
 		$this->render('/compte/cellar');
 		
 	}
 
 	public function whishlist() {
-
+		$wines = $this->Wine->find('all', array('limit' => 5));
+		$this->set(compact('wines'));
 		$this->render('/compte/whishlist');
 		
 	}

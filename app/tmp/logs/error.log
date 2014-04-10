@@ -52,3 +52,232 @@ Stack Trace:
 #3 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Core/App.php(902): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2014-04-10 14:31:20 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery-2.0.3.min.map
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-10 14:31:38 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery-2.0.3.min.map
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-10 14:31:55 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery-2.0.3.min.map
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-10 14:32:10 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery-2.0.3.min.map
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-10 14:32:43 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery-2.0.3.min.map
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-10 14:32:54 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery-2.0.3.min.map
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-10 14:33:24 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery-2.0.3.min.map
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-10 14:33:39 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery-2.0.3.min.map
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-10 14:42:36 Error: [MissingControllerException] Controller class UserController could not be found.
+Exception Attributes: array (
+  'class' => 'UserController',
+  'plugin' => NULL,
+)
+Request URL: /user/qdeneuve/%3Cpre%20class=
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-10 14:43:18 Error: [MissingControllerException] Controller class UserController could not be found.
+Exception Attributes: array (
+  'class' => 'UserController',
+  'plugin' => NULL,
+)
+Request URL: /user/qdeneuve/%3Cpre%20class=
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-10 14:45:36 Error: Fatal Error (1): Call to a member function find() on a non-object in [/Users/qdeneuve/Projets/WineLovers/app/Controller/UsersController.php, line 75]
+2014-04-10 14:45:36 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /user/qdeneuve/cellar
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Users/qdeneuve...', 75)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Users/qdeneuve...', 75, Array)
+#2 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Users/qdeneuve...', 75, Array)
+#3 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-04-10 14:45:50 Error: Fatal Error (1): Call to a member function findBySlug() on a non-object in [/Users/qdeneuve/Projets/WineLovers/app/Controller/UsersController.php, line 74]
+2014-04-10 14:45:50 Error: [FatalErrorException] Call to a member function findBySlug() on a non-object
+Request URL: /user/qdeneuve/cellar
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Users/qdeneuve...', 74)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Users/qdeneuve...', 74, Array)
+#2 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Users/qdeneuve...', 74, Array)
+#3 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-04-10 14:47:52 Error: Fatal Error (4): syntax error, unexpected 'endfor' (T_ENDFOR) in [/Users/qdeneuve/Projets/WineLovers/app/View/users/friends.ctp, line 24]
+2014-04-10 14:47:52 Error: [FatalErrorException] syntax error, unexpected 'endfor' (T_ENDFOR)
+Request URL: /user/qdeneuve/friends
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Users/qdeneuve...', 24)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Users/qdeneuve...', 24, Array)
+#2 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Users/qdeneuve...', 24, Array)
+#3 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-04-10 15:09:40 Error: [MissingControllerException] Controller class MeController could not be found.
+Exception Attributes: array (
+  'class' => 'MeController',
+  'plugin' => NULL,
+)
+Request URL: /me/%3Cpre%20class=
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-10 15:11:21 Error: Fatal Error (4): syntax error, unexpected '$event' (T_VARIABLE) in [/Users/qdeneuve/Projets/WineLovers/app/Controller/EventsController.php, line 71]
+2014-04-10 15:11:21 Error: [FatalErrorException] syntax error, unexpected '$event' (T_VARIABLE)
+Request URL: /event/La-foire-aux-vins/guests
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Users/qdeneuve...', 71)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Users/qdeneuve...', 71, Array)
+#2 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Users/qdeneuve...', 71, Array)
+#3 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-04-10 15:15:19 Error: [MissingControllerException] Controller class MeController could not be found.
+Exception Attributes: array (
+  'class' => 'MeController',
+  'plugin' => NULL,
+)
+Request URL: /me/%3Cpre%20class=
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-10 15:18:26 Error: [MissingControllerException] Controller class MeController could not be found.
+Exception Attributes: array (
+  'class' => 'MeController',
+  'plugin' => NULL,
+)
+Request URL: /me/%3Cpre%20class=
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-10 15:19:08 Error: Fatal Error (1): Call to a member function find() on a non-object in [/Users/qdeneuve/Projets/WineLovers/app/Controller/CompteController.php, line 79]
+2014-04-10 15:19:08 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /me/whishlist
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Users/qdeneuve...', 79)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Users/qdeneuve...', 79, Array)
+#2 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Users/qdeneuve...', 79, Array)
+#3 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-04-10 15:19:54 Error: [MissingActionException] Action CompteController::stats() could not be found.
+Exception Attributes: array (
+  'controller' => 'CompteController',
+  'action' => 'stats',
+)
+Request URL: /compte/stats
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(CompteController), Object(CakeRequest), Object(CakeResponse))
+#2 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-04-10 15:22:20 Error: [MissingViewException] View file "/Users/qdeneuve/Projets/WineLovers/app/View/compte/stats.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/Users/qdeneuve/Projets/WineLovers/app/View/compte/stats.ctp',
+)
+Request URL: /compte/stats
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/lib/Cake/View/View.php(457): View->_getViewFileName('/compte/stats')
+#1 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Controller/Controller.php(952): View->render('/compte/stats', NULL)
+#2 /Users/qdeneuve/Projets/WineLovers/app/Controller/CompteController.php(73): Controller->render('/compte/stats')
+#3 [internal function]: CompteController->stats()
+#4 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(CompteController), Array)
+#5 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#6 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(CompteController), Object(CakeRequest), Object(CakeResponse))
+#7 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2014-04-10 15:25:21 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery-2.0.3.min.map
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-10 15:25:56 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery-2.0.3.min.map
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-10 15:26:32 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery-2.0.3.min.map
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-10 15:26:46 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery-2.0.3.min.map
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

@@ -1,1 +1,1 @@
-friends page
+<div class="alert alert-warning">Bientôt...</div>

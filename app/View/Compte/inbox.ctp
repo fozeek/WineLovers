@@ -1,1 +1,1 @@
-inbox.ctp
+<div class="alert alert-warning">Bientôt...</div>

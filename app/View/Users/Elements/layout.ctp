@@ -28,10 +28,10 @@
 				      Send a Message
 				    </a>
 				  </li>
-				  <li><a href="#">Propose a Wine</a></li>
-		      	  <li><a href="#">Propose an Event</a></li>
+				  <li><a href="#">Proposer un Vin</a></li>
+		      	  <li><a href="#">Proposer un Évènement</a></li>
 		    	  <li class="divider"></li>
-		      	  <li><a href="#">Report</a></li>
+		      	  <li><a href="#">Signaler</a></li>
 			    </ul>
 			  </li>
 			</ul>
@@ -45,8 +45,8 @@
 			<?= $user['User']['description'] ?>
 		</p>
 		<div class="btn-group">
-		  <button type="button" class="btn btn-default add-as-friend"><span class="glyphicon glyphicon-ok hidden"></span> <span data-original="Add as friend" data-replace="Friend" data-over="Remove as friend" data-remove="Friend removed">Add as friend</span></button>
-		  <button type="button" class="btn btn-default">Send a message</button>
+		  <button type="button" class="btn btn-default add-as-friend"><span class="glyphicon glyphicon-ok hidden"></span> <span data-original="Ajouter comme ami" data-replace="Ami" data-over="Retirer de ma liste d'ami" data-remove="Ami retiré de votre liste">Ajouter comme ami</span></button>
+		  <button type="button" class="btn btn-default">Envoyer un message</button>
 
 		  <div class="btn-group">
 		    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
@@ -54,10 +54,10 @@
 		      <span class="caret"></span>
 		    </button>
 		    <ul class="dropdown-menu">
-		      <li><a href="#">Propose a Wine</a></li>
-		      <li><a href="#">Propose an Event</a></li>
+		      <li><a href="#">Proposer un Vin</a></li>
+		      <li><a href="#">Proposer un Évènement</a></li>
 		    	<li class="divider"></li>
-		      <li><a href="#">Report</a></li>
+		      <li><a href="#">Signaler</a></li>
 		    </ul>
 		  </div>
 		</div>

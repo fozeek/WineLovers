@@ -34,7 +34,7 @@ class UsersController extends AppController {
  *
  * @var array
  */
-	public $uses = array();
+	public $uses = array('Wine', 'User');
 
 	public $scaffold;
 
@@ -72,13 +72,15 @@ class UsersController extends AppController {
 
 	public function cellar() {
 		$user = $this->User->findBySlug($this->request->params['pseudo']);
-		$this->set(compact('user'));
+		$wines = $this->Wine->find('all', array('limit' => 4));
+		$this->set(compact('user', 'wines'));
 		$this->render('/users/cellar');
 	}
 
 	public function friends() {
 		$user = $this->User->findBySlug($this->request->params['pseudo']);
-		$this->set(compact('user'));
+		$friends = $this->User->find('all', array('limit' => 6));
+		$this->set(compact('user', 'friends'));
 		$this->render('/users/friends');
 	}
 

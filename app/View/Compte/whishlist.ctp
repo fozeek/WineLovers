@@ -8,7 +8,7 @@
 <div class="clearfix"></div>
 
 <div class="row">
-  <?php for($cpt = 0;$cpt<10;$cpt++) : ?>
-  	<?= $this->element('cards/wine') ?>
-  <?php endfor ?>
+  <?php foreach($wines as $wine) : ?>
+  	<?= $this->element('cards/wine', array('wine' => $wine, 'size' => 4)) ?>
+  <?php endforeach ?>
 </div>
