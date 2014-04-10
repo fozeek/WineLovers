@@ -1,0 +1,54 @@
+2014-04-10 11:37:06 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[28000] [1045] Access denied for user \'root\'@\'localhost\' (using password: NO)',
+  'enabled' => true,
+)
+Request URL: /
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Model/Datasource/DboSource.php(260): Mysql->connect()
+#1 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Model/ConnectionManager.php(105): DboSource->__construct(Array)
+#2 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Model/Model.php(3471): ConnectionManager::getDataSource('default')
+#3 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Model/Model.php(1126): Model->setDataSource('default')
+#4 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Model/Model.php(3493): Model->setSource('wines')
+#5 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Model/Model.php(2897): Model->getDataSource()
+#6 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Model/Model.php(2869): Model->_readDataSource('all', Array)
+#7 /Users/qdeneuve/Projets/WineLovers/app/Controller/HomeController.php(55): Model->find('all', Array)
+#8 [internal function]: HomeController->index()
+#9 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(HomeController), Array)
+#10 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#11 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(HomeController), Object(CakeRequest), Object(CakeResponse))
+#12 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-04-10 11:37:08 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[28000] [1045] Access denied for user \'root\'@\'localhost\' (using password: NO)',
+  'enabled' => true,
+)
+Request URL: /
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Model/Datasource/DboSource.php(260): Mysql->connect()
+#1 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Model/ConnectionManager.php(105): DboSource->__construct(Array)
+#2 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Model/Model.php(3471): ConnectionManager::getDataSource('default')
+#3 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Model/Model.php(1126): Model->setDataSource('default')
+#4 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Model/Model.php(3493): Model->setSource('wines')
+#5 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Model/Model.php(2897): Model->getDataSource()
+#6 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Model/Model.php(2869): Model->_readDataSource('all', Array)
+#7 /Users/qdeneuve/Projets/WineLovers/app/Controller/HomeController.php(55): Model->find('all', Array)
+#8 [internal function]: HomeController->index()
+#9 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(HomeController), Array)
+#10 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#11 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(HomeController), Object(CakeRequest), Object(CakeResponse))
+#12 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-04-10 11:39:47 Error: Fatal Error (64): Cannot use isset() on the result of an expression (you can use "null !== expression" instead) in [/Users/qdeneuve/Projets/WineLovers/app/View/home/index.ctp, line 4]
+2014-04-10 11:39:47 Error: [FatalErrorException] Cannot use isset() on the result of an expression (you can use "null !== expression" instead)
+Request URL: /
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(64, 'Cannot use isse...', '/Users/qdeneuve...', 4)
+#1 [internal function]: ErrorHandler::handleError(64, 'Cannot use isse...', '/Users/qdeneuve...', 4, Array)
+#2 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 64, 'Cannot use isse...', '/Users/qdeneuve...', 4, Array)
+#3 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}

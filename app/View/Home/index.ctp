@@ -1,9 +1,10 @@
 <div class="jumbotron" style="background: url(img/bg.jpeg);color: white;text-shadow: 0px 1px 1px black;">
   <h1>Bienvenue sur La Bonne Cave</h1>
   <p>Come for a Wine !</p>
-
-  <a class="btn btn-default" href="<?php echo $this->Html->url(array('controller' => 'users', 'action' => 'login')) ?>" role="button">Connexion</a>
-  <a class="btn btn-default" href="<?php echo $this->Html->url(array('controller' => 'users', 'action' => 'signin')) ?>" role="button">Inscription</a>
+  <?php if(!isset($auth)) : ?>
+  	<a class="btn btn-default" href="<?php echo $this->Html->url(array('controller' => 'users', 'action' => 'login')) ?>" role="button">Connexion</a>
+  	<a class="btn btn-default" href="<?php echo $this->Html->url(array('controller' => 'users', 'action' => 'signin')) ?>" role="button">Inscription</a>
+  <?php endif ?>
 </div>
 
 <div class="row">
