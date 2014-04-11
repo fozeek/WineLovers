@@ -1,4 +1,12 @@
-<?= $this->Form->create('User', array('action' => 'signin', 'role' => 'form-horizontal')) ?>
+<?= $this->Form->create('User', array('action' => 'signin', 'role' => 'form-horizontal', 
+                  'inputDefaults' => array(
+                  'error' => array(
+                    'attributes' => array(
+                      'wrap' => 'label', 
+                      'class' => 'alert alert-danger'
+                    )
+                )))
+  ) ?>
   
   <?= $this->Form->input('pseudo', array(
       'div' => array('class' => 'form-group'), 

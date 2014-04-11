@@ -11,14 +11,9 @@ class User extends AppModel {
 
 	public $validate = array(
         'pseudo' => array(
-            'alphaNumeric' => array(
-                'rule'     => 'alphaNumeric',
-                'required' => true,
-                'message'  => 'Saisir uniquement des chiffres ou des lettres.'
-            ),
             'size' => array(
                 'rule'    => array('between', 6, 200),
-                'message' => '6 caractères minimum.'
+                'message' =>   '6 caractères minimum.'
             )
         ),
         'password' => array(
@@ -31,10 +26,12 @@ class User extends AppModel {
         ),
         'zip'   => array(
             'sizemax'   => array(
-                'rule'  => array('maxLength', 5)
+                'rule'  => array('maxLength', 5),
+                'message'   => 'Saisir un code postal valide.'
             ),
             'sizemin'   => array(
-                'rule'  => array('minLength', 5)
+                'rule'      => array('minLength', 5),
+                'message'   => 'Saisir un code postal valide.'
             )
         )
     );

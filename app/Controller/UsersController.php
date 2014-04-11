@@ -113,10 +113,16 @@ class UsersController extends AppController {
 
 	public function signin() {
 		if($this->request->is("post")){
-			$this->User->create($this->request->data);
-			$this->User->save();
+			$this->User->set($this->request->data);
 
-			$this->redirect(array('controller' => 'Home', 'action' => 'index'));
+			if($this->User->validates()){
+				$this->User->create($this->request->data);
+				$this->User->save();
+
+				$this->redirect(array('controller' => 'Home', 'action' => 'index'));
+			} else {
+
+			}
 		}
 
 		$this->render('/users/signin');
