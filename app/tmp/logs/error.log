@@ -284,3 +284,48 @@ Stack Trace:
 #0 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
 >>>>>>> FETCH_HEAD
+2014-04-10 15:38:09 Error: [MissingControllerException] Controller class <preClass=Controller could not be found.
+Exception Attributes: array (
+  'class' => '<preClass=Controller',
+  'plugin' => NULL,
+)
+Request URL: /%3Cpre%20class=
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-10 15:38:11 Error: [MissingControllerException] Controller class <preClass=Controller could not be found.
+Exception Attributes: array (
+  'class' => '<preClass=Controller',
+  'plugin' => NULL,
+)
+Request URL: /%3Cpre%20class=
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-10 15:38:17 Error: [MissingControllerException] Controller class <preClass=Controller could not be found.
+Exception Attributes: array (
+  'class' => '<preClass=Controller',
+  'plugin' => NULL,
+)
+Request URL: /%3Cpre%20class=
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-10 15:38:43 Error: [MissingControllerException] Controller class <preClass=Controller could not be found.
+Exception Attributes: array (
+  'class' => '<preClass=Controller',
+  'plugin' => NULL,
+)
+Request URL: /%3Cpre%20class=
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-10 15:38:57 Error: [MissingControllerException] Controller class <preClass=Controller could not be found.
+Exception Attributes: array (
+  'class' => '<preClass=Controller',
+  'plugin' => NULL,
+)
+Request URL: /%3Cpre%20class=
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
