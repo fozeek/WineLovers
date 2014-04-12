@@ -1,5 +1,5 @@
 <div class="page-header">
-  <h1>Users <small>Find some friends</small></h1>
+  <h1>Utilisateurs <small></small></h1>
 </div>
 
 <div class="row">

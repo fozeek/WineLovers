@@ -1,5 +1,5 @@
 <?php $this->extend('Elements/layout'); ?>
-<?php $this->assign('active.friends', 'active'); ?>
+<?php $this->assign('active.feeds', 'active'); ?>
 
 <textarea class="form-control" rows="5" style="margin-bottom: 5px;">Laissez un commentaire</textarea>
 <button type="submit" class="btn btn-default pull-right">Publier</button>
