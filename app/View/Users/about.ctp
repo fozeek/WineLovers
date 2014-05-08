@@ -21,10 +21,10 @@
 
 <div class="row">
 	<div class="col-md-6">
-		<p class="lead">A participé à <strong>8</strong> Évènements</p>
+		<p class="lead">A participé à <strong>1</strong> Évènements</p>
 	</div>
 	<div class="col-md-6">	
-		<p class="lead">A organisé <strong>3</strong> Évènements</p>
+		<p class="lead">A organisé <strong><?= $user['User']['event_count'] ?></strong> Évènements</p>
 	</div>
 </div>
 

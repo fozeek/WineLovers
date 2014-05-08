@@ -15,10 +15,7 @@
 <br />
 
 <div class="row">
-  <?php foreach($users as $user) : ?>
-    <?= $this->element('cards/user', [
-    	'user' => $user,
-    	'size' => 4
-    ]) ?>
+  <?php foreach($event['Guest'] as $user) : ?>
+    <?= $this->element('cards/user', ['user' => $user, 'size' => 3]) ?>
   <?php endforeach ?>
 </div>

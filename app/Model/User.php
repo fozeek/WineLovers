@@ -4,10 +4,30 @@ App::uses('SimplePasswordHasher', 'Controller/Component/Auth');
 
 class User extends AppModel {
 
-	public $displayField = 'name';
-	public $virtualFields = array(
-	    'name' => "CONCAT(User.firstname, ' ', User.lastname)"
-	);
+	// public $displayField = 'name';
+	// public $virtualFields = array(
+	//     'name' => "CONCAT(User.firstname, ' ', User.lastname)"
+	// );
+
+    public $hasMany = array(
+            'CreatedEvent' => array(
+                'className' => 'Event',
+                'foreignKey' => 'author_id'
+            ),
+            'R_JoinedEvent' => array('className' => 'EventRGuest'),
+            'R_LikedEvent' => array('className' => 'EventRLike'),
+        );
+
+    public $hasAndBelongsToMany = array(
+            'JoinedEvent' => array(
+                'className' => 'Event',
+                'joinTable' => 'events_joins'
+            ),
+            'LikedEvent' => array(
+                'className' => 'Event',
+                'joinTable' => 'events_likes'
+            ),
+        );
 
 	public $validate = array(
         'pseudo' => array(
@@ -37,11 +57,20 @@ class User extends AppModel {
     );
 
 	public function afterFind($results, $primary = false) {
-		foreach ($results as $key => $result) {
-			$created = new DateTime($results[$key][$this->alias]['created']);
-			$updated = new DateTime($results[$key][$this->alias]['updated']);
-			$results[$key][$this->alias]['created_print'] = $created->format('l j F Y');
-			$results[$key][$this->alias]['updated_print'] = $updated->format('l j F Y');
+        foreach ($results as $key => $result) {
+            if($primary || array_key_exists($this->alias, $result)) {
+                if(!isset($results[$key][$this->alias]['created'])) {
+                    return $results;
+                }
+                $results[$key][$this->alias]['created'] = new DateTime($results[$key][$this->alias]['created']);
+                $results[$key][$this->alias]['updated'] = new DateTime($results[$key][$this->alias]['updated']);
+                $results[$key][$this->alias]['name'] = $results[$key][$this->alias]['firstname'].' '.$results[$key][$this->alias]['lastname'];
+            }
+            else {
+                $results[$key]['created'] = new DateTime($results[$key]['created']);
+                $results[$key]['updated'] = new DateTime($results[$key]['updated']);
+                $results[$key]['name'] = $results[$key]['firstname'].' '.$results[$key]['lastname'];
+            }
 		}
 		return $results;
 	}

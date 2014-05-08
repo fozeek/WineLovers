@@ -4,6 +4,6 @@
 
 <div class="row">
   <?php foreach($users as $user) : ?>
-    <?= $this->element('cards/user', ['user' => $user, 'size' => 3]) ?>
+    <?= $this->element('cards/user', ['user' => $user['User'], 'size' => 3]) ?>
   <?php endforeach ?>
 </div>

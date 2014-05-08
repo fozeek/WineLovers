@@ -38,7 +38,7 @@
 			
 		<?php endif ?>
 		
-		<h2><?= $user['User']['name'] ?> <small>inscrit le <?= $user['User']['created_print'] ?></small></h2>
+		<h2><?= $user['User']['name'] ?> <small>inscrit le <?= $user['User']['created']->format('l j F Y') ?></small></h2>
 		
 		<?php if($this->fetch('active.feeds')) : ?>
 		<p class="lead">

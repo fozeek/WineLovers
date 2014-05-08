@@ -848,3 +848,564 @@ Request URL: /js/jquery-2.0.3.min.map
 Stack Trace:
 #0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2014-04-29 08:31:49 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery-2.0.3.min.map
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-29 08:34:40 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery-2.0.3.min.map
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-29 08:35:53 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery-2.0.3.min.map
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-29 08:37:35 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery-2.0.3.min.map
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-29 08:37:42 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery-2.0.3.min.map
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-29 08:37:44 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery-2.0.3.min.map
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-29 08:40:01 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery-2.0.3.min.map
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-29 08:40:03 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery-2.0.3.min.map
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-29 08:40:05 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery-2.0.3.min.map
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-29 08:40:11 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery-2.0.3.min.map
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-29 08:40:13 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery-2.0.3.min.map
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-29 08:40:22 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery-2.0.3.min.map
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-29 08:40:24 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery-2.0.3.min.map
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-29 08:40:31 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery-2.0.3.min.map
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-08 13:31:31 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Event.user_id' in 'on clause'
+Request URL: /
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `Event`....', Array)
+#2 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Model/Datasource/DboSource.php(664): DboSource->execute('SELECT `Event`....', Array, Array)
+#3 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Model/Datasource/DboSource.php(1076): DboSource->fetchAll('SELECT `Event`....', false)
+#4 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Model/Model.php(2897): DboSource->read(Object(Event), Array)
+#5 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Model/Model.php(2869): Model->_readDataSource('all', Array)
+#6 /Users/qdeneuve/Projets/WineLovers/app/Controller/HomeController.php(57): Model->find('all', Array)
+#7 [internal function]: HomeController->index()
+#8 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(HomeController), Array)
+#9 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#10 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(HomeController), Object(CakeRequest), Object(CakeResponse))
+#11 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-05-08 13:32:49 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'User.firstname' in 'field list'
+Request URL: /
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `Event`....', Array)
+#2 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Model/Datasource/DboSource.php(664): DboSource->execute('SELECT `Event`....', Array, Array)
+#3 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Model/Datasource/DboSource.php(1076): DboSource->fetchAll('SELECT `Event`....', false)
+#4 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Model/Model.php(2897): DboSource->read(Object(Event), Array)
+#5 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Model/Model.php(2869): Model->_readDataSource('all', Array)
+#6 /Users/qdeneuve/Projets/WineLovers/app/Controller/HomeController.php(57): Model->find('all', Array)
+#7 [internal function]: HomeController->index()
+#8 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(HomeController), Array)
+#9 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#10 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(HomeController), Object(CakeRequest), Object(CakeResponse))
+#11 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-05-08 13:34:43 Error: Fatal Error (4): syntax error, unexpected '.', expecting ')' in [/Users/qdeneuve/Projets/WineLovers/app/Model/User.php, line 9]
+2014-05-08 13:34:43 Error: [FatalErrorException] syntax error, unexpected '.', expecting ')'
+Request URL: /
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Users/qdeneuve...', 9)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Users/qdeneuve...', 9, Array)
+#2 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Users/qdeneuve...', 9, Array)
+#3 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-08 13:35:21 Error: Fatal Error (4): syntax error, unexpected '.', expecting ')' in [/Users/qdeneuve/Projets/WineLovers/app/Model/User.php, line 9]
+2014-05-08 13:35:21 Error: [FatalErrorException] syntax error, unexpected '.', expecting ')'
+Request URL: /
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Users/qdeneuve...', 9)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Users/qdeneuve...', 9, Array)
+#2 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Users/qdeneuve...', 9, Array)
+#3 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-08 13:48:11 Error: Fatal Error (1): Call to a member function saveField() on a non-object in [/Users/qdeneuve/Projets/WineLovers/app/Controller/EventsController.php, line 57]
+2014-05-08 13:48:11 Error: [FatalErrorException] Call to a member function saveField() on a non-object
+Request URL: /event/Vinitech
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Users/qdeneuve...', 57)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Users/qdeneuve...', 57, Array)
+#2 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Users/qdeneuve...', 57, Array)
+#3 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-08 13:48:27 Error: Fatal Error (1): Call to a member function saveField() on a non-object in [/Users/qdeneuve/Projets/WineLovers/app/Controller/EventsController.php, line 57]
+2014-05-08 13:48:27 Error: [FatalErrorException] Call to a member function saveField() on a non-object
+Request URL: /event/Vinitech
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Users/qdeneuve...', 57)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Users/qdeneuve...', 57, Array)
+#2 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Users/qdeneuve...', 57, Array)
+#3 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-08 13:48:39 Error: Fatal Error (1): Call to a member function saveField() on a non-object in [/Users/qdeneuve/Projets/WineLovers/app/Controller/EventsController.php, line 57]
+2014-05-08 13:48:39 Error: [FatalErrorException] Call to a member function saveField() on a non-object
+Request URL: /event/La-foire-aux-vins
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Users/qdeneuve...', 57)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Users/qdeneuve...', 57, Array)
+#2 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Users/qdeneuve...', 57, Array)
+#3 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-08 13:49:08 Error: Fatal Error (1): Call to a member function saveField() on a non-object in [/Users/qdeneuve/Projets/WineLovers/app/Controller/EventsController.php, line 57]
+2014-05-08 13:49:08 Error: [FatalErrorException] Call to a member function saveField() on a non-object
+Request URL: /event/La-foire-aux-vins
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Users/qdeneuve...', 57)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Users/qdeneuve...', 57, Array)
+#2 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Users/qdeneuve...', 57, Array)
+#3 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-08 13:55:30 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery-2.0.3.min.map
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-08 14:01:14 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Event.user_id' in 'field list'
+Request URL: /user/HappyLo
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT `Event`....', Array)
+#2 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Model/Datasource/DboSource.php(664): DboSource->execute('SELECT `Event`....', Array, Array)
+#3 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Model/Datasource/DboSource.php(1338): DboSource->fetchAll('SELECT `Event`....', false)
+#4 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Model/Datasource/DboSource.php(1200): DboSource->fetchAssociated(Object(User), 'SELECT `Event`....', Array)
+#5 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Model/Datasource/DboSource.php(1111): DboSource->queryAssociation(Object(User), Object(Event), 'hasMany', 'Event', Array, Array, true, Array, 0, Array)
+#6 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Model/Model.php(2897): DboSource->read(Object(User), Array)
+#7 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Model/Model.php(2869): Model->_readDataSource('first', Array)
+#8 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Model/Datasource/DboSource.php(597): Model->find('first', Array)
+#9 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Model/Model.php(800): DboSource->query('findBySlug', Array, Object(User))
+#10 /Users/qdeneuve/Projets/WineLovers/app/Controller/UsersController.php(71): Model->__call('findBySlug', Array)
+#11 /Users/qdeneuve/Projets/WineLovers/app/Controller/UsersController.php(71): User->findBySlug('HappyLo')
+#12 [internal function]: UsersController->feeds()
+#13 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#14 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#15 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#16 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#17 {main}
+2014-05-08 14:01:14 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery-2.0.3.min.map
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-08 14:03:32 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery-2.0.3.min.map
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-08 14:03:47 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery-2.0.3.min.map
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-08 14:04:41 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery-2.0.3.min.map
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-08 14:04:44 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery-2.0.3.min.map
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-08 14:06:14 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery-2.0.3.min.map
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-08 14:06:36 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery-2.0.3.min.map
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-08 14:07:45 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery-2.0.3.min.map
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-08 14:09:48 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery-2.0.3.min.map
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-08 14:23:25 Error: [MissingTableException] Table events_users for model EventsUser was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'events_users',
+  'class' => 'EventsUser',
+  'ds' => 'default',
+)
+Request URL: /
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Model/Model.php(3493): Model->setSource('events_users')
+#1 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Model/Model.php(1353): Model->getDataSource()
+#2 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Model/Model.php(864): Model->schema()
+#3 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Model/Model.php(892): Model->__isset('EventsUser')
+#4 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Model/Model.php(3569): Model->__get('EventsUser')
+#5 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Model/Datasource/DboSource.php(1591): Model->joinModel('EventsUser', Array)
+#6 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Model/Datasource/DboSource.php(1067): DboSource->generateAssociationQuery(Object(User), Object(Event), 'hasAndBelongsTo...', 'Event', Array, Array, false, NULL)
+#7 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Model/Model.php(2897): DboSource->read(Object(User), Array)
+#8 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Model/Model.php(2869): Model->_readDataSource('all', Array)
+#9 /Users/qdeneuve/Projets/WineLovers/app/Controller/HomeController.php(56): Model->find('all', Array)
+#10 [internal function]: HomeController->index()
+#11 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(HomeController), Array)
+#12 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#13 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(HomeController), Object(CakeRequest), Object(CakeResponse))
+#14 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2014-05-08 14:34:09 Error: Fatal Error (4): syntax error, unexpected '=', expecting ')' in [/Users/qdeneuve/Projets/WineLovers/app/Model/Event.php, line 11]
+2014-05-08 14:34:09 Error: [FatalErrorException] syntax error, unexpected '=', expecting ')'
+Request URL: /event/La-foire-aux-vins
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Users/qdeneuve...', 11)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Users/qdeneuve...', 11, Array)
+#2 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Users/qdeneuve...', 11, Array)
+#3 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-08 14:34:21 Error: [MissingTableException] Table events_user for model Guest was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'events_user',
+  'class' => 'Guest',
+  'ds' => 'default',
+)
+Request URL: /event/La-foire-aux-vins
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Model/Model.php(3493): Model->setSource('events_user')
+#1 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Model/Datasource/DboSource.php(1062): Model->getDataSource()
+#2 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Model/Model.php(2897): DboSource->read(Object(Event), Array)
+#3 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Model/Model.php(2869): Model->_readDataSource('first', Array)
+#4 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Model/Datasource/DboSource.php(597): Model->find('first', Array)
+#5 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Model/Model.php(800): DboSource->query('findBySlug', Array, Object(Event))
+#6 /Users/qdeneuve/Projets/WineLovers/app/Controller/EventsController.php(56): Model->__call('findBySlug', Array)
+#7 /Users/qdeneuve/Projets/WineLovers/app/Controller/EventsController.php(56): Event->findBySlug('La-foire-aux-vi...')
+#8 [internal function]: EventsController->feeds()
+#9 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(EventsController), Array)
+#10 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#11 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest), Object(CakeResponse))
+#12 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-05-08 14:50:29 Error: [MissingTableException] Table events_likes for model R_EventLike was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'events_likes',
+  'class' => 'R_EventLike',
+  'ds' => 'default',
+)
+Request URL: /event/La-foire-aux-vins
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Model/Model.php(3493): Model->setSource('events_likes')
+#1 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Model/Datasource/DboSource.php(1062): Model->getDataSource()
+#2 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Model/Model.php(2897): DboSource->read(Object(Event), Array)
+#3 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Model/Model.php(2869): Model->_readDataSource('first', Array)
+#4 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Model/Datasource/DboSource.php(597): Model->find('first', Array)
+#5 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Model/Model.php(800): DboSource->query('findBySlug', Array, Object(Event))
+#6 /Users/qdeneuve/Projets/WineLovers/app/Controller/EventsController.php(56): Model->__call('findBySlug', Array)
+#7 /Users/qdeneuve/Projets/WineLovers/app/Controller/EventsController.php(56): Event->findBySlug('La-foire-aux-vi...')
+#8 [internal function]: EventsController->feeds()
+#9 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(EventsController), Array)
+#10 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#11 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest), Object(CakeResponse))
+#12 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-05-08 15:10:10 Error: Fatal Error (4): syntax error, unexpected ')' in [/Users/qdeneuve/Projets/WineLovers/app/Model/User.php, line 60]
+2014-05-08 15:10:10 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /event/La-foire-aux-vins
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Users/qdeneuve...', 60)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Users/qdeneuve...', 60, Array)
+#2 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Users/qdeneuve...', 60, Array)
+#3 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-08 15:11:25 Error: Fatal Error (4): syntax error, unexpected '{' in [/Users/qdeneuve/Projets/WineLovers/app/Model/User.php, line 60]
+2014-05-08 15:11:25 Error: [FatalErrorException] syntax error, unexpected '{'
+Request URL: /event/La-foire-aux-vins
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Users/qdeneuve...', 60)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Users/qdeneuve...', 60, Array)
+#2 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Users/qdeneuve...', 60, Array)
+#3 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-08 15:12:10 Error: Fatal Error (4): syntax error, unexpected ';' in [/Users/qdeneuve/Projets/WineLovers/app/Model/User.php, line 60]
+2014-05-08 15:12:10 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /event/La-foire-aux-vins
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Users/qdeneuve...', 60)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Users/qdeneuve...', 60, Array)
+#2 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Users/qdeneuve...', 60, Array)
+#3 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-08 15:15:10 Error: Fatal Error (4): syntax error, unexpected ';' in [/Users/qdeneuve/Projets/WineLovers/app/Model/User.php, line 63]
+2014-05-08 15:15:10 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /event/La-foire-aux-vins
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Users/qdeneuve...', 63)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Users/qdeneuve...', 63, Array)
+#2 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Users/qdeneuve...', 63, Array)
+#3 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-08 15:17:18 Error: [MissingTableException] Table events_joins for model EventsJoin was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'events_joins',
+  'class' => 'EventsJoin',
+  'ds' => 'default',
+)
+Request URL: /
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Model/Model.php(3493): Model->setSource('events_joins')
+#1 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Model/Model.php(1353): Model->getDataSource()
+#2 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Model/Model.php(864): Model->schema()
+#3 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Model/Model.php(892): Model->__isset('EventsJoin')
+#4 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Model/Model.php(3569): Model->__get('EventsJoin')
+#5 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Model/Datasource/DboSource.php(1591): Model->joinModel('EventsJoin', Array)
+#6 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Model/Datasource/DboSource.php(1067): DboSource->generateAssociationQuery(Object(User), Object(Event), 'hasAndBelongsTo...', 'JoinedEvent', Array, Array, false, NULL)
+#7 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Model/Model.php(2897): DboSource->read(Object(User), Array)
+#8 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Model/Model.php(2869): Model->_readDataSource('all', Array)
+#9 /Users/qdeneuve/Projets/WineLovers/app/Controller/HomeController.php(56): Model->find('all', Array)
+#10 [internal function]: HomeController->index()
+#11 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(HomeController), Array)
+#12 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#13 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(HomeController), Object(CakeRequest), Object(CakeResponse))
+#14 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2014-05-08 15:17:45 Error: [MissingTableException] Table events_guests for model R_JoinedEvent was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'events_guests',
+  'class' => 'R_JoinedEvent',
+  'ds' => 'default',
+)
+Request URL: /
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Model/Model.php(3493): Model->setSource('events_guests')
+#1 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Model/Datasource/DboSource.php(1062): Model->getDataSource()
+#2 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Model/Model.php(2897): DboSource->read(Object(User), Array)
+#3 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Model/Model.php(2869): Model->_readDataSource('all', Array)
+#4 /Users/qdeneuve/Projets/WineLovers/app/Controller/HomeController.php(56): Model->find('all', Array)
+#5 [internal function]: HomeController->index()
+#6 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(HomeController), Array)
+#7 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#8 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(HomeController), Object(CakeRequest), Object(CakeResponse))
+#9 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-05-08 15:17:56 Error: [MissingTableException] Table events_guests for model EventsGuest was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'events_guests',
+  'class' => 'EventsGuest',
+  'ds' => 'default',
+)
+Request URL: /
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Model/Model.php(3493): Model->setSource('events_guests')
+#1 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Model/Model.php(1353): Model->getDataSource()
+#2 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Model/Model.php(864): Model->schema()
+#3 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Model/Model.php(892): Model->__isset('EventsGuest')
+#4 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Model/Model.php(3569): Model->__get('EventsGuest')
+#5 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Model/Datasource/DboSource.php(1591): Model->joinModel('EventsGuest', Array)
+#6 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Model/Datasource/DboSource.php(1067): DboSource->generateAssociationQuery(Object(Event), Object(User), 'hasAndBelongsTo...', 'Guest', Array, Array, false, NULL)
+#7 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Model/Model.php(2897): DboSource->read(Object(Event), Array)
+#8 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Model/Model.php(2869): Model->_readDataSource('all', Array)
+#9 /Users/qdeneuve/Projets/WineLovers/app/Controller/HomeController.php(57): Model->find('all', Array)
+#10 [internal function]: HomeController->index()
+#11 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(HomeController), Array)
+#12 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#13 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(HomeController), Object(CakeRequest), Object(CakeResponse))
+#14 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2014-05-08 15:31:24 Error: Fatal Error (4): syntax error, unexpected 'foreach' (T_FOREACH) in [/Users/qdeneuve/Projets/WineLovers/app/Model/User.php, line 65]
+2014-05-08 15:31:24 Error: [FatalErrorException] syntax error, unexpected 'foreach' (T_FOREACH)
+Request URL: /event/La-foire-aux-vins
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Users/qdeneuve...', 65)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Users/qdeneuve...', 65, Array)
+#2 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Users/qdeneuve...', 65, Array)
+#3 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-08 15:40:12 Error: [Exception] DateTime::__construct() expects parameter 1 to be string, object given
+Request URL: /event/La-foire-aux-vins
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/app/Model/User.php(64): DateTime->__construct(Object(DateTime))
+#1 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Model/Datasource/DboSource.php(1153): User->afterFind(Array, false)
+#2 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Model/Datasource/DboSource.php(1121): DboSource->_filterResults(Array, Object(Event), Array)
+#3 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Model/Model.php(2897): DboSource->read(Object(Event), Array)
+#4 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Model/Model.php(2869): Model->_readDataSource('first', Array)
+#5 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Model/Datasource/DboSource.php(597): Model->find('first', Array)
+#6 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Model/Model.php(800): DboSource->query('findBySlug', Array, Object(Event))
+#7 /Users/qdeneuve/Projets/WineLovers/app/Controller/EventsController.php(56): Model->__call('findBySlug', Array)
+#8 /Users/qdeneuve/Projets/WineLovers/app/Controller/EventsController.php(56): Event->findBySlug('La-foire-aux-vi...')
+#9 [internal function]: EventsController->feeds()
+#10 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(EventsController), Array)
+#11 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#12 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest), Object(CakeResponse))
+#13 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2014-05-08 15:41:06 Error: Fatal Error (4): syntax error, unexpected 'else' (T_ELSE) in [/Users/qdeneuve/Projets/WineLovers/app/Model/User.php, line 69]
+2014-05-08 15:41:06 Error: [FatalErrorException] syntax error, unexpected 'else' (T_ELSE)
+Request URL: /event/La-foire-aux-vins
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Users/qdeneuve...', 69)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Users/qdeneuve...', 69, Array)
+#2 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Users/qdeneuve...', 69, Array)
+#3 /Users/qdeneuve/Projets/WineLovers/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-08 15:49:17 Error: [MissingControllerException] Controller class UserController could not be found.
+Exception Attributes: array (
+  'class' => 'UserController',
+  'plugin' => NULL,
+)
+Request URL: /user/qdeneuve/%3Cpre%20class=
+Stack Trace:
+#0 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
