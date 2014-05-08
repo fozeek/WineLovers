@@ -29,7 +29,7 @@
 
 			<a href="<?= $this->Html->url(array('controller' => 'events', 'action' => 'feeds', 'name' => $event['Event']['slug'])) ?>"><h4 style="display: block;padding-top: 5px;margin-top: 0px;"><?= $event['Event']['name'] ?></a>
 			<br />
-			<small class="pull-right" style="margin-top: 5px;"> 598 Invités</a></small><small> par <a href="<?= $this->Html->url(array('controller' => 'users', 'action' => 'feeds', 'pseudo' => $event['Author']['pseudo'])) ?>"><?= $event['Author']['pseudo'] ?></a></small></h4>
+			<small class="pull-right" style="margin-top: 5px;"> <?= count($event['Guest']) ?> Invités</a></small><small> par <a href="<?= $this->Html->url(array('controller' => 'users', 'action' => 'feeds', 'pseudo' => $event['Author']['pseudo'])) ?>"><?= $event['Author']['pseudo'] ?></a></small></h4>
 			<div style="clear: both;height: 5px;"></div>
 		<?php endforeach ?>
 	</div>
