@@ -34,7 +34,7 @@ class EventsController extends AppController {
  *
  * @var array
  */
-	public $uses = array('Event', 'User');
+	public $uses = array('Event', 'User', 'Post');
 
 /**
  * Displays a view
@@ -54,7 +54,8 @@ class EventsController extends AppController {
 
 	public function feeds() {
 		$event = $this->Event->findBySlug($this->request->params['name']);
-		$this->set(compact('event'));
+		$posts = parent::getPosts('Event', $event);
+		$this->set(compact('event', 'posts'));
 		$this->render('/events/feeds');
 		
 	}

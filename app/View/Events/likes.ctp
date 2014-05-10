@@ -3,6 +3,6 @@
 
 <div class="row">
   <?php foreach($event['Like'] as $user) : ?>
-    <?= $this->element('cards/user', ['user' => $user['User'], 'size' => 3]) ?>
+    <?= $this->element('cards/user', ['user' => $user, 'size' => 3]) ?>
   <?php endforeach ?>
 </div>

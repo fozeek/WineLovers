@@ -3,14 +3,13 @@
 class Event extends AppModel {
 
 	public $belongsTo = array('Author' => array(
-			'className' => 'User',
-			'counterCache' => true
-			// 'foreignKey' => ''
+			'className' => 'User'
 		));
 
 	public $hasMany = array(
 			'R_EventGuest' => array('className' => 'EventRGuest'),
-			'R_EventLike' => array('className' => 'EventRLike')
+			'R_EventLike' => array('className' => 'EventRLike'),
+			'Post' => array('conditions' => array('Post.link_object' => 'Event'), 'foreignKey' => 'link_id')
 		);
 
 	public $hasAndBelongsToMany = array(
@@ -21,22 +20,11 @@ class Event extends AppModel {
 	public $displayField = 'name';
 
 	public function afterFind($results, $primary = false) {
-        foreach ($results as $key => $result) {
-            if($primary || array_key_exists($this->alias, $result)) {
-                if(!isset($results[$key][$this->alias]['created'])) {
-                    return $results;
-                }
-                $results[$key][$this->alias]['created'] = new DateTime($results[$key][$this->alias]['created']);
-				$results[$key][$this->alias]['updated'] = new DateTime($results[$key][$this->alias]['updated']);
-				$results[$key][$this->alias]['date'] = new DateTime($results[$key][$this->alias]['date']);
-            }
-            else {
-                $results[$key]['created'] = new DateTime($results[$key]['created']);
-				$results[$key]['updated'] = new DateTime($results[$key]['updated']);
-				$results[$key]['date'] = new DateTime($results[$key]['date']);
-            }
-		}
-		return $results;
+        return parent::afterFindFields($results, $primary, array(
+                'created' => function ($created) {return new DateTime($created);},
+                'updated' => function ($updated) {return new DateTime($updated);},
+                'date' => function ($date) {return new DateTime($date);}
+            ));
 	}
 
 	public function beforeSave($options = array()) {

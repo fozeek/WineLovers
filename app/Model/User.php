@@ -14,8 +14,12 @@ class User extends AppModel {
                 'className' => 'Event',
                 'foreignKey' => 'author_id'
             ),
+            'Post' => array('conditions' => array('Post.link_object' => 'User'), 'foreignKey' => 'link_id'),
             'R_JoinedEvent' => array('className' => 'EventRGuest'),
             'R_LikedEvent' => array('className' => 'EventRLike'),
+            'R_Cellar' => array('className' => 'UserRCellar'),
+            'R_Whishlist' => array('className' => 'UserRWishlist'),
+            'R_Friendship' => array('className' => 'UserRFriendship')
         );
 
     public $hasAndBelongsToMany = array(
@@ -26,6 +30,19 @@ class User extends AppModel {
             'LikedEvent' => array(
                 'className' => 'Event',
                 'joinTable' => 'events_likes'
+            ),
+            'WineCellar' => array(
+                'className' => 'Wine',
+                'joinTable' => 'cellars'
+            ),
+            'WineWishlist' => array(
+                'className' => 'Wine',
+                'joinTable' => 'wishlists'
+            ),
+            'UserFriendship' => array(
+                'className' => 'User',
+                'joinTable' => 'friendships',
+                'associationForeignKey' => 'friend_id'
             ),
         );
 
@@ -57,22 +74,11 @@ class User extends AppModel {
     );
 
 	public function afterFind($results, $primary = false) {
-        foreach ($results as $key => $result) {
-            if($primary || array_key_exists($this->alias, $result)) {
-                if(!isset($results[$key][$this->alias]['created'])) {
-                    return $results;
-                }
-                $results[$key][$this->alias]['created'] = new DateTime($results[$key][$this->alias]['created']);
-                $results[$key][$this->alias]['updated'] = new DateTime($results[$key][$this->alias]['updated']);
-                $results[$key][$this->alias]['name'] = $results[$key][$this->alias]['firstname'].' '.$results[$key][$this->alias]['lastname'];
-            }
-            else {
-                $results[$key]['created'] = new DateTime($results[$key]['created']);
-                $results[$key]['updated'] = new DateTime($results[$key]['updated']);
-                $results[$key]['name'] = $results[$key]['firstname'].' '.$results[$key]['lastname'];
-            }
-		}
-		return $results;
+        return parent::afterFindFields($results, $primary, array(
+                'created' => function ($created) {return new DateTime($created);},
+                'updated' => function ($updated) {return new DateTime($updated);},
+                'name' => function ($firstname, $lastname) {return $firstname.' '.$lastname;},
+            ));
 	}
 
 	public function beforeSave($options = array()) {

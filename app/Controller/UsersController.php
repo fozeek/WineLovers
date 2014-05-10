@@ -34,7 +34,7 @@ class UsersController extends AppController {
  *
  * @var array
  */
-	public $uses = array('Wine', 'User');
+	public $uses = array('Wine', 'User', 'Post');
 
 	public $scaffold;
 
@@ -66,21 +66,20 @@ class UsersController extends AppController {
 
 	public function feeds() {
 		$user = $this->User->findBySlug($this->request->params['pseudo']);
-		$this->set(compact('user'));
+		$posts = parent::getPosts('User', $user);
+		$this->set(compact('user', 'posts'));
 		$this->render('/users/feeds');
 	}
 
 	public function cellar() {
 		$user = $this->User->findBySlug($this->request->params['pseudo']);
-		$wines = $this->Wine->find('all', array('limit' => 4));
-		$this->set(compact('user', 'wines'));
+		$this->set(compact('user'));
 		$this->render('/users/cellar');
 	}
 
 	public function friends() {
 		$user = $this->User->findBySlug($this->request->params['pseudo']);
-		$friends = $this->User->find('all', array('limit' => 6));
-		$this->set(compact('user', 'friends'));
+		$this->set(compact('user'));
 		$this->render('/users/friends');
 	}
 
@@ -90,10 +89,10 @@ class UsersController extends AppController {
 		$this->render('/users/events');
 	}
 
-	public function whishlist() {
+	public function wishlist() {
 		$user = $this->User->findBySlug($this->request->params['pseudo']);
 		$this->set(compact('user'));
-		$this->render('/users/whishlist');
+		$this->render('/users/wishlist');
 	}
 
 	public function login() {

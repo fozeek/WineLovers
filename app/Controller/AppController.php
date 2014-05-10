@@ -31,6 +31,8 @@ App::uses('Controller', 'Controller');
  */
 class AppController extends Controller {
 
+    public $user = false;
+
 	public $components = array('DebugKit.Toolbar', 'Session', 'Security', 
 		'Auth' => array(
         	'authenticate' => array(
@@ -44,8 +46,26 @@ class AppController extends Controller {
     public function beforeFilter() {
         parent::beforeFilter();
 
-        $auth = $this->Auth->user();
-        $this->set(compact('auth'));
+        $this->user = $this->Auth->user();
+        $this->set(['auth' => $this->user]);
+    }
+
+    public function getPosts($name, $object) {
+        return $this->Post->find('all', array(
+                'contain' => array(
+                    'AttachWine',
+                    'AttachEvent',
+                    'AttachUser',
+                    'Author',
+                    'Comment' => array(
+                            'Author'
+                        )
+                ),
+                'conditions' => array(
+                        'Post.link_object' => $name,
+                        'Post.link_id' => $object[$name]['id']
+                    )
+            ));
     }
 	
 }

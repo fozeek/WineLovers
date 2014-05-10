@@ -1,5 +1,5 @@
 <div class="btn-group pull-right">
-  <button type="button" class="btn btn-default"><span>Ajouter un vin</span></button>
+  <a href="<?= $this->Html->url(array('controller' => 'wines', 'action' => 'index')) ?>" class="btn btn-primary" role="button">Ajouter un vin</a>
   <button type="button" class="btn btn-default">Partager</button>
 </div>
 <h2>
@@ -8,7 +8,7 @@
 <div class="clearfix"></div>
 
 <div class="row">
-  <?php foreach($wines as $wine) : ?>
+  <?php foreach($user['WineCellar'] as $wine) : ?>
   	<?= $this->element('cards/wine', array('wine' => $wine, 'size' => 4)) ?>
   <?php endforeach ?>
 </div>

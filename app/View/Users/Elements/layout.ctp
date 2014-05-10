@@ -1,13 +1,13 @@
 <div class="row">
 	<div class="col-md-3">	
-		<img src="http://lorempixel.com/500/500" class="img-responsive img-rounded" alt="Responsive image" style="margin-bottom: 15px;"/>
+		<img src="<?= 'http://www.gravatar.com/avatar/' . md5( strtolower( trim( $user['User']['email'] ) ) ) . '?s=400' ?>" class="img-responsive img-rounded" alt="Responsive image" style="margin-bottom: 15px;"/>
 		<ul class="nav nav-pills nav-stacked">
 		  <li class="<?= $this->fetch('active.feeds') ?>"><a href="<?php echo $this->Html->url(array('controller' => 'users', 'action' => 'feeds', 'pseudo' => $user['User']['slug'])) ?>">Actualités</a></li>
 		  <li class="<?= $this->fetch('active.cellar') ?>"><a href="<?php echo $this->Html->url(array('controller' => 'users', 'action' => 'cellar', 'pseudo' => $user['User']['slug'])) ?>">Cave</a></li>
 		  <li class="<?= $this->fetch('active.about') ?>"><a href="<?php echo $this->Html->url(array('controller' => 'users', 'action' => 'about', 'pseudo' => $user['User']['slug'])) ?>">À propos</a></li>
 		  <li class="<?= $this->fetch('active.events') ?>"><a href="<?php echo $this->Html->url(array('controller' => 'users', 'action' => 'events', 'pseudo' => $user['User']['slug'])) ?>">Évènements</a></li>
 		  <li class="<?= $this->fetch('active.friends') ?>"><a href="<?php echo $this->Html->url(array('controller' => 'users', 'action' => 'friends', 'pseudo' => $user['User']['slug'])) ?>">Amis</a></li>
-		  <li class="<?= $this->fetch('active.whishlist') ?>"><a href="<?php echo $this->Html->url(array('controller' => 'users', 'action' => 'whishlist', 'pseudo' => $user['User']['slug'])) ?>">Whishlist</a></li>
+		  <li class="<?= $this->fetch('active.whishlist') ?>"><a href="<?php echo $this->Html->url(array('controller' => 'users', 'action' => 'wishlist', 'pseudo' => $user['User']['slug'])) ?>">Wishlist</a></li>
 		</ul>
 	</div>
 	<div class="col-md-9">

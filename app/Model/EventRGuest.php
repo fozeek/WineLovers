@@ -4,6 +4,6 @@ class EventRGuest extends AppModel {
 
 	public $useTable = 'events_joins';
 
-	public $hasBelongs = array('User', 'Event');
+	public $belongsTo = array('User', 'Event');
 
 }

@@ -3,10 +3,9 @@
 		<img src="http://placekitten.com/500/500" class="img-responsive img-rounded" alt="Responsive image" style="margin-bottom: 15px;"/>
 		<ul class="nav nav-pills nav-stacked">
 		  <li class="<?= $this->fetch('active.feeds') ?>"><a href="<?php echo $this->Html->url(array('controller' => 'events', 'action' => 'feeds', 'name' => $event['Event']['slug'])) ?>">Actualités</a></li>
-		  <li class="<?= $this->fetch('active.guests') ?>"><a href="<?php echo $this->Html->url(array('controller' => 'events', 'action' => 'guests', 'name' => $event['Event']['slug'])) ?>">Invités</a></li>
+		  <li class="<?= $this->fetch('active.guests') ?>"><a href="<?php echo $this->Html->url(array('controller' => 'events', 'action' => 'guests', 'name' => $event['Event']['slug'])) ?>">Participants</a></li>
 		  <li class="<?= $this->fetch('active.about') ?>"><a href="<?php echo $this->Html->url(array('controller' => 'events', 'action' => 'about', 'name' => $event['Event']['slug'])) ?>">À propos</a></li>
 		  <li class="<?= $this->fetch('active.likes') ?>"><a href="<?php echo $this->Html->url(array('controller' => 'events', 'action' => 'likes', 'name' => $event['Event']['slug'])) ?>">Likes</a></li>
-		  <li class="<?= $this->fetch('active.medias') ?>"><a href="<?php echo $this->Html->url(array('controller' => 'events', 'action' => 'medias', 'name' => $event['Event']['slug'])) ?>">Medias</a></li>
 		</ul>
 	</div>
 	<div class="col-md-9">
