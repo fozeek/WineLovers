@@ -23,6 +23,7 @@ margin: -2px auto -6px auto;"><?= $event['Event']['date']->format('d') ?></span>
 		<div class="btn-group">
 		  <button type="button" class="btn btn-default add-as-friend"><span class="glyphicon glyphicon-ok hidden"></span> <span data-original="Venir" data-replace="Je viens" data-over="Je ne veux plus venir" data-remove="Inscription annulée">Venir</span></button>
 		  <button type="button" class="btn btn-default">Proposer à un ami</button>
+		  <button type="button" class="btn btn-default">Like</button>
 
 		  <div class="btn-group">
 		    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">

@@ -16,4 +16,3 @@
       ) ?>
 
 <?= $this->Form->end(array('label' => 'Connexion', 'class' => "btn btn-default")) ?>
-  

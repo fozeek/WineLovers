@@ -34,7 +34,7 @@ class CompteController extends AppController {
  *
  * @var array
  */
-	public $uses = array('User', 'Wine');
+	public $uses = array('User', 'Wine', 'UserRFriendship', 'Post', 'Comment');
 
 /**
  * Displays a view
@@ -94,9 +94,51 @@ class CompteController extends AppController {
 		
 	}
 
-	public function inbox() {
+	public function addFriend() {
+		$this->UserRFriendship->save(array('user_id' => $this->user['id'], 'friend_id' => $this->request['data']['id']));
+		exit();
+	}
 
-		$this->render('/compte/inbox');
-		
+	public function removeFriend() {
+		$rFriendship = $this->UserRFriendship->find('first', array(
+				'conditions' => array('UserRFriendship.user_id' => $this->user['id'], 'friend_id' => $this->request['data']['id'])
+			));
+		$this->UserRFriendship->delete($rFriendship['UserRFriendship']['id']);
+		exit();
+	}
+
+	public function createPost() {
+		$data = array(
+				'author_id' => $this->user['id'], 
+				'link_id' => $this->request['data']['link_id'],
+				'link_object' => $this->request['data']['link_object'],
+				'text' => $this->request['data']['text']
+			);
+		if(array_key_exists('attach_user_id', $this->request['data'])) {
+			$data['attach_user_id'] = $this->request['data']['attach_user_id'];
+		}
+		if(array_key_exists('attach_event_id', $this->request['data'])) {
+			$data['attach_event_id'] = $this->request['data']['attach_event_id'];	
+		}
+		if(array_key_exists('attach_wine_id', $this->request['data'])) {
+			$data['attach_wine_id'] = $this->request['data']['attach_wine_id'];
+		}
+		$this->Post->save($data);
+		$post = $this->Post->findById($this->Post->id);
+		$this->set(compact('post'));
+	}
+
+	public function commentPost() {
+		$data = array(
+				'author_id' => $this->user['id'], 
+				'post_id' => $this->request['data']['post_id'],
+				'text' => $this->request['data']['text']
+			);
+		$this->Comment->save($data);
+		$comment = $this->Comment->findById($this->Comment->id);
+		$author = $comment['Author'];
+		$comment = $comment['Comment'];
+		$comment['Author'] = $author;
+		$this->set(compact('comment'));
 	}
 }

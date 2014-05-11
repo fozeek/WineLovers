@@ -1,6 +1,6 @@
 <div class="row">
 	<div class="col-md-3">	
-		<img src="<?= 'http://www.gravatar.com/avatar/' . md5( strtolower( trim( $user['User']['email'] ) ) ) . '?s=400' ?>" class="img-responsive img-rounded" alt="Responsive image" style="margin-bottom: 15px;"/>
+		<img src="<?= 'http://www.gravatar.com/avatar/' . md5( strtolower( trim( $user['User']['email'] ) ) ) . '?s=400&d=http://chicagoluvbiz.com/wp-content/uploads/2014/01/wine-icon.png' ?>" class="img-responsive img-rounded" alt="Responsive image" style="margin-bottom: 15px;"/>
 		<ul class="nav nav-pills nav-stacked">
 		  <li class="<?= $this->fetch('active.feeds') ?>"><a href="<?php echo $this->Html->url(array('controller' => 'users', 'action' => 'feeds', 'pseudo' => $user['User']['slug'])) ?>">Actualités</a></li>
 		  <li class="<?= $this->fetch('active.cellar') ?>"><a href="<?php echo $this->Html->url(array('controller' => 'users', 'action' => 'cellar', 'pseudo' => $user['User']['slug'])) ?>">Cave</a></li>
@@ -45,7 +45,7 @@
 			<?= $user['User']['description'] ?>
 		</p>
 		<div class="btn-group">
-		  <button type="button" class="btn btn-default add-as-friend"><span class="glyphicon glyphicon-ok hidden"></span> <span data-original="Ajouter comme ami" data-replace="Ami" data-over="Retirer de ma liste d'ami" data-remove="Ami retiré de votre liste">Ajouter comme ami</span></button>
+		  <button type="button" class="btn btn-<?php if($isFriend) : ?>success<?php else: ?>default<?php endif ?> add-as-friend"><span class="glyphicon glyphicon-ok <?php if(!$isFriend) : ?>hidden<?php endif ?>"></span> <span data-id="<?= $user['User']['id'] ?>" data-original="Ajouter comme ami" data-replace="Ami" data-over="Retirer de ma liste d'ami" data-remove="Ami retiré de votre liste"><?php if($isFriend) : ?>Ami<?php else : ?>Ajouter comme ami<?php endif ?></span></button>
 		  <button type="button" class="btn btn-default">Envoyer un message</button>
 
 		  <div class="btn-group">

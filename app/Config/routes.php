@@ -36,6 +36,10 @@
 	Router::connect('/me/calendar', array('controller' => 'compte', 'action' => 'calendar'));
 	Router::connect('/me/cellar', array('controller' => 'compte', 'action' => 'cellar'));
 	Router::connect('/me/whishlist', array('controller' => 'compte', 'action' => 'whishlist'));
+	Router::connect('/me/addFriend', array('controller' => 'compte', 'action' => 'addFriend'));
+	Router::connect('/me/removeFriend', array('controller' => 'compte', 'action' => 'removeFriend'));
+	Router::connect('/me/createPost', array('controller' => 'compte', 'action' => 'createPost'));
+	Router::connect('/me/commentPost', array('controller' => 'compte', 'action' => 'commentPost'));
 
 	Router::connect('/users', array('controller' => 'users', 'action' => 'index'));
 	Router::connect('/user/:pseudo', array('controller' => 'users', 'action' => 'feeds'), array('pseudo' => '[a-zA-Z0-9\-]+'));

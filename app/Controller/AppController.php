@@ -33,7 +33,7 @@ class AppController extends Controller {
 
     public $user = false;
 
-	public $components = array('DebugKit.Toolbar', 'Session', 'Security', 
+	public $components = array('DebugKit.Toolbar', 'Session', 
 		'Auth' => array(
         	'authenticate' => array(
             	'Form' => array(
@@ -64,7 +64,8 @@ class AppController extends Controller {
                 'conditions' => array(
                         'Post.link_object' => $name,
                         'Post.link_id' => $object[$name]['id']
-                    )
+                    ),
+                'order' => array('Post.created' => 'DESC')
             ));
     }
 	
