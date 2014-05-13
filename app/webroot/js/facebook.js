@@ -3,28 +3,19 @@
     console.log(response);
 
     if (response.status === 'connected') {
-      var request = $.ajax({
-        url: "/me/login-by-facebook",
+      console.log(response);
+     /* var request = $.ajax({
+        url: "/login-by-facebook",
         type: "POST",
         data: {
-          text : text.val().trim(),
-          link_id : link_id.val(),
-          link_object : link_object.val(),
-          attach_object : attach_object.val(),
-          attach_id : attach_id.val(),
+          name : response.name,
         },
         dataType: "html"
-      });
-
-      text.val('');
-       
-      request.done(function( msg ) {
-         
       });
        
       request.fail(function( jqXHR, textStatus ) {
         alert( "Request failed: " + textStatus );
-      });
+      });*/
 
     } else if (response.status === 'not_authorized') {
       document.getElementById('status').innerHTML = 'Please log ' +
