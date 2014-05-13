@@ -1,4 +1,5 @@
 $(document).ready(function() {
+<<<<<<< HEAD
 
 	$('#addObjectToPost .tab input').on('keyup', function() {
 		var $that = $(this).parent();
@@ -72,6 +73,16 @@ $(document).ready(function() {
 			else {
 				$scrollModuleObject = true;
 			}
+=======
+	var $scrollModule = true;
+
+	$('#testou').on('scroll', function() {
+		var top = $(this).children('.row').position().top;
+		var height = $(this).children('.row').height();
+		var parentHeight = $(this).height();
+		if(parentHeight >= height + top) {
+			console.log('bottom');
+>>>>>>> FETCH_HEAD
 		}
 	});
 
