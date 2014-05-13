@@ -60,11 +60,11 @@ class AppController extends Controller {
             )));
         $this->set('pagePosts', $page);
         $friends = $this->User->findById($this->user['id']);
-        $friends = $friends['UserFriendship'];
+        $friends = array_slice($friends['UserFriendship'], 0, 20);
         $this->set('friendsPosts', $friends);
-        $events = $this->Event->find('all');
+        $events = $this->Event->find('all', array('limit' => 20));
         $this->set('eventsPosts', $events);
-        $wines = $this->Wine->find('all');
+        $wines = $this->Wine->find('all', array('limit' => 20));
         $this->set('winesPosts', $wines);
         return $this->Post->find('all', array(
                 'contain' => array(

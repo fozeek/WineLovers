@@ -38,7 +38,6 @@ $cakeDescription = __d('cake_dev', 'La Bonne Cave');
 
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
-		echo $this->fetch('script');
 	?>
 </head>
 <body>
@@ -123,5 +122,6 @@ $cakeDescription = __d('cake_dev', 'La Bonne Cave');
 	<?php echo $this->Html->script('bootstrap.min'); ?>
 	<?php echo $this->fetch('scriptBottom'); ?>
 	<?php echo $this->Html->script('script'); ?>
+	<?php echo $this->fetch('script'); ?>
 </body>
 </html>

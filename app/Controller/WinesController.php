@@ -60,6 +60,26 @@ class WinesController extends AppController {
  *	or MissingViewException in debug mode.
  */
 
+	private function testWine($wine) {
+		$user = $this->User->findById($this->user['id']);
+		$bool = false;
+		foreach ($user['WineCellar'] as $wineCellar) {
+			if($wineCellar['id'] == $wine['Wine']['id']) {
+				$bool = true;
+				break;
+			}
+		}
+		$this->set('isInCellar', $bool);
+		$bool = false;
+		foreach ($user['WineWishlist'] as $wineWishlist) {
+			if($wineWishlist['id'] == $wine['Wine']['id']) {
+				$bool = true;
+				break;
+			}
+		}
+		$this->set('isInWishlist', $bool);
+	}
+
 	public function index() {
 		//echo '<pre>';
 		//var_dump(file_get_contents($this->apiUrl . $this->wineName . 'Yquem+Sauternes+Bordeaux+France' . $this->vintage . $this->limit . 5 . $this->autoExpand . $this->keywordModeWineList));
@@ -67,11 +87,11 @@ class WinesController extends AppController {
 		$wines = $this->Wine->find('all');
 		$this->set(compact('wines'));
 		$this->render('/wines/index');
-		
 	}
 
 	public function feeds() {
 		$wine = $this->Wine->findBySlug($this->request->params['name']);
+		$this->testWine($wine);
 		$posts = parent::getPosts('Wine', $wine);
 		$this->set(compact('wine', 'posts'));
 		$this->render('/wines/feeds');
@@ -80,6 +100,7 @@ class WinesController extends AppController {
 
 	public function about() {
 		$wine = $this->Wine->findBySlug($this->request->params['name']);
+		$this->testWine($wine);
 		$this->set(compact('wine'));
 		$this->render('/wines/about');
 	
@@ -87,6 +108,7 @@ class WinesController extends AppController {
 
 	public function cellars() {
 		$wine = $this->Wine->findBySlug($this->request->params['name']);
+		$this->testWine($wine);
 		$this->set(compact('wine'));
 		$this->render('/wines/cellars');
 		
@@ -94,6 +116,7 @@ class WinesController extends AppController {
 
 	public function wishlist() {
 		$wine = $this->Wine->findBySlug($this->request->params['name']);
+		$this->testWine($wine);
 		$this->set(compact('wine'));
 		$this->render('/wines/wishlists');
 		

@@ -34,7 +34,7 @@ class CompteController extends AppController {
  *
  * @var array
  */
-	public $uses = array('User', 'Wine', 'UserRFriendship', 'Post', 'Comment');
+	public $uses = array('User', 'Wine', 'UserRFriendship', 'Post', 'Comment', 'UserRCellar', 'UserRWishlist');
 
 /**
  * Displays a view
@@ -63,15 +63,11 @@ class CompteController extends AppController {
 	}
 
 	public function calendar() {
-
 		$this->render('/compte/calendar');
-		
 	}
 
 	public function stats() {
-
 		$this->render('/compte/stats');
-		
 	}
 
 	public function cellar() {
@@ -89,13 +85,37 @@ class CompteController extends AppController {
 	}
 
 	public function profil() {
-
 		$this->render('/compte/profil');
-		
 	}
 
 	public function addFriend() {
 		$this->UserRFriendship->save(array('user_id' => $this->user['id'], 'friend_id' => $this->request['data']['id']));
+		exit();
+	}
+
+	public function addWishlistWine() {
+		$this->UserRWishlist->save(array('user_id' => $this->user['id'], 'wine_id' => $this->request['data']['id']));
+		exit();
+	}
+
+	public function addCellarWine() {
+		$this->UserRCellar->save(array('user_id' => $this->user['id'], 'wine_id' => $this->request['data']['id']));
+		exit();
+	}
+
+	public function removeWishlistWine() {
+		$rWishlist = $this->UserRWishlist->find('first', array(
+				'conditions' => array('UserRWishlist.user_id' => $this->user['id'], 'wine_id' => $this->request['data']['id'])
+			));
+		$this->UserRWishlist->delete($rWishlist['UserRWishlist']['id']);
+		exit();
+	}
+
+	public function removeCellarWine() {
+		$rWishlist = $this->UserRCellar->find('first', array(
+				'conditions' => array('UserRCellar.user_id' => $this->user['id'], 'wine_id' => $this->request['data']['id'])
+			));
+		$this->UserRCellar->delete($rWishlist['UserRCellar']['id']);
 		exit();
 	}
 

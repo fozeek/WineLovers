@@ -1,3 +1,4 @@
+<?php $this->Html->script('pages/users/script', array('inline'=>false)); ?>
 <div class="row">
 	<div class="col-md-3">	
 		<img src="<?= 'http://www.gravatar.com/avatar/' . md5( strtolower( trim( $user['User']['email'] ) ) ) . '?s=400&d=http://chicagoluvbiz.com/wp-content/uploads/2014/01/wine-icon.png' ?>" class="img-responsive img-rounded" alt="Responsive image" style="margin-bottom: 15px;"/>

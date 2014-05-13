@@ -11,70 +11,49 @@
 		</ul>
 		<div class="tab tab-friend">
 			<div class="results" style="position: relative;max-height: 550px;overflow-y: auto;overflow-x: hidden;">
-				<div class="row" style="margin: 15px;margin-left: 0px;" >
+				<input class="form-control" style="margin-top: 15px;margin-left: 15px;width: 568px;" placeholder="Rechercher un ami"/>
+				<div class="nodata" style="display: none;text-align: center;font-size: 40px;color: #E7E7E7;padding: 20px;">
+					Aucun resultat.
+				</div>
+				<div class="row" style="margin: 15px;margin-left: 0px;margin-bottom: 0px;" >
 				  <?php foreach($friendsPosts as $friend) : ?>
-				   	<div style="width: 50%;float: left;padding: 15px;padding-top: 0px;padding-right: 0px;cursor: pointer;">
-						<div class="thumbnail" style="margin: 0px;" data-name="<?= $friend['firstname'] ?> <?= $friend['lastname'] ?>" data-image="user" data-object="user" data-id="<?= $friend['id'] ?>">
-						  <div class="row">
-						    <div class="col-md-5">
-						      <img src="<?= 'http://www.gravatar.com/avatar/' . md5( strtolower( trim( $friend['email'] ) ) ) . '?s=400&d=http://chicagoluvbiz.com/wp-content/uploads/2014/01/wine-icon.png' ?>" alt="..." class="img-responsive img-rounded">
-						    </div> 
-						    <div class="col-md-7" style="padding: 0px;padding-right: 5px;"> 
-						      <div class="caption" style="padding: 0px;padding-right: 5px;">
-						        <h3><a><?= $friend['firstname'] ?> <?= $friend['lastname'] ?></a></h3>
-						      </div>
-						    </div>
-						  </div>
-						  
-						</div>
-					</div>
+				   	<?= $this->element('cards/posts/objects/user', array('friend' => $friend)) ?>
 				  <?php endforeach ?>
+				</div>
+				<div class="paginator" data-page="2" data-object="friends" style="display: none;">
+					Chargement ..
 				</div>
 			</div>
 		</div>
 		<div class="tab tab-event" style="display: none;">
-			<div id="testou" class="results" style="position: relative;max-height: 550px;overflow-y: auto;overflow-x: hidden;">
-				<div class="row" style="margin: 15px;margin-left: 0px;" >
+			<div class="results" style="position: relative;max-height: 550px;overflow-y: auto;overflow-x: hidden;">
+				<input class="form-control" style="margin-top: 15px;margin-left: 15px;width: 568px;" placeholder="Rechercher un évènement"/>
+				<div class="nodata" style="display: none;text-align: center;font-size: 40px;color: #E7E7E7;padding: 20px;">
+					Aucun resultat.
+				</div>
+				<div class="row" style="margin: 15px;margin-left: 0px;margin-bottom: 0px;" >
 				  <?php foreach($eventsPosts as $event) : ?>
-				   	<div style="width: 50%;float: left;padding: 15px;padding-top: 0px;padding-right: 0px;cursor: pointer;">
-						<div class="thumbnail" style="margin: 0px;" data-name="<?= $event['Event']['name'] ?>" data-image="calendar" data-object="event" data-id="<?= $event['Event']['id'] ?>">
-						  <div class="row">
-						    <div class="col-md-5">
-						      <img src="http://chicagoluvbiz.com/wp-content/uploads/2014/01/wine-icon.png" alt="..." class="img-responsive img-rounded">
-						    </div> 
-						    <div class="col-md-7" style="padding: 0px;padding-right: 5px;"> 
-						      <div class="caption" style="padding: 0px;padding-right: 5px;">
-						        <h3 style="max-height: 53px;overflow: hidden;font-size: 1.2em;"><a><?= (strlen($event['Event']['name'])>25) ? substr($event['Event']['name'], 0, 25).'...' : $event['Event']['name'] ?></a></h3>
-						      </div>
-						    </div>
-						  </div>
-						  
-						</div>
-					</div>
+				   	<?= $this->element('cards/posts/objects/event', array('event' => $event)) ?>
 				  <?php endforeach ?>
+				</div>
+				<div class="paginator" data-page="2" data-object="events" style="display: none;">
+					Chargement ..
 				</div>
 			</div>
 		</div>
 		<div class="tab tab-wine" style="display: none;">
 			<div class="results" style="position: relative;max-height: 550px;overflow-y: auto;overflow-x: hidden;">
-				<div class="row" style="margin: 15px;margin-left: 0px;" >
+				<input class="form-control" style="margin-top: 15px;margin-left: 15px;width: 568px;" placeholder="Rechercher un vin"/>
+				<div class="nodata" style="display: none;text-align: center;font-size: 40px;color: #E7E7E7;padding: 20px;">
+					Aucun resultat.
+				</div>
+				<div class="row" style="margin: 15px;margin-left: 0px;margin-bottom: 0px;" >
 				  <?php foreach($winesPosts as $wine) : ?>
-				   	<div style="width: 50%;float: left;padding: 15px;padding-top: 0px;padding-right: 0px;cursor: pointer;">
-						<div class="thumbnail" style="margin: 0px;" data-name="<?= $wine['Wine']['name'] ?>" data-image="glass" data-object="wine" data-id="<?= $wine['Wine']['id'] ?>">
-						  <div class="row">
-						    <div class="col-md-5">
-						      <img src="http://chicagoluvbiz.com/wp-content/uploads/2014/01/wine-icon.png" alt="..." class="img-responsive img-rounded">
-						    </div> 
-						    <div class="col-md-7" style="padding: 0px;padding-right: 5px;"> 
-						      <div class="caption" style="padding: 0px;padding-right: 5px;vertical-align: middle;">
-						        <h3 style="max-height: 53px;color: rgb(128, 0, 0);overflow: hidden;font-size: 1.2em;"><?= (strlen($wine['Wine']['name'])>25) ? substr($wine['Wine']['name'], 0, 25).'...' : $wine['Wine']['name'] ?></h3>
-						      </div>
-						    </div>
-						  </div>
-						  
-						</div>
-					</div>
+				   	<?= $this->element('cards/posts/objects/wine', array('wine' => $wine)) ?>
 				  <?php endforeach ?>
+				</div>
+				<div class="paginator" data-page="2" data-object="wines" style="display: none;">
+					Chargement ..
 				</div>
 			</div>
 		</div>

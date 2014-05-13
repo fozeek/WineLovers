@@ -1,23 +1,87 @@
 $(document).ready(function() {
 
+	$('#addObjectToPost .tab input').on('keyup', function() {
+		var $that = $(this).parent();
+		var value = $(this).val();
+		console.log(value);
+		var request = $.ajax({
+			url: "/post/more-" + $that.find('.paginator').attr('data-object'),
+			type: "POST",
+			data: {
+				page : 1,
+				id : $that.find('.paginator').attr('data-id'),
+				value : value
+			},
+			dataType: "html"
+		});
+		
+		request.done(function( msg ) {
+    		$that.find('.paginator').attr('data-page', 2);
+		    $that.find('.paginator').hide();
+   			$that.children('.row').html(msg);
+			$scrollModuleObject = true;
+			if(msg=='') {
+				$that.children('.nodata').show();
+			}
+			else {
+				$that.children('.nodata').hide();
+			}
+		});
+		
+		request.fail(function( jqXHR, textStatus ) {
+		  alert( "Request failed: " + textStatus );
+		});
+	});
+
+	var $scrollModuleObject = true;
+	$('#addObjectToPost .tab .results').on('scroll', function() {
+		if($scrollModuleObject) {
+			$scrollModuleObject = false;
+			var top = $(this).children('.row').position().top;
+			var height = $(this).children('.row').height();
+			var parentHeight = $(this).height();
+			var $that = $(this);
+			if(parentHeight >= (height + top - 30)) {
+
+				var request = $.ajax({
+					url: "/post/more-" + $that.find('.paginator').attr('data-object'),
+					type: "POST",
+					data: {
+						page : $that.find('.paginator').attr('data-page'),
+						id : $that.find('.paginator').attr('data-id'),
+						value : $that.find('input').val()
+					},
+					dataType: "html"
+				});
+				
+				request.done(function( msg ) {
+					if(msg=='') {
+		    			$that.find('.paginator').hide();
+						$scrollModuleObject = false;
+						return;
+					}
+					$that.find('.paginator').attr('data-page', parseInt($that.find('.paginator').attr('data-page')) + 1);
+		   			$that.children('.row').append(msg);
+					$scrollModuleObject = true;
+				});
+				
+				request.fail(function( jqXHR, textStatus ) {
+				  alert( "Request failed: " + textStatus );
+				});
+			}
+			else {
+				$scrollModuleObject = true;
+			}
+		}
+	});
+
 
 	var $scrollModule = true;
-
-	$('#testou').on('scroll', function() {
-		var top = $(this).children('.row').position().top;
-		var height = $(this).children('.row').height();
-		var parentHeight = $(this).height();
-		if(parentHeight >= height + top) {
-			console.log('bottom');
-		}
-	})
-
 	document.addEventListener( 'scroll',function (event) {
 
-	    if ( $scrollModule && window.scrollY >= document.body.scrollHeight - window.innerHeight )
+	    if ( $('#load-more') && $scrollModule && window.scrollY >= document.body.scrollHeight - window.innerHeight )
 	    {
 	    	$scrollModule = false;
-	    	console.log('load..');
 	        var request = $.ajax({
 				url: "/post/more-posts",
 				type: "POST",
@@ -33,7 +97,6 @@ $(document).ready(function() {
 			 
 			request.done(function( msg ) {
 				if(msg=='') {
-	    		console.log('stop..');
 	    			$('#load-more').hide();
 					$scrollModule = false;
 					return;
@@ -46,13 +109,13 @@ $(document).ready(function() {
 			  alert( "Request failed: " + textStatus );
 			});
 	    }
-	} );
+	});
 
 	$('#addObjectToPost .nav-tabs li').on('click', function() {
 		$('#addObjectToPost').find('.tab').hide();
 		$('#addObjectToPost').find('.tab-' + $(this).attr('data-tab')).show();
 	});
-	$('#addObjectToPost .thumbnail').on('click', function() {
+	$('#addObjectToPost').on('click', '.thumbnail', function() {
 		var $form = $('#post-form');
 		$form.find('.addSomething').html('<span class="glyphicon glyphicon-'+$(this).attr('data-image')+'" style="margin-right: 10px;" />' + $(this).attr('data-name'));
 		$form.find('.removeSomething').show();
@@ -168,108 +231,4 @@ $(document).ready(function() {
 
 		return false;
 	});
-
-	
-
-	var addAsFriends = function() {
-
-		$('.add-as-friend').mouseenter(function() {
-	   		if($(this).hasClass('btn-success')) {
-	   			$(this).addClass('btn-warning');
-	   			$(this).removeClass('btn-success');
-	   			$(this).find('span:last').html($(this).find('span:last').attr('data-over'));
-	   			$(this).find('span:first').removeClass('glyphicon-ok');
-	   			$(this).find('span:first').addClass('glyphicon-remove');
-	   			$(this).blur();
-	   			tempo = false;
-	   		}
-	   	});
-	   	$('.add-as-friend').mouseleave(function() {
-	   			
-	   		if($(this).hasClass('btn-success')) {
-	   			bindClick();
-	   		}
-	   		if($(this).hasClass('btn-warning')) {
-	   			$(this).addClass('btn-success');
-	   			$(this).removeClass('btn-warning');
-	   			$(this).find('span:last').html($(this).find('span:last').attr('data-replace'));
-	   			$(this).find('span:first').removeClass('glyphicon-remove');
-	   			$(this).find('span:first').addClass('glyphicon-ok');
-	   			$(this).blur();
-	   		}
-	   	});
-
-	   	var bindClick = function() {
-		   	$('.add-as-friend').click(function() {
-
-			   		if($(this).hasClass('btn-default')) {
-
-						var $that = $(this);
-						$that.unbind('click');
-
-			   			var request = $.ajax({
-							url: "/me/addFriend",
-							type: "POST",
-							data: { id : $(this).find('span:last').attr('data-id') },
-							dataType: "html"
-						});
-						 
-						request.done(function( msg ) {
-				   			$that.addClass('btn-success');
-				   			$that.removeClass('btn-default');
-				   			$that.find('span:first').removeClass('hidden');
-				   			$that.find('span:last').html($that.find('span:last').attr('data-replace'));
-				   			$that.blur();
-						});
-						 
-						request.fail(function( jqXHR, textStatus ) {
-						  alert( "Request failed: " + textStatus );
-						});
-
-			   			
-			   		}
-			   		else if($(this).hasClass('btn-warning')) {
-			   			var $that = $(this);
-			   			$that.unbind('click');
-
-			   			var request = $.ajax({
-						  url: "/me/removeFriend",
-						  type: "POST",
-						  data: { id : $that.find('span:last').attr('data-id') },
-						  dataType: "html"
-						});
-						 
-						request.done(function( msg ) {
-						    $that.removeClass('btn-warning');
-					   		$that.addClass('btn-danger');
-					   		$that.find('span:last').html($that.find('span:last').attr('data-remove'));
-					   		window.setTimeout(function() {
-				   				$('.add-as-friend').css('transition-duration', '2s');
-					   			$('.add-as-friend').removeClass('btn-danger');
-					   			$('.add-as-friend').addClass('btn-default');
-					   			$('.add-as-friend').find('span:first').addClass('hidden');
-					   			$('.add-as-friend').find('span:last').html($('.add-as-friend').find('span:last').attr('data-original'));
-				   				$('.add-as-friend').find('span:first').removeClass('glyphicon-remove');
-				   				$('.add-as-friend').find('span:first').addClass('glyphicon-ok');
-					   			$('.add-as-friend').blur();
-				   				window.setTimeout(function() {	
-				   					$('.add-as-friend').css('transition-duration', '');
-				   					bindClick();
-				   				}, 2000);
-					   		}, 1000);
-						});
-						 
-						request.fail(function( jqXHR, textStatus ) {
-						  alert( "Request failed: " + textStatus );
-						});
-
-			   			
-			   		}
-		   			
-		   	});
-		}
-
-		bindClick();
-	};
-	addAsFriends();
 });

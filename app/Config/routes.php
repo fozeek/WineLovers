@@ -36,8 +36,13 @@
 	Router::connect('/me/calendar', array('controller' => 'compte', 'action' => 'calendar'));
 	Router::connect('/me/cellar', array('controller' => 'compte', 'action' => 'cellar'));
 	Router::connect('/me/whishlist', array('controller' => 'compte', 'action' => 'whishlist'));
+
 	Router::connect('/me/addFriend', array('controller' => 'compte', 'action' => 'addFriend'));
 	Router::connect('/me/removeFriend', array('controller' => 'compte', 'action' => 'removeFriend'));
+	Router::connect('/me/add-cellar-wine', array('controller' => 'compte', 'action' => 'addCellarWine'));
+	Router::connect('/me/add-wishlist-wine', array('controller' => 'compte', 'action' => 'addWishlistWine'));
+	Router::connect('/me/remove-cellar-wine', array('controller' => 'compte', 'action' => 'removeCellarWine'));
+	Router::connect('/me/remove-wishlist-wine', array('controller' => 'compte', 'action' => 'removeWishlistWine'));
 
 	Router::connect('/users', array('controller' => 'users', 'action' => 'index'));
 	Router::connect('/user/:pseudo', array('controller' => 'users', 'action' => 'feeds'), array('pseudo' => '[a-zA-Z0-9\-]+'));
@@ -66,6 +71,9 @@
 	Router::connect('/post/create-post', array('controller' => 'posts', 'action' => 'createPost'));
 	Router::connect('/post/comment-post', array('controller' => 'posts', 'action' => 'commentPost'));
 	Router::connect('/post/more-posts', array('controller' => 'posts', 'action' => 'morePosts'));
+	Router::connect('/post/more-events', array('controller' => 'posts', 'action' => 'moreEvents'));
+	Router::connect('/post/more-friends', array('controller' => 'posts', 'action' => 'moreFriends'));
+	Router::connect('/post/more-wines', array('controller' => 'posts', 'action' => 'moreWines'));
 /**
  * ...and connect the rest of 'Pages' controller's URLs.
  */

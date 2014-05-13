@@ -93,4 +93,40 @@ class PostsController extends AppController
 		$this->set(compact('posts'));
 	}
 
+	public function moreWines() {
+		$options = array('limit' => 20, 'page' => $this->request['data']['page']);
+		if($this->request['data']['value'] !== '') {
+			$options['conditions'] = array('Wine.name LIKE' => '%'.$this->request['data']['value'].'%');
+		}
+        $wines = $this->Wine->find('all', $options);
+        $this->set('winesPosts', $wines);
+	}
+
+	public function moreFriends() {
+		$friends = $this->User->findById($this->user['id']);
+		$friends = $friends['UserFriendship'];
+		$friendsPosts = array();
+		if($this->request['data']['value'] !== '') {
+			foreach ($friends as $key => $friend) {
+				if(preg_match('/'.$this->request['data']['value'].'/i', $friend['name'])) {
+					$friendsPosts[] = $friend;
+				}
+			}
+		}
+		else {
+			$friendsPosts = $friends;
+		}
+        $friends = array_slice($friends, 20*($this->request['data']['page']-1), 20);
+        $this->set('friendsPosts', $friendsPosts);
+	}
+
+	public function moreEvents() {
+		$options = array('limit' => 20, 'page' => $this->request['data']['page']);
+		if($this->request['data']['value'] !== '') {
+			$options['conditions'] = array('Event.name LIKE' => '%'.$this->request['data']['value'].'%');
+		}
+		$events = $this->Event->find('all', $options);
+        $this->set('eventsPosts', $events);
+	}
+
 }

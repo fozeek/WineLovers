@@ -83,14 +83,6 @@ class UsersController extends AppController {
 		$this->render('/users/feeds');
 	}
 
-	public function morefeeds() {
-		$user = $this->User->findBySlug($this->request->params['pseudo']);
-		$posts = parent::getPosts('User', $user);
-		$isFriend = $this->isFriend($user['User']['id']);
-		$this->set(compact('user', 'posts', 'isFriend'));
-		$this->render('/users/morefeeds');
-	}
-
 	public function cellar() {
 		$user = $this->User->findBySlug($this->request->params['pseudo']);
 		$isFriend = $this->isFriend($user['User']['id']);
