@@ -1,6 +1,4 @@
 $(document).ready(function() {
-
-
 	var $scrollModule = true;
 
 	$('#testou').on('scroll', function() {

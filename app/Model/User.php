@@ -51,6 +51,10 @@ class User extends AppModel {
             'size' => array(
                 'rule'    => array('between', 6, 200),
                 'message' =>   '6 caractères minimum.'
+            ),
+            'unique' => array(
+                'rule'      => 'isUnique',
+                'message'   => 'Pseudo déjà pris.'
             )
         ),
         'password' => array(
@@ -58,8 +62,14 @@ class User extends AppModel {
             'message' => 'Saisir entre 5 et 15 caractères.'
         ),
         'email' => array(
-            'rule'      => '/^[a-zA-Z0-9\._-]+@[a-zA-Z0-9\.-]{2,}[\.][a-zA-Z]{2,}$/i',
-            'message'   => 'Saisir une adresse email valide.'
+            'valid' => array(
+                'rule'      => '/^[a-zA-Z0-9\._-]+@[a-zA-Z0-9\.-]{2,}[\.][a-zA-Z]{2,}$/i',
+                'message'   => 'Saisir une adresse email valide.'
+            ),
+            'unique' => array(
+                'rule'      => 'isUnique',
+                'message'   => 'Adresse email déjà pris.'
+            )
         ),
         'zip'   => array(
             'sizemax'   => array(

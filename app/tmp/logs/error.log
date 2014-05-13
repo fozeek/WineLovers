@@ -7198,3 +7198,341 @@ Stack Trace:
 #0 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 >>>>>>> FETCH_HEAD
 #1 {main}
+2014-05-13 09:50:12 Error: [MissingActionException] Action CompteController::inbox() could not be found.
+Exception Attributes: array (
+  'controller' => 'CompteController',
+  'action' => 'inbox',
+)
+Request URL: /me/inbox
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(CompteController), Object(CakeRequest), Object(CakeResponse))
+#2 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-05-13 09:59:53 Error: [MissingTableException] Table user_r_wis hlists for model R_Whishlist was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'user_r_wis hlists',
+  'class' => 'R_Whishlist',
+  'ds' => 'default',
+)
+Request URL: /
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Model/Model.php(3493): Model->setSource('user_r_wis hlis...')
+#1 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Model/Datasource/DboSource.php(1062): Model->getDataSource()
+#2 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Model/Model.php(2897): DboSource->read(Object(User), Array)
+#3 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Model/Model.php(2869): Model->_readDataSource('all', Array)
+#4 /Users/jonathanbicheux/Documents/Project/WineLovers/app/Controller/HomeController.php(56): Model->find('all', Array)
+#5 [internal function]: HomeController->index()
+#6 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(HomeController), Array)
+#7 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#8 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(HomeController), Object(CakeRequest), Object(CakeResponse))
+#9 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-05-13 09:59:55 Error: [MissingTableException] Table user_r_wis hlists for model R_Whishlist was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'user_r_wis hlists',
+  'class' => 'R_Whishlist',
+  'ds' => 'default',
+)
+Request URL: /
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Model/Model.php(3493): Model->setSource('user_r_wis hlis...')
+#1 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Model/Datasource/DboSource.php(1062): Model->getDataSource()
+#2 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Model/Model.php(2897): DboSource->read(Object(User), Array)
+#3 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Model/Model.php(2869): Model->_readDataSource('all', Array)
+#4 /Users/jonathanbicheux/Documents/Project/WineLovers/app/Controller/HomeController.php(56): Model->find('all', Array)
+#5 [internal function]: HomeController->index()
+#6 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(HomeController), Array)
+#7 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#8 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(HomeController), Object(CakeRequest), Object(CakeResponse))
+#9 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-05-13 09:59:55 Error: [MissingTableException] Table user_r_wis hlists for model R_Whishlist was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'user_r_wis hlists',
+  'class' => 'R_Whishlist',
+  'ds' => 'default',
+)
+Request URL: /
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Model/Model.php(3493): Model->setSource('user_r_wis hlis...')
+#1 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Model/Datasource/DboSource.php(1062): Model->getDataSource()
+#2 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Model/Model.php(2897): DboSource->read(Object(User), Array)
+#3 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Model/Model.php(2869): Model->_readDataSource('all', Array)
+#4 /Users/jonathanbicheux/Documents/Project/WineLovers/app/Controller/HomeController.php(56): Model->find('all', Array)
+#5 [internal function]: HomeController->index()
+#6 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(HomeController), Array)
+#7 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#8 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(HomeController), Object(CakeRequest), Object(CakeResponse))
+#9 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-05-13 09:59:56 Error: [MissingTableException] Table user_r_wis hlists for model R_Whishlist was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'user_r_wis hlists',
+  'class' => 'R_Whishlist',
+  'ds' => 'default',
+)
+Request URL: /
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Model/Model.php(3493): Model->setSource('user_r_wis hlis...')
+#1 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Model/Datasource/DboSource.php(1062): Model->getDataSource()
+#2 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Model/Model.php(2897): DboSource->read(Object(User), Array)
+#3 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Model/Model.php(2869): Model->_readDataSource('all', Array)
+#4 /Users/jonathanbicheux/Documents/Project/WineLovers/app/Controller/HomeController.php(56): Model->find('all', Array)
+#5 [internal function]: HomeController->index()
+#6 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(HomeController), Array)
+#7 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#8 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(HomeController), Object(CakeRequest), Object(CakeResponse))
+#9 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-05-13 10:00:11 Error: [MissingTableException] Table user_r_wis hlists for model R_Whishlist was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'user_r_wis hlists',
+  'class' => 'R_Whishlist',
+  'ds' => 'default',
+)
+Request URL: /
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Model/Model.php(3493): Model->setSource('user_r_wis hlis...')
+#1 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Model/Datasource/DboSource.php(1062): Model->getDataSource()
+#2 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Model/Model.php(2897): DboSource->read(Object(User), Array)
+#3 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Model/Model.php(2869): Model->_readDataSource('all', Array)
+#4 /Users/jonathanbicheux/Documents/Project/WineLovers/app/Controller/HomeController.php(56): Model->find('all', Array)
+#5 [internal function]: HomeController->index()
+#6 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(HomeController), Array)
+#7 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#8 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(HomeController), Object(CakeRequest), Object(CakeResponse))
+#9 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-05-13 10:00:11 Error: [MissingTableException] Table user_r_wis hlists for model R_Whishlist was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'user_r_wis hlists',
+  'class' => 'R_Whishlist',
+  'ds' => 'default',
+)
+Request URL: /
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Model/Model.php(3493): Model->setSource('user_r_wis hlis...')
+#1 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Model/Datasource/DboSource.php(1062): Model->getDataSource()
+#2 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Model/Model.php(2897): DboSource->read(Object(User), Array)
+#3 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Model/Model.php(2869): Model->_readDataSource('all', Array)
+#4 /Users/jonathanbicheux/Documents/Project/WineLovers/app/Controller/HomeController.php(56): Model->find('all', Array)
+#5 [internal function]: HomeController->index()
+#6 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(HomeController), Array)
+#7 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#8 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(HomeController), Object(CakeRequest), Object(CakeResponse))
+#9 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-05-13 10:00:12 Error: [MissingTableException] Table user_r_wis hlists for model R_Whishlist was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'user_r_wis hlists',
+  'class' => 'R_Whishlist',
+  'ds' => 'default',
+)
+Request URL: /
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Model/Model.php(3493): Model->setSource('user_r_wis hlis...')
+#1 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Model/Datasource/DboSource.php(1062): Model->getDataSource()
+#2 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Model/Model.php(2897): DboSource->read(Object(User), Array)
+#3 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Model/Model.php(2869): Model->_readDataSource('all', Array)
+#4 /Users/jonathanbicheux/Documents/Project/WineLovers/app/Controller/HomeController.php(56): Model->find('all', Array)
+#5 [internal function]: HomeController->index()
+#6 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(HomeController), Array)
+#7 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#8 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(HomeController), Object(CakeRequest), Object(CakeResponse))
+#9 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-05-13 10:00:14 Error: [MissingTableException] Table user_r_wis hlists for model R_Whishlist was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'user_r_wis hlists',
+  'class' => 'R_Whishlist',
+  'ds' => 'default',
+)
+Request URL: /
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Model/Model.php(3493): Model->setSource('user_r_wis hlis...')
+#1 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Model/Datasource/DboSource.php(1062): Model->getDataSource()
+#2 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Model/Model.php(2897): DboSource->read(Object(User), Array)
+#3 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Model/Model.php(2869): Model->_readDataSource('all', Array)
+#4 /Users/jonathanbicheux/Documents/Project/WineLovers/app/Controller/HomeController.php(56): Model->find('all', Array)
+#5 [internal function]: HomeController->index()
+#6 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(HomeController), Array)
+#7 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#8 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(HomeController), Object(CakeRequest), Object(CakeResponse))
+#9 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-05-13 10:00:59 Error: [MissingTableException] Table user_r_wis hlists for model R_Whishlist was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'user_r_wis hlists',
+  'class' => 'R_Whishlist',
+  'ds' => 'default',
+)
+Request URL: /
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Model/Model.php(3493): Model->setSource('user_r_wis hlis...')
+#1 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Model/Datasource/DboSource.php(1062): Model->getDataSource()
+#2 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Model/Model.php(2897): DboSource->read(Object(User), Array)
+#3 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Model/Model.php(2869): Model->_readDataSource('all', Array)
+#4 /Users/jonathanbicheux/Documents/Project/WineLovers/app/Controller/HomeController.php(56): Model->find('all', Array)
+#5 [internal function]: HomeController->index()
+#6 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(HomeController), Array)
+#7 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#8 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(HomeController), Object(CakeRequest), Object(CakeResponse))
+#9 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-05-13 10:01:02 Error: [MissingTableException] Table user_r_wis hlists for model R_Whishlist was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'user_r_wis hlists',
+  'class' => 'R_Whishlist',
+  'ds' => 'default',
+)
+Request URL: /
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Model/Model.php(3493): Model->setSource('user_r_wis hlis...')
+#1 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Model/Datasource/DboSource.php(1062): Model->getDataSource()
+#2 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Model/Model.php(2897): DboSource->read(Object(User), Array)
+#3 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Model/Model.php(2869): Model->_readDataSource('all', Array)
+#4 /Users/jonathanbicheux/Documents/Project/WineLovers/app/Controller/HomeController.php(56): Model->find('all', Array)
+#5 [internal function]: HomeController->index()
+#6 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(HomeController), Array)
+#7 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#8 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(HomeController), Object(CakeRequest), Object(CakeResponse))
+#9 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-05-13 10:14:03 Error: [MissingTableException] Table user_r_wis hlists for model R_Whishlist was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'user_r_wis hlists',
+  'class' => 'R_Whishlist',
+  'ds' => 'default',
+)
+Request URL: /
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Model/Model.php(3493): Model->setSource('user_r_wis hlis...')
+#1 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Model/Datasource/DboSource.php(1062): Model->getDataSource()
+#2 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Model/Model.php(2897): DboSource->read(Object(User), Array)
+#3 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Model/Model.php(2869): Model->_readDataSource('all', Array)
+#4 /Users/jonathanbicheux/Documents/Project/WineLovers/app/Controller/HomeController.php(56): Model->find('all', Array)
+#5 [internal function]: HomeController->index()
+#6 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(HomeController), Array)
+#7 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#8 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(HomeController), Object(CakeRequest), Object(CakeResponse))
+#9 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-05-13 10:14:03 Error: [MissingTableException] Table user_r_wis hlists for model R_Whishlist was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'user_r_wis hlists',
+  'class' => 'R_Whishlist',
+  'ds' => 'default',
+)
+Request URL: /
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Model/Model.php(3493): Model->setSource('user_r_wis hlis...')
+#1 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Model/Datasource/DboSource.php(1062): Model->getDataSource()
+#2 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Model/Model.php(2897): DboSource->read(Object(User), Array)
+#3 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Model/Model.php(2869): Model->_readDataSource('all', Array)
+#4 /Users/jonathanbicheux/Documents/Project/WineLovers/app/Controller/HomeController.php(56): Model->find('all', Array)
+#5 [internal function]: HomeController->index()
+#6 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(HomeController), Array)
+#7 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#8 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(HomeController), Object(CakeRequest), Object(CakeResponse))
+#9 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-05-13 10:25:47 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery-2.0.3.min.map
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-13 10:34:10 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery-2.0.3.min.map
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-13 10:36:13 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery-2.0.3.min.map
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-13 10:36:15 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery-2.0.3.min.map
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-13 10:36:36 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery-2.0.3.min.map
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-13 10:37:16 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery-2.0.3.min.map
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-13 10:38:26 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery-2.0.3.min.map
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-13 10:51:12 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery-2.0.3.min.map
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-13 11:27:38 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery-2.0.3.min.map
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-13 11:28:51 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery-2.0.3.min.map
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-13 11:29:03 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery-2.0.3.min.map
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
