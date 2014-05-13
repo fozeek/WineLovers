@@ -16,7 +16,7 @@
 <br />
 
 <div class="row">
-  <?php foreach($friends as $friend) : ?>
+  <?php foreach($user['UserFriendship'] as $friend) : ?>
     <?= $this->element('cards/user', [
     	'user' => $friend,
     	'size' => 4

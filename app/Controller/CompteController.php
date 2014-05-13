@@ -34,7 +34,7 @@ class CompteController extends AppController {
  *
  * @var array
  */
-	public $uses = array('User', 'Wine');
+	public $uses = array('User', 'Wine', 'UserRFriendship', 'Post', 'Comment');
 
 /**
  * Displays a view
@@ -75,15 +75,15 @@ class CompteController extends AppController {
 	}
 
 	public function cellar() {
-		$wines = $this->Wine->find('all', array('limit' => 10));
-		$this->set(compact('wines'));
+		$user = $this->User->findById($this->user['id']);
+		$this->set(compact('user'));
 		$this->render('/compte/cellar');
 		
 	}
 
 	public function whishlist() {
-		$wines = $this->Wine->find('all', array('limit' => 5));
-		$this->set(compact('wines'));
+		$user = $this->User->findById($this->user['id']);
+		$this->set(compact('user'));
 		$this->render('/compte/whishlist');
 		
 	}
@@ -94,9 +94,16 @@ class CompteController extends AppController {
 		
 	}
 
-	public function inbox() {
+	public function addFriend() {
+		$this->UserRFriendship->save(array('user_id' => $this->user['id'], 'friend_id' => $this->request['data']['id']));
+		exit();
+	}
 
-		$this->render('/compte/inbox');
-		
+	public function removeFriend() {
+		$rFriendship = $this->UserRFriendship->find('first', array(
+				'conditions' => array('UserRFriendship.user_id' => $this->user['id'], 'friend_id' => $this->request['data']['id'])
+			));
+		$this->UserRFriendship->delete($rFriendship['UserRFriendship']['id']);
+		exit();
 	}
 }

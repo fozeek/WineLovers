@@ -1,10 +1,11 @@
 <div class="row">
 	<div class="col-md-3">	
-		<img src="http://lorempixel.com/500/500" class="img-responsive img-rounded" alt="Responsive image" style="margin-bottom: 15px;"/>
+		<img src="<?= $wine['Wine']['image'] ?>" class="img-responsive img-rounded" alt="Responsive image" style="margin-bottom: 15px;width: 100%;"/>
 		<ul class="nav nav-pills nav-stacked">
 		  <li class="<?= $this->fetch('active.feeds') ?>"><a href="<?php echo $this->Html->url(array('controller' => 'wines', 'action' => 'feeds', 'name' => $wine['Wine']['slug'])) ?>">Actualités</a></li>
 		  <li class="<?= $this->fetch('active.about') ?>"><a href="<?php echo $this->Html->url(array('controller' => 'wines', 'action' => 'about', 'name' => $wine['Wine']['slug'])) ?>">À propos</a></li>
-		  <li class="<?= $this->fetch('active.events') ?>"><a href="<?php echo $this->Html->url(array('controller' => 'wines', 'action' => 'events', 'name' => $wine['Wine']['slug'])) ?>">Évenements</a></li>
+		  <li class="<?= $this->fetch('active.cellars') ?>"><a href="<?php echo $this->Html->url(array('controller' => 'wines', 'action' => 'cellars', 'name' => $wine['Wine']['slug'])) ?>">Caves</a></li>
+		  <li class="<?= $this->fetch('active.wishlists') ?>"><a href="<?php echo $this->Html->url(array('controller' => 'wines', 'action' => 'wishlist', 'name' => $wine['Wine']['slug'])) ?>">Wishlists</a></li>
 		</ul>
 	</div>
 	<div class="col-md-9">	

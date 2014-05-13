@@ -4,14 +4,23 @@ class Wine extends AppModel {
 
 	public $displayField = 'name';
 
+	public $hasAndBelongsToMany = array(
+			'Cellars' => array(
+                'className' => 'User',
+                'joinTable' => 'cellars'
+            ),
+            'Wishlists' => array(
+                'className' => 'User',
+                'joinTable' => 'wishlists'
+            ),
+            // TODO : Likes
+		);
+
 	public function afterFind($results, $primary = false) {
-		foreach ($results as $key => $result) {
-			$created = new DateTime($results[$key][$this->alias]['created']);
-			$updated = new DateTime($results[$key][$this->alias]['updated']);
-			$results[$key][$this->alias]['created_print'] = $created->format('l j F Y');
-			$results[$key][$this->alias]['updated_print'] = $updated->format('l j F Y');
-		}
-		return $results;
+		return parent::afterFindFields($results, $primary, array(
+                'created' => function ($created) {return new DateTime($created);},
+                'updated' => function ($updated) {return new DateTime($updated);}
+            ));
 	}
 
 	public function beforeSave($options = array()) {

@@ -31,7 +31,9 @@ App::uses('Controller', 'Controller');
  */
 class AppController extends Controller {
 
-	public $components = array('DebugKit.Toolbar', 'Session', 'Security', 
+    public $user = false;
+
+	public $components = array('DebugKit.Toolbar', 'Session', 
 		'Auth' => array(
         	'authenticate' => array(
             	'Form' => array(
@@ -44,8 +46,54 @@ class AppController extends Controller {
     public function beforeFilter() {
         parent::beforeFilter();
 
-        $auth = $this->Auth->user();
-        $this->set(compact('auth'));
+        $this->user = $this->Auth->user();
+        $this->set(['auth' => $this->user]);
+    }
+
+    public function getPosts($name, $object) {
+        $page = (array_key_exists('page', $this->request->query)) ? $this->request->query["page"] : 1;
+        $this->set('countPosts', $this->Post->find('count', array(
+                'conditions' => array(
+                        'Post.link_object' => $name,
+                        'Post.link_id' => $object[$name]['id']
+                    ),
+            )));
+        $this->set('pagePosts', $page);
+        $friends = $this->User->findById($this->user['id']);
+        $friends = $friends['UserFriendship'];
+        $this->set('friendsPosts', $friends);
+        $events = $this->Event->find('all');
+        $this->set('eventsPosts', $events);
+        $wines = $this->Wine->find('all');
+        $this->set('winesPosts', $wines);
+        return $this->Post->find('all', array(
+                'contain' => array(
+                    'AttachWine' => array(
+                            'Cellars',
+                            'Wishlists'
+                        ),
+                    'AttachEvent' => array(
+                            'Guest',
+                            'Like'
+                        ),
+                    'AttachUser' => array(
+                            'UserFriendship',
+                            'WineCellar',
+                            'JoinedEvent'
+                        ),
+                    'Author',
+                    'Comment' => array(
+                            'Author'
+                        )
+                ),
+                'conditions' => array(
+                        'Post.link_object' => $name,
+                        'Post.link_id' => $object[$name]['id']
+                    ),
+                'order' => array('Post.created' => 'DESC'),
+                'limit' => 10,
+                'page' => $page
+            ));
     }
 	
 }

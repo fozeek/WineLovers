@@ -30,4 +30,41 @@ App::uses('Model', 'Model');
  * @package       app.Model
  */
 class AppModel extends Model {
+
+	public function afterFindFields($results, $primary, $callbacks) {
+		if(!array_key_exists('created', $results)) {
+            foreach ($results as $key => $result) {
+                if($primary || array_key_exists($this->alias, $result)) {
+                    if(!isset($results[$key][$this->alias]['created'])) {
+                        return $results;
+                    }
+                    $results[$key][$this->alias] = $this->_executeChange($results[$key][$this->alias], $callbacks);
+                }
+                else {
+                    $results[$key] = $this->_executeChange($results[$key], $callbacks);
+                }
+    		}
+        }
+        else {
+            $results = $this->_executeChange($results, $callbacks);
+        }
+		return $results;
+	}
+
+	protected function _executeChange($results, $callbacks) {
+		if(array_key_exists('_parsed', $results) && $results['_parsed']) { // because some object can be send to 'afterFind' several time
+			return $results;
+		}
+		$results['_parsed'] = true;
+		foreach ($callbacks as $key => $callback) {
+			$reflection = new ReflectionFunction($callback);
+			$params = array();
+			foreach ($reflection->getParameters() as $args => $value) {
+				$params[] = $results[$value->getName()];
+			}
+			$results[$key] = call_user_func_array($callback, $params);
+		}
+		return $results;
+	}
+
 }

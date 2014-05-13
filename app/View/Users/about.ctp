@@ -3,16 +3,16 @@
 
 <div class="row">
 	<div class="col-md-6">
-		<p class="lead"><strong>6</strong> Vins dans sa cave</p>
+		<p class="lead"><strong><?= count($user['WineCellar']) ?></strong> Vins dans sa cave</p>
 	</div>
 	<div class="col-md-6">	
-		<p class="lead"><strong>27</strong> Vins dans sa Whishlist</p>
+		<p class="lead"><strong><?= count($user['WineWishlist']) ?></strong> Vins dans sa Whishlist</p>
 	</div>
 </div>
 
 <div class="row">
 	<div class="col-md-6">
-		<p class="lead"><strong>239</strong> Amis</p>
+		<p class="lead"><strong><?= count($user['UserFriendship']) ?></strong> Amis</p>
 	</div>
 	<div class="col-md-6">	
 		<p class="lead"><strong>32</strong> Likes</p>
@@ -21,16 +21,16 @@
 
 <div class="row">
 	<div class="col-md-6">
-		<p class="lead">A participé à <strong>8</strong> Évènements</p>
+		<p class="lead">A participé à <strong><?= count($user['JoinedEvent']) ?></strong> Évènements</p>
 	</div>
 	<div class="col-md-6">	
-		<p class="lead">A organisé <strong>3</strong> Évènements</p>
+		<p class="lead">A organisé <strong><?= count($user['CreatedEvent']) ?></strong> Évènements</p>
 	</div>
 </div>
 
 <div class="row">
 	<div class="col-md-6">
-		<p class="lead"><strong>832</strong> Posts</p>
+		<p class="lead"><strong><?= count($user['Post']) ?></strong> Posts</p>
 	</div>
 </div>
 <hr />

@@ -36,6 +36,8 @@
 	Router::connect('/me/calendar', array('controller' => 'compte', 'action' => 'calendar'));
 	Router::connect('/me/cellar', array('controller' => 'compte', 'action' => 'cellar'));
 	Router::connect('/me/whishlist', array('controller' => 'compte', 'action' => 'whishlist'));
+	Router::connect('/me/addFriend', array('controller' => 'compte', 'action' => 'addFriend'));
+	Router::connect('/me/removeFriend', array('controller' => 'compte', 'action' => 'removeFriend'));
 
 	Router::connect('/users', array('controller' => 'users', 'action' => 'index'));
 	Router::connect('/user/:pseudo', array('controller' => 'users', 'action' => 'feeds'), array('pseudo' => '[a-zA-Z0-9\-]+'));
@@ -43,7 +45,7 @@
 	Router::connect('/user/:pseudo/friends', array('controller' => 'users', 'action' => 'friends'), array('pseudo' => '[a-zA-Z0-9\-]+'));
 	Router::connect('/user/:pseudo/about', array('controller' => 'users', 'action' => 'about'), array('pseudo' => '[a-zA-Z0-9\-]+'));
 	Router::connect('/user/:pseudo/events', array('controller' => 'users', 'action' => 'events'), array('pseudo' => '[a-zA-Z0-9\-]+'));
-	Router::connect('/user/:pseudo/whishlist', array('controller' => 'users', 'action' => 'whishlist'), array('pseudo' => '[a-zA-Z0-9\-]+'));
+	Router::connect('/user/:pseudo/wishlist', array('controller' => 'users', 'action' => 'wishlist'), array('pseudo' => '[a-zA-Z0-9\-]+'));
 	Router::connect('/signin', array('controller' => 'users', 'action' => 'signin'));
 	Router::connect('/login', array('controller' => 'users', 'action' => 'login'));
 	Router::connect('/logout', array('controller' => 'users', 'action' => 'logout', '[method]' => 'POST'));
@@ -51,15 +53,19 @@
 	Router::connect('/wines', array('controller' => 'wines', 'action' => 'index'));
 	Router::connect('/wine/:name', array('controller' => 'wines', 'action' => 'feeds'), array('name' => '[a-zA-Z0-9\-]+'));
 	Router::connect('/wine/:name/about', array('controller' => 'wines', 'action' => 'about'), array('name' => '[a-zA-Z0-9\-]+'));
-	Router::connect('/wine/:name/events', array('controller' => 'wines', 'action' => 'events'), array('name' => '[a-zA-Z0-9\-]+'));
-	Router::connect('/wine/:name/likes', array('controller' => 'wines', 'action' => 'likes'), array('name' => '[a-zA-Z0-9\-]+'));
+	Router::connect('/wine/:name/cellars', array('controller' => 'wines', 'action' => 'cellars'), array('name' => '[a-zA-Z0-9\-]+'));
+	Router::connect('/wine/:name/wishlists', array('controller' => 'wines', 'action' => 'wishlist'), array('name' => '[a-zA-Z0-9\-]+'));
 
 	Router::connect('/events', array('controller' => 'events', 'action' => 'index'));
 	Router::connect('/event/:name', array('controller' => 'events', 'action' => 'feeds'), array('name' => '[a-zA-Z0-9\-]+'));
 	Router::connect('/event/:name/about', array('controller' => 'events', 'action' => 'about'), array('name' => '[a-zA-Z0-9\-]+'));
 	Router::connect('/event/:name/guests', array('controller' => 'events', 'action' => 'guests'), array('name' => '[a-zA-Z0-9\-]+'));
 	Router::connect('/event/:name/likes', array('controller' => 'events', 'action' => 'likes'), array('name' => '[a-zA-Z0-9\-]+'));
-	Router::connect('/event/:name/medias', array('controller' => 'events', 'action' => 'medias'), array('name' => '[a-zA-Z0-9\-]+'));
+
+
+	Router::connect('/post/create-post', array('controller' => 'posts', 'action' => 'createPost'));
+	Router::connect('/post/comment-post', array('controller' => 'posts', 'action' => 'commentPost'));
+	Router::connect('/post/more-posts', array('controller' => 'posts', 'action' => 'morePosts'));
 /**
  * ...and connect the rest of 'Pages' controller's URLs.
  */

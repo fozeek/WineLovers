@@ -3,7 +3,7 @@
 
 <div class="row">
 	<div class="col-md-6">
-		<p class="lead"><strong>529</strong> Invités</p>
+		<p class="lead"><strong><?= count($event['Guest']) ?></strong> Invités</p>
 	</div>
 	<div class="col-md-6">	
 		<p class="lead"><strong>32</strong> Vins</p>

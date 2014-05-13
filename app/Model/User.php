@@ -4,10 +4,47 @@ App::uses('SimplePasswordHasher', 'Controller/Component/Auth');
 
 class User extends AppModel {
 
-	public $displayField = 'name';
-	public $virtualFields = array(
-	    'name' => "CONCAT(User.firstname, ' ', User.lastname)"
-	);
+	// public $displayField = 'name';
+	// public $virtualFields = array(
+	//     'name' => "CONCAT(User.firstname, ' ', User.lastname)"
+	// );
+
+    public $hasMany = array(
+            'CreatedEvent' => array(
+                'className' => 'Event',
+                'foreignKey' => 'author_id'
+            ),
+            'Post' => array('conditions' => array('Post.link_object' => 'User'), 'foreignKey' => 'link_id'),
+            'R_JoinedEvent' => array('className' => 'EventRGuest'),
+            'R_LikedEvent' => array('className' => 'EventRLike'),
+            'R_Cellar' => array('className' => 'UserRCellar'),
+            'R_Whishlist' => array('className' => 'UserRWishlist'),
+            'R_Friendship' => array('className' => 'UserRFriendship')
+        );
+
+    public $hasAndBelongsToMany = array(
+            'JoinedEvent' => array(
+                'className' => 'Event',
+                'joinTable' => 'events_joins'
+            ),
+            'LikedEvent' => array(
+                'className' => 'Event',
+                'joinTable' => 'events_likes'
+            ),
+            'WineCellar' => array(
+                'className' => 'Wine',
+                'joinTable' => 'cellars'
+            ),
+            'WineWishlist' => array(
+                'className' => 'Wine',
+                'joinTable' => 'wishlists'
+            ),
+            'UserFriendship' => array(
+                'className' => 'User',
+                'joinTable' => 'friendships',
+                'associationForeignKey' => 'friend_id'
+            ),
+        );
 
 	public $validate = array(
         'pseudo' => array(
@@ -37,13 +74,11 @@ class User extends AppModel {
     );
 
 	public function afterFind($results, $primary = false) {
-		foreach ($results as $key => $result) {
-			$created = new DateTime($results[$key][$this->alias]['created']);
-			$updated = new DateTime($results[$key][$this->alias]['updated']);
-			$results[$key][$this->alias]['created_print'] = $created->format('l j F Y');
-			$results[$key][$this->alias]['updated_print'] = $updated->format('l j F Y');
-		}
-		return $results;
+        return parent::afterFindFields($results, $primary, array(
+                'created' => function ($created) {return new DateTime($created);},
+                'updated' => function ($updated) {return new DateTime($updated);},
+                'name' => function ($firstname, $lastname) {return $firstname.' '.$lastname;},
+            ));
 	}
 
 	public function beforeSave($options = array()) {

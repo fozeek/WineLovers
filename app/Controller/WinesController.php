@@ -34,7 +34,7 @@ class WinesController extends AppController {
  *
  * @var array
  */
-	public $uses = array('Wine', 'User');
+	public $uses = array('Wine', 'User', 'Post', 'Event');
 
 	public $apiUrl = "http://api.wine-searcher.com/wine-select-api.lml?Xkey=bchxjn531137&Xformat=J&Xversion=5Y&Xcurrencycode=eur&Xlocation=fr";
 
@@ -72,7 +72,8 @@ class WinesController extends AppController {
 
 	public function feeds() {
 		$wine = $this->Wine->findBySlug($this->request->params['name']);
-		$this->set(compact('wine'));
+		$posts = parent::getPosts('Wine', $wine);
+		$this->set(compact('wine', 'posts'));
 		$this->render('/wines/feeds');
 		
 	}
@@ -81,20 +82,20 @@ class WinesController extends AppController {
 		$wine = $this->Wine->findBySlug($this->request->params['name']);
 		$this->set(compact('wine'));
 		$this->render('/wines/about');
+	
+	}
+
+	public function cellars() {
+		$wine = $this->Wine->findBySlug($this->request->params['name']);
+		$this->set(compact('wine'));
+		$this->render('/wines/cellars');
 		
 	}
 
-	public function events() {
+	public function wishlist() {
 		$wine = $this->Wine->findBySlug($this->request->params['name']);
 		$this->set(compact('wine'));
-		$this->render('/wines/events');
-		
-	}
-
-	public function likes() {
-		$wine = $this->Wine->findBySlug($this->request->params['name']);
-		$this->set(compact('wine'));
-		$this->render('/wines/likes');
+		$this->render('/wines/wishlists');
 		
 	}
 }
