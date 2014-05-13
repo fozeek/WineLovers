@@ -13,6 +13,7 @@ class Wine extends AppModel {
                 'className' => 'User',
                 'joinTable' => 'wishlists'
             ),
+            // TODO : Likes
 		);
 
 	public function afterFind($results, $primary = false) {

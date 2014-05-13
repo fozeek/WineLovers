@@ -34,7 +34,7 @@ class UsersController extends AppController {
  *
  * @var array
  */
-	public $uses = array('Wine', 'User', 'Post');
+	public $uses = array('Wine', 'User', 'Post', 'Event');
 
 	public $scaffold;
 
@@ -81,6 +81,14 @@ class UsersController extends AppController {
 		$isFriend = $this->isFriend($user['User']['id']);
 		$this->set(compact('user', 'posts', 'isFriend'));
 		$this->render('/users/feeds');
+	}
+
+	public function morefeeds() {
+		$user = $this->User->findBySlug($this->request->params['pseudo']);
+		$posts = parent::getPosts('User', $user);
+		$isFriend = $this->isFriend($user['User']['id']);
+		$this->set(compact('user', 'posts', 'isFriend'));
+		$this->render('/users/morefeeds');
 	}
 
 	public function cellar() {

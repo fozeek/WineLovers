@@ -20,10 +20,15 @@
     	</div>
     	<?php endif ?>
     	<?php if (array_key_exists('AttachEvent', $post) && $post['AttachEvent']['id'] !== null): ?>
-    	<div class="row">
-    		<?= $this->element('cards/posts/event', array('event' => $post['AttachEvent'])) ?>
-    	</div>
-    	<?php endif ?>
+      <div class="row">
+        <?= $this->element('cards/posts/event', array('event' => $post['AttachEvent'])) ?>
+      </div>
+      <?php endif ?>
+      <?php if (array_key_exists('AttachUser', $post) && $post['AttachUser']['id'] !== null): ?>
+      <div class="row">
+        <?= $this->element('cards/posts/user', array('user' => $post['AttachUser'])) ?>
+      </div>
+      <?php endif ?>
     </div>
     <div class="comments-container">
     <?php foreach ($post['Comment'] as $comment): ?>

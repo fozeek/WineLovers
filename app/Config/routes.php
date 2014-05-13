@@ -38,8 +38,6 @@
 	Router::connect('/me/whishlist', array('controller' => 'compte', 'action' => 'whishlist'));
 	Router::connect('/me/addFriend', array('controller' => 'compte', 'action' => 'addFriend'));
 	Router::connect('/me/removeFriend', array('controller' => 'compte', 'action' => 'removeFriend'));
-	Router::connect('/me/createPost', array('controller' => 'compte', 'action' => 'createPost'));
-	Router::connect('/me/commentPost', array('controller' => 'compte', 'action' => 'commentPost'));
 
 	Router::connect('/users', array('controller' => 'users', 'action' => 'index'));
 	Router::connect('/user/:pseudo', array('controller' => 'users', 'action' => 'feeds'), array('pseudo' => '[a-zA-Z0-9\-]+'));
@@ -63,6 +61,11 @@
 	Router::connect('/event/:name/about', array('controller' => 'events', 'action' => 'about'), array('name' => '[a-zA-Z0-9\-]+'));
 	Router::connect('/event/:name/guests', array('controller' => 'events', 'action' => 'guests'), array('name' => '[a-zA-Z0-9\-]+'));
 	Router::connect('/event/:name/likes', array('controller' => 'events', 'action' => 'likes'), array('name' => '[a-zA-Z0-9\-]+'));
+
+
+	Router::connect('/post/create-post', array('controller' => 'posts', 'action' => 'createPost'));
+	Router::connect('/post/comment-post', array('controller' => 'posts', 'action' => 'commentPost'));
+	Router::connect('/post/more-posts', array('controller' => 'posts', 'action' => 'morePosts'));
 /**
  * ...and connect the rest of 'Pages' controller's URLs.
  */

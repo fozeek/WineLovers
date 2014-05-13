@@ -34,7 +34,7 @@ class EventsController extends AppController {
  *
  * @var array
  */
-	public $uses = array('Event', 'User', 'Post');
+	public $uses = array('Event', 'User', 'Post', 'Wine');
 
 /**
  * Displays a view

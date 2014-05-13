@@ -10,7 +10,7 @@
 	</div>
 </div>
 <div style="padding: 8px;margin-left: 60px;">
-	<p class="lead">
+	<p class="lead" style="margin-bottom: 0px;">
     	<?= $comment['text'] ?>
 	</p>
 </div>

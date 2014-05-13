@@ -34,7 +34,7 @@ class WinesController extends AppController {
  *
  * @var array
  */
-	public $uses = array('Wine', 'User', 'Post');
+	public $uses = array('Wine', 'User', 'Post', 'Event');
 
 	public $apiUrl = "http://api.wine-searcher.com/wine-select-api.lml?Xkey=bchxjn531137&Xformat=J&Xversion=5Y&Xcurrencycode=eur&Xlocation=fr";
 

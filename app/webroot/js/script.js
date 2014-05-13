@@ -1,10 +1,84 @@
 $(document).ready(function() {
 
+
+	var $scrollModule = true;
+
+	$('#testou').on('scroll', function() {
+		var top = $(this).children('.row').position().top;
+		var height = $(this).children('.row').height();
+		var parentHeight = $(this).height();
+		if(parentHeight >= height + top) {
+			console.log('bottom');
+		}
+	})
+
+	document.addEventListener( 'scroll',function (event) {
+
+	    if ( $scrollModule && window.scrollY >= document.body.scrollHeight - window.innerHeight )
+	    {
+	    	$scrollModule = false;
+	    	console.log('load..');
+	        var request = $.ajax({
+				url: "/post/more-posts",
+				type: "POST",
+				data: {
+					page : $('#load-more').attr('data-page'),
+					object : $('#load-more').attr('data-object'),
+					id : $('#load-more').attr('data-id')
+				},
+				dataType: "html"
+			});
+
+			$('#load-more').attr('data-page', parseInt($('#load-more').attr('data-page')) + 1);
+			 
+			request.done(function( msg ) {
+				if(msg=='') {
+	    		console.log('stop..');
+	    			$('#load-more').hide();
+					$scrollModule = false;
+					return;
+				}
+	   			$('.posts-container').append(msg);
+				$scrollModule = true;
+			});
+			 
+			request.fail(function( jqXHR, textStatus ) {
+			  alert( "Request failed: " + textStatus );
+			});
+	    }
+	} );
+
+	$('#addObjectToPost .nav-tabs li').on('click', function() {
+		$('#addObjectToPost').find('.tab').hide();
+		$('#addObjectToPost').find('.tab-' + $(this).attr('data-tab')).show();
+	});
+	$('#addObjectToPost .thumbnail').on('click', function() {
+		var $form = $('#post-form');
+		$form.find('.addSomething').html('<span class="glyphicon glyphicon-'+$(this).attr('data-image')+'" style="margin-right: 10px;" />' + $(this).attr('data-name'));
+		$form.find('.removeSomething').show();
+		$form.find('.attach_object').val($(this).attr('data-object'));
+		$form.find('.attach_id').val($(this).attr('data-id'));
+		$('#addObjectToPost').modal('hide');
+	});
+
+	$('#post-form .removeSomething').on('click', function() {
+		var $form = $('#post-form');
+		$form.find('.addSomething').html('Ajouter');
+		$form.find('.removeSomething').hide();
+		$form.find('.attach_object').val('');
+		$form.find('.attach_id').val('');
+		return false;
+	});
+
+
+
+
 	$('body').on('focus', '#post-form textarea, .comment-form textarea', function() {
 		if($(this).val() == $(this).attr('data-val')) {
 			$(this).val('');
 		}
 		$(this).height('120px');
+		$(this).parent().find('.addSomething').show();
 		$(this).parent().find('button[type=submit]').show();
 	});
 
@@ -14,15 +88,20 @@ $(document).ready(function() {
 		var text = $form.find('.text');
 		var link_id = $form.find('.link_id');
 		var link_object = $form.find('.link_object');
+		var attach_object = $form.find('.attach_object');
+		var attach_id = $form.find('.attach_id');
 		
 		if(text.val().trim() !='') {
+
 			var request = $.ajax({
-				url: "/me/createPost",
+				url: "/post/create-post",
 				type: "POST",
 				data: {
 					text : text.val().trim(),
 					link_id : link_id.val(),
-					link_object : link_object.val()
+					link_object : link_object.val(),
+					attach_object : attach_object.val(),
+					attach_id : attach_id.val(),
 				},
 				dataType: "html"
 			});
@@ -38,6 +117,12 @@ $(document).ready(function() {
 			request.fail(function( jqXHR, textStatus ) {
 			  alert( "Request failed: " + textStatus );
 			});
+
+			$form.find('.addSomething').html('Ajouter');
+			$form.find('.removeSomething').hide();
+			$form.find('.attach_object').val('');
+			$form.find('.attach_id').val('');
+
 		}
 		else {
 			alert('Faut marquer quelque chose !');
@@ -54,7 +139,7 @@ $(document).ready(function() {
 		
 		if(text.val().trim() !='') {
 			var request = $.ajax({
-				url: "/me/commentPost",
+				url: "/post/comment-post",
 				type: "POST",
 				data: {
 					text : text.val().trim(),
