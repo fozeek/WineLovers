@@ -1,4 +1,4 @@
-<?= $this->Form->create('User', array('action' => 'signin', 'role' => 'form-horizontal', 
+  <?= $this->Form->create('User', array('action' => 'signin', 'role' => 'form-horizontal', 
                   'inputDefaults' => array(
                   'error' => array(
                     'attributes' => array(
