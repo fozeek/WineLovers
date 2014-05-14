@@ -20,7 +20,7 @@ $(document).ready(function() {
 		    $that.find('.paginator').hide();
    			$that.children('.row').html(msg);
 			$scrollModuleObject = true;
-			if(msg=='') {
+			if(msg.trim()=='') {
 				$that.children('.nodata').show();
 			}
 			else {
@@ -55,7 +55,7 @@ $(document).ready(function() {
 				});
 				
 				request.done(function( msg ) {
-					if(msg=='') {
+					if(msg.trim()=='') {
 		    			$that.find('.paginator').hide();
 						$scrollModuleObject = false;
 						return;
@@ -96,7 +96,7 @@ $(document).ready(function() {
 			$('#load-more').attr('data-page', parseInt($('#load-more').attr('data-page')) + 1);
 			 
 			request.done(function( msg ) {
-				if(msg=='') {
+				if(msg.trim()=='') {
 	    			$('#load-more').hide();
 					$scrollModule = false;
 					return;
