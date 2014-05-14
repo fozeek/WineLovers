@@ -53,6 +53,7 @@
 	Router::connect('/user/:pseudo/wishlist', array('controller' => 'users', 'action' => 'wishlist'), array('pseudo' => '[a-zA-Z0-9\-]+'));
 	Router::connect('/signin', array('controller' => 'users', 'action' => 'signin'));
 	Router::connect('/login', array('controller' => 'users', 'action' => 'login'));
+	Router::connect('/login-by-facebook', array('controller' => 'users', 'action' => 'loginByFacebook'));
 	Router::connect('/logout', array('controller' => 'users', 'action' => 'logout', '[method]' => 'POST'));
 
 	Router::connect('/wines', array('controller' => 'wines', 'action' => 'index'));

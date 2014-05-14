@@ -9220,6 +9220,7 @@ Stack Trace:
 #0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 >>>>>>> FETCH_HEAD
 #1 {main}
+<<<<<<< HEAD
 2014-05-14 08:17:29 Error: Fatal Error (1): Function name must be a string in [/Users/qdeneuve/Projets/WineLovers/app/View/Elements/cards/wine.ctp, line 2]
 2014-05-14 08:17:29 Error: [FatalErrorException] Function name must be a string
 Request URL: /me/whishlist
@@ -9574,146 +9575,243 @@ Stack Trace:
 #0 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
 2014-05-14 08:39:22 Error: [MissingControllerException] Controller class JsController could not be found.
+=======
+2014-05-13 17:27:13 Error: [MissingControllerException] Controller class JsController could not be found.
+>>>>>>> FETCH_HEAD
 Exception Attributes: array (
   'class' => 'JsController',
   'plugin' => NULL,
 )
 Request URL: /js/jquery-2.0.3.min.map
 Stack Trace:
+<<<<<<< HEAD
 #0 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
 2014-05-14 08:39:24 Error: [MissingControllerException] Controller class JsController could not be found.
+=======
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-13 17:27:54 Error: [MissingControllerException] Controller class JsController could not be found.
+>>>>>>> FETCH_HEAD
 Exception Attributes: array (
   'class' => 'JsController',
   'plugin' => NULL,
 )
 Request URL: /js/jquery-2.0.3.min.map
 Stack Trace:
+<<<<<<< HEAD
 #0 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
 2014-05-14 08:39:24 Error: [MissingControllerException] Controller class JsController could not be found.
+=======
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-13 17:29:58 Error: [MissingControllerException] Controller class JsController could not be found.
+>>>>>>> FETCH_HEAD
 Exception Attributes: array (
   'class' => 'JsController',
   'plugin' => NULL,
 )
 Request URL: /js/jquery-2.0.3.min.map
 Stack Trace:
+<<<<<<< HEAD
 #0 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
 2014-05-14 08:39:28 Error: [MissingControllerException] Controller class JsController could not be found.
+=======
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-13 17:48:33 Error: [MissingControllerException] Controller class JsController could not be found.
+>>>>>>> FETCH_HEAD
 Exception Attributes: array (
   'class' => 'JsController',
   'plugin' => NULL,
 )
 Request URL: /js/jquery-2.0.3.min.map
 Stack Trace:
+<<<<<<< HEAD
 #0 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
 2014-05-14 08:39:54 Error: [MissingControllerException] Controller class JsController could not be found.
+=======
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-13 17:48:50 Error: [MissingControllerException] Controller class JsController could not be found.
+>>>>>>> FETCH_HEAD
 Exception Attributes: array (
   'class' => 'JsController',
   'plugin' => NULL,
 )
 Request URL: /js/jquery-2.0.3.min.map
 Stack Trace:
+<<<<<<< HEAD
 #0 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
 2014-05-14 08:40:49 Error: [MissingControllerException] Controller class JsController could not be found.
+=======
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-13 17:50:10 Error: [MissingControllerException] Controller class JsController could not be found.
+>>>>>>> FETCH_HEAD
 Exception Attributes: array (
   'class' => 'JsController',
   'plugin' => NULL,
 )
 Request URL: /js/jquery-2.0.3.min.map
 Stack Trace:
+<<<<<<< HEAD
 #0 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
 2014-05-14 08:40:52 Error: [MissingControllerException] Controller class JsController could not be found.
+=======
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-13 19:19:06 Error: [MissingControllerException] Controller class JsController could not be found.
+>>>>>>> FETCH_HEAD
 Exception Attributes: array (
   'class' => 'JsController',
   'plugin' => NULL,
 )
 Request URL: /js/jquery-2.0.3.min.map
 Stack Trace:
+<<<<<<< HEAD
 #0 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
 2014-05-14 08:41:56 Error: [MissingControllerException] Controller class JsController could not be found.
+=======
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-13 19:19:08 Error: [MissingControllerException] Controller class JsController could not be found.
+>>>>>>> FETCH_HEAD
 Exception Attributes: array (
   'class' => 'JsController',
   'plugin' => NULL,
 )
 Request URL: /js/jquery-2.0.3.min.map
 Stack Trace:
+<<<<<<< HEAD
 #0 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
 2014-05-14 08:42:47 Error: [MissingControllerException] Controller class JsController could not be found.
+=======
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-13 19:19:13 Error: [MissingControllerException] Controller class JsController could not be found.
+>>>>>>> FETCH_HEAD
 Exception Attributes: array (
   'class' => 'JsController',
   'plugin' => NULL,
 )
 Request URL: /js/jquery-2.0.3.min.map
 Stack Trace:
+<<<<<<< HEAD
 #0 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
 2014-05-14 08:44:12 Error: [MissingControllerException] Controller class JsController could not be found.
+=======
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-13 19:19:16 Error: [MissingControllerException] Controller class JsController could not be found.
+>>>>>>> FETCH_HEAD
 Exception Attributes: array (
   'class' => 'JsController',
   'plugin' => NULL,
 )
 Request URL: /js/jquery-2.0.3.min.map
 Stack Trace:
+<<<<<<< HEAD
 #0 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
 2014-05-14 08:44:30 Error: [MissingControllerException] Controller class JsController could not be found.
+=======
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-13 19:21:20 Error: [MissingControllerException] Controller class JsController could not be found.
+>>>>>>> FETCH_HEAD
 Exception Attributes: array (
   'class' => 'JsController',
   'plugin' => NULL,
 )
 Request URL: /js/jquery-2.0.3.min.map
 Stack Trace:
+<<<<<<< HEAD
 #0 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
 2014-05-14 08:57:45 Error: [MissingControllerException] Controller class JsController could not be found.
+=======
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-13 19:21:33 Error: [MissingControllerException] Controller class JsController could not be found.
+>>>>>>> FETCH_HEAD
 Exception Attributes: array (
   'class' => 'JsController',
   'plugin' => NULL,
 )
 Request URL: /js/jquery-2.0.3.min.map
 Stack Trace:
+<<<<<<< HEAD
 #0 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
 2014-05-14 08:59:54 Error: [MissingControllerException] Controller class JsController could not be found.
+=======
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-14 09:11:15 Error: [MissingControllerException] Controller class JsController could not be found.
+>>>>>>> FETCH_HEAD
 Exception Attributes: array (
   'class' => 'JsController',
   'plugin' => NULL,
 )
 Request URL: /js/jquery-2.0.3.min.map
 Stack Trace:
+<<<<<<< HEAD
 #0 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
 2014-05-14 09:00:53 Error: [MissingControllerException] Controller class JsController could not be found.
+=======
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-14 09:11:34 Error: [MissingControllerException] Controller class JsController could not be found.
+>>>>>>> FETCH_HEAD
 Exception Attributes: array (
   'class' => 'JsController',
   'plugin' => NULL,
 )
 Request URL: /js/jquery-2.0.3.min.map
 Stack Trace:
+<<<<<<< HEAD
 #0 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
 2014-05-14 09:03:41 Error: [MissingControllerException] Controller class JsController could not be found.
+=======
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-14 09:11:38 Error: [MissingControllerException] Controller class JsController could not be found.
+>>>>>>> FETCH_HEAD
 Exception Attributes: array (
   'class' => 'JsController',
   'plugin' => NULL,
 )
 Request URL: /js/jquery-2.0.3.min.map
 Stack Trace:
+<<<<<<< HEAD
 #0 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
 2014-05-14 09:04:02 Error: [MissingControllerException] Controller class JsController could not be found.
+=======
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-14 09:11:49 Error: [MissingControllerException] Controller class JsController could not be found.
+>>>>>>> FETCH_HEAD
 Exception Attributes: array (
   'class' => 'JsController',
   'plugin' => NULL,
 )
 Request URL: /js/jquery-2.0.3.min.map
 Stack Trace:
+<<<<<<< HEAD
 #0 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+=======
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+>>>>>>> FETCH_HEAD
 #1 {main}
