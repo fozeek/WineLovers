@@ -1,5 +1,5 @@
-<div style="width: 50%;float: left;padding: 15px;padding-top: 0px;padding-right: 0px;cursor: pointer;">
-	<div class="thumbnail" style="margin: 0px;" data-name="<?= $wine['Wine']['name'] ?>" data-image="glass" data-object="wine" data-id="<?= $wine['Wine']['id'] ?>">
+<div style="width: 50%;float: left;padding: 15px;padding-top: 0px;padding-right: 0px;">
+	<div class="thumbnail" style="margin: 0px;cursor: pointer;" data-name="<?= $wine['Wine']['name'] ?>" data-image="glass" data-object="wine" data-id="<?= $wine['Wine']['id'] ?>">
 	  <div class="row">
 	    <div class="col-md-5">
 	      <div class="img-responsive img-rounded" style="background: url(<?= $wine['Wine']['image'] ?>) center center no-repeat;height: 94px;width: 94px;background-size: cover;">

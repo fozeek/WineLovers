@@ -72,15 +72,16 @@ class CompteController extends AppController {
 
 	public function cellar() {
 		$user = $this->User->findById($this->user['id']);
-		$this->set(compact('user'));
+		$wines = $this->Wine->find('all', array('limit' => 20));
+		$this->set(compact('user', 'wines'));
 		$this->render('/compte/cellar');
 		
 	}
 
-	public function whishlist() {
+	public function wishlist() {
 		$user = $this->User->findById($this->user['id']);
 		$this->set(compact('user'));
-		$this->render('/compte/whishlist');
+		$this->render('/compte/wishlist');
 		
 	}
 

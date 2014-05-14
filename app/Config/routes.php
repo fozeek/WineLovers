@@ -35,7 +35,7 @@
 	Router::connect('/me/settings', array('controller' => 'compte', 'action' => 'settings'));
 	Router::connect('/me/calendar', array('controller' => 'compte', 'action' => 'calendar'));
 	Router::connect('/me/cellar', array('controller' => 'compte', 'action' => 'cellar'));
-	Router::connect('/me/whishlist', array('controller' => 'compte', 'action' => 'whishlist'));
+	Router::connect('/me/wishlist', array('controller' => 'compte', 'action' => 'wishlist'));
 
 	Router::connect('/me/addFriend', array('controller' => 'compte', 'action' => 'addFriend'));
 	Router::connect('/me/removeFriend', array('controller' => 'compte', 'action' => 'removeFriend'));

@@ -3,7 +3,7 @@ $(document).ready(function() {
 	$('#addObjectToPost .tab input').on('keyup', function() {
 		var $that = $(this).parent();
 		var value = $(this).val();
-		console.log(value);
+		
 		var request = $.ajax({
 			url: "/post/more-" + $that.find('.paginator').attr('data-object'),
 			type: "POST",

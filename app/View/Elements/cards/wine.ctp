@@ -1,4 +1,4 @@
-<div class="col-md-<?= (isset($size)) ? $size : 4 ?>" style="max-height: 260px;">
+<div class="col-md-<?= (isset($size)) ? $size : 4 ?>" style="max-height: 260px;position: relative;">
 	<div class="thumbnail" style="position: relative;">
 		<a href="<?php echo $this->Html->url(array('controller' => 'wines', 'action' => 'feeds', 'name' => $wine['slug'])); ?>">
 			<img src="<?= $wine['image'] ?>" alt="..." style="max-height: 220px;">
@@ -8,4 +8,7 @@
 			<p><?= $wine['description'] ?></p>
 		</div>
 	</div>
+	<?php if(isset($button)) : ?>
+		<button data-id="<?= $wine['id'] ?>" class="remove" style="position: absolute;top: -10px;right: 0px;padding-top: 4px;background: white;border: 1px solid #ccc;border-radius: 30px;"><span class="glyphicon glyphicon-remove"></span></button>
+	<?php endif ?>
 </div>

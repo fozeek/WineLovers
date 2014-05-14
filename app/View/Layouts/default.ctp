@@ -72,7 +72,7 @@ $cakeDescription = __d('cake_dev', 'La Bonne Cave');
 				    </a>
 				  </li>
 				  <li>
-				    <a href="<?php echo $this->Html->url(array('controller' => 'compte', 'action' => 'whishlist')) ?>">
+				    <a href="<?php echo $this->Html->url(array('controller' => 'compte', 'action' => 'wishlist')) ?>">
 				      Ma Wishlist
 				    </a>
 				  </li>
