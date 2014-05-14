@@ -1,32 +1,15 @@
-  function statusChangeCallback(response) {
-    console.log('statusChangeCallback');
-
-    if (response.status === 'connected') {
-      FB.api('/me', function(response) {
-        console.log(response);
-      
-     /* var request = $.ajax({
-          url: "/login-by-facebook",
-          type: "POST",
-          data: {
-            name : response.name,
-          },
-          dataType: "html"
-        });
-         
-        request.fail(function( jqXHR, textStatus ) {
-          alert( "Request failed: " + textStatus );
-        });*/
-      });
-
-    } else if (response.status === 'not_authorized') {
-      document.getElementById('status').innerHTML = 'Please log ' +
-        'into this app.';
-    } else {
-      document.getElementById('status').innerHTML = 'Please log ' +
-        'into Facebook.';
-    }
-  }
+  $(document).ready(function() {
+    FB.login(function(response) {
+     if (response.authResponse) {
+       console.log('Welcome!  Fetching your information.... ');
+       FB.api('/me', function(response) {
+         console.log('Good to see you, ' + response.name + '.');
+       });
+     } else {
+       console.log('User cancelled login or did not fully authorize.');
+     }
+    });
+  });
 
   function checkLoginState() {
     FB.getLoginStatus(function(response) {
@@ -41,10 +24,6 @@
       xfbml      : true,  
       version    : 'v2.0' 
     });
-
-    FB.getLoginStatus(function(response) {
-      statusChangeCallback(response);
-    });
   };
 
   (function(d, s, id) {
@@ -54,4 +33,4 @@
     js.src = "//connect.facebook.net/fr_FR/sdk.js";
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));
-}
+
