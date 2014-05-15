@@ -100,6 +100,9 @@ class PostsController extends AppController
 		}
         $wines = $this->Wine->find('all', $options);
         $this->set('winesPosts', $wines);
+        if(array_key_exists('ids', $this->request['data'])) {
+        	$this->set('ids', $this->request['data']['ids']);
+        }
 	}
 
 	public function moreFriends() {

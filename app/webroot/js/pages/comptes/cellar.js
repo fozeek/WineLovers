@@ -18,8 +18,21 @@ $(document).ready(function() {
 		});
 	});
 
-	$('#addWine .thumbnail').on('click', function() {
-		console.log('coucou');
+	$('#addWine').on('click', '.thumbnail', function() {
+		if(!$(this).hasClass('selected')) {
+			$(this).addClass('selected');
+			$(this).css('border-color', 'blue');
+			$(this).css('background', '#cedefd');
+			$(this).find('h3').css('color', 'blue');
+			$('#ids').val($('#ids').val()+':'+$(this).attr('data-id'));
+		}
+		else {
+			$(this).removeClass('selected');
+			$(this).css('border-color', '#ddd');
+			$(this).css('background', 'white');
+			$(this).find('h3').css('color', 'rgb(128, 0, 0)');
+			$('#ids').val($('#ids').val().replace(':'+$(this).attr('data-id'), ''));
+		}
 	});
 
 
@@ -33,7 +46,8 @@ $(document).ready(function() {
 			data: {
 				page : 1,
 				id : $that.find('.paginator').attr('data-id'),
-				value : value
+				value : value,
+				ids: $('#ids').val()
 			},
 			dataType: "html"
 		});
@@ -43,7 +57,7 @@ $(document).ready(function() {
 		    $that.find('.paginator').hide();
    			$that.children('.row').html(msg);
 			$scrollModuleObject = true;
-			if(msg=='') {
+			if(msg.trim()=='') {
 				$that.children('.nodata').show();
 			}
 			else {
@@ -72,7 +86,8 @@ $(document).ready(function() {
 					data: {
 						page : $that.find('.paginator').attr('data-page'),
 						id : $that.find('.paginator').attr('data-id'),
-						value : $that.find('input').val()
+						value : $that.find('input').val(),
+						ids: $('#ids').val()
 					},
 					dataType: "html"
 				});

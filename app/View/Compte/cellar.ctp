@@ -8,6 +8,7 @@
         <h4 class="modal-title" id="myModalLabel">Choississez vos vins</h4>
       </div>
       <div class="modal-body" style="padding: 0px;">
+      	<input type="hidden" id="ids"/>
 		<div class="results" style="position: relative;max-height: 550px;overflow-y: auto;overflow-x: hidden;">
 	        <input class="form-control" style="margin-top: 15px;margin-left: 15px;width: 568px;" placeholder="Rechercher un vin"/>
 			<div class="nodata" style="display: none;text-align: center;font-size: 40px;color: #E7E7E7;padding: 20px;">

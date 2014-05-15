@@ -32,7 +32,6 @@ $(document).ready(function() {
 		   	$('#addWishlistWine').click(function() {
 
 			   		if($(this).hasClass('btn-default')) {
-			   			console.log('cocuou');
 						var $that = $(this);
 						$that.unbind('click');
 

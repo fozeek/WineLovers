@@ -1,5 +1,5 @@
 <div class="col-md-<?= (isset($size)) ? $size : 4 ?>" style="max-height: 260px;position: relative;">
-	<div class="thumbnail" style="position: relative;">
+	<div class="thumbnail" style="position: relative;" data-id="<?= $wine['id'] ?>">
 		<a href="<?php echo $this->Html->url(array('controller' => 'wines', 'action' => 'feeds', 'name' => $wine['slug'])); ?>">
 			<img src="<?= $wine['image'] ?>" alt="..." style="max-height: 220px;">
 		</a>
