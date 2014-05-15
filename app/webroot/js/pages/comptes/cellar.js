@@ -31,7 +31,7 @@ $(document).ready(function() {
 			$(this).css('border-color', '#ddd');
 			$(this).css('background', 'white');
 			$(this).find('h3').css('color', 'rgb(128, 0, 0)');
-			$('#ids').val($('#ids').val().replace(':'+$(this).attr('data-id'), ''));
+			$('#ids').val($('#ids').val().replace(':'+$(this).attr('data-id')+':', ':'));
 		}
 	});
 

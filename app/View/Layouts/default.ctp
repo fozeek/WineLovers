@@ -61,17 +61,6 @@ $cakeDescription = __d('cake_dev', 'La Bonne Cave');
 				    </a>
 				  </li>
 				  <li>
-				    <a href="<?php echo $this->Html->url(array('controller' => 'compte', 'action' => 'inbox')) ?>">
-				      <span class="badge pull-right">42</span>
-				      Messagerie
-				    </a>
-				  </li>
-				  <li>
-				    <a href="<?php echo $this->Html->url(array('controller' => 'compte', 'action' => 'calendar')) ?>">
-				      Calendrier
-				    </a>
-				  </li>
-				  <li>
 				    <a href="<?php echo $this->Html->url(array('controller' => 'compte', 'action' => 'wishlist')) ?>">
 				      Ma Wishlist
 				    </a>
@@ -79,11 +68,6 @@ $cakeDescription = __d('cake_dev', 'La Bonne Cave');
 				  <li>
 				    <a href="<?php echo $this->Html->url(array('controller' => 'compte', 'action' => 'cellar')) ?>">
 				      Ma Cave
-				    </a>
-				  </li>
-				  <li>
-				    <a href="<?php echo $this->Html->url(array('controller' => 'compte', 'action' => 'stats')) ?>">
-				      Statistiques
 				    </a>
 				  </li>
 				  <li class="divider"></li>
