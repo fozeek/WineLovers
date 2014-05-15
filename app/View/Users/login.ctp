@@ -1,4 +1,4 @@
-<?= $this->Html->script('facebook', array('inLine' => false)) ?>
+<?= $this->Html->script('facebook', array('inline' => false)) ?>
 <?= $this->Form->create('User', array('action' => 'login', 'role' => 'form')) ?>
 
   <?= $this->Form->input('email', array(
@@ -20,4 +20,4 @@
 
 <div id="fb-root"></div>
 <div id="status"></div>
-<div class="fb-login-button" data-max-rows="1" data-size="xlarge" data-show-faces="false" data-auto-logout-link="false"></div>
+<button id="fbconnect">Connexion via Facebook</button>

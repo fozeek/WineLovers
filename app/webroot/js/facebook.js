@@ -1,19 +1,20 @@
-  $(document).ready(function() {
-    FB.login(function(response) {
-     if (response.authResponse) {
-       console.log('Welcome!  Fetching your information.... ');
-       FB.api('/me', function(response) {
-         console.log('Good to see you, ' + response.name + '.');
-       });
-     } else {
-       console.log('User cancelled login or did not fully authorize.');
-     }
-    });
-  });
+  function loginFb(){
+     FB.api('/me', function(response) {
+          var request = $.ajax({
+            url: "/login-by-facebook",
+            type: "POST",
+            data: {
+              fbID : response.id,
+              name : response.last_name,
+              firstname : response.first_name,
+              email : response.email
+            },
+            dataType: "html"
+          });
 
-  function checkLoginState() {
-    FB.getLoginStatus(function(response) {
-      statusChangeCallback(response);
+          request.done(function( msg ) {
+            document.location.href="/me"
+          });
     });
   }
 
@@ -34,3 +35,17 @@
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));
 
+  $(document).ready(function() {
+    jQuery('#fbconnect').on('click', function(){
+      FB.getLoginStatus(function(response) {
+        if (response.status === 'connected') {
+          loginFb();
+        }
+        else {
+          FB.login(function(){loginFb();}, {scope: 'email', return_scopes: true});
+        }
+
+       
+      });
+    });
+  });

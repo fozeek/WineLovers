@@ -49,7 +49,7 @@ class UsersController extends AppController {
 
 	public function beforeFilter(){
 		parent::beforeFilter();
-		$this->Auth->allow('signin');
+		$this->Auth->allow('signin', 'loginByFacebook');
 	}
 
 	private function isFriend($id) {
@@ -146,5 +146,32 @@ class UsersController extends AppController {
 	public function logout() {
     	$this->redirect($this->Auth->logout());
 		$this->render('/users/logout');	
+	}
+
+	public function loginByFacebook (){
+		$data = $this->request['data'];
+		$userByMail = $this->User->findByEmail($data['email']);
+
+		if(count($userByMail) == 0){
+			$i = 1;
+			$pseudo = $data['firstname'].".".$data['name'];
+			
+			do{
+				$user = $this->User->findByPseudo($pseudo);
+				
+				if(count($user) != 0){
+					$pseudo = $pseudo.$i;
+				}	
+
+				$i++;
+			} while(count($user)!=0);
+
+			$this->User->create(array("pseudo" => $pseudo, "firstname" => $data['firstname'], "lastname" => $data['name'], "email" => $data['email'], "facebookid" => $data['fbID']));
+			$this->User->save();
+		}
+
+		$user = $this->User->findByEmail($data['email']);
+		$this->Auth->login($user['User']);
+	   	exit;
 	}
 }
