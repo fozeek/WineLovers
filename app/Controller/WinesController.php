@@ -106,6 +106,14 @@ class WinesController extends AppController {
 	
 	}
 
+	public function testimonials() {
+		$wine = $this->Wine->findBySlug($this->request->params['name']);
+		$this->testWine($wine);
+		$this->set(compact('wine'));
+		$this->render('/wines/testimonials');
+	
+	}
+
 	public function cellars() {
 		$wine = $this->Wine->findBySlug($this->request->params['name']);
 		$this->testWine($wine);

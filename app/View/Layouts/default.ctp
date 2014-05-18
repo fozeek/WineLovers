@@ -70,6 +70,11 @@ $cakeDescription = __d('cake_dev', 'La Bonne Cave');
 				      Ma Cave
 				    </a>
 				  </li>
+				  <li>
+				    <a href="<?php echo $this->Html->url(array('controller' => 'compte', 'action' => 'events')) ?>">
+				      Mes évènements
+				    </a>
+				  </li>
 				  <li class="divider"></li>
 				  <li>
 				    <a href="<?php echo $this->Html->url(array('controller' => 'users', 'action' => 'logout')) ?>">

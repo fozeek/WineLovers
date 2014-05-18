@@ -1,1 +1,2 @@
-<div class="alert alert-warning">Bientôt...</div>
+<?php $this->extend('Elements/layout'); ?>
+<?php $this->assign('active.inbox', 'active'); ?>

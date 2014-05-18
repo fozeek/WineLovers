@@ -1,7 +1,8 @@
-<div class="col-md-<?= (isset($size)) ? $size : 4 ?>" style="max-height: 260px;position: relative;">
-	<div class="thumbnail" style="position: relative;" data-id="<?= $wine['id'] ?>">
+<div class="col-md-<?= (isset($size)) ? $size : 4 ?>" style="position: relative;">
+	<div class="thumbnail" style="position: relative;height: 260px;" data-id="<?= $wine['id'] ?>">
 		<a href="<?php echo $this->Html->url(array('controller' => 'wines', 'action' => 'feeds', 'name' => $wine['slug'])); ?>">
-			<img src="<?= $wine['image'] ?>" alt="..." style="max-height: 220px;">
+			<div style="height: 250px;width: 285px;background: #F9F9F9 url(<?= $wine['image'] ?>) center center no-repeat;background-size: contain;">
+			</div>
 		</a>
 		<div class="caption" style="position: absolute;bottom: 0px;left: 0px;background: rgba(255, 255, 255, 0.6);width: 100%;padding: 20px;padding-top: 0px;padding-bottom: 5px;">
 			<h3><a href="<?php echo $this->Html->url(array('controller' => 'wines', 'action' => 'feeds', 'name' => $wine['slug'])); ?>" style="color: rgb(128, 0, 0);"><?= $wine['name'] ?></a></h3>

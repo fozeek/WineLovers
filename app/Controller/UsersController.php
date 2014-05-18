@@ -54,12 +54,13 @@ class UsersController extends AppController {
 
 	private function isFriend($id) {
 		$user = $this->User->findById($this->user['id']);
+		$isFriend = false;
 		foreach ($user['UserFriendship'] as $friend) {
 			if($id == $friend['id']) {
-				return true;
+				$isFriend = true;
 			}
 		}
-		return false;
+		$this->set(compact('isFriend'));
 	}
 
 	public function index() {
@@ -70,44 +71,44 @@ class UsersController extends AppController {
 
 	public function about() {
 		$user = $this->User->findBySlug($this->request->params['pseudo']);
-		$isFriend = $this->isFriend($user['User']['id']);
-		$this->set(compact('user', 'isFriend'));
+		$this->isFriend($user['User']['id']);
+		$this->set(compact('user'));
 		$this->render('/users/about');
 	}
 
 	public function feeds() {
 		$user = $this->User->findBySlug($this->request->params['pseudo']);
 		$posts = parent::getPosts('User', $user);
-		$isFriend = $this->isFriend($user['User']['id']);
-		$this->set(compact('user', 'posts', 'isFriend'));
+		$this->isFriend($user['User']['id']);
+		$this->set(compact('user', 'posts'));
 		$this->render('/users/feeds');
 	}
 
 	public function cellar() {
 		$user = $this->User->findBySlug($this->request->params['pseudo']);
-		$isFriend = $this->isFriend($user['User']['id']);
-		$this->set(compact('user', 'isFriend'));
+		$this->isFriend($user['User']['id']);
+		$this->set(compact('user'));
 		$this->render('/users/cellar');
 	}
 
 	public function friends() {
 		$user = $this->User->findBySlug($this->request->params['pseudo']);
-		$isFriend = $this->isFriend($user['User']['id']);
-		$this->set(compact('user', 'isFriend'));
+		$this->isFriend($user['User']['id']);
+		$this->set(compact('user'));
 		$this->render('/users/friends');
 	}
 
 	public function events() {
 		$user = $this->User->findBySlug($this->request->params['pseudo']);
-		$isFriend = $this->isFriend($user['User']['id']);
-		$this->set(compact('user', 'isFriend'));
+		$this->isFriend($user['User']['id']);
+		$this->set(compact('user'));
 		$this->render('/users/events');
 	}
 
 	public function wishlist() {
 		$user = $this->User->findBySlug($this->request->params['pseudo']);
-		$isFriend = $this->isFriend($user['User']['id']);
-		$this->set(compact('user', 'isFriend'));
+		$this->isFriend($user['User']['id']);
+		$this->set(compact('user'));
 		$this->render('/users/wishlist');
 	}
 

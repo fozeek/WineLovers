@@ -1,3 +1,6 @@
+<?php $this->extend('Elements/layout'); ?>
+<?php $this->assign('active.cellar', 'active'); ?>
+
 <?php $this->Html->script('pages/comptes/cellar', array('inline'=>false)); ?>
 
 <div class="modal fade" id="addWine" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -7,8 +10,8 @@
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
         <h4 class="modal-title" id="myModalLabel">Choississez vos vins</h4>
       </div>
-      <div class="modal-body" style="padding: 0px;">
-      	<input type="hidden" id="ids"/>
+  	  <input type="hidden" id="ids"/>
+      <div id="step1" class="modal-body" style="padding: 0px;">
 		<div class="results" style="position: relative;max-height: 550px;overflow-y: auto;overflow-x: hidden;">
 	        <input class="form-control" style="margin-top: 15px;margin-left: 15px;width: 568px;" placeholder="Rechercher un vin"/>
 			<div class="nodata" style="display: none;text-align: center;font-size: 40px;color: #E7E7E7;padding: 20px;">
@@ -24,24 +27,60 @@
 			</div>
 		</div>
       </div>
+		<div id="step2" class="modal-body" style="padding: 0px;display: none;">
+		</div>
+		<div class="hidden template">
+			<div class="new" data-id style="padding: 15px;margin-top: -1px;border-top: 1px solid #eee;">
+				<div class="row">
+					<div class="col-md-2">
+						<div class="img-responsive img-rounded img" style="background: center center no-repeat;height: 94px;width: 94px;background-size: cover;">
+	      				</div>
+					</div>
+					<div class="col-md-10">
+						<h4 class="name" style="color: rgb(128, 0, 0);">Wine name</h4>
+						<input type="text" class="form-control" placeholder="Quantité"/>
+						<input type="text" class="form-control" placeholder="Millésime"/>
+					</div>
+				</div>
+			</div>
+		</div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Ajouter à ma Cave</button>
+        <button id="step2submit" type="button" class="btn btn-primary">Ajouter à ma Cave</button>
       </div>
     </div>
   </div>
 </div>
 
+<div class="row">
+  <div class="col-md-4">
+  	<h2 style="margin-top: 5px;">
+		Ma Cave
+	</h2>
+  </div>
+  <div class="col-md-8" style="padding-top: 5px;">
+
+	<div class="btn-group pull-right" style="margin-left: 20px;">
+	  <button class="btn btn-primary" role="button" data-toggle="modal" data-target="#addWine">Ajouter un vin</button>
+	  <button type="button" class="btn btn-default">Partager</button>
+	 </div>
+    <div class="input-group">
+      <input type="text" class="form-control" placeholder="Rechercher">
+      <span class="input-group-btn">
+      	<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Nom <span class="caret"></span></button>
+        <ul class="dropdown-menu">
+          <li><a href="#">Millésime</a></li>
+          <li><a href="#">Note</a></li>
+        </ul>
+      </span>
+    </div><!-- /input-group -->
+  </div>
+</div><!-- /.row -->
 
 
-<div class="btn-group pull-right">
-  <button class="btn btn-primary" role="button" data-toggle="modal" data-target="#addWine">Ajouter un vin</button>
-  <button type="button" class="btn btn-default">Partager</button>
-</div>
-<h2>
-	Ma Cave
-</h2>
+
 <div class="clearfix"></div>
+<br />
 
 <div class="row">
   <?php foreach($user['WineCellar'] as $wine) : ?>

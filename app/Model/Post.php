@@ -16,6 +16,10 @@ class Post extends AppModel {
 	public $hasMany = array('Comment');
 
 
+	public function beforeSave($options = array()) {
+		$this->data[$this->alias]['text'] = htmlentities($this->data[$this->alias]['text']);
+	}
+
 	public function afterFind($results, $primary = false) {
         return parent::afterFindFields($results, $primary, array(
                 'created' => function ($created) {return new DateTime($created);},

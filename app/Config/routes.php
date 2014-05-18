@@ -36,6 +36,7 @@
 	Router::connect('/me/calendar', array('controller' => 'compte', 'action' => 'calendar'));
 	Router::connect('/me/cellar', array('controller' => 'compte', 'action' => 'cellar'));
 	Router::connect('/me/wishlist', array('controller' => 'compte', 'action' => 'wishlist'));
+	Router::connect('/me/events', array('controller' => 'compte', 'action' => 'events'));
 
 	Router::connect('/me/addFriend', array('controller' => 'compte', 'action' => 'addFriend'));
 	Router::connect('/me/removeFriend', array('controller' => 'compte', 'action' => 'removeFriend'));
@@ -61,6 +62,7 @@
 	Router::connect('/wine/:name/about', array('controller' => 'wines', 'action' => 'about'), array('name' => '[a-zA-Z0-9\-]+'));
 	Router::connect('/wine/:name/cellars', array('controller' => 'wines', 'action' => 'cellars'), array('name' => '[a-zA-Z0-9\-]+'));
 	Router::connect('/wine/:name/wishlists', array('controller' => 'wines', 'action' => 'wishlist'), array('name' => '[a-zA-Z0-9\-]+'));
+	Router::connect('/wine/:name/testimonials', array('controller' => 'wines', 'action' => 'testimonials'), array('name' => '[a-zA-Z0-9\-]+'));
 
 	Router::connect('/events', array('controller' => 'events', 'action' => 'index'));
 	Router::connect('/event/:name', array('controller' => 'events', 'action' => 'feeds'), array('name' => '[a-zA-Z0-9\-]+'));

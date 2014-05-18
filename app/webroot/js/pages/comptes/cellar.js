@@ -1,5 +1,29 @@
 $(document).ready(function() {
 
+	$('#addWine').on('hidden.bs.modal', function (e) {
+	  
+		$('#step2').hide();
+		$('#step1').show();
+	})
+
+	$('#step2submit').on('click', function() {
+		// var ids = $('#ids').val().split(':');
+		// var tpl = $('#addWine').find('.template').html();
+		// // step2
+		// var step2Html = $('#step2');
+		// ids.shift();
+		// names.shift();
+		// step2Html.html();
+		// for (var id in ids) {
+		//     step2Html.append(tpl);
+		//     step2Html.find('.new').find('.name').html(names[id]);
+		//     step2Html.find('.new').attr('data-id', ids[id]);
+		//     step2Html.find('.new').removeClass('new');
+		// }
+		$('#step1').hide();
+		$('#step2').show();
+	});
+
 	$('.col-md-4 .remove').on('click', function() {
 		var $that = $(this);
 		var request = $.ajax({
@@ -25,6 +49,15 @@ $(document).ready(function() {
 			$(this).css('background', '#cedefd');
 			$(this).find('h3').css('color', 'blue');
 			$('#ids').val($('#ids').val()+':'+$(this).attr('data-id'));
+			$('#names').val($('#names').val()+':'+$(this).attr('data-name'));
+			//ajout a la liste
+			var tpl = $('#addWine').find('.template').html();
+			var step2Html = $('#step2');
+			step2Html.append(tpl);
+		    step2Html.find('.new').find('.name').html($(this).attr('data-name'));
+		    step2Html.find('.new').attr('data-id', $(this).attr('data-id'));
+		    step2Html.find('.new').find('.img').css('backgroundImage', $(this).find('.img').css('backgroundImage'));
+		    step2Html.find('.new').removeClass('new');
 		}
 		else {
 			$(this).removeClass('selected');
@@ -32,6 +65,7 @@ $(document).ready(function() {
 			$(this).css('background', 'white');
 			$(this).find('h3').css('color', 'rgb(128, 0, 0)');
 			$('#ids').val($('#ids').val().replace(':'+$(this).attr('data-id')+':', ':'));
+			$('#names').val($('#names').val().replace(':'+$(this).attr('data-name')+':', ':'));
 		}
 	});
 

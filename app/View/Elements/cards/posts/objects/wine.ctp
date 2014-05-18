@@ -1,8 +1,8 @@
 <?php
 	$bool = false;
 	if(isset($ids)) {
-		foreach ($ids as $id) {
-			if($wine['id']==$id) {
+		foreach (explode(':', $ids) as $id) {
+			if($wine['Wine']['id']==$id) {
 				$bool = true;
 			}
 		}
@@ -12,7 +12,7 @@
 	<div class="thumbnail <?php if($bool) : ?>selected<?php endif ?>" style="margin: 0px;cursor: pointer;<?php if($bool) : ?>background: rgb(206, 222, 253);border-color: blue;<?php endif ?>" data-name="<?= $wine['Wine']['name'] ?>" data-image="glass" data-object="wine" data-id="<?= $wine['Wine']['id'] ?>">
 	  <div class="row">
 	    <div class="col-md-5">
-	      <div class="img-responsive img-rounded" style="background: url(<?= $wine['Wine']['image'] ?>) center center no-repeat;height: 94px;width: 94px;background-size: cover;">
+	      <div class="img-responsive img-rounded img" style="background: url(<?= $wine['Wine']['image'] ?>) center center no-repeat;height: 94px;width: 94px;background-size: cover;">
 	      </div>
 	    </div> 
 	    <div class="col-md-7" style="padding: 0px;padding-right: 5px;"> 

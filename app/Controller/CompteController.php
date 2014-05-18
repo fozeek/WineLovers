@@ -51,7 +51,8 @@ class CompteController extends AppController {
 	}
 
 	public function settings() {
-
+		$user = $this->User->findById($this->user['id']);
+		$this->set(compact('user'));
 		$this->render('/compte/settings');
 		
 	}
@@ -82,6 +83,13 @@ class CompteController extends AppController {
 		$user = $this->User->findById($this->user['id']);
 		$this->set(compact('user'));
 		$this->render('/compte/wishlist');
+		
+	}
+
+	public function events() {
+		$user = $this->User->findById($this->user['id']);
+		$this->set(compact('user'));
+		$this->render('/compte/events');
 		
 	}
 

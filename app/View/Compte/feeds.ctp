@@ -1,3 +1,5 @@
+<?php $this->extend('Elements/layout'); ?>
+<?php $this->assign('active.feeds', 'active'); ?>
 
 <div class="page-header">
   <h1>Actualités</h1>
