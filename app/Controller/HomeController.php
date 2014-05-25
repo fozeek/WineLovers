@@ -54,7 +54,7 @@ class HomeController extends AppController {
 
 		$wines = $this->Wine->find('all', array('limit' => 4));
 		$users = $this->User->find('all', array('limit' => 4));
-		$events = $this->Event->find('all', array('limit' => 8, 'order' => array('Event.date' => 'DESC')));
+		$events = $this->Event->find('all', array('limit' => 9, 'order' => array('Event.date' => 'DESC')));
 		$this->set(compact('events', 'users', 'wines'));
 		$this->render('/home/index');
 		

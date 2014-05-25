@@ -1,4 +1,6 @@
-  <?= $this->Form->create('User', array('action' => 'signin', 'role' => 'form-horizontal', 
+<h2>Inscription<a href="<?= $this->Html->url(array('controller' => 'users', 'action' => 'login')) ?>"><button class="btn btn-default" style="margin-left: 30px;">Connexion</button></a></h2>
+<br />
+<?= $this->Form->create('User', array('action' => 'signin', 'role' => 'form-horizontal', 
                   'inputDefaults' => array(
                   'error' => array(
                     'attributes' => array(
