@@ -3,6 +3,7 @@
 <div class="row">
   <div class="col-md-6"> 
     <h3>Via courriel</h3>
+    <? echo $this->Session->flash(); ?>
     <br />
     <?= $this->Html->script('facebook', array('inline' => false)) ?>
     <?= $this->Form->create('User', array('action' => 'login', 'role' => 'form')) ?>

@@ -59,6 +59,7 @@
 	Router::connect('/login', array('controller' => 'users', 'action' => 'login'));
 	Router::connect('/login-by-facebook', array('controller' => 'users', 'action' => 'loginByFacebook'));
 	Router::connect('/logout', array('controller' => 'users', 'action' => 'logout', '[method]' => 'POST'));
+	Router::connect('/validation/:code', array('controller' => 'users', 'action' => 'validation'), array('code' => '[a-zA-Z0-9\-]+'));
 
 	Router::connect('/wines', array('controller' => 'wines', 'action' => 'index'));
 	Router::connect('/wine/:name', array('controller' => 'wines', 'action' => 'feeds'), array('name' => '[a-zA-Z0-9\-]+'));
