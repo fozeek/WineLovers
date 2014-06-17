@@ -61,7 +61,7 @@
 		</div>
 		<div class="col-md-11">
 			<div >
-				<strong><?= $user['User']['name'] ?></strong> <?= $actu['News']['msg'] ?>
+				<strong><?= $actu['FromUser']['name'] ?></strong> <?= $actu['News']['msg'] ?>
 			</div>
 			<hr style="margin-top: 7px;"/>
 
