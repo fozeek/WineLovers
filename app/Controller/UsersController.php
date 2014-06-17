@@ -148,13 +148,12 @@ class UsersController extends AppController {
 			$this->User->set($this->request->data);
 
 			if($this->User->validates()){
-				$this->User->create($this->request->data);
+				$info = array_merge($this->request->data["User"], array("code" => uniqid()));
+				$this->User->create($info);
 				$this->User->save();
 
 				$this->redirect(array('controller' => 'Home', 'action' => 'index'));
-			} else {
-
-			}
+			} 
 		}
 
 		$this->render('/users/signin');
