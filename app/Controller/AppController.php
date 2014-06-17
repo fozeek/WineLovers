@@ -104,8 +104,10 @@ class AppController extends Controller {
                     'FromUser',
                 ),
                 'conditions' => array(
-                        'News.link_object' => $name,
-                        'News.link_id' => $object[$name]['id']
+                        'OR' => array(
+                            'News.link_object' => $name,
+                            'News.link_id' => $object[$name]['id']
+                        )
                     ),
                 'order' => array('News.created' => 'DESC'),
                 'limit' => 10,

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client: localhost
--- Généré le: Mar 17 Juin 2014 à 14:30
+-- Généré le: Mar 17 Juin 2014 à 14:39
 -- Version du serveur: 5.5.33
 -- Version de PHP: 5.5.3
 
@@ -568,7 +568,7 @@ CREATE TABLE `reviews_joins` (
 
 CREATE TABLE `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `code` int(11) NOT NULL,
+  `code` text NOT NULL,
   `valid` int(11) NOT NULL,
   `pseudo` varchar(255) NOT NULL,
   `slug` varchar(200) NOT NULL,
@@ -591,12 +591,12 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `code`, `valid`, `pseudo`, `slug`, `password`, `firstname`, `lastname`, `email`, `address`, `zip`, `city`, `created`, `updated`, `image`, `description`) VALUES
-(1, 0, 0, 'qdeneuve', 'qdeneuve', '', 'Quentin', 'Deneuve', 'dark.quent@free.fr', '', 0, '', '2014-03-23 00:00:00', '2014-03-23 00:00:00', '', ''),
-(2, 0, 0, 'luc', 'luc', '', 'Luc', 'Notsnad', '', '', 0, '', '2014-03-23 00:00:00', '2014-03-23 00:00:00', '', 'Bounjour'),
-(3, 0, 0, 'HappyLo', 'HappyLo', '', 'Happy', 'Lo', '', '', 0, '', '2014-03-17 00:00:00', '2014-03-23 00:00:00', '', 'Whesh !'),
-(7, 0, 0, 'fozeek', 'fozeek', '0e70432396ff578620a055f76d4773a0', 'Quentin', 'Deneuve', 'dark_kul@hotmail.fr', '90 rue Charles Godin', 91640, 'Briis sous Forges', '2014-04-08 22:22:16', '2014-04-08 22:22:16', '', ''),
-(8, 0, 0, 'dqzdzqdzq', 'dqzdzqdzq', '0e70432396ff578620a055f76d4773a0', 'Quentin', 'Deneuve', 'dark_kul@hotmail.fr', '90 rue Charles Godin', 74924, 'Briis sous Forges', '2014-04-09 09:28:02', '2014-04-09 09:28:02', '', ''),
-(9, 0, 0, 'TESTPOURMOI', 'TESTPOURMOI', '86f6fe02007a8a8949383549ca7186b7', 'Quentin', 'Deneuve', 'dark_kul@hotmail.fr', '90 rue Charles Godin', 36472, 'Briis sous Forges', '2014-04-09 09:28:28', '2014-04-09 09:28:28', '', '');
+(1, '0', 0, 'qdeneuve', 'qdeneuve', '', 'Quentin', 'Deneuve', 'dark.quent@free.fr', '', 0, '', '2014-03-23 00:00:00', '2014-03-23 00:00:00', '', ''),
+(2, '0', 0, 'luc', 'luc', '', 'Luc', 'Notsnad', '', '', 0, '', '2014-03-23 00:00:00', '2014-03-23 00:00:00', '', 'Bounjour'),
+(3, '0', 0, 'HappyLo', 'HappyLo', '', 'Happy', 'Lo', '', '', 0, '', '2014-03-17 00:00:00', '2014-03-23 00:00:00', '', 'Whesh !'),
+(7, '0', 0, 'fozeek', 'fozeek', '0e70432396ff578620a055f76d4773a0', 'Quentin', 'Deneuve', 'dark_kul@hotmail.fr', '90 rue Charles Godin', 91640, 'Briis sous Forges', '2014-04-08 22:22:16', '2014-04-08 22:22:16', '', ''),
+(8, '0', 0, 'dqzdzqdzq', 'dqzdzqdzq', '0e70432396ff578620a055f76d4773a0', 'Quentin', 'Deneuve', 'dark_kul@hotmail.fr', '90 rue Charles Godin', 74924, 'Briis sous Forges', '2014-04-09 09:28:02', '2014-04-09 09:28:02', '', ''),
+(9, '0', 0, 'TESTPOURMOI', 'TESTPOURMOI', '86f6fe02007a8a8949383549ca7186b7', 'Quentin', 'Deneuve', 'dark_kul@hotmail.fr', '90 rue Charles Godin', 36472, 'Briis sous Forges', '2014-04-09 09:28:28', '2014-04-09 09:28:28', '', '');
 
 -- --------------------------------------------------------
 
