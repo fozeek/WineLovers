@@ -3,14 +3,15 @@
 class PostsController extends AppController
 {
 
-	public $uses = array('Post', 'Comment', 'Wine', 'User', 'Event');
+	public $uses = array('Post', 'Comment', 'Wine', 'User', 'Event', 'News');
 
 	public function createPost() {
 		$data = array(
 				'author_id' => $this->user['id'], 
 				'link_id' => $this->request['data']['link_id'],
 				'link_object' => $this->request['data']['link_object'],
-				'text' => $this->request['data']['text']
+				'text' => $this->request['data']['text'],
+				'link_'.strtolower($this->request['data']['link_object']).'_id' => $this->request['data']['link_id']
 			);
 		$attachObject = $this->request['data']['attach_object'];
 		$attachId = $this->request['data']['attach_id'];
@@ -18,6 +19,19 @@ class PostsController extends AppController
 			$data['attach_'.$attachObject.'_id'] = intval($attachId);
 		}
 		$this->Post->save($data);
+
+		$this->News->save(array(
+
+				'link_id' => $this->request['data']['link_id'],
+				'link_object' => $this->request['data']['link_object'],
+				'type' => 'post',
+				'msg' => '',
+				'attach_post_id' => $this->Post->id,
+				'author_user_id' => $this->user['id'],
+
+
+			));
+
 		$post = $this->Post->find('all', array(
 				'contain' => array(
                     'AttachWine' => array(
@@ -36,7 +50,10 @@ class PostsController extends AppController
                     'Author',
                     'Comment' => array(
                             'Author'
-                        )
+                        ),
+                    'ToWine',
+                    'ToEvent',
+                    'ToUser',
                 ),
                 'conditions' => array(
                         'Post.id' => $this->Post->id,
@@ -62,35 +79,51 @@ class PostsController extends AppController
 	public function morePosts() {
 		$object = $this->request['data']['object'];
 		$id = $this->request['data']['id'];
-		$posts = $this->Post->find('all', array(
+		$this->set('news', $this->News->find('all', array(
                 'contain' => array(
-                    'AttachWine' => array(
+                    'LinkPost' => array(
+                        'AttachWine' => array(
+                                'Cellars',
+                                'Wishlists'
+                            ),
+                        'AttachEvent' => array(
+                                'Guest',
+                                'Like',
+                            ),
+                        'AttachUser' => array(
+                                'UserFriendship',
+                                'WineCellar',
+                                'JoinedEvent'
+                            ),
+                        'ToWine',
+                        'ToEvent',
+                        'ToUser',
+                        'Author',
+                        'Comment' => array(
+                                'Author'
+                            )
+                    ),
+                    'LinkEvent' => array(
+                            'Guest',
+                            'Like',
+                        ),
+                    'LinkUser',
+                    'LinkWine' => array(
                             'Cellars',
                             'Wishlists'
                         ),
-                    'AttachEvent' => array(
-                            'Guest',
-                            'Like'
-                        ),
-                    'AttachUser' => array(
-                            'UserFriendship',
-                            'WineCellar',
-                            'JoinedEvent'
-                        ),
-                    'Author',
-                    'Comment' => array(
-                            'Author'
-                        )
+                    'FromWine',
+                    'FromEvent',
+                    'FromUser',
                 ),
                 'conditions' => array(
-                        'Post.link_object' => $object,
-                        'Post.link_id' => $id
+                        'News.link_object' => $object,
+                        'News.link_id' => $id
                     ),
-                'order' => array('Post.created' => 'DESC'),
+                'order' => array('News.created' => 'DESC'),
                 'limit' => 10,
                 'page' => $this->request['data']['page']
-            ));
-		$this->set(compact('posts'));
+            )));
 	}
 
 	public function moreWines() {

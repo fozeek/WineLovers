@@ -1,0 +1,13 @@
+Events (toutes les interactions)
+Vin : notations sur la page vins
+Gérer les publics/privé pour toutes les listes etc (et les profils)
+
+Gestion des vins (ajout)
+
+Whishlist => ajout direct
+
+
+!!!!!
+faire les before save avec htmlentities() !!!
+
+faire des validations pour tous les formulaires

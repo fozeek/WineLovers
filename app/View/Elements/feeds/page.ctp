@@ -61,6 +61,7 @@
     </div>
   </div>
 </div>
+<?php if(!isset($isyou)) : ?>
 <form id="post-form" role="form" method="post">
   <div class="form-group">
   	<input type="hidden" class="link_id" value="<?= $id ?>" />
@@ -77,9 +78,11 @@
 </form>
 <div class="clearfix"></div>
 <hr />
+
+<?php endif ?>
 <div class="posts-container">
-<?php foreach ($posts as $post): ?>
-	<?= $this->element('feeds/news', ['post' => $post]) ?>
+<?php foreach ($news as $actu): ?>
+	<?= $this->element('feeds/news', ['actu' => $actu]) ?>
 <?php endforeach ?>
 </div>
 <?= $this->element('feeds/paginator', ['count' => $countPosts, 'pagePosts' => $pagePosts, 'object' => $object, 'id' => $id]) ?>

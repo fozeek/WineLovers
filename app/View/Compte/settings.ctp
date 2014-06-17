@@ -1,5 +1,5 @@
 <?php $this->extend('Elements/layout'); ?>
-<?php $this->assign('active.cellar', 'settings'); ?>
+<?php $this->assign('active.settings', 'active'); ?>
 
 <h2>Informations personnelles</h2>
 <form role="form">

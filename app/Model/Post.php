@@ -11,6 +11,9 @@ class Post extends AppModel {
 			'AttachWine' => array('className' => 'Wine', 'foreignKey' => 'attach_wine_id'),
 			'AttachUser' => array('className' => 'User', 'foreignKey' => 'attach_user_id'),
 			'AttachEvent' => array('className' => 'Event', 'foreignKey' => 'attach_event_id'),
+			'ToWine' => array('className' => 'Wine', 'foreignKey' => 'link_wine_id'),
+			'ToUser' => array('className' => 'User', 'foreignKey' => 'link_user_id'),
+			'ToEvent' => array('className' => 'Event', 'foreignKey' => 'link_event_id'),
 		);
 
 	public $hasMany = array('Comment');

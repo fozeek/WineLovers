@@ -1,4 +1,4 @@
 <?php $this->layout = false; ?>
-<?php foreach ($posts as $post): ?>
-	<?= $this->element('feeds/news', ['post' => $post]) ?>
+<?php foreach ($news as $actu): ?>
+	<?= $this->element('feeds/news', ['actu' => $actu]) ?>
 <?php endforeach ?>

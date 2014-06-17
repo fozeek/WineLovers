@@ -14,7 +14,7 @@
 	  <button class="btn btn-primary" role="button" data-toggle="modal" data-target="#addWine">Ajouter un vin</button>
 	  <button type="button" class="btn btn-default">Partager</button>
 	 </div>
-    <div class="input-group">
+    <div class="input-group hidden">
       <input type="text" class="form-control" placeholder="Rechercher">
       <span class="input-group-btn">
       	<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Nom <span class="caret"></span></button>

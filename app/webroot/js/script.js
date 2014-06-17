@@ -78,9 +78,9 @@ $(document).ready(function() {
 
 	var $scrollModule = true;
 	document.addEventListener( 'scroll',function (event) {
-
-	    if ( $('#load-more').lengh && $scrollModule && window.scrollY >= document.body.scrollHeight - window.innerHeight )
+	    if ( $('#load-more') && $scrollModule && window.scrollY >= document.body.scrollHeight - window.innerHeight )
 	    {
+	    	
 	    	$scrollModule = false;
 	        var request = $.ajax({
 				url: "/post/more-posts",

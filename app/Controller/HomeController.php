@@ -34,7 +34,7 @@ class HomeController extends AppController {
  *
  * @var array
  */
-	public $uses = array('Event', 'User', 'Wine');
+	public $uses = array('Event', 'User', 'Wine', 'News');
 
 /**
  * Displays a view

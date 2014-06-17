@@ -1,27 +1,135 @@
 $(document).ready(function() {
 
+
+	$('.addnotebtn').on('click', function() {
+		var addNote = $('#addNote');
+		addNote.find('.winename').html($(this).attr('data-name'));
+		$('#addNote').find('.winename').attr('data-id', $(this).attr('data-id'));
+	});
+	$('#addNote .star').on('click', function() {
+		$('#addNote .star').removeClass('glyphicon-star').addClass('glyphicon-star-empty');
+		for (var i = 1; i <= $(this).attr('data-val'); i++) {
+			$('#addNote .star-'+i).removeClass('glyphicon-star-empty').addClass('glyphicon-star');
+		};
+		$(this).parent().attr('data-val', $(this).attr('data-val'));
+	});
+	$('#addnotesubmit').on('click', function() {
+
+		var wineId = $('#addNote').find('.winename').attr('data-id');
+		var note = $('#addNote .star').parent().attr('data-val');
+		var comment = $('#addNote .comment').val();
+		var vintage = $('#addNote .vintage').val();
+
+		console.log(wineId, note, comment, vintage);
+
+		var request = $.ajax({
+			url: "/me/add-note",
+			type: "POST",
+			data: { wineId : wineId, note : note, comment : comment, vintage : vintage },
+			dataType: "html"
+		});
+		 
+		request.done(function( msg ) {
+   			window.location.reload();
+   		});
+		 
+		request.fail(function( jqXHR, textStatus ) {
+		  alert( "Request failed: " + textStatus );
+		});
+	});
+
+
+
 	$('#addWine').on('hidden.bs.modal', function (e) {
 	  
 		$('#step2').hide();
 		$('#step1').show();
+		$('#step2submit').hide();
+		$('#step1submit').show();
 	})
 
-	$('#step2submit').on('click', function() {
-		// var ids = $('#ids').val().split(':');
-		// var tpl = $('#addWine').find('.template').html();
-		// // step2
-		// var step2Html = $('#step2');
-		// ids.shift();
-		// names.shift();
-		// step2Html.html();
-		// for (var id in ids) {
-		//     step2Html.append(tpl);
-		//     step2Html.find('.new').find('.name').html(names[id]);
-		//     step2Html.find('.new').attr('data-id', ids[id]);
-		//     step2Html.find('.new').removeClass('new');
-		// }
+	$('.updatestockbtn').on('click', function() {
+		$('#update').find('.winename').html($(this).attr('data-name'));
+		$('#update').find('.winename').attr('data-id', $(this).attr('data-id'));
+		$('#update').find('.qty').val($(this).attr('data-qty'));
+		$('#update').find('.qty').attr('data-original', $(this).attr('data-qty'));
+		$('#update').find('.vintage').val($(this).attr('data-vintage'));
+		$('#update').find('.vintage').attr('disabled','disabled');
+	});
+
+	$('.addstockbtn').on('click', function() {
+		$('#update').find('.winename').html($(this).attr('data-name'));
+		$('#update').find('.winename').attr('data-id', $(this).attr('data-id'));
+		$('#update').find('.qty').val('');
+		$('#update').find('.qty').attr('data-original', 0);
+	});
+
+	$('#update').on('hidden.bs.modal', function (e) {
+	  	$(this).find('.qty').val($(this).attr('data-qty'));
+		$(this).find('.qty').attr('data-original', 0);
+		$(this).find('.vintage').val('');
+		$(this).find('.vintage').removeAttr('disabled');
+	})
+
+	$('#updateSubmit').on('click', function() {
+
+		// calcule nombre
+		var qty = $("#update .qty").val() - $("#update .qty").attr('data-original');
+
+		var id = $('#update .winename').attr('data-id');
+		var vintage = $('#update .vintage').val();
+
+		var request = $.ajax({
+			url: "/me/add-cellar-wine",
+			type: "POST",
+			data: { ids : id, qtys : qty, millesimes : vintage },
+			dataType: "html"
+		});
+		 
+		request.done(function( msg ) {
+   			window.location.reload();
+   		});
+		 
+		request.fail(function( jqXHR, textStatus ) {
+		  alert( "Request failed: " + textStatus );
+		});
+	});
+
+	$('#step1submit').on('click', function() {
 		$('#step1').hide();
 		$('#step2').show();
+		$(this).hide();
+		$('#step2submit').show();
+	});
+
+	$('#step2submit').on('click', function() {
+		
+		var winesIds = '';
+		var winesQtys = '';
+		var WinesMillesimes = '';
+
+		$('#step2 .selectedWine').each(function() {
+			winesIds += ':' + $(this).attr('data-id');
+			winesQtys += ':' + $(this).find('.qty').val();
+			WinesMillesimes += ':' + $(this).find('.millesime').val();
+		})
+
+		var request = $.ajax({
+			url: "/me/add-cellar-wine",
+			type: "POST",
+			data: { ids : winesIds, qtys : winesQtys, millesimes : WinesMillesimes },
+			dataType: "html"
+		});
+		 
+		request.done(function( msg ) {
+   			window.location.reload();
+   		});
+		 
+		request.fail(function( jqXHR, textStatus ) {
+		  alert( "Request failed: " + textStatus );
+		});
+
+
 	});
 
 	$('.col-md-4 .remove').on('click', function() {
@@ -56,7 +164,6 @@ $(document).ready(function() {
 			step2Html.append(tpl);
 		    step2Html.find('.new').find('.name').html($(this).attr('data-name'));
 		    step2Html.find('.new').attr('data-id', $(this).attr('data-id'));
-		    step2Html.find('.new').find('.img').css('backgroundImage', $(this).find('.img').css('backgroundImage'));
 		    step2Html.find('.new').removeClass('new');
 		}
 		else {
@@ -64,8 +171,10 @@ $(document).ready(function() {
 			$(this).css('border-color', '#ddd');
 			$(this).css('background', 'white');
 			$(this).find('h3').css('color', 'rgb(128, 0, 0)');
-			$('#ids').val($('#ids').val().replace(':'+$(this).attr('data-id')+':', ':'));
-			$('#names').val($('#names').val().replace(':'+$(this).attr('data-name')+':', ':'));
+			$('#ids').val($('#ids').val().replace(':'+$(this).attr('data-id'), ''));
+			
+			var step2Html = $('#step2');
+			step2Html.find('div[data-id='+$(this).attr('data-id')+']').remove();
 		}
 	});
 

@@ -38,30 +38,6 @@
             <input id="eventwhere" class="form-control"/>
             </div>
           </div>
-          <div class="row">
-            <div class="form-group col-md-4" style="padding: 5px;text-align: right;">
-            <label for="eventwhere">Où</label>
-            </div>
-            <div class="form-group col-md-8">
-            <input id="eventwhere" class="form-control"/>
-            </div>
-          </div>
-          <div class="row">
-            <div class="form-group col-md-4" style="padding: 5px;text-align: right;">
-            <label for="eventwhen">Quand</label>
-            </div>
-            <div class="form-group col-md-8">
-            <input id="eventwhen" class="form-control"/>
-            </div>
-          </div>
-          <div class="row">
-            <div class="form-group col-md-4" style="padding: 5px;text-align: right;">
-            <label for="eventwhen">Avec</label>
-            </div>
-            <div class="form-group col-md-8">
-        		<button type="button" class="btn btn-default">Ajouter des amis (<span class="nb">0</span>)</button>
-            </div>
-          </div>
         </form>
       </div>
       <div class="modal-footer">
@@ -85,12 +61,21 @@
 	</div>
 	<div class="col-md-9">	
 		<h2><span style="color: rgb(128,0,0);"><?= $wine['Wine']['name'] ?></span> 
+      <?php
+        $note = 0;
+        foreach ($wine['Reviews'] as $key => $review) {
+          $note += $review['note'];
+        }
+        if(count($wine['Reviews'])!=0) {
+          $note = round($note/count($wine['Reviews']));
+        }
+      ?>
 			<small>
-				<span class="glyphicon glyphicon-star" style="font-size: 1.3em;"></span>
-				<span class="glyphicon glyphicon-star" style="font-size: 1.3em;"></span>
-				<span class="glyphicon glyphicon-star" style="font-size: 1.3em;"></span>
-				<span class="glyphicon glyphicon-star-empty" style="font-size: 1.3em;"></span>
-				<span class="glyphicon glyphicon-star-empty" style="font-size: 1.3em;"></span>
+      <?php  if(count($wine['Reviews'])!=0) : for($cpt = 1;$cpt<=5;$cpt++ ) : ?>
+				<span class="glyphicon glyphicon-star<?php if($note<$cpt) : ?>-empty<?php endif ?>" style="font-size: 1.3em;"></span>
+      <?php endfor; else: ?>
+      Aucune note
+    <?php endif ?>
 			</small>
 		</h2>
 		<div class="btn-group">

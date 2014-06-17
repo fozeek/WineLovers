@@ -30,7 +30,6 @@
 
 	Router::connect('/me', array('controller' => 'compte', 'action' => 'feeds'));
 	Router::connect('/me/inbox', array('controller' => 'compte', 'action' => 'inbox'));
-	Router::connect('/me/profil', array('controller' => 'compte', 'action' => 'profils'));
 	Router::connect('/me/friends', array('controller' => 'compte', 'action' => 'friends'));
 	Router::connect('/me/settings', array('controller' => 'compte', 'action' => 'settings'));
 	Router::connect('/me/calendar', array('controller' => 'compte', 'action' => 'calendar'));
@@ -38,12 +37,16 @@
 	Router::connect('/me/wishlist', array('controller' => 'compte', 'action' => 'wishlist'));
 	Router::connect('/me/events', array('controller' => 'compte', 'action' => 'events'));
 
-	Router::connect('/me/addFriend', array('controller' => 'compte', 'action' => 'addFriend'));
-	Router::connect('/me/removeFriend', array('controller' => 'compte', 'action' => 'removeFriend'));
+	Router::connect('/me/add-friend', array('controller' => 'compte', 'action' => 'addFriend'));
+	Router::connect('/me/remove-friend', array('controller' => 'compte', 'action' => 'removeFriend'));
+	Router::connect('/me/add-friend-request', array('controller' => 'compte', 'action' => 'addFriendRequest'));
+	Router::connect('/me/remove-friend-request', array('controller' => 'compte', 'action' => 'removeFriendRequest'));
 	Router::connect('/me/add-cellar-wine', array('controller' => 'compte', 'action' => 'addCellarWine'));
 	Router::connect('/me/add-wishlist-wine', array('controller' => 'compte', 'action' => 'addWishlistWine'));
 	Router::connect('/me/remove-cellar-wine', array('controller' => 'compte', 'action' => 'removeCellarWine'));
 	Router::connect('/me/remove-wishlist-wine', array('controller' => 'compte', 'action' => 'removeWishlistWine'));
+	Router::connect('/me/add-note', array('controller' => 'compte', 'action' => 'addNote'));
+	Router::connect('/me/add-event', array('controller' => 'compte', 'action' => 'addEvent'));
 
 	Router::connect('/users', array('controller' => 'users', 'action' => 'index'));
 	Router::connect('/user/:pseudo', array('controller' => 'users', 'action' => 'feeds'), array('pseudo' => '[a-zA-Z0-9\-]+'));

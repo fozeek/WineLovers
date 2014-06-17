@@ -50,7 +50,7 @@ class AppController extends Controller {
         $this->set(['auth' => $this->user]);
     }
 
-    public function getPosts($name, $object) {
+    public function getNews($name, $object) {
         $page = (array_key_exists('page', $this->request->query)) ? $this->request->query["page"] : 1;
         $this->set('countPosts', $this->Post->find('count', array(
                 'conditions' => array(
@@ -66,34 +66,51 @@ class AppController extends Controller {
         $this->set('eventsPosts', $events);
         $wines = $this->Wine->find('all', array('limit' => 20));
         $this->set('winesPosts', $wines);
-        return $this->Post->find('all', array(
+        $this->set('news', $this->News->find('all', array(
                 'contain' => array(
-                    'AttachWine' => array(
+                    'LinkPost' => array(
+                        'AttachWine' => array(
+                                'Cellars',
+                                'Wishlists'
+                            ),
+                        'AttachEvent' => array(
+                                'Guest',
+                                'Like',
+                            ),
+                        'AttachUser' => array(
+                                'UserFriendship',
+                                'WineCellar',
+                                'JoinedEvent'
+                            ),
+                        'ToWine',
+                        'ToEvent',
+                        'ToUser',
+                        'Author',
+                        'Comment' => array(
+                                'Author'
+                            )
+                    ),
+                    'LinkEvent' => array(
+                            'Guest',
+                            'Like',
+                        ),
+                    'LinkUser',
+                    'LinkWine' => array(
                             'Cellars',
                             'Wishlists'
                         ),
-                    'AttachEvent' => array(
-                            'Guest',
-                            'Like'
-                        ),
-                    'AttachUser' => array(
-                            'UserFriendship',
-                            'WineCellar',
-                            'JoinedEvent'
-                        ),
-                    'Author',
-                    'Comment' => array(
-                            'Author'
-                        )
+                    'FromWine',
+                    'FromEvent',
+                    'FromUser',
                 ),
                 'conditions' => array(
-                        'Post.link_object' => $name,
-                        'Post.link_id' => $object[$name]['id']
+                        'News.link_object' => $name,
+                        'News.link_id' => $object[$name]['id']
                     ),
-                'order' => array('Post.created' => 'DESC'),
+                'order' => array('News.created' => 'DESC'),
                 'limit' => 10,
                 'page' => $page
-            ));
+            )));
     }
 	
 }

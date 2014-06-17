@@ -34,7 +34,7 @@ class EventsController extends AppController {
  *
  * @var array
  */
-	public $uses = array('Event', 'User', 'Post', 'Wine');
+	public $uses = array('Event', 'User', 'Post', 'Wine', 'News');
 
 /**
  * Displays a view
@@ -54,8 +54,8 @@ class EventsController extends AppController {
 
 	public function feeds() {
 		$event = $this->Event->findBySlug($this->request->params['name']);
-		$posts = parent::getPosts('Event', $event);
-		$this->set(compact('event', 'posts'));
+		parent::getNews('Event', $event);
+		$this->set(compact('event'));
 		$this->render('/events/feeds');
 		
 	}
@@ -87,5 +87,16 @@ class EventsController extends AppController {
 		$this->set(compact('event'));
 		$this->render('/events/likes');
 		
+	}
+
+	public function create() {
+		$this->Event->save(array(
+			'author_id' => $this->user['id'],
+			'name' => $this->request['data']['name'],
+			'date' => $this->request['data']['date'],
+			'description' => $this->request['data']['description'],
+			'where' => $this->request['data']['where'],
+		));
+		$this->render('/events/create');
 	}
 }

@@ -1,4 +1,4 @@
-<div class="col-md-<?= ($size) ? $size : 4 ?>">
+<div class="col-md-<?= ($size) ? $size : 4 ?>" style="position: relative;">
 <div class="thumbnail">
   <div class="row">
     <div class="col-md-5">
@@ -12,4 +12,7 @@
   </div>
   
 </div>
+  <?php if(isset($button)) : ?>
+    <button data-id="<?= $user['id'] ?>" class="remove" style="position: absolute;top: -10px;right: 0px;padding-top: 4px;background: white;border: 1px solid #ccc;border-radius: 30px;"><span class="glyphicon glyphicon-remove"></span></button>
+  <?php endif ?>
 </div>

@@ -19,7 +19,8 @@ class User extends AppModel {
             'R_LikedEvent' => array('className' => 'EventRLike'),
             'R_Cellar' => array('className' => 'UserRCellar'),
             'R_Whishlist' => array('className' => 'UserRWishlist'),
-            'R_Friendship' => array('className' => 'UserRFriendship')
+            'R_Friendship' => array('className' => 'UserRFriendship'),
+            'R_FriendshipRequest' => array('className' => 'UserRFriendshipRequest')
         );
 
     public $hasAndBelongsToMany = array(
@@ -44,6 +45,18 @@ class User extends AppModel {
                 'joinTable' => 'friendships',
                 'associationForeignKey' => 'friend_id'
             ),
+            'UserFriendshipRequest' => array(
+                'className' => 'User',
+                'joinTable' => 'friendshipsrequests',
+                'foreignKey' => 'friend_id',
+                'associationForeignKey' => 'user_id'
+            ),
+            'UserFriendshipRequestSent' => array(
+                'className' => 'User',
+                'joinTable' => 'friendshipsrequests',
+                'foreignKey' => 'user_id',
+                'associationForeignKey' => 'friend_id'
+            )
         );
 
 	public $validate = array(

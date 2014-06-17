@@ -71,6 +71,11 @@ $cakeDescription = __d('cake_dev', 'La Bonne Cave');
 				    </a>
 				  </li>
 				  <li>
+				    <a href="<?php echo $this->Html->url(array('controller' => 'compte', 'action' => 'friends')) ?>">
+				      Mes amis
+				    </a>
+				  </li>
+				  <li>
 				    <a href="<?php echo $this->Html->url(array('controller' => 'compte', 'action' => 'events')) ?>">
 				      Mes évènements
 				    </a>
@@ -85,7 +90,7 @@ $cakeDescription = __d('cake_dev', 'La Bonne Cave');
 			    </ul>
 			  </li>
 			  <li class="pull-right">
-			    <a href="<?php echo $this->Html->url(array('controller' => 'compte', 'action' => 'profil')) ?>">
+			    <a href="<?php echo $this->Html->url(array('controller' => 'compte', 'action' => 'feeds')) ?>">
 			      <?= $auth['pseudo'] ?>
 			    </a>
 			  </li>

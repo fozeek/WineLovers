@@ -2,7 +2,16 @@
 
 class Wine extends AppModel {
 
+    public $actsAs = array('Containable');
+
 	public $displayField = 'name';
+
+    public $hasMany = array(
+            'Reviews' => array(
+                'className' => 'Review',
+                'foreignKey' => 'wine_id'
+            ),
+        );
 
 	public $hasAndBelongsToMany = array(
 			'Cellars' => array(
@@ -12,7 +21,7 @@ class Wine extends AppModel {
             'Wishlists' => array(
                 'className' => 'User',
                 'joinTable' => 'wishlists'
-            ),
+            )
             // TODO : Likes
 		);
 

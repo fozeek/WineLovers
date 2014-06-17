@@ -13,6 +13,8 @@
 	</div>
 	<div class="col-md-9">
 		<?php if(!$this->fetch('active.feeds')) : ?>
+
+			<?php if(!isset($isyou)) : ?>
 			<ul class="nav nav-pills pull-right" style="margin-top: 20px;">
 			  <li class="dropdown">
 			    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
@@ -20,9 +22,10 @@
 			    </a>
 			    <ul class="dropdown-menu">
 			      <li>
-				    <a href="<?php echo $this->Html->url(array('controller' => 'compte', 'action' => 'feeds')) ?>">
-				      Add as friend
-				    </a>
+				    <a class="btn-success friend-button friend-friend <?php if(!$isFriend) : ?>hidden<?php endif ?>" style="cursor: pointer;"><span class="glyphicon glyphicon-ok"></span> <span data-id="<?= $user['User']['id'] ?>" data-original="Ami" data-replace="Retirer de ma liste d'ami">Ami</span></a>
+				<a class="btn-primary friend-button friend-request <?php if(!$isFriendRequest) : ?>hidden<?php endif ?>" style="cursor: pointer;"><span class="glyphicon glyphicon-ok hidden"></span> <span data-id="<?= $user['User']['id'] ?>" data-original="Accepter sa demande d'ami" data-replace="Accepter sa demande d'ami">Accepter sa demande d'ami</span></a>
+				<a class="btn-default friend-button friend-request-sent <?php if(!$isFriendRequestSent) : ?>hidden<?php endif ?>" style="cursor: pointer;"><span class="glyphicon glyphicon-ok"></span> <span data-id="<?= $user['User']['id'] ?>" data-original="Demande d'ami envoyée" data-replace="Annuler la demande">Demande d'ami envoyée</span></a>
+				<a class="btn-default friend-button friend-no <?php if($isFriend || $isFriendRequest || $isFriendRequestSent) : ?>hidden<?php endif ?>" style="cursor: pointer;"><span class="glyphicon glyphicon-ok"></span> <span data-id="<?= $user['User']['id'] ?>" data-original="Ajouter comme ami" data-replace="Ajouter comme ami">Ajouter comme ami</span></a>
 				  </li>
 				  <li>
 				    <a href="<?php echo $this->Html->url(array('controller' => 'compte', 'action' => 'inbox')) ?>">
@@ -36,17 +39,24 @@
 			    </ul>
 			  </li>
 			</ul>
+			<?php endif ?>
 			
 		<?php endif ?>
 		
 		<h2><?= $user['User']['name'] ?> <small>inscrit le <?= $user['User']['created']->format('l j F Y') ?></small></h2>
-		
+		<?php if(isset($isyou)) : ?>
+			<span class="label label-warning">Ceci est votre compte tel que le public y a accès</span>
+		<?php endif ?>
 		<?php if($this->fetch('active.feeds')) : ?>
 		<p class="lead">
-			<?= $user['User']['description'] ?>
+			<?= $user['User']['description'] ?><br />
 		</p>
+		<?php if(!isset($isyou)) : ?>
 		<div class="btn-group">
-		  <button type="button" class="btn btn-<?php if($isFriend) : ?>success<?php else: ?>default<?php endif ?> add-as-friend"><span class="glyphicon glyphicon-ok <?php if(!$isFriend) : ?>hidden<?php endif ?>"></span> <span data-id="<?= $user['User']['id'] ?>" data-original="Ajouter comme ami" data-replace="Ami" data-over="Retirer de ma liste d'ami" data-remove="Ami retiré de votre liste"><?php if($isFriend) : ?>Ami<?php else : ?>Ajouter comme ami<?php endif ?></span></button>
+				<button type="button" class="btn btn-success friend-button friend-friend <?php if(!$isFriend) : ?>hidden<?php endif ?>"><span class="glyphicon glyphicon-ok"></span> <span data-id="<?= $user['User']['id'] ?>" data-original="Ami" data-replace="Retirer de ma liste d'ami">Ami</span></button>
+				<button type="button" class="btn btn-primary friend-button friend-request <?php if(!$isFriendRequest) : ?>hidden<?php endif ?>"><span class="glyphicon glyphicon-ok hidden"></span> <span data-id="<?= $user['User']['id'] ?>" data-original="Accepter sa demande d'ami" data-replace="Accepter sa demande d'ami">Accepter sa demande d'ami</span></button>
+				<button type="button" class="btn btn-default friend-button friend-request-sent <?php if(!$isFriendRequestSent) : ?>hidden<?php endif ?>"><span class="glyphicon glyphicon-ok"></span> <span data-id="<?= $user['User']['id'] ?>" data-original="Demande d'ami envoyée" data-replace="Annuler la demande">Demande d'ami envoyée</span></button>
+				<button type="button" class="btn btn-default friend-button friend-no <?php if($isFriend || $isFriendRequest || $isFriendRequestSent) : ?>hidden<?php endif ?>"><span class="glyphicon glyphicon-ok"></span> <span data-id="<?= $user['User']['id'] ?>" data-original="Ajouter comme ami" data-replace="Ajouter comme ami">Ajouter comme ami</span></button>
 		  <button type="button" class="btn btn-default">Envoyer un message</button>
 
 		  <div class="btn-group">
@@ -62,6 +72,7 @@
 		    </ul>
 		  </div>
 		</div>
+		<?php endif ?>
 		<?php endif ?>
 		
 		<hr />

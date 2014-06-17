@@ -5,8 +5,16 @@
 			</div>
 		</a>
 		<div class="caption" style="position: absolute;bottom: 0px;left: 0px;background: rgba(255, 255, 255, 0.6);width: 100%;padding: 20px;padding-top: 0px;padding-bottom: 5px;">
+			<?php if(isset($attach)) : ?>
+			<div style="margin-top: 10px;margin-bottom: -10px;">
+				<strong><?= $attach['qty'] ?></strong> bouteilles de <strong><?= $attach['vintage'] ?></strong>
+			</div>
+			<?php endif ?>
 			<h3><a href="<?php echo $this->Html->url(array('controller' => 'wines', 'action' => 'feeds', 'name' => $wine['slug'])); ?>" style="color: rgb(128, 0, 0);"><?= $wine['name'] ?></a></h3>
+			
+			<?php if(!isset($attach)) : ?>
 			<p><?= $wine['description'] ?></p>
+			<?php endif ?>
 		</div>
 	</div>
 	<?php if(isset($button)) : ?>

@@ -34,7 +34,7 @@ class UsersController extends AppController {
  *
  * @var array
  */
-	public $uses = array('Wine', 'User', 'Post', 'Event');
+	public $uses = array('Wine', 'User', 'Post', 'Event', 'News');
 
 	public $scaffold;
 
@@ -54,13 +54,29 @@ class UsersController extends AppController {
 
 	private function isFriend($id) {
 		$user = $this->User->findById($this->user['id']);
+		if($id == $this->user['id']) {
+			$this->set(array('isyou' => true));
+			return;
+		}
 		$isFriend = false;
+		$isFriendRequest = false;
+		$isFriendRequestSent = false;
 		foreach ($user['UserFriendship'] as $friend) {
 			if($id == $friend['id']) {
 				$isFriend = true;
 			}
 		}
-		$this->set(compact('isFriend'));
+		foreach ($user['UserFriendshipRequest'] as $friend) {
+			if($id == $friend['id']) {
+				$isFriendRequest = true;
+			}
+		}
+		foreach ($user['UserFriendshipRequestSent'] as $friend) {
+			if($id == $friend['id']) {
+				$isFriendRequestSent = true;
+			}
+		}
+		$this->set(compact('isFriend', 'isFriendRequest', 'isFriendRequestSent'));
 	}
 
 	public function index() {
@@ -78,9 +94,9 @@ class UsersController extends AppController {
 
 	public function feeds() {
 		$user = $this->User->findBySlug($this->request->params['pseudo']);
-		$posts = parent::getPosts('User', $user);
+		parent::getNews('User', $user);
 		$this->isFriend($user['User']['id']);
-		$this->set(compact('user', 'posts'));
+		$this->set(compact('user'));
 		$this->render('/users/feeds');
 	}
 
