@@ -42,6 +42,7 @@ $cakeDescription = __d('cake_dev', 'La Bonne Cave');
 </head>
 <body>
 	<div id="container" class="container">
+		<? echo $this->Session->flash(); ?>
 		<div id="header">
 			<?php if($auth) : ?>
 			<ul class="nav nav-pills pull-right">

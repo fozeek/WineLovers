@@ -18,7 +18,8 @@
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 App::uses('AppController', 'Controller');
-
+App::uses('CakeEmail', 'Network/Email');
+	
 /**
  * Static content controller
  *
@@ -49,7 +50,7 @@ class UsersController extends AppController {
 
 	public function beforeFilter(){
 		parent::beforeFilter();
-		$this->Auth->allow('signin', 'loginByFacebook');
+		$this->Auth->allow('signin', 'loginByFacebook', 'validation');
 	}
 
 	private function isFriend($id) {
@@ -135,7 +136,13 @@ class UsersController extends AppController {
 
 		if($this->request->is("post")){
 			if ($this->Auth->login()) {
-	            return $this->redirect(array('controller' => 'compte', 'action' => 'feeds'));
+				$user = $this->Auth->user();
+				if($user['valid'] == 1){
+	            	return $this->redirect(array('controller' => 'compte', 'action' => 'feeds'));
+	        	} else {
+	        		$this->Session->setFlash('Veuillez valider votre adresse mail.', 'default', array("class" => "alert alert-danger"));
+	        		$this->Auth->logout();
+	        	}
 	        } else {
 	            $this->Session->setFlash('Username ou password est incorrect');
 	        }
@@ -148,13 +155,23 @@ class UsersController extends AppController {
 			$this->User->set($this->request->data);
 
 			if($this->User->validates()){
-				$this->User->create($this->request->data);
+				$user = $this->request->data["User"];
+				$code = uniqid();
+				$info = array_merge($user, array("code" => $code));
+				$this->User->create($info);
 				$this->User->save();
 
-				$this->redirect(array('controller' => 'Home', 'action' => 'index'));
-			} else {
+				$Email = new CakeEmail();
+				$Email->emailFormat('html');
+				$Email->from(array('lucnotsand@gmail.com' => 'WineLovers'));
+				$Email->to($user["email"]);
+				$Email->subject("Confirmation d'inscription");
+				$Email->send('Bonjour '.$user["firstname"].'<br/><br/>Pour valider votre compte, cliquez sur le lien suivant :<br/>
+	<a href="'.Router::url(array('controller' => 'users', 'action' => 'validation', 'code' => $code), true).'">'.Router::url(array('controller' => 'users', 'action' => 'validation', 'code' => $code), true).'</a>');
 
-			}
+				$this->Session->setFlash('Un email vous a été envoyé pour valider votre compte !');
+				$this->redirect(array('controller' => 'Home', 'action' => 'index'));
+			} 
 		}
 
 		$this->render('/users/signin');
@@ -183,12 +200,20 @@ class UsersController extends AppController {
 				$i++;
 			} while(count($user)!=0);
 
-			$this->User->create(array("pseudo" => $pseudo, "firstname" => $data['firstname'], "lastname" => $data['name'], "email" => $data['email'], "facebookid" => $data['fbID']));
+			$this->User->create(array("valid" => 1, "pseudo" => $pseudo, "firstname" => $data['firstname'], "lastname" => $data['name'], "email" => $data['email'], "facebookid" => $data['fbID']));
 			$this->User->save();
 		}
 
 		$user = $this->User->findByEmail($data['email']);
 		$this->Auth->login($user['User']);
-	   	exit;
+	   	exit;	
+	}
+
+	public function validation (){
+		$user = $this->User->findByCode($this->request->params["code"]);
+		$this->User->id = $user["User"]["id"];
+		$this->User->saveField('valid', '1');
+		$this->Session->setFlash('Votre compte est validé.');
+		$this->redirect(array('controller' => 'users', 'action' => 'login'));
 	}
 }

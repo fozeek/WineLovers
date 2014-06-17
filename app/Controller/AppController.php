@@ -33,7 +33,7 @@ class AppController extends Controller {
 
     public $user = false;
 
-	public $components = array('DebugKit.Toolbar', 'Session', 
+	public $components = array('DebugKit.Toolbar', 'Session',
 		'Auth' => array(
         	'authenticate' => array(
             	'Form' => array(
