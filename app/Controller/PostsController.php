@@ -79,6 +79,18 @@ class PostsController extends AppController
 	public function morePosts() {
 		$object = $this->request['data']['object'];
 		$id = $this->request['data']['id'];
+		$conditions = $this->request['data']['conditions'];
+
+		if(!empty($conditions)) {
+			$conditions = json_decode($conditions, true);
+		}
+		else {
+			$conditions = array(
+                    'News.link_object' => $object,
+                    'News.link_id' => $id
+                );
+		}
+
 		$this->set('news', $this->News->find('all', array(
                 'contain' => array(
                     'LinkPost' => array(
@@ -116,10 +128,7 @@ class PostsController extends AppController
                     'FromEvent',
                     'FromUser',
                 ),
-                'conditions' => array(
-                        'News.link_object' => $object,
-                        'News.link_id' => $id
-                    ),
+                'conditions' => $conditions,
                 'order' => array('News.created' => 'DESC'),
                 'limit' => 10,
                 'page' => $this->request['data']['page']

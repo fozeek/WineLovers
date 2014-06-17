@@ -2,6 +2,59 @@
 <?php $this->assign('active.wishlist', 'active'); ?>
 
 <?php $this->Html->script('pages/comptes/wishlist', array('inline'=>false)); ?>
+
+<div class="modal fade" id="addWine" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Choississez vos vins</h4>
+      </div>
+      <input type="hidden" id="ids"/>
+      <div id="step1" class="modal-body" style="padding: 0px;">
+    <div class="results" style="position: relative;max-height: 550px;overflow-y: auto;overflow-x: hidden;">
+          <input class="form-control" style="margin-top: 15px;margin-left: 15px;width: 568px;" placeholder="Rechercher un vin"/>
+      <div class="nodata" style="display: none;text-align: center;font-size: 40px;color: #E7E7E7;padding: 20px;">
+        Aucun resultat.
+      </div>
+      <div class="row" style="margin: 15px;margin-left: 0px;margin-bottom: 0px;" >
+        <?php foreach($wines as $wine) : ?>
+          <?= $this->element('cards/posts/objects/wine', array('wine' => $wine)) ?>
+        <?php endforeach ?>
+      </div>
+      <div class="paginator" data-page="2" data-object="wines" style="display: none;">
+        Chargement ..
+      </div>
+    </div>
+      </div>
+    <div id="step2" class="modal-body" style="padding: 0px;display: none;">
+    </div>
+    <div class="hidden template">
+      <div class="new selectedWine" data-id style="padding: 15px;margin-top: -1px;border-top: 1px solid #eee;">
+        <div class="row">
+          <div class="col-md-2">
+            <div class="img-responsive img-rounded img" style="background: center center no-repeat;height: 94px;width: 94px;background-size: cover;">
+                </div>
+          </div>
+          <div class="col-md-10">
+            <h4 class="name" style="color: rgb(128, 0, 0);">Wine name</h4>
+            <input type="text" class="form-control qty" placeholder="Quantité"/>
+            <input type="text" class="form-control millesime" placeholder="Millésime"/>
+          </div>
+        </div>
+      </div>
+    </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button id="step1submit" type="button" class="btn btn-primary">Suivant</button>
+        <button id="step2submit" type="button" class="btn btn-primary" style="display: none;">Ajouter à ma Cave</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
 <div class="row">
   <div class="col-md-4">
   	<h2 style="margin-top: 5px;">

@@ -6,7 +6,6 @@
 		'friendsPosts' => $friendsPosts,
 		'eventsPosts' => $eventsPosts,
 		'winesPosts' => $winesPosts,
-		'object' => 'User',
-		'id' => $user['User']['id'],
+		'conditions' => $conditions,
 		'news' => $news
 	)) ?>

@@ -85,4 +85,4 @@
 	<?= $this->element('feeds/news', ['actu' => $actu]) ?>
 <?php endforeach ?>
 </div>
-<?= $this->element('feeds/paginator', ['count' => $countPosts, 'pagePosts' => $pagePosts, 'object' => $object, 'id' => $id]) ?>
+<?= $this->element('feeds/paginator', ['count' => $countPosts, 'pagePosts' => $pagePosts, 'object' => (isset($object)) ? $object: false, 'id' => (isset($id)) ? $id: false, 'conditions' => (isset($conditions)) ? $conditions: false]) ?>

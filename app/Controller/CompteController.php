@@ -46,7 +46,40 @@ class CompteController extends AppController {
  */
 	public function feeds() {
 		$user = $this->User->findById($this->user['id']);
-		parent::getNews('User', $user);
+
+		$conditions = array('OR' => array());
+	
+		// ajout des amis
+		foreach ($user['UserFriendship'] as $key => $friend) {
+			array_push($conditions['OR'], array(
+					'AND' => array(
+		                    'News.link_object' => 'User',
+		                    'News.link_id' => $friend['id']
+		                )
+				));
+		}
+
+		// ajout des vins
+		foreach ($user['WineCellar'] as $key => $wine) {
+			array_push($conditions['OR'], array(
+					'AND' => array(
+		                    'News.link_object' => 'Wine',
+		                    'News.link_id' => $wine['id']
+		                )
+				));
+		}
+
+		// ajout des events
+		foreach ($user['JoinedEvent'] as $key => $event) {
+			array_push($conditions['OR'], array(
+					'AND' => array(
+		                    'News.link_object' => 'Event',
+		                    'News.link_id' => $event['id']
+		                )
+				));
+		}
+
+		parent::getNews('User', $user, $conditions);
 		$this->render('/compte/feeds');
 		
 	}
@@ -161,6 +194,8 @@ class CompteController extends AppController {
 
 	public function addFriend() {
 		$this->UserRFriendship->save(array('user_id' => $this->user['id'], 'friend_id' => $this->request['data']['id']));
+		$this->UserRFriendship->create();
+		$this->UserRFriendship->save(array('user_id' => $this->request['data']['id'], 'friend_id' => $this->user['id']));
 		$remove = $this->UserRFriendshipRequest->find('first', array(
 				'conditions' => array('user_id' => $this->request['data']['id'], 'friend_id' => $this->user['id'])
 			));

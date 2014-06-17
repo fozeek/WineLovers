@@ -88,6 +88,7 @@ $(document).ready(function() {
 				data: {
 					page : $('#load-more').attr('data-page'),
 					object : $('#load-more').attr('data-object'),
+					conditions : $('#load-more').attr('data-conditions'),
 					id : $('#load-more').attr('data-id')
 				},
 				dataType: "html"

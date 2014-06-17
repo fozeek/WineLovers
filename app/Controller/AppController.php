@@ -50,7 +50,7 @@ class AppController extends Controller {
         $this->set(['auth' => $this->user]);
     }
 
-    public function getNews($name, $object) {
+    public function getNews($name, $object, $conditions = false) {
         $page = (array_key_exists('page', $this->request->query)) ? $this->request->query["page"] : 1;
         $this->set('countPosts', $this->Post->find('count', array(
                 'conditions' => array(
@@ -66,6 +66,45 @@ class AppController extends Controller {
         $this->set('eventsPosts', $events);
         $wines = $this->Wine->find('all', array('limit' => 20));
         $this->set('winesPosts', $wines);
+
+
+        if($conditions) {
+            $conditions = $conditions;
+
+            if(count($conditions['OR'])<=0)
+            $conditions['OR'][] = array(
+                    'News.link_object' => 'User',
+                    'News.link_id' => 0
+                );
+
+            // array(
+            //     'OR' => array(
+            //         'AND' => array(
+            //                 'News.link_object' => $name,
+            //                 'News.link_id' => $object[$name]['id']
+            //             ),
+            //         'AND' => array(
+            //                 'News.link_object' => $name,
+            //                 'News.link_id' => $object[$name]['id']
+            //             ),
+            //         'AND' => array(
+            //                 'News.link_object' => $name,
+            //                 'News.link_id' => $object[$name]['id']
+            //             ),
+            //     )
+            // ),
+        }
+        else {
+            $conditions = array(
+                'News.link_object' => $name,
+                'News.link_id' => $object[$name]['id']
+            );
+        }
+
+        
+
+        $this->set('conditions', $conditions);
+
         $this->set('news', $this->News->find('all', array(
                 'contain' => array(
                     'LinkPost' => array(
@@ -103,12 +142,8 @@ class AppController extends Controller {
                     'FromEvent',
                     'FromUser',
                 ),
-                'conditions' => array(
-                        'OR' => array(
-                            'News.link_object' => $name,
-                            'News.link_id' => $object[$name]['id']
-                        )
-                    ),
+    
+                'conditions' => $conditions,
                 'order' => array('News.created' => 'DESC'),
                 'limit' => 10,
                 'page' => $page
