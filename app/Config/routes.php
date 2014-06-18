@@ -48,6 +48,8 @@
 	Router::connect('/me/remove-wishlist-wine', array('controller' => 'compte', 'action' => 'removeWishlistWine'));
 	Router::connect('/me/add-note', array('controller' => 'compte', 'action' => 'addNote'));
 	Router::connect('/me/add-event', array('controller' => 'compte', 'action' => 'addEvent'));
+	Router::connect('/me/join-event', array('controller' => 'compte', 'action' => 'joinEvent', '[method]' => 'POST'));
+	Router::connect('/me/leave-event', array('controller' => 'compte', 'action' => 'leaveEvent', '[method]' => 'POST'));
 
 	Router::connect('/users', array('controller' => 'users', 'action' => 'index'));
 	Router::connect('/user/:pseudo', array('controller' => 'users', 'action' => 'feeds'), array('pseudo' => '[a-zA-Z0-9\-]+'));

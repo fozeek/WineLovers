@@ -8,16 +8,16 @@
 	    		<h4 class="media-heading" style="margin-top: 0px;">
             <a href="<?= $this->Html->url(array('controller' => 'users', 'action' => 'feeds', 'pseudo' => $post['Author']['slug'])) ?>"><?= $post['Author']['name'] ?></a> 
 
-            > 
+           
 
             <?php if (array_key_exists('ToWine', $post) && array_key_exists('id', $post['ToWine']) && !empty($post['ToWine']['id'])): ?>
-              <a href="<?= $this->Html->url(array('controller' => 'wines', 'action' => 'feeds', 'name' => $post['ToWine']['slug'])) ?>"><?= $post['ToWine']['name'] ?></a>
+               > <a href="<?= $this->Html->url(array('controller' => 'wines', 'action' => 'feeds', 'name' => $post['ToWine']['slug'])) ?>"><?= $post['ToWine']['name'] ?></a>
             <?php endif ?>
             <?php if (array_key_exists('ToEvent', $post) && array_key_exists('id', $post['ToEvent']) && !empty($post['ToEvent']['id'])): ?>
-              <a href="<?= $this->Html->url(array('controller' => 'events', 'action' => 'feeds', 'name' => $post['ToEvent']['slug'])) ?>"><?= $post['ToEvent']['name'] ?></a>
+               > <a href="<?= $this->Html->url(array('controller' => 'events', 'action' => 'feeds', 'name' => $post['ToEvent']['slug'])) ?>"><?= $post['ToEvent']['name'] ?></a>
             <?php endif ?>
-            <?php if (array_key_exists('ToUser', $post) && array_key_exists('id', $post['ToUser']) && !empty($post['ToUser']['id'])): ?>
-              <a href="<?= $this->Html->url(array('controller' => 'users', 'action' => 'feeds', 'pseudo' => $post['ToUser']['slug'])) ?>"><?= $post['ToUser']['name'] ?></a>
+            <?php if (array_key_exists('ToUser', $post) && array_key_exists('id', $post['ToUser']) && !empty($post['ToUser']['id']) && $post['ToUser']['id'] !=  $post['Author']['id']): ?>
+               > <a href="<?= $this->Html->url(array('controller' => 'users', 'action' => 'feeds', 'pseudo' => $post['ToUser']['slug'])) ?>"><?= $post['ToUser']['name'] ?></a>
             <?php endif ?>
 
           </h4>

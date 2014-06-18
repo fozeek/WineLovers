@@ -35,7 +35,7 @@ class UsersController extends AppController {
  *
  * @var array
  */
-	public $uses = array('Wine', 'User', 'Post', 'Event', 'News');
+	public $uses = array('Wine', 'User', 'Post', 'Event', 'News', 'Review');
 
 	public $scaffold;
 
@@ -104,7 +104,73 @@ class UsersController extends AppController {
 	public function cellar() {
 		$user = $this->User->findBySlug($this->request->params['pseudo']);
 		$this->isFriend($user['User']['id']);
-		$this->set(compact('user'));
+
+
+		$reviews = $this->Review->find('all', array('conditions' => array(
+				'author_id' => $user['User']['id']
+			)));
+
+		$userWines = $user['WineCellar'];
+		$userRWines = $user['R_Cellar'];
+
+		$datas = [];
+
+		foreach ($userWines as $key => $wine) {
+			if(!array_key_exists($wine['id'], $datas)) {
+				$datas[$wine['id']]['wine'] = $wine;
+			}
+		}
+
+		foreach ($userRWines as $key => $userRWine) {
+			if(!array_key_exists('vintages', $datas[$userRWine['wine_id']])) {
+				$datas[$userRWine['wine_id']]['vintages'] = array();
+			}
+
+			if(!array_key_exists('reviews', $datas[$userRWine['wine_id']])) {
+				$datas[$userRWine['wine_id']]['reviews'] = array();
+			}
+
+			if(array_key_exists($userRWine['vintage'], $datas[$userRWine['wine_id']]['vintages'])) {
+				$datas[$userRWine['wine_id']]['vintages'][$userRWine['vintage']] += $userRWine['qty'];
+			}
+			else {
+				$datas[$userRWine['wine_id']]['vintages'][$userRWine['vintage']] = $userRWine['qty'];
+			}
+		}
+		// supression des vins ou qty == 0
+		foreach ($datas as $key => $value) {
+			if(count($value['vintages']) <= 0) {
+				unset($datas[$key]);
+			}
+			else {
+				$qty = 0;
+				foreach ($datas[$key]['vintages'] as $vintage => $qtyVintage) {
+					if($qtyVintage <= 0) {
+						unset($datas[$key]['vintages'][$vintage]);
+					}
+					else {
+						$qty += $qtyVintage;
+					}
+				}
+				if($qty == 0) {
+					unset($datas[$key]);
+				}
+			}
+		}
+
+		// ajout des notes
+		foreach ($reviews as $key => $review) {
+			if(array_key_exists($review['Review']['wine_id'], $datas)) {
+				if(!array_key_exists('reviews', $datas[$review['Review']['wine_id']])) {
+					$datas[$review['Review']['id']]['reviews'] = array();
+				}
+				$datas[$review['Review']['wine_id']]['reviews'][] = $review;
+			}
+		}
+
+
+
+		$this->set(compact('user', 'datas'));
 		$this->render('/users/cellar');
 	}
 

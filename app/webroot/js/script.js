@@ -1,5 +1,51 @@
 $(document).ready(function() {
 
+	$("#joinevent").on('click', function() {
+		var eventId = $(this).attr('data-id');
+			console.log('click');
+
+		var request = $.ajax({
+			url: "/me/join-event",
+			type: "POST",
+			data: {
+				id : eventId
+			},
+			dataType: "html"
+		});
+		
+		request.done(function( msg ) {
+			console.log('msg');
+			$("#joinevent").hide();
+			$("#leaveevent").show();
+		});
+		
+		request.fail(function( jqXHR, textStatus ) {
+		  alert( "Request failed: " + textStatus );
+		});
+	});
+
+	$("#leaveevent").on('click', function() {
+		var eventId = $(this).attr('data-id');
+
+		var request = $.ajax({
+			url: "/me/leave-event",
+			type: "POST",
+			data: {
+				id : eventId
+			},
+			dataType: "html"
+		});
+		
+		request.done(function( msg ) {
+			$("#joinevent").show();
+			$("#leaveevent").hide();
+		});
+		
+		request.fail(function( jqXHR, textStatus ) {
+		  alert( "Request failed: " + textStatus );
+		});
+	});
+
 	$('#addObjectToPost .tab input').on('keyup', function() {
 		var $that = $(this).parent();
 		var value = $(this).val();
@@ -78,7 +124,7 @@ $(document).ready(function() {
 
 	var $scrollModule = true;
 	document.addEventListener( 'scroll',function (event) {
-	    if ( $('#load-more') && $scrollModule && window.scrollY >= document.body.scrollHeight - window.innerHeight )
+	    if ( $('#load-more').length && $scrollModule && window.scrollY >= document.body.scrollHeight - window.innerHeight )
 	    {
 	    	
 	    	$scrollModule = false;
