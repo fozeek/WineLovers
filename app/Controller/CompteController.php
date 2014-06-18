@@ -34,7 +34,7 @@ class CompteController extends AppController {
  *
  * @var array
  */
-	public $uses = array('User', 'Wine', 'UserRFriendship', 'Post', 'Comment', 'UserRCellar', 'UserRWishlist', 'UserRFriendshipRequest', 'Review', 'Event', 'News');
+	public $uses = array('User', 'Wine', 'UserRFriendship', 'Post', 'Comment', 'UserRCellar', 'UserRWishlist', 'UserRFriendshipRequest', 'Review', 'Event', 'News', 'EventRGuest');
 
 /**
  * Displays a view
@@ -274,6 +274,21 @@ class CompteController extends AppController {
 				'conditions' => array('user_id' => $this->user['id'], 'friend_id' => $this->request['data']['id'])
 			));
 		$this->UserRFriendshipRequest->delete($rFriendshipRequest['UserRFriendshipRequest']['id']);
+		exit();
+	}
+
+
+
+	public function joinEvent() {
+		$this->EventRGuest->save(array('event_id' => $this->request['data']['id'], 'user_id' => $this->user['id']));
+		exit();
+	}
+
+	public function leaveEvent() {
+		$rEventRGuest = $this->EventRGuest->find('first', array(
+				'conditions' => array('EventRGuest.user_id' => $this->user['id'], 'event_id' => $this->request['data']['id'])
+			));
+		$this->EventRGuest->delete($rEventRGuest['EventRGuest']['id']);
 		exit();
 	}
 }

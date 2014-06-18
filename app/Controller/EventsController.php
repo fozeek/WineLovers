@@ -34,7 +34,7 @@ class EventsController extends AppController {
  *
  * @var array
  */
-	public $uses = array('Event', 'User', 'Post', 'Wine', 'News');
+	public $uses = array('Event', 'User', 'Post', 'Wine', 'News', 'EventRGuest');
 
 /**
  * Displays a view
@@ -44,6 +44,27 @@ class EventsController extends AppController {
  * @throws NotFoundException When the view file could not be found
  *	or MissingViewException in debug mode.
  */
+
+	private function testEvent($event) {
+		$user = $this->User->findById($this->user['id']);
+		$bool = false;
+		foreach ($user['JoinedEvent'] as $joinedEvent) {
+			if($joinedEvent['id'] == $event['Event']['id']) {
+				$bool = true;
+				break;
+			}
+		}
+		$this->set('isJoined', $bool);
+		$bool = false;
+		foreach ($user['LikedEvent'] as $likedEvent) {
+			if($likedEvent['id'] == $event['Event']['id']) {
+				$bool = true;
+				break;
+			}
+		}
+		$this->set('isLiked', $bool);
+	}
+
 
 	public function index() {
 		$events = $this->Event->find('all');
@@ -55,6 +76,7 @@ class EventsController extends AppController {
 	public function feeds() {
 		$event = $this->Event->findBySlug($this->request->params['name']);
 		parent::getNews('Event', $event);
+		$this->testEvent($event);
 		$this->set(compact('event'));
 		$this->render('/events/feeds');
 		
@@ -63,6 +85,7 @@ class EventsController extends AppController {
 	public function about() {
 		$event = $this->Event->findBySlug($this->request->params['name']);
 		$this->set(compact('event'));
+		$this->testEvent($event);
 		$this->render('/events/about');
 		
 	}
@@ -71,6 +94,7 @@ class EventsController extends AppController {
 		$users = $this->User->find('all', array('limit' => 8));
 		$event = $this->Event->findBySlug($this->request->params['name']);
 		$this->set(compact('event', 'users'));
+		$this->testEvent($event);
 		$this->render('/events/guests');
 		
 	}
@@ -78,6 +102,7 @@ class EventsController extends AppController {
 	public function medias() {
 		$event = $this->Event->findBySlug($this->request->params['name']);
 		$this->set(compact('event'));
+		$this->testEvent($event);
 		$this->render('/events/medias');
 		
 	}
@@ -85,6 +110,7 @@ class EventsController extends AppController {
 	public function likes() {
 		$event = $this->Event->findBySlug($this->request->params['name']);
 		$this->set(compact('event'));
+		$this->testEvent($event);
 		$this->render('/events/likes');
 		
 	}

@@ -61,14 +61,13 @@
     </div>
   </div>
 </div>
-<?php if(!isset($isyou)) : ?>
 <form id="post-form" role="form" method="post">
   <div class="form-group">
   	<input type="hidden" class="link_id" value="<?= $id ?>" />
   	<input type="hidden" class="link_object" value="<?= $object ?>" />
   	<input type="hidden" class="attach_id" value="" />
   	<input type="hidden" class="attach_object" value="" />
-	<textarea class="form-control text" rows="5" style="margin-bottom: 5px;width: 100%;max-width: 100%;height: 35px;" name="text" data-val="Laisser un message">Laisser un message</textarea>
+	<textarea class="form-control text" rows="5" style="margin-bottom: 5px;width: 100%;max-width: 100%;height: 35px;" name="text" data-val="<?php if(!isset($isyou)) : ?>Laisser un message<?php else : ?>Exprimez-vous<?php endif ?>"><?php if(!isset($isyou)) : ?>Laisser un message<?php else : ?>Exprimez-vous<?php endif ?></textarea>
 	<button type="submit" class="btn btn-default pull-right" style="display: none;">Publier</button>
 	<div class="btn-group pull-right" style="margin-right: 10px;">
 		<button class="btn btn-default addSomething" style="display: none;" data-toggle="modal" data-target="#addObjectToPost">Ajouter</button>
@@ -78,8 +77,6 @@
 </form>
 <div class="clearfix"></div>
 <hr />
-
-<?php endif ?>
 <div class="posts-container">
 <?php foreach ($news as $actu): ?>
 	<?= $this->element('feeds/news', ['actu' => $actu]) ?>

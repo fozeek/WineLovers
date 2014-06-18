@@ -21,9 +21,10 @@ margin: -2px auto -6px auto;"><?= $event['Event']['date']->format('d') ?></span>
 		<br />
 
 		<div class="btn-group">
-		  <button type="button" class="btn btn-default add-as-friend"><span class="glyphicon glyphicon-ok hidden"></span> <span data-original="Venir" data-replace="Je viens" data-over="Je ne veux plus venir" data-remove="Inscription annulée">Venir</span></button>
-		  <button type="button" class="btn btn-default">Proposer à un ami</button>
-		  <button type="button" class="btn btn-default">Like</button>
+		  <button type="button" class="btn btn-default" id="joinevent" data-id="<?= $event['Event']['id'] ?>" style="<?php if($isJoined) : ?>display: none;<?php endif ?>"><span class="glyphicon glyphicon-ok hidden"></span>Venir</button>
+		  <button type="button" class="btn btn-success" id="leaveevent" data-id="<?= $event['Event']['id'] ?>" style="<?php if(!$isJoined) : ?>display: none;<?php endif ?>"><span class="glyphicon glyphicon-ok hidden"></span>Participe</button>
+		  <button type="button" class="btn btn-sucess" id="likeevent" data-id="<?= $event['Event']['id'] ?>" style="<?php if(!$isLiked) : ?>display: none;<?php endif ?>">Like</button>
+		  <button type="button" class="btn btn-default" id="dislikeevent" data-id="<?= $event['Event']['id'] ?>" style="<?php if($isLiked) : ?>display: none;<?php endif ?>">Like</button>
 
 		  <div class="btn-group">
 		    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
