@@ -111,7 +111,7 @@ $cakeDescription = __d('cake_dev', 'La Bonne Cave');
 			&copy; La bonne cave 2014 • 
 			<a href="<?php echo $this->Html->url(array('controller' => 'home', 'action' => 'contact')) ?>">Contact</a> • 
 			<a href="<?php echo $this->Html->url(array('controller' => 'home', 'action' => 'about')) ?>">A propos</a>
-		</div>
+		</div><br />
 	</div>
 	<?php echo $this->Html->script('jquery.min'); ?>
 	<?php echo $this->Html->script('bootstrap.min'); ?>

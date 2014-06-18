@@ -27,6 +27,7 @@
 	Router::connect('/', array('controller' => 'home', 'action' => 'index'));
 	Router::connect('/about', array('controller' => 'home', 'action' => 'about'));
 	Router::connect('/contact', array('controller' => 'home', 'action' => 'contact'));
+	Router::connect('/contact/send-email', array('controller' => 'home', 'action' => 'sendEmail'));
 
 	Router::connect('/me', array('controller' => 'compte', 'action' => 'feeds'));
 	Router::connect('/me/inbox', array('controller' => 'compte', 'action' => 'inbox'));

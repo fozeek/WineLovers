@@ -144,7 +144,7 @@ class UsersController extends AppController {
 	        		$this->Auth->logout();
 	        	}
 	        } else {
-	            $this->Session->setFlash('Username ou password est incorrect');
+	            $this->Session->setFlash('Adresse email ou mot de passe incorrect', 'default', array("class" => "alert alert-danger"));
 	        }
 		}
 		$this->render('/users/login');	

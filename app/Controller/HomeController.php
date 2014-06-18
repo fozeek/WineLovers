@@ -18,6 +18,7 @@
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 App::uses('AppController', 'Controller');
+App::uses('CakeEmail', 'Network/Email');
 
 /**
  * Static content controller
@@ -47,7 +48,7 @@ class HomeController extends AppController {
 
 	public function beforeFilter() {
 		parent::beforeFilter();
-		$this->Auth->allow(array('index', 'about', 'contact'));
+		$this->Auth->allow(array('index', 'about', 'contact', 'sendEmail'));
 	}
 	
 	public function index() {
@@ -70,5 +71,24 @@ class HomeController extends AppController {
 
 		$this->render('/home/contact');
 		
+	}
+
+	public function sendEmail() {
+		$data = $this->request['data']['Event'];
+		
+		try{
+			$Email = new CakeEmail();
+			$Email->emailFormat('text');
+			$Email->from($data['email']);
+			$Email->to('lucnotsand@gmail.com');
+			$Email->subject("Feedback");
+			$Email->send($data['notes']);
+
+			$this->Session->setFlash('Votre message a été envoyé !');
+			$this->redirect(array('controller' => 'Home', 'action' => 'index'));
+		} catch (Exception $e) {
+			$this->Session->setFlash('Adresse email invalide !', 'default', array("class" => "alert alert-danger"));
+			$this->redirect(array('controller' => 'Home', 'action' => 'contact'));
+		}
 	}
 }
