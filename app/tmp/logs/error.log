@@ -9668,6 +9668,7 @@ Request URL: /js/jquery-2.0.3.min.map
 Stack Trace:
 #0 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+<<<<<<< HEAD
 2014-06-19 13:23:06 Error: [MissingControllerException] Controller class JsController could not be found.
 Exception Attributes: array (
   'class' => 'JsController',
@@ -9686,3 +9687,756 @@ Request URL: /js/jquery-2.0.3.min.map
 Stack Trace:
 #0 /Users/qdeneuve/Projets/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+=======
+2014-06-19 11:28:41 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /://www.docdunet.fr/wp-content/uploads/2012/02/Vin-rouge-hypertension.jpg
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-19 11:28:41 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /://static.wine-searcher.net/images/labels/29/14/santa-rita-reserva-sauvignon-blanc-casablanca-valley-chile-10122914.jpg
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-19 11:28:41 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /://static.wine-searcher.net/images/labels/54/76/penfolds-koonunga-hill-chardonnay-south-australia-10365476.jpg
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-19 11:28:41 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /://static.wine-searcher.net/images/labels/71/27/petrus-pomerol-france-10187127.jpg
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-19 11:29:55 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /://static.wine-searcher.net/images/labels/71/27/petrus-pomerol-france-10187127.jpg
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-19 11:29:55 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /://www.docdunet.fr/wp-content/uploads/2012/02/Vin-rouge-hypertension.jpg
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-19 11:29:55 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /://static.wine-searcher.net/images/labels/29/14/santa-rita-reserva-sauvignon-blanc-casablanca-valley-chile-10122914.jpg
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-19 11:29:55 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /://static.wine-searcher.net/images/labels/54/76/penfolds-koonunga-hill-chardonnay-south-australia-10365476.jpg
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-19 11:30:05 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /://static.wine-searcher.net/images/labels/54/76/penfolds-koonunga-hill-chardonnay-south-australia-10365476.jpg
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-19 11:30:05 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /://static.wine-searcher.net/images/labels/29/14/santa-rita-reserva-sauvignon-blanc-casablanca-valley-chile-10122914.jpg
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-19 11:30:05 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /://www.docdunet.fr/wp-content/uploads/2012/02/Vin-rouge-hypertension.jpg
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-19 11:30:05 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /://static.wine-searcher.net/images/labels/10/89/vignobles-andre-lurton-chateau-de-cruzeau-pessac-leognan-france-10311089.jpg
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-19 11:30:05 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /://static.wine-searcher.net/images/labels/47/28/chateau-margaux-margaux-france-10474728.jpg
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-19 11:30:05 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /://static.wine-searcher.net/images/labels/71/27/petrus-pomerol-france-10187127.jpg
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-19 11:41:51 Error: Fatal Error (1): Call to a member function format() on a non-object in [/Users/jonathanbicheux/Documents/Project/WineLovers/app/View/Users/Elements/layout.ctp, line 46]
+2014-06-19 11:41:51 Error: [FatalErrorException] Call to a member function format() on a non-object
+Request URL: /users/feeds/pseudo:Luc.Notsand
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Users/jonathan...', 46)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Users/jonathan...', 46, Array)
+#2 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Users/jonathan...', 46, Array)
+#3 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-06-19 11:43:43 Error: Fatal Error (1): Call to a member function format() on a non-object in [/Users/jonathanbicheux/Documents/Project/WineLovers/app/View/Users/Elements/layout.ctp, line 46]
+2014-06-19 11:43:43 Error: [FatalErrorException] Call to a member function format() on a non-object
+Request URL: /users/feeds/pseudo:Luc.Notsand
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Users/jonathan...', 46)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Users/jonathan...', 46, Array)
+#2 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Users/jonathan...', 46, Array)
+#3 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-06-19 11:46:32 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /://static.wine-searcher.net/images/labels/29/14/santa-rita-reserva-sauvignon-blanc-casablanca-valley-chile-10122914.jpg
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-19 11:46:32 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /://static.wine-searcher.net/images/labels/54/76/penfolds-koonunga-hill-chardonnay-south-australia-10365476.jpg
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-19 11:46:32 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /://static.wine-searcher.net/images/labels/71/27/petrus-pomerol-france-10187127.jpg
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-19 11:46:32 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /://www.docdunet.fr/wp-content/uploads/2012/02/Vin-rouge-hypertension.jpg
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-19 11:47:23 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /://static.wine-searcher.net/images/labels/54/76/penfolds-koonunga-hill-chardonnay-south-australia-10365476.jpg
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-19 11:47:23 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /://static.wine-searcher.net/images/labels/71/27/petrus-pomerol-france-10187127.jpg
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-19 11:47:23 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /://www.docdunet.fr/wp-content/uploads/2012/02/Vin-rouge-hypertension.jpg
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-19 11:47:23 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /://static.wine-searcher.net/images/labels/29/14/santa-rita-reserva-sauvignon-blanc-casablanca-valley-chile-10122914.jpg
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-19 11:47:25 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /://static.wine-searcher.net/images/labels/54/76/penfolds-koonunga-hill-chardonnay-south-australia-10365476.jpg
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-19 11:47:32 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /://static.wine-searcher.net/images/labels/54/76/penfolds-koonunga-hill-chardonnay-south-australia-10365476.jpg
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-19 11:47:33 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /://static.wine-searcher.net/images/labels/54/76/penfolds-koonunga-hill-chardonnay-south-australia-10365476.jpg
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-19 11:47:35 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /://static.wine-searcher.net/images/labels/54/76/penfolds-koonunga-hill-chardonnay-south-australia-10365476.jpg
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-19 11:47:39 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /://static.wine-searcher.net/images/labels/54/76/penfolds-koonunga-hill-chardonnay-south-australia-10365476.jpg
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-19 11:47:41 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /://static.wine-searcher.net/images/labels/54/76/penfolds-koonunga-hill-chardonnay-south-australia-10365476.jpg
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-19 11:47:49 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /://www.docdunet.fr/wp-content/uploads/2012/02/Vin-rouge-hypertension.jpg
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-19 11:47:49 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /://static.wine-searcher.net/images/labels/29/14/santa-rita-reserva-sauvignon-blanc-casablanca-valley-chile-10122914.jpg
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-19 11:47:49 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /://static.wine-searcher.net/images/labels/54/76/penfolds-koonunga-hill-chardonnay-south-australia-10365476.jpg
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-19 11:47:49 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /://static.wine-searcher.net/images/labels/71/27/petrus-pomerol-france-10187127.jpg
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-19 11:47:53 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /://www.docdunet.fr/wp-content/uploads/2012/02/Vin-rouge-hypertension.jpg
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-19 11:47:53 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /://static.wine-searcher.net/images/labels/47/28/chateau-margaux-margaux-france-10474728.jpg
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-19 11:47:53 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /://static.wine-searcher.net/images/labels/71/27/petrus-pomerol-france-10187127.jpg
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-19 11:47:53 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /://static.wine-searcher.net/images/labels/10/89/vignobles-andre-lurton-chateau-de-cruzeau-pessac-leognan-france-10311089.jpg
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-19 11:47:53 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /://static.wine-searcher.net/images/labels/54/76/penfolds-koonunga-hill-chardonnay-south-australia-10365476.jpg
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-19 11:47:53 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /://static.wine-searcher.net/images/labels/29/14/santa-rita-reserva-sauvignon-blanc-casablanca-valley-chile-10122914.jpg
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-19 11:48:38 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /://www.docdunet.fr/wp-content/uploads/2012/02/Vin-rouge-hypertension.jpg
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-19 11:48:41 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /://static.wine-searcher.net/images/labels/29/14/santa-rita-reserva-sauvignon-blanc-casablanca-valley-chile-10122914.jpg
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-19 11:48:41 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /://www.docdunet.fr/wp-content/uploads/2012/02/Vin-rouge-hypertension.jpg
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-19 11:48:41 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /://static.wine-searcher.net/images/labels/71/27/petrus-pomerol-france-10187127.jpg
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-19 11:48:41 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /://static.wine-searcher.net/images/labels/54/76/penfolds-koonunga-hill-chardonnay-south-australia-10365476.jpg
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-19 11:48:52 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /://static.wine-searcher.net/images/labels/47/28/chateau-margaux-margaux-france-10474728.jpg
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-19 11:48:52 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /://static.wine-searcher.net/images/labels/54/76/penfolds-koonunga-hill-chardonnay-south-australia-10365476.jpg
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-19 11:48:52 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /://www.docdunet.fr/wp-content/uploads/2012/02/Vin-rouge-hypertension.jpg
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-19 11:48:52 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /://static.wine-searcher.net/images/labels/29/14/santa-rita-reserva-sauvignon-blanc-casablanca-valley-chile-10122914.jpg
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-19 11:48:52 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /://static.wine-searcher.net/images/labels/10/89/vignobles-andre-lurton-chateau-de-cruzeau-pessac-leognan-france-10311089.jpg
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-19 11:48:52 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /://static.wine-searcher.net/images/labels/71/27/petrus-pomerol-france-10187127.jpg
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-19 11:49:01 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /://www.docdunet.fr/wp-content/uploads/2012/02/Vin-rouge-hypertension.jpg
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-19 11:52:10 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /://static.wine-searcher.net/images/labels/10/89/vignobles-andre-lurton-chateau-de-cruzeau-pessac-leognan-france-10311089.jpg
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-19 11:52:10 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /://static.wine-searcher.net/images/labels/71/27/petrus-pomerol-france-10187127.jpg
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-19 11:52:10 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /://www.docdunet.fr/wp-content/uploads/2012/02/Vin-rouge-hypertension.jpg
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-19 11:52:10 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /://static.wine-searcher.net/images/labels/47/28/chateau-margaux-margaux-france-10474728.jpg
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-19 11:52:10 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /://static.wine-searcher.net/images/labels/29/14/santa-rita-reserva-sauvignon-blanc-casablanca-valley-chile-10122914.jpg
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-19 11:52:10 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /://static.wine-searcher.net/images/labels/54/76/penfolds-koonunga-hill-chardonnay-south-australia-10365476.jpg
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-19 11:52:46 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /://static.wine-searcher.net/images/labels/10/89/vignobles-andre-lurton-chateau-de-cruzeau-pessac-leognan-france-10311089.jpg
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-19 11:53:12 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /://static.wine-searcher.net/images/labels/10/89/vignobles-andre-lurton-chateau-de-cruzeau-pessac-leognan-france-10311089.jpg
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-19 11:55:24 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /://static.wine-searcher.net/images/labels/10/89/vignobles-andre-lurton-chateau-de-cruzeau-pessac-leognan-france-10311089.jpg
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-19 11:55:55 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /://static.wine-searcher.net/images/labels/10/89/vignobles-andre-lurton-chateau-de-cruzeau-pessac-leognan-france-10311089.jpg
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-19 12:01:19 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /://static.wine-searcher.net/images/labels/10/89/vignobles-andre-lurton-chateau-de-cruzeau-pessac-leognan-france-10311089.jpg
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-19 12:01:28 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'vintage' cannot be null
+Request URL: /me/add-note
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('INSERT INTO `wi...', Array)
+#2 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Model/Datasource/DboSource.php(1003): DboSource->execute('INSERT INTO `wi...')
+#3 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Model/Model.php(1830): DboSource->create(Object(Review), Array, Array)
+#4 /Users/jonathanbicheux/Documents/Project/WineLovers/app/Controller/CompteController.php(213): Model->save(Array)
+#5 [internal function]: CompteController->addNote()
+#6 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(CompteController), Array)
+#7 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#8 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(CompteController), Object(CakeRequest), Object(CakeResponse))
+#9 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-06-19 12:01:57 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'vintage' cannot be null
+Request URL: /me/add-note
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('INSERT INTO `wi...', Array)
+#2 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Model/Datasource/DboSource.php(1003): DboSource->execute('INSERT INTO `wi...')
+#3 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Model/Model.php(1830): DboSource->create(Object(Review), Array, Array)
+#4 /Users/jonathanbicheux/Documents/Project/WineLovers/app/Controller/CompteController.php(213): Model->save(Array)
+#5 [internal function]: CompteController->addNote()
+#6 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(CompteController), Array)
+#7 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#8 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(CompteController), Object(CakeRequest), Object(CakeResponse))
+#9 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2014-06-19 12:02:53 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /://static.wine-searcher.net/images/labels/10/89/vignobles-andre-lurton-chateau-de-cruzeau-pessac-leognan-france-10311089.jpg
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-19 12:02:57 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /://static.wine-searcher.net/images/labels/29/14/santa-rita-reserva-sauvignon-blanc-casablanca-valley-chile-10122914.jpg
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-19 12:02:57 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /://static.wine-searcher.net/images/labels/54/76/penfolds-koonunga-hill-chardonnay-south-australia-10365476.jpg
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-19 12:02:57 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /://static.wine-searcher.net/images/labels/71/27/petrus-pomerol-france-10187127.jpg
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-19 12:02:57 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /://www.docdunet.fr/wp-content/uploads/2012/02/Vin-rouge-hypertension.jpg
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-19 12:04:54 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /://static.wine-searcher.net/images/labels/71/27/petrus-pomerol-france-10187127.jpg
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-19 12:04:54 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /://static.wine-searcher.net/images/labels/29/14/santa-rita-reserva-sauvignon-blanc-casablanca-valley-chile-10122914.jpg
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-19 12:04:54 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /://www.docdunet.fr/wp-content/uploads/2012/02/Vin-rouge-hypertension.jpg
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-19 12:04:54 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /://static.wine-searcher.net/images/labels/47/28/chateau-margaux-margaux-france-10474728.jpg
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-19 12:04:54 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /://static.wine-searcher.net/images/labels/54/76/penfolds-koonunga-hill-chardonnay-south-australia-10365476.jpg
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-19 12:04:54 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /://static.wine-searcher.net/images/labels/10/89/vignobles-andre-lurton-chateau-de-cruzeau-pessac-leognan-france-10311089.jpg
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-19 13:20:23 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /://static.wine-searcher.net/images/labels/29/14/santa-rita-reserva-sauvignon-blanc-casablanca-valley-chile-10122914.jpg
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-19 13:20:23 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /://www.docdunet.fr/wp-content/uploads/2012/02/Vin-rouge-hypertension.jpg
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-19 13:20:23 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /://static.wine-searcher.net/images/labels/54/76/penfolds-koonunga-hill-chardonnay-south-australia-10365476.jpg
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-19 13:20:23 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /://static.wine-searcher.net/images/labels/71/27/petrus-pomerol-france-10187127.jpg
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-19 13:20:28 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /://static.wine-searcher.net/images/labels/10/89/vignobles-andre-lurton-chateau-de-cruzeau-pessac-leognan-france-10311089.jpg
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-06-19 13:20:41 Error: Fatal Error (1): Call to a member function format() on a non-object in [/Users/jonathanbicheux/Documents/Project/WineLovers/app/View/Users/Elements/layout.ctp, line 46]
+2014-06-19 13:20:41 Error: [FatalErrorException] Call to a member function format() on a non-object
+Request URL: /users/feeds/pseudo:Luc.Notsand
+Stack Trace:
+#0 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Users/jonathan...', 46)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Users/jonathan...', 46, Array)
+#2 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Users/jonathan...', 46, Array)
+#3 /Users/jonathanbicheux/Documents/Project/WineLovers/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+>>>>>>> FETCH_HEAD
