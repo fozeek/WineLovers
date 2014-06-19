@@ -123,6 +123,34 @@ class EventsController extends AppController {
 		
 	}
 
+	public function update() {
+		$data = $this->request->data;
+		$this->Event->id = $data['id'];
+
+		if(!empty($data['description']))
+			$this->Event->saveField('description', $data['description']);
+
+		if(!empty($_FILES['image']['name'])) {
+			$uniqId = uniqid();
+			$image = 'event_'.$uniqId.strrchr($_FILES['image']['name'], '.');
+			$this->Event->saveField('image', $image);
+			$image = parent::uploadFile($_FILES['image'], 'event_'.$uniqId);
+			if($image) {
+	        	$this->Session->setFlash('Image uploadée', 'default', array("class" => "alert alert-success"));
+				$this->Event->read(null, $this->Event->id);
+				$this->redirect(array("controller" => "events", "action" => "settings", 'name' => $this->Event->data['Event']['slug']));
+			}
+			else {
+	        	$this->Session->setFlash('Echec de l\'upload de l\'image', 'default', array("class" => "alert alert-danger"));
+				$this->Event->read(null, $this->Event->id);
+				$this->redirect(array("controller" => "events", "action" => "settings", 'name' => $this->Event->data['Event']['slug']));
+			}
+		}
+		$this->Event->read(null, $this->Event->id);
+	        	$this->Session->setFlash('Informations sauvegardées', 'default', array("class" => "alert alert-success"));
+		$this->redirect(array("controller" => "events", "action" => "settings", 'name' => $this->Event->data['Event']['slug']));
+	}
+
 	public function create() {
 		$this->Event->save(array(
 			'author_id' => $this->user['id'],

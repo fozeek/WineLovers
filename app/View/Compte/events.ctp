@@ -80,6 +80,10 @@
   <?php foreach($user['CreatedEvent'] as $event) : ?>
     <?= $this->element('cards/event', ['event' => $event, 'size' => 3]) ?>
   <?php endforeach ?>
+  <?php ?>
+  <?php if(count($user['CreatedEvent']) == 0) : ?>
+    <div class="alert alert-info">vous n'avez pas encore créé d'évènement.</div>
+  <?php endif ?>
 </div>
 
 <h3>Mes participations</h3>
@@ -87,4 +91,7 @@
   <?php foreach($user['JoinedEvent'] as $event) : ?>
     <?= $this->element('cards/event', ['event' => $event, 'size' => 3]) ?>
   <?php endforeach ?>
+  <?php if(count($user['JoinedEvent']) == 0) : ?>
+    <div class="alert alert-info">vous n'avez pas encore rejoins d'évènement.</div>
+  <?php endif ?>
 </div>

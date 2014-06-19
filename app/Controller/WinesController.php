@@ -106,6 +106,8 @@ class WinesController extends AppController {
 	
 	}
 
+	
+
 	public function add() {
 
 		if ($this->request->is('post')) {

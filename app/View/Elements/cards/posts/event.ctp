@@ -2,7 +2,7 @@
 	<div class="row">
 		<div class="col-md-2">
 			<a href="<?php echo $this->Html->url(array('controller' => 'events', 'action' => 'feeds', 'name' => $event['slug'])); ?>">
-				<div style="width: 128px;height: 128px;margin: -14px;border: 1px solid #eee;border-right: none;background: #eee url(<?php if(!empty($event['image'])) : echo $event['image']; else: ?>http://www.iconpng.com/png/pictograms/serve-wine.png<?php endif ?>) center center no-repeat;background-size: cover;-moz-background-size: cover;-webkit-background-size: cover;-o-background-size: cover;"></div>
+				<div style="width: 128px;height: 128px;margin: -14px;border: 1px solid #eee;border-right: none;background: #eee url(<?php if(!empty($event['image'])) : echo '/img/upload/'.$event['image']; else: ?>http://www.iconpng.com/png/pictograms/serve-wine.png<?php endif ?>) center center no-repeat;background-size: cover;-moz-background-size: cover;-webkit-background-size: cover;-o-background-size: cover;"></div>
 			</a>
 		</div>
 		<div class="col-md-1">

@@ -6,7 +6,7 @@
 	<div class="row">
 		<div class="col-md-1">
 			<a class="pull-left" href="#">
-    			<img class="media-object img-rounded" src="<?php if(!empty($actu['FromUser']['image'])) : echo $actu['FromUser']['image']; else: ?>http://chicagoluvbiz.com/wp-content/uploads/2014/01/wine-icon.png<?php endif ?>" alt="..." style="width: 50px;">
+    			<img class="media-object img-rounded" src="<?php if(!empty($actu['FromUser']['image'])) : echo '/img/upload/'.$actu['FromUser']['image']; else: ?>http://chicagoluvbiz.com/wp-content/uploads/2014/01/wine-icon.png<?php endif ?>" alt="..." style="width: 50px;">
   			</a>
 		</div>
 		<div class="col-md-11">
@@ -37,7 +37,7 @@
 	<div class="row">
 		<div class="col-md-1">
 			<a class="pull-left" href="#">
-    			<img class="media-object img-rounded" src="<?php if(!empty($actu['FromUser']['image'])) : echo $actu['FromUser']['image']; else: ?>http://chicagoluvbiz.com/wp-content/uploads/2014/01/wine-icon.png<?php endif ?>" alt="..." style="width: 50px;">
+    			<img class="media-object img-rounded" src="<?php if(!empty($actu['FromUser']['image'])) : echo '/img/upload/'.$actu['FromUser']['image']; else: ?>http://chicagoluvbiz.com/wp-content/uploads/2014/01/wine-icon.png<?php endif ?>" alt="..." style="width: 50px;">
   			</a>
 		</div>
 		<div class="col-md-11">
@@ -63,7 +63,7 @@
 	<div class="row">
 		<div class="col-md-1">
 			<a class="pull-left" href="#">
-    			<img class="media-object img-rounded" src="<?php if(!empty($actu['FromUser']['image'])) : echo $actu['FromUser']['image']; else: ?>http://chicagoluvbiz.com/wp-content/uploads/2014/01/wine-icon.png<?php endif ?>" alt="..." style="width: 50px;">
+    			<img class="media-object img-rounded" src="<?php if(!empty($actu['FromUser']['image'])) : echo '/img/upload/'.$actu['FromUser']['image']; else: ?>http://chicagoluvbiz.com/wp-content/uploads/2014/01/wine-icon.png<?php endif ?>" alt="..." style="width: 50px;">
   			</a>
 		</div>
 		<div class="col-md-11">

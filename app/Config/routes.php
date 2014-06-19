@@ -52,6 +52,7 @@
 	Router::connect('/me/leave-event', array('controller' => 'compte', 'action' => 'leaveEvent', '[method]' => 'POST'));
 	Router::connect('/me/like-event', array('controller' => 'compte', 'action' => 'likeEvent', '[method]' => 'POST'));
 	Router::connect('/me/dislike-event', array('controller' => 'compte', 'action' => 'dislikeEvent', '[method]' => 'POST'));
+	Router::connect('/me/update', array('controller' => 'compte', 'action' => 'update', '[method]' => 'POST'));
 
 	Router::connect('/users', array('controller' => 'users', 'action' => 'index'));
 	Router::connect('/user/:pseudo', array('controller' => 'users', 'action' => 'feeds'), array('pseudo' => '[a-zA-Z0-9\-]+'));

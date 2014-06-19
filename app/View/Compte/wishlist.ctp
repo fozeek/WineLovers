@@ -28,7 +28,7 @@
     </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
         <button id="step1submit" type="button" class="btn btn-primary">Ajouter à ma Whishlist</button>
       </div>
     </div>
@@ -67,4 +67,7 @@
   <?php foreach($user['WineWishlist'] as $wine) : ?>
   	<?= $this->element('cards/wine', array('wine' => $wine, 'size' => 4, 'button' => 'Retirer')) ?>
   <?php endforeach ?>
+  <?php if($user['WineWishlist'] == 0) : ?>
+    <div class="alert alert-info">vous n'avez pas encore ajouté de vins. <a href="<?= $this->Html->url(array("controller" => "wines", "action" => "index")) ?>">Aller les parcourir</a>.</div>
+  <?php endif ?>
 </div>

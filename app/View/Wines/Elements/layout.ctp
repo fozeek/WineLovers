@@ -82,6 +82,9 @@
 		  <a  role="button" type="button" href="<?= $this->Html->url(array("controller" => "compte", "action" => 'cellar')) ?>" class="btn btn-<?php if($isInCellar) : ?>success<?php else: ?>default<?php endif ?>"><?php if($isInCellar) : ?>Dans ma Cave<?php else: ?>Ajouter à ma Cave<?php endif ?></span></a>
 		  <button id="addWishlistWine" data-id="<?= $wine['Wine']['id'] ?>" type="button" class="btn btn-<?php if($isInWishlist) : ?>success<?php else: ?>default<?php endif ?>"><span class="glyphicon glyphicon-<?php if($isInWishlist) : ?>ok<?php else: ?>heart-empty<?php endif ?>"></span> <span data-original="Ajouter à ma Whishlist" data-replace="Dans votre Wishlist" data-over="Retirer de ma Wishlist" data-remove="Vin retiré de votre Wishlist"><?php if($isInWishlist) : ?>Dans votre Wishlist<?php else: ?>Ajouter à ma Whishlist<?php endif ?></span></button>
 		  <button  data-toggle="modal" data-target="#addNote" class="btn btn-default" id="noteWishlistWine" data-id="<?= $wine['Wine']['id'] ?>" type="button"><span class="glyphicon glyphicon-star-empty"></span> Noter ce vin</button>
+      <div class="btn-group" style="padding: 7px;">
+        <div class="fb-share-button" data-href="<?= rtrim($_SERVER['HTTP_REFERER'], '/').$_SERVER['REQUEST_URI'] ?>" data-type="button_count"></div>
+      </div>
 		</div>
 
 		<hr />

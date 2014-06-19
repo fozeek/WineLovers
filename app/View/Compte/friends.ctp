@@ -67,5 +67,8 @@
       'size' => 4,
       'button' => true
     ]) ?>
-  <?php endforeach ?>
+  <?php endforeach ?> 
+  <?php if(count($user['UserFriendship']) == 0) : ?>
+    <div class="alert alert-info">vous n'avez pas encore ajouté d'amis. <a href="<?= $this->Html->url(array("controller" => "users", "action" => "index")) ?>">Aller les retrouver</a>.</div>
+  <?php endif ?>
 </div>

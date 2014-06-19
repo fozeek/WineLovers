@@ -2,7 +2,9 @@
 <?php $this->assign('settings.likes', 'active'); ?>
 
 
-<form role="form">
+
+<form enctype="multipart/form-data" method="post" action="<?= $this->Html->url(array("controller" => "events", "action" => "update")) ?>" role="form">
+  <input type="hidden" name="id" value="<?= $event['Event']['id'] ?>"/>
   <div class="row">
     <div class="form-group col-md-4" style="padding: 5px;text-align: right;">
     <label for="description">Description</label>
@@ -13,10 +15,10 @@
   </div>
   <div class="row">
     <div class="form-group col-md-4" style="padding: 5px;text-align: right;">
-    <label for="file">Image</label>
+    <label for="image">Image</label>
     </div>
     <div class="form-group col-md-8" style="margin-bottom: 0px;">
-      <input type="file" name="file" id="file"/>
+      <input type="file" name="image" id="image"/>
     </div>
   </div>
   <div class="row">

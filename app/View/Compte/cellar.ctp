@@ -130,7 +130,7 @@
 			</div>
 		</div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
         <button id="step1submit" type="button" class="btn btn-primary">Suivant</button>
         <button id="step2submit" type="button" class="btn btn-primary" style="display: none;">Ajouter à ma Cave</button>
       </div>
@@ -161,7 +161,7 @@
 				</div>
 			</div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
         <button id="updateSubmit" type="button" class="btn btn-primary">Sauvegarder</button>
       </div>
     </div>
@@ -249,3 +249,6 @@
   	</div>
   </div>
   <?php endif; endforeach; ?>
+  <?php if(count($datas) == 0) : ?>
+    <div class="alert alert-info">vous n'avez pas encore ajouté de vins. <a href="<?= $this->Html->url(array("controller" => "wines", "action" => "index")) ?>">Aller les parcourir</a>.</div>
+  <?php endif ?>

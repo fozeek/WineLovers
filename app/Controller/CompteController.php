@@ -59,6 +59,14 @@ class CompteController extends AppController {
 				));
 		}
 
+		// ajout de soi meme
+		array_push($conditions['OR'], array(
+					'AND' => array(
+		                    'News.link_object' => 'User',
+		                    'News.link_id' => $this->user['id']
+		                )
+				));
+
 		// ajout des vins
 		foreach ($user['WineCellar'] as $key => $wine) {
 			array_push($conditions['OR'], array(
@@ -192,6 +200,47 @@ class CompteController extends AppController {
 		
 	}
 
+	public function update() {
+		$data = $this->request->data;
+		$this->User->id = $this->user['id'];
+		if(!empty($data['email']))
+			$this->User->saveField('email', $data['email']);
+
+		if(!empty($data['password']))
+			$this->User->saveField('password', $data['password']);
+
+		if(!empty($data['firstname']))
+			$this->User->saveField('firstname', $data['firstname']);
+
+		if(!empty($data['lastname']))
+			$this->User->saveField('lastname', $data['lastname']);
+
+		if(!empty($data['address']))
+			$this->User->saveField('address', $data['address']);
+
+		if(!empty($data['description']))
+			$this->User->saveField('description', $data['description']);
+
+		if(!empty($_FILES['image']['name'])) {
+			$uniqId = uniqid();
+			$image = 'user_'.$uniqId.strrchr($_FILES['image']['name'], '.');
+			$this->User->saveField('image', $image);
+			$image = parent::uploadFile($_FILES['image'], 'user_'.$uniqId);
+			if($image) {
+	        	$this->Session->setFlash('Image uploadée', 'default', array("class" => "alert alert-success"));
+				$this->Wine->read(null, $this->Wine->id);
+				$this->redirect(array("controller" => "compte", "action" => "settings"));
+			}
+			else {
+	        	$this->Session->setFlash('Echec de l\'upload de l\'image', 'default', array("class" => "alert alert-danger"));
+				$this->Wine->read(null, $this->Wine->id);
+				$this->redirect(array("controller" => "compte", "action" => "settings"));
+			}
+		}
+	        	$this->Session->setFlash('Informations sauvegardées', 'default', array("class" => "alert alert-success"));
+		$this->redirect(array("controller" => "compte", "action" => "settings"));
+	}
+
 	public function addFriend() {
 		$this->UserRFriendship->save(array('user_id' => $this->user['id'], 'friend_id' => $this->request['data']['id']));
 		$this->UserRFriendship->create();
@@ -242,6 +291,7 @@ class CompteController extends AppController {
 				'description' => $this->request['data']['desc'],
 				'name' => $this->request['data']['name'],
 			));
+		$this->EventRGuest->save(array('event_id' => $this->Event->id, 'user_id' => $this->user['id']));
 		exit();
 	}
 

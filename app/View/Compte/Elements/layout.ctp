@@ -6,7 +6,7 @@
 		  <li class="<?= $this->fetch('active.cellar') ?>"><a href="<?php echo $this->Html->url(array('controller' => 'compte', 'action' => 'cellar')) ?>">Cave</a></li>
 		  <li class="<?= $this->fetch('active.wishlist') ?>"><a href="<?php echo $this->Html->url(array('controller' => 'compte', 'action' => 'wishlist')) ?>">Wishlist</a></li>
 		  <li class="<?= $this->fetch('active.friends') ?>"><a href="<?php echo $this->Html->url(array('controller' => 'compte', 'action' => 'friends')) ?>">Amis</a></li>
-		  <li class="<?= $this->fetch('active.events') ?>"><a href="<?php echo $this->Html->url(array('controller' => 'compte', 'action' => 'events')) ?>">Events</a></li>
+		  <li class="<?= $this->fetch('active.events') ?>"><a href="<?php echo $this->Html->url(array('controller' => 'compte', 'action' => 'events')) ?>">Évènements</a></li>
 		  <li class="<?= $this->fetch('active.settings') ?>"><a href="<?php echo $this->Html->url(array('controller' => 'compte', 'action' => 'settings')) ?>">Paramêtres</a></li>
 		</ul>
 	</div>
