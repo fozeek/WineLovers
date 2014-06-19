@@ -34,7 +34,7 @@ class CompteController extends AppController {
  *
  * @var array
  */
-	public $uses = array('User', 'Wine', 'UserRFriendship', 'Post', 'Comment', 'UserRCellar', 'UserRWishlist', 'UserRFriendshipRequest', 'Review', 'Event', 'News', 'EventRGuest');
+	public $uses = array('User', 'Wine', 'UserRFriendship', 'Post', 'Comment', 'UserRCellar', 'UserRWishlist', 'UserRFriendshipRequest', 'Review', 'Event', 'News', 'EventRGuest', 'EventRLike');
 
 /**
  * Displays a view
@@ -200,12 +200,16 @@ class CompteController extends AppController {
 				'conditions' => array('user_id' => $this->request['data']['id'], 'friend_id' => $this->user['id'])
 			));
 		$this->UserRFriendshipRequest->delete($remove['UserRFriendshipRequest']['id']);
+
+
+		
+
+		
 		$this->set(array('friend' => $this->User->findById($this->request['data']['id'])));
 		$this->render('/compte/addfriend');
 	}
 
 	public function addNote() {
-		echo 'coucou';
 		$this->Review->save(array('author_id' => $this->user['id'], 'note' => $this->request['data']['note'], 'comment' => $this->request['data']['comment'], 'wine_id' => $this->request['data']['wineId'], 'vintage' => $this->request['data']['vintage']));
 		exit();
 	}
@@ -216,6 +220,15 @@ class CompteController extends AppController {
 	}
 
 	public function addWishlistWine() {
+		if(array_key_exists('ids', $this->request['data'])) {
+			$ids = array_values(array_filter(explode(':', $this->request['data']['ids'])));
+			foreach ($ids as $key => $id) {
+				$this->UserRWishlist->create();
+				$this->UserRWishlist->save(array('user_id' => $this->user['id'], 'wine_id' => $id));
+			}
+			exit();
+		}
+
 		$this->UserRWishlist->save(array('user_id' => $this->user['id'], 'wine_id' => $this->request['data']['id']));
 		exit();
 	}
@@ -240,6 +253,29 @@ class CompteController extends AppController {
 		foreach ($ids as $key => $id) {
 			$this->UserRCellar->create();
 			$this->UserRCellar->save(array('user_id' => $this->user['id'], 'wine_id' => $id, 'qty' => $qtys[$key], 'vintage' => $millesimes[$key]));
+
+			// news pour le vin
+			$this->News->save(array(
+				'link_id' => $id,
+				'link_object' => 'Wine',
+				'type' => 'wine_add',
+				'msg' => '',
+				'attach_wine_id' => $id,
+				'author_user_id' => $this->user['id'],
+			));
+			$this->News->create();
+
+			// news pour l'utilisateur
+			$this->News->save(array(
+				'link_id' => $this->user['id'],
+				'link_object' => 'User',
+				'type' => 'wine_add',
+				'msg' => '',
+				'attach_wine_id' => $id,
+				'author_user_id' => $this->user['id'],
+			));
+			$this->News->create();
+
 		}
 
 		exit();
@@ -281,6 +317,30 @@ class CompteController extends AppController {
 
 	public function joinEvent() {
 		$this->EventRGuest->save(array('event_id' => $this->request['data']['id'], 'user_id' => $this->user['id']));
+
+		// news pour l'event
+		$this->News->save(array(
+				'link_id' => $this->request['data']['id'],
+				'link_object' => 'Event',
+				'type' => 'event_join',
+				'msg' => '',
+				'attach_event_id' => $this->request['data']['id'],
+				'author_user_id' => $this->user['id'],
+			));
+
+		$this->News->create();
+
+		// news pour l'utilisateur
+		$this->News->save(array(
+				'link_id' => $this->user['id'],
+				'link_object' => 'User',
+				'type' => 'event_join',
+				'msg' => '',
+				'attach_event_id' => $this->request['data']['id'],
+				'author_user_id' => $this->user['id'],
+			));
+
+
 		exit();
 	}
 
@@ -289,6 +349,19 @@ class CompteController extends AppController {
 				'conditions' => array('EventRGuest.user_id' => $this->user['id'], 'event_id' => $this->request['data']['id'])
 			));
 		$this->EventRGuest->delete($rEventRGuest['EventRGuest']['id']);
+		exit();
+	}
+
+	public function likeEvent() {
+		$this->EventRLike->save(array('event_id' => $this->request['data']['id'], 'user_id' => $this->user['id']));
+		exit();
+	}
+
+	public function dislikeEvent() {
+		$rEventRLike = $this->EventRLike->find('first', array(
+				'conditions' => array('EventRLike.user_id' => $this->user['id'], 'event_id' => $this->request['data']['id'])
+			));
+		$this->EventRLike->delete($rEventRLike['EventRLike']['id']);
 		exit();
 	}
 }

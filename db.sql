@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client: localhost
--- Généré le: Mar 17 Juin 2014 à 14:39
+-- Généré le: Jeu 19 Juin 2014 à 10:15
 -- Version du serveur: 5.5.33
 -- Version de PHP: 5.5.3
 
@@ -29,7 +29,7 @@ CREATE TABLE `cellars` (
   `qty` int(11) NOT NULL,
   `vintage` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=42 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=44 ;
 
 --
 -- Contenu de la table `cellars`
@@ -60,7 +60,9 @@ INSERT INTO `cellars` (`id`, `created`, `updated`, `user_id`, `wine_id`, `qty`, 
 (38, '2014-06-15 16:24:59', '2014-06-15 16:24:59', 7, 1, -5, 1992),
 (39, '2014-06-15 16:25:12', '2014-06-15 16:25:12', 7, 1, 32, 1563),
 (40, '2014-06-16 14:22:29', '2014-06-16 14:22:29', 7, 5, 32, 1990),
-(41, '2014-06-16 15:57:59', '2014-06-16 15:57:59', 7, 1, -20, 1563);
+(41, '2014-06-16 15:57:59', '2014-06-16 15:57:59', 7, 1, -20, 1563),
+(42, '2014-06-18 16:19:53', '2014-06-18 16:19:53', 7, 2, 0, 0),
+(43, '2014-06-18 22:33:07', '2014-06-18 22:33:07', 7, 63, 12, 1893);
 
 -- --------------------------------------------------------
 
@@ -76,7 +78,7 @@ CREATE TABLE `comments` (
   `author_id` int(11) NOT NULL,
   `post_id` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=46 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=49 ;
 
 --
 -- Contenu de la table `comments`
@@ -127,7 +129,10 @@ INSERT INTO `comments` (`id`, `created`, `updated`, `text`, `author_id`, `post_i
 (42, '2014-05-15 16:37:55', '2014-05-15 16:37:55', '&lt;script&gt;alert(''coucou'')&lt;/script&gt;', 7, 147),
 (43, '2014-05-15 16:50:11', '2014-05-15 16:50:11', 'vintage', 7, 146),
 (44, '2014-06-16 18:07:33', '2014-06-16 18:07:33', 'Coucou !', 7, 121),
-(45, '2014-06-16 20:16:43', '2014-06-16 20:16:43', 'Comm'' swag', 7, 165);
+(45, '2014-06-16 20:16:43', '2014-06-16 20:16:43', 'Comm'' swag', 7, 165),
+(46, '2014-06-17 16:01:10', '2014-06-17 16:01:10', 'COUCOU !!!!!!! &lt;3', 7, 167),
+(47, '2014-06-17 16:01:18', '2014-06-17 16:01:18', 'ooooooh :3', 7, 167),
+(48, '2014-06-17 16:01:24', '2014-06-17 16:01:24', 'Moi aussi ;)', 7, 167);
 
 -- --------------------------------------------------------
 
@@ -146,6 +151,7 @@ CREATE TABLE `events` (
   `date` datetime NOT NULL,
   `description` varchar(500) NOT NULL,
   `author_id` int(11) NOT NULL,
+  `image` text NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=24 ;
 
@@ -153,30 +159,30 @@ CREATE TABLE `events` (
 -- Contenu de la table `events`
 --
 
-INSERT INTO `events` (`id`, `created`, `updated`, `private`, `where`, `name`, `slug`, `date`, `description`, `author_id`) VALUES
-(1, '2014-04-08 00:00:00', '2014-04-09 00:00:00', 0, '', 'La foire aux vins', 'La-foire-aux-vins', '2014-04-23 00:00:00', 'Une foire comme on les aime !', 1),
-(2, '2014-04-18 00:00:00', '2014-04-25 00:00:00', 0, '', 'Degustation de Chateau-Lapompe', 'Degustation-de-Chateau-Lapompe', '2014-04-22 00:00:00', 'Venez nombreux', 1),
-(3, '2014-04-09 00:00:00', '2014-04-17 00:00:00', 0, '', 'Viens boire un vin', 'Viens-boire-un-vin', '2014-04-17 00:00:00', 'Amenez vos vins !', 1),
-(4, '2014-04-18 00:00:00', '2014-04-12 00:00:00', 0, '', 'Le salon du vin', 'Le-salon-du-vin', '2014-04-30 00:00:00', 'Venez au salon du vin !', 1),
-(5, '2014-04-09 00:00:00', '2014-04-09 00:00:00', 0, '', 'La traditionnelle St Vincent', 'La-traditionnelle-St-Vincent', '2014-04-26 00:00:00', 'La traditionnelle St Vincent', 2),
-(6, '2014-04-09 00:00:00', '2014-04-17 00:00:00', 0, '', 'La Route des Vins', 'La-Route-des-Vins', '2014-04-24 00:00:00', 'La Route des Vins', 1),
-(7, '2014-04-08 00:00:00', '2014-05-08 13:51:00', 0, '', 'Vinitech', 'Vinitech', '2014-04-30 00:00:00', 'Vinitech', 3),
-(8, '2014-04-07 00:00:00', '2014-04-09 00:00:00', 0, '', 'Jazz and Wine', 'Jazz-and-Wine', '2014-04-04 00:00:00', 'Jazz and Win', 1),
-(9, '2014-04-08 00:00:00', '2014-04-02 00:00:00', 0, '', 'Week-end des Grands Crus', 'Week-end-des-Grands-Crus', '2014-04-08 00:00:00', 'Week-end des Grands Crus', 1),
-(10, '2014-04-08 00:00:00', '2014-04-01 00:00:00', 0, '', 'Salon des vins des vignerons independants', 'Salon-des-vins-des-vignerons-independants', '2014-04-08 00:00:00', 'Salon des vins des vignerons independants', 1),
-(11, '2014-05-06 00:00:00', '2014-05-15 00:00:00', 0, '', 'Test1', 'unet', '2014-05-22 00:00:00', 'une', 3),
-(12, '2014-05-13 00:00:00', '2014-05-08 00:00:00', 0, '', 'Vinmania', 'deuzet', '2014-05-22 00:00:00', 'desc', 3),
-(13, '2014-05-06 00:00:00', '2014-05-15 00:00:00', 0, '', 'Trinquons', 'uner', '2014-05-22 00:00:00', 'une', 3),
-(14, '2014-05-13 00:00:00', '2014-05-08 00:00:00', 0, '', 'Vinparty', 'deuzre', '2014-05-22 00:00:00', 'desc', 3),
-(15, '2014-05-06 00:00:00', '2014-05-15 00:00:00', 0, '', 'Vin a moi', 'unez', '2014-05-22 00:00:00', 'une', 3),
-(16, '2014-05-13 00:00:00', '2014-05-08 00:00:00', 0, '', 'Open rose', 'deuzez', '2014-05-22 00:00:00', 'desc', 3),
-(17, '2014-05-06 00:00:00', '2014-05-15 00:00:00', 0, '', 'Open blanc', 'uneu', '2014-05-22 00:00:00', 'une', 3),
-(18, '2014-05-13 00:00:00', '2014-05-08 00:00:00', 0, '', 'Open rouge', 'deuzeu', '2014-05-22 00:00:00', 'desc', 3),
-(19, '2014-05-06 00:00:00', '2014-05-15 00:00:00', 0, '', 'Open all', 'unenh', '2014-05-22 00:00:00', 'une', 3),
-(20, '2014-05-13 00:00:00', '2014-05-08 00:00:00', 0, '', 'Projet wine', 'deuzenh', '2014-05-22 00:00:00', 'desc', 3),
-(21, '2014-05-27 00:00:00', '2014-05-09 00:00:00', 0, '', 'Wine me !', 'load-me', '2014-05-07 00:00:00', 'dddddd', 1),
-(22, '2014-06-16 15:54:21', '2014-06-16 15:54:21', 1, 'LÃ ', 'COUOU', 'COUOU', '2012-12-12 00:00:00', 'desc', 7),
-(23, '2014-06-17 13:50:43', '2014-06-17 13:50:43', 1, 'Paris', 'Projet W', 'Projet-W', '0000-00-00 00:00:00', 'BrÃ»lons ma maison', 7);
+INSERT INTO `events` (`id`, `created`, `updated`, `private`, `where`, `name`, `slug`, `date`, `description`, `author_id`, `image`) VALUES
+(1, '2014-04-08 00:00:00', '2014-04-09 00:00:00', 0, '', 'La foire aux vins', 'La-foire-aux-vins', '2014-04-23 00:00:00', 'Une foire comme on les aime !', 1, ''),
+(2, '2014-04-18 00:00:00', '2014-04-25 00:00:00', 0, '', 'Degustation de Chateau-Lapompe', 'Degustation-de-Chateau-Lapompe', '2014-04-22 00:00:00', 'Venez nombreux', 1, ''),
+(3, '2014-04-09 00:00:00', '2014-04-17 00:00:00', 0, '', 'Viens boire un vin', 'Viens-boire-un-vin', '2014-04-17 00:00:00', 'Amenez vos vins !', 1, ''),
+(4, '2014-04-18 00:00:00', '2014-04-12 00:00:00', 0, '', 'Le salon du vin', 'Le-salon-du-vin', '2014-04-30 00:00:00', 'Venez au salon du vin !', 1, ''),
+(5, '2014-04-09 00:00:00', '2014-04-09 00:00:00', 0, '', 'La traditionnelle St Vincent', 'La-traditionnelle-St-Vincent', '2014-04-26 00:00:00', 'La traditionnelle St Vincent', 2, ''),
+(6, '2014-04-09 00:00:00', '2014-04-17 00:00:00', 0, '', 'La Route des Vins', 'La-Route-des-Vins', '2014-04-24 00:00:00', 'La Route des Vins', 1, ''),
+(7, '2014-04-08 00:00:00', '2014-05-08 13:51:00', 0, '', 'Vinitech', 'Vinitech', '2014-04-30 00:00:00', 'Vinitech', 3, ''),
+(8, '2014-04-07 00:00:00', '2014-04-09 00:00:00', 0, '', 'Jazz and Wine', 'Jazz-and-Wine', '2014-04-04 00:00:00', 'Jazz and Win', 1, ''),
+(9, '2014-04-08 00:00:00', '2014-04-02 00:00:00', 0, '', 'Week-end des Grands Crus', 'Week-end-des-Grands-Crus', '2014-04-08 00:00:00', 'Week-end des Grands Crus', 1, ''),
+(10, '2014-04-08 00:00:00', '2014-04-01 00:00:00', 0, '', 'Salon des vins des vignerons independants', 'Salon-des-vins-des-vignerons-independants', '2014-04-08 00:00:00', 'Salon des vins des vignerons independants', 1, ''),
+(11, '2014-05-06 00:00:00', '2014-05-15 00:00:00', 0, '', 'Test1', 'unet', '2014-05-22 00:00:00', 'une', 3, ''),
+(12, '2014-05-13 00:00:00', '2014-05-08 00:00:00', 0, '', 'Vinmania', 'deuzet', '2014-05-22 00:00:00', 'desc', 3, ''),
+(13, '2014-05-06 00:00:00', '2014-05-15 00:00:00', 0, '', 'Trinquons', 'uner', '2014-05-22 00:00:00', 'une', 3, ''),
+(14, '2014-05-13 00:00:00', '2014-05-08 00:00:00', 0, '', 'Vinparty', 'deuzre', '2014-05-22 00:00:00', 'desc', 3, ''),
+(15, '2014-05-06 00:00:00', '2014-05-15 00:00:00', 0, '', 'Vin a moi', 'unez', '2014-05-22 00:00:00', 'une', 3, ''),
+(16, '2014-05-13 00:00:00', '2014-05-08 00:00:00', 0, '', 'Open rose', 'deuzez', '2014-05-22 00:00:00', 'desc', 3, ''),
+(17, '2014-05-06 00:00:00', '2014-05-15 00:00:00', 0, '', 'Open blanc', 'uneu', '2014-05-22 00:00:00', 'une', 3, ''),
+(18, '2014-05-13 00:00:00', '2014-05-08 00:00:00', 0, '', 'Open rouge', 'deuzeu', '2014-05-22 00:00:00', 'desc', 3, ''),
+(19, '2014-05-06 00:00:00', '2014-05-15 00:00:00', 0, '', 'Open all', 'unenh', '2014-05-22 00:00:00', 'une', 3, ''),
+(20, '2014-05-13 00:00:00', '2014-05-08 00:00:00', 0, '', 'Projet wine', 'deuzenh', '2014-05-22 00:00:00', 'desc', 3, ''),
+(21, '2014-05-27 00:00:00', '2014-05-09 00:00:00', 0, '', 'Wine me !', 'load-me', '2014-05-07 00:00:00', 'dddddd', 1, ''),
+(22, '2014-06-16 15:54:21', '2014-06-16 15:54:21', 1, 'LÃ ', 'COUOU', 'COUOU', '2012-12-12 00:00:00', 'desc', 7, ''),
+(23, '2014-06-17 13:50:43', '2014-06-17 13:50:43', 1, 'Paris', 'Projet W', 'Projet-W', '0000-00-00 00:00:00', 'BrÃ»lons ma maison', 7, '');
 
 -- --------------------------------------------------------
 
@@ -201,7 +207,7 @@ CREATE TABLE `events_joins` (
   `event_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=13 ;
 
 --
 -- Contenu de la table `events_joins`
@@ -211,7 +217,13 @@ INSERT INTO `events_joins` (`id`, `event_id`, `user_id`) VALUES
 (1, 1, 1),
 (2, 1, 2),
 (3, 1, 7),
-(4, 2, 1);
+(4, 2, 1),
+(6, 11, 7),
+(7, 12, 7),
+(9, 22, 7),
+(10, 13, 7),
+(11, 14, 7),
+(12, 17, 7);
 
 -- --------------------------------------------------------
 
@@ -224,14 +236,15 @@ CREATE TABLE `events_likes` (
   `event_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=15 ;
 
 --
 -- Contenu de la table `events_likes`
 --
 
 INSERT INTO `events_likes` (`id`, `event_id`, `user_id`) VALUES
-(1, 1, 1);
+(11, 11, 7),
+(14, 17, 7);
 
 -- --------------------------------------------------------
 
@@ -258,7 +271,14 @@ CREATE TABLE `friendships` (
   `friend_id` int(11) NOT NULL,
   `created` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=65 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=66 ;
+
+--
+-- Contenu de la table `friendships`
+--
+
+INSERT INTO `friendships` (`id`, `user_id`, `friend_id`, `created`) VALUES
+(65, 7, 2, '2014-06-18 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -272,7 +292,7 @@ CREATE TABLE `friendshipsrequests` (
   `friend_id` int(11) NOT NULL,
   `created` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=20 ;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -287,7 +307,7 @@ CREATE TABLE `news` (
   `link_id` int(11) NOT NULL,
   `link_object` text NOT NULL,
   `type` varchar(200) NOT NULL COMMENT 'post, event, ...',
-  `msg` text NOT NULL,
+  `msg` text,
   `attach_user_id` int(11) DEFAULT NULL,
   `attach_event_id` int(11) DEFAULT NULL,
   `attach_wine_id` int(11) DEFAULT NULL,
@@ -296,7 +316,7 @@ CREATE TABLE `news` (
   `author_user_id` int(11) DEFAULT NULL,
   `author_wine_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=17 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=45 ;
 
 --
 -- Contenu de la table `news`
@@ -318,7 +338,35 @@ INSERT INTO `news` (`id`, `created`, `updated`, `link_id`, `link_object`, `type`
 (13, '2014-06-16 19:49:48', '2014-06-16 19:49:48', 11, 'Event', 'post', '', NULL, NULL, NULL, 163, NULL, 7, NULL),
 (14, '2014-06-16 19:51:35', '2014-06-16 19:51:35', 11, 'Event', 'post', '', NULL, NULL, NULL, 164, NULL, 7, NULL),
 (15, '2014-06-16 19:51:54', '2014-06-16 19:51:54', 11, 'Event', 'post', '', NULL, NULL, NULL, 165, NULL, 7, NULL),
-(16, '2014-06-17 10:51:09', '2014-06-17 10:51:09', 1, 'Wine', 'post', '', NULL, NULL, NULL, 166, NULL, 7, NULL);
+(16, '2014-06-17 10:51:09', '2014-06-17 10:51:09', 1, 'Wine', 'post', '', NULL, NULL, NULL, 166, NULL, 7, NULL),
+(17, '2014-06-17 15:10:24', '2014-06-17 15:10:24', 2, 'User', 'post', '', NULL, NULL, NULL, 167, NULL, 7, NULL),
+(18, '2014-06-17 15:12:03', '2014-06-17 15:12:03', 1, 'Event', 'post', '', NULL, NULL, NULL, 168, NULL, 7, NULL),
+(19, '2014-06-17 16:27:05', '2014-06-17 16:27:05', 2, 'User', 'post', '', NULL, NULL, NULL, 169, NULL, 7, NULL),
+(20, '2014-06-17 16:27:08', '2014-06-17 16:27:08', 2, 'User', 'post', '', NULL, NULL, NULL, 170, NULL, 7, NULL),
+(21, '2014-06-17 16:27:10', '2014-06-17 16:27:10', 2, 'User', 'post', '', NULL, NULL, NULL, 171, NULL, 7, NULL),
+(22, '2014-06-17 16:27:13', '2014-06-17 16:27:13', 2, 'User', 'post', '', NULL, NULL, NULL, 172, NULL, 7, NULL),
+(23, '2014-06-17 16:27:15', '2014-06-17 16:27:15', 2, 'User', 'post', '', NULL, NULL, NULL, 173, NULL, 7, NULL),
+(24, '2014-06-17 16:27:17', '2014-06-17 16:27:17', 2, 'User', 'post', '', NULL, NULL, NULL, 174, NULL, 7, NULL),
+(25, '2014-06-17 16:27:21', '2014-06-17 16:27:21', 2, 'User', 'post', '', NULL, NULL, NULL, 175, NULL, 7, NULL),
+(26, '2014-06-17 16:27:23', '2014-06-17 16:27:23', 2, 'User', 'post', '', NULL, NULL, NULL, 176, NULL, 7, NULL),
+(27, '2014-06-17 16:27:26', '2014-06-17 16:27:26', 2, 'User', 'post', '', NULL, NULL, NULL, 177, NULL, 7, NULL),
+(28, '2014-06-17 16:27:29', '2014-06-17 16:27:29', 2, 'User', 'post', '', NULL, NULL, NULL, 178, NULL, 7, NULL),
+(29, '2014-06-17 16:31:53', '2014-06-17 16:31:53', 2, 'User', 'post', '', NULL, NULL, NULL, 179, NULL, 7, NULL),
+(30, '2014-06-17 16:38:24', '2014-06-17 16:38:24', 2, 'User', 'post', '', NULL, NULL, NULL, 180, NULL, 7, NULL),
+(31, '2014-06-17 23:17:09', '2014-06-17 23:17:09', 2, 'Wine', 'post', '', NULL, NULL, NULL, 181, NULL, 7, NULL),
+(32, '2014-06-18 09:16:37', '2014-06-18 09:16:37', 7, 'User', 'post', '', NULL, NULL, NULL, 182, NULL, 7, NULL),
+(33, '2014-06-18 09:28:56', '2014-06-18 09:28:56', 7, 'User', 'post', '', NULL, NULL, NULL, 183, NULL, 7, NULL),
+(34, '2014-06-18 13:44:11', '2014-06-18 13:44:11', 7, 'User', 'post', '', NULL, NULL, NULL, 184, NULL, 7, NULL),
+(35, '2014-06-18 16:00:05', '2014-06-18 16:00:05', 22, 'Event', 'post', '', NULL, NULL, NULL, 185, NULL, 7, NULL),
+(36, '2014-06-18 22:18:59', '2014-06-18 22:18:59', 7, 'User', 'event_join', '', NULL, 13, NULL, NULL, NULL, 7, NULL),
+(37, '2014-06-18 22:19:13', '2014-06-18 22:19:13', 13, 'Event', 'post', '', NULL, NULL, NULL, 186, NULL, 7, NULL),
+(38, '2014-06-18 22:21:03', '2014-06-18 22:21:03', 7, 'User', 'event_join', '', NULL, 14, NULL, NULL, NULL, 7, NULL),
+(39, '2014-06-18 22:22:19', '2014-06-18 22:22:19', 17, 'Event', 'event_join', '', NULL, 17, NULL, NULL, NULL, 7, NULL),
+(40, '2014-06-18 22:22:19', '2014-06-18 22:22:19', 7, 'User', 'event_join', '', NULL, 17, NULL, NULL, NULL, 7, NULL),
+(41, '2014-06-18 22:33:07', '2014-06-18 22:33:07', 63, 'Wine', 'wine_add', '', NULL, NULL, 63, NULL, NULL, 7, NULL),
+(42, '2014-06-18 22:33:07', '2014-06-18 22:33:07', 7, 'User', 'wine_add', '', NULL, NULL, 63, NULL, NULL, 7, NULL),
+(43, '2014-06-18 22:37:04', '2014-06-18 22:37:04', 63, 'Wine', 'post', '', NULL, NULL, NULL, 187, NULL, 7, NULL),
+(44, '2014-06-18 22:43:26', '2014-06-18 22:43:26', 55, 'Wine', 'post', '', NULL, NULL, NULL, 188, NULL, 7, NULL);
 
 -- --------------------------------------------------------
 
@@ -342,7 +390,7 @@ CREATE TABLE `posts` (
   `link_wine_id` int(11) NOT NULL,
   `link_event_id` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=167 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=189 ;
 
 --
 -- Contenu de la table `posts`
@@ -514,7 +562,29 @@ INSERT INTO `posts` (`id`, `created`, `updated`, `author_id`, `type`, `text`, `l
 (163, '2014-06-16 19:49:48', '2014-06-16 19:49:48', 7, 0, 'Encore un !!!!!', 11, 'Event', 0, 0, 0, 0, 0, 11),
 (164, '2014-06-16 19:51:35', '2014-06-16 19:51:35', 7, 0, 'Test again ! yeah ! ;)', 11, 'Event', 0, 0, 0, 0, 0, 11),
 (165, '2014-06-16 19:51:54', '2014-06-16 19:51:54', 7, 0, 'THE ELEVEN !!!!!', 11, 'Event', 0, 0, 0, 0, 0, 11),
-(166, '2014-06-17 10:51:09', '2014-06-17 10:51:09', 7, 0, 'Un p''tit message ;)', 1, 'Wine', 0, 0, 0, 0, 1, 0);
+(166, '2014-06-17 10:51:09', '2014-06-17 10:51:09', 7, 0, 'Un p''tit message ;)', 1, 'Wine', 0, 0, 0, 0, 1, 0),
+(167, '2014-06-17 15:10:24', '2014-06-17 15:10:24', 7, 0, 'Coucou toi ! :)', 2, 'User', 0, 0, 0, 2, 0, 0),
+(168, '2014-06-17 15:12:03', '2014-06-17 15:12:03', 7, 0, 'Un message sur un event !', 1, 'Event', 0, 0, 0, 0, 0, 1),
+(169, '2014-06-17 16:27:05', '2014-06-17 16:27:05', 7, 0, '1', 2, 'User', 0, 0, 0, 2, 0, 0),
+(170, '2014-06-17 16:27:08', '2014-06-17 16:27:08', 7, 0, '2', 2, 'User', 0, 0, 0, 2, 0, 0),
+(171, '2014-06-17 16:27:10', '2014-06-17 16:27:10', 7, 0, '3', 2, 'User', 0, 0, 0, 2, 0, 0),
+(172, '2014-06-17 16:27:13', '2014-06-17 16:27:13', 7, 0, '4', 2, 'User', 0, 0, 0, 2, 0, 0),
+(173, '2014-06-17 16:27:15', '2014-06-17 16:27:15', 7, 0, '5', 2, 'User', 0, 0, 0, 2, 0, 0),
+(174, '2014-06-17 16:27:17', '2014-06-17 16:27:17', 7, 0, '6', 2, 'User', 0, 0, 0, 2, 0, 0),
+(175, '2014-06-17 16:27:21', '2014-06-17 16:27:21', 7, 0, '7', 2, 'User', 0, 0, 0, 2, 0, 0),
+(176, '2014-06-17 16:27:23', '2014-06-17 16:27:23', 7, 0, '8', 2, 'User', 0, 0, 0, 2, 0, 0),
+(177, '2014-06-17 16:27:26', '2014-06-17 16:27:26', 7, 0, '9', 2, 'User', 0, 0, 0, 2, 0, 0),
+(178, '2014-06-17 16:27:29', '2014-06-17 16:27:29', 7, 0, '10', 2, 'User', 0, 0, 0, 2, 0, 0),
+(179, '2014-06-17 16:31:53', '2014-06-17 16:31:53', 7, 0, 'COOL !', 2, 'User', 0, 0, 0, 2, 0, 0),
+(180, '2014-06-17 16:38:24', '2014-06-17 16:38:24', 7, 0, 'Regarde ce looser !', 2, 'User', 0, 2, 0, 2, 0, 0),
+(181, '2014-06-17 23:17:09', '2014-06-17 23:17:09', 7, 0, 'Yo !\nAvec celui l&agrave;, c''est nickel !', 2, 'Wine', 6, 0, 0, 0, 2, 0),
+(182, '2014-06-18 09:16:37', '2014-06-18 09:16:37', 7, 0, 'Ceci est mon statut !', 7, 'User', 0, 0, 0, 7, 0, 0),
+(183, '2014-06-18 09:28:56', '2014-06-18 09:28:56', 7, 0, 'Poto ! Viens boire un coup ! *hips*', 7, 'User', 0, 2, 0, 7, 0, 0),
+(184, '2014-06-18 13:44:11', '2014-06-18 13:44:11', 7, 0, 'Coucou moi ;)', 7, 'User', 0, 0, 0, 7, 0, 0),
+(185, '2014-06-18 16:00:05', '2014-06-18 16:00:05', 7, 0, 'Trop mignon le chat !', 22, 'Event', 0, 0, 0, 0, 0, 22),
+(186, '2014-06-18 22:19:13', '2014-06-18 22:19:13', 7, 0, 'Coucou !', 13, 'Event', 0, 0, 0, 0, 0, 13),
+(187, '2014-06-18 22:37:04', '2014-06-18 22:37:04', 7, 0, 'Love this one !', 63, 'Wine', 0, 0, 0, 0, 63, 0),
+(188, '2014-06-18 22:43:26', '2014-06-18 22:43:26', 7, 0, 'Une bouteille de 1911 ! &Ccedil;a c''est de la bonne Luc !', 55, 'Wine', 0, 2, 0, 0, 55, 0);
 
 -- --------------------------------------------------------
 
@@ -532,7 +602,7 @@ CREATE TABLE `reviews` (
   `vintage` int(11) NOT NULL,
   `author_id` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
 
 --
 -- Contenu de la table `reviews`
@@ -545,7 +615,10 @@ INSERT INTO `reviews` (`id`, `created`, `updated`, `wine_id`, `note`, `comment`,
 (4, '2014-06-16 14:18:56', '2014-06-16 14:18:56', 1, 5, 'LOl', 0, 7),
 (5, '2014-06-16 14:19:07', '2014-06-16 14:19:07', 1, 5, 'Peut etre cool !', 1324, 7),
 (6, '2014-06-16 14:19:18', '2014-06-16 14:19:18', 2, 2, 'Coucou', 1234, 7),
-(7, '2014-06-17 10:52:37', '2014-06-17 10:52:37', 5, 5, 'Parfait ! :)', 1423, 7);
+(7, '2014-06-17 10:52:37', '2014-06-17 10:52:37', 5, 5, 'Parfait ! :)', 1423, 7),
+(8, '2014-06-18 13:59:26', '2014-06-18 13:59:26', 1, 5, 'Cool wine ! ;)', 1234, 7),
+(9, '2014-06-18 18:04:57', '2014-06-18 18:04:57', 54, 3, 'Coome', 1234, 7),
+(10, '2014-06-18 22:00:05', '2014-06-18 22:00:05', 63, 4, 'Super !', 1783, 7);
 
 -- --------------------------------------------------------
 
@@ -594,9 +667,9 @@ INSERT INTO `users` (`id`, `code`, `valid`, `pseudo`, `slug`, `password`, `first
 (1, '0', 0, 'qdeneuve', 'qdeneuve', '', 'Quentin', 'Deneuve', 'dark.quent@free.fr', '', 0, '', '2014-03-23 00:00:00', '2014-03-23 00:00:00', '', ''),
 (2, '0', 0, 'luc', 'luc', '', 'Luc', 'Notsnad', '', '', 0, '', '2014-03-23 00:00:00', '2014-03-23 00:00:00', '', 'Bounjour'),
 (3, '0', 0, 'HappyLo', 'HappyLo', '', 'Happy', 'Lo', '', '', 0, '', '2014-03-17 00:00:00', '2014-03-23 00:00:00', '', 'Whesh !'),
-(7, '0', 0, 'fozeek', 'fozeek', '0e70432396ff578620a055f76d4773a0', 'Quentin', 'Deneuve', 'dark_kul@hotmail.fr', '90 rue Charles Godin', 91640, 'Briis sous Forges', '2014-04-08 22:22:16', '2014-04-08 22:22:16', '', ''),
-(8, '0', 0, 'dqzdzqdzq', 'dqzdzqdzq', '0e70432396ff578620a055f76d4773a0', 'Quentin', 'Deneuve', 'dark_kul@hotmail.fr', '90 rue Charles Godin', 74924, 'Briis sous Forges', '2014-04-09 09:28:02', '2014-04-09 09:28:02', '', ''),
-(9, '0', 0, 'TESTPOURMOI', 'TESTPOURMOI', '86f6fe02007a8a8949383549ca7186b7', 'Quentin', 'Deneuve', 'dark_kul@hotmail.fr', '90 rue Charles Godin', 36472, 'Briis sous Forges', '2014-04-09 09:28:28', '2014-04-09 09:28:28', '', '');
+(7, '0', 1, 'fozeek', 'fozeek', '0e70432396ff578620a055f76d4773a0', 'Quentin', 'Deneuve', 'dark_kul@hotmail.fr', '90 rue Charles Godin', 91640, 'Briis sous Forges', '2014-04-08 22:22:16', '2014-04-08 22:22:16', '', 'descr'),
+(8, '0', 0, 'dqzdzqdzq', 'dqzdzqdzq', '0e70432396ff578620a055f76d4773a0', 'Quentin', 'Deneuve', 'MAIL@MAIL.FR', '90 rue Charles Godin', 74924, 'Briis sous Forges', '2014-04-09 09:28:02', '2014-04-09 09:28:02', '', ''),
+(9, '0', 1, 'TESTPOURMOI', 'TESTPOURMOI', '86f6fe02007a8a8949383549ca7186b7', 'Quentin', 'Deneuve', 'MAIL@MAIL.FR', '90 rue Charles Godin', 36472, 'Briis sous Forges', '2014-04-09 09:28:28', '2014-04-09 09:28:28', '', '');
 
 -- --------------------------------------------------------
 
@@ -626,7 +699,7 @@ CREATE TABLE `wines` (
   `description` varchar(500) NOT NULL,
   `image` varchar(500) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=64 ;
 
 --
 -- Contenu de la table `wines`
@@ -638,7 +711,16 @@ INSERT INTO `wines` (`id`, `created`, `updated`, `name`, `slug`, `description`, 
 (3, '2014-04-15 00:00:00', '2014-04-17 00:00:00', 'Domaine Leflaive Montrachet Grand Cru', 'Domaine-Leflaive-Montrachet-Grand-Cru', 'Domaine Leflaive Montrachet Grand Cru', 'http://www.docdunet.fr/wp-content/uploads/2012/02/Vin-rouge-hypertension.jpg'),
 (4, '2014-04-16 00:00:00', '2014-04-11 00:00:00', 'Petrus', 'Petrus', 'Pomerol, France', 'http://static.wine-searcher.net/images/labels/71/27/petrus-pomerol-france-10187127.jpg'),
 (5, '2014-04-10 00:00:00', '2014-04-10 00:00:00', 'Chateau Margaux', 'Chateau-Margaux', 'Margaux, France', 'http://static.wine-searcher.net/images/labels/47/28/chateau-margaux-margaux-france-10474728.jpg'),
-(6, '2014-04-10 00:00:00', '2014-04-11 00:00:00', 'Vignobles Andre Lurton Chateau de Cruzeau', 'Vignobles-Andre-Lurton-Chateau-de-Cruzeau', 'Pessac-Leognan, France', 'http://static.wine-searcher.net/images/labels/10/89/vignobles-andre-lurton-chateau-de-cruzeau-pessac-leognan-france-10311089.jpg');
+(6, '2014-04-10 00:00:00', '2014-04-11 00:00:00', 'Vignobles Andre Lurton Chateau de Cruzeau', 'Vignobles-Andre-Lurton-Chateau-de-Cruzeau', 'Pessac-Leognan, France', 'http://static.wine-searcher.net/images/labels/10/89/vignobles-andre-lurton-chateau-de-cruzeau-pessac-leognan-france-10311089.jpg'),
+(55, '2014-06-18 21:49:14', '2014-06-18 21:49:14', 'Baron Philippe de Rothschild Chateau Mouton Rothschild', 'Baron-Philippe-de-Rothschild-Chateau-Mouton-Rothschild', 'Pauillac, France', 'wine_53a1ed3a4f3c1.jpg'),
+(56, '2014-06-18 21:51:38', '2014-06-18 21:51:38', 'Chateau Latour', 'Chateau-Latour', 'Pauillac, France', 'wine_53a1edca4c7e6.jpg'),
+(57, '2014-06-18 21:52:14', '2014-06-18 21:52:14', 'Chateau Haut-Brion', 'Chateau-Haut-Brion', 'Pessac-Leognan, France', 'wine_53a1edeea4833.jpg'),
+(58, '2014-06-18 21:53:08', '2014-06-18 21:53:08', 'Chateau d''Yquem', 'Chateau-d-Yquem', 'Sauternes, France', 'wine_53a1ee2444cf6.jpg'),
+(59, '2014-06-18 21:54:15', '2014-06-18 21:54:15', 'Domaine de la Romanee-Conti Romanee-Conti Grand Cru', 'Domaine-de-la-Romanee-Conti-Romanee-Conti-Grand-Cru', 'Cote de Nuits, France', 'wine_53a1ee676f069.jpg'),
+(60, '2014-06-18 21:55:03', '2014-06-18 21:55:03', 'Chateau Cheval Blanc', 'Chateau-Cheval-Blanc', 'Saint-Emilion Grand Cru, France', 'wine_53a1ee9773b04.jpg'),
+(61, '2014-06-18 21:55:54', '2014-06-18 21:55:54', 'Chateau Cos d''Estournel', 'Chateau-Cos-d-Estournel', 'Saint-Estephe, France', 'wine_53a1eeca67d5f.jpg'),
+(62, '2014-06-18 21:57:29', '2014-06-18 21:57:29', 'Chateau Lynch-Bages', 'Chateau-Lynch-Bages', 'Pauillac, France', 'wine_53a1ef29a623e.jpg'),
+(63, '2014-06-18 21:59:22', '2014-06-18 21:59:22', 'Opus One', 'Opus-One', 'Napa Valley, USA', 'wine_53a1ef9a99acf.jpg');
 
 -- --------------------------------------------------------
 
@@ -653,7 +735,7 @@ CREATE TABLE `wishlists` (
   `user_id` int(11) NOT NULL,
   `wine_id` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=15 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=22 ;
 
 --
 -- Contenu de la table `wishlists`
@@ -663,4 +745,10 @@ INSERT INTO `wishlists` (`id`, `created`, `updated`, `user_id`, `wine_id`) VALUE
 (1, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 4),
 (2, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 5),
 (9, '2014-05-14 08:35:23', '2014-05-14 08:35:23', 7, 3),
-(14, '2014-05-17 18:42:32', '2014-05-17 18:42:32', 7, 1);
+(15, '2014-06-18 13:54:27', '2014-06-18 13:54:27', 7, 1),
+(16, '2014-06-18 14:20:33', '2014-06-18 14:20:33', 7, 4),
+(17, '2014-06-18 14:20:40', '2014-06-18 14:20:40', 7, 5),
+(18, '2014-06-18 14:20:40', '2014-06-18 14:20:40', 7, 6),
+(19, '2014-06-18 17:47:13', '2014-06-18 17:47:13', 7, 49),
+(20, '2014-06-18 18:04:44', '2014-06-18 18:04:44', 7, 54),
+(21, '2014-06-18 21:59:52', '2014-06-18 21:59:52', 7, 63);

@@ -1,7 +1,7 @@
 <?php $this->Html->script('pages/users/script', array('inline'=>false)); ?>
 <div class="row">
 	<div class="col-md-3">	
-		<img src="<?= 'http://www.gravatar.com/avatar/' . md5( strtolower( trim( $user['User']['email'] ) ) ) . '?s=400&d=http://chicagoluvbiz.com/wp-content/uploads/2014/01/wine-icon.png' ?>" class="img-responsive img-rounded" alt="Responsive image" style="margin-bottom: 15px;"/>
+		<img src="<?php if(!empty($user['User']['image'])) : echo $user['User']['image']; else: ?>http://chicagoluvbiz.com/wp-content/uploads/2014/01/wine-icon.png<?php endif ?>" class="img-responsive img-rounded" alt="Responsive image" style="margin-bottom: 15px;"/>
 		<ul class="nav nav-pills nav-stacked">
 		  <li class="<?= $this->fetch('active.feeds') ?>"><a href="<?php echo $this->Html->url(array('controller' => 'users', 'action' => 'feeds', 'pseudo' => $user['User']['slug'])) ?>">Actualités</a></li>
 		  <li class="<?= $this->fetch('active.cellar') ?>"><a href="<?php echo $this->Html->url(array('controller' => 'users', 'action' => 'cellar', 'pseudo' => $user['User']['slug'])) ?>">Cave</a></li>

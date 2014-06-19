@@ -1,11 +1,14 @@
 <div class="row">
 	<div class="col-md-3">	
-		<img src="http://placekitten.com/500/500" class="img-responsive img-rounded" alt="Responsive image" style="margin-bottom: 15px;"/>
+		<img src="<?php if(!empty($event['image'])) : echo $event['image']; else: ?>http://www.iconpng.com/png/pictograms/serve-wine.png<?php endif ?>" class="img-responsive img-rounded" alt="Responsive image" style="margin-bottom: 15px;"/>
 		<ul class="nav nav-pills nav-stacked">
 		  <li class="<?= $this->fetch('active.feeds') ?>"><a href="<?php echo $this->Html->url(array('controller' => 'events', 'action' => 'feeds', 'name' => $event['Event']['slug'])) ?>">Actualités</a></li>
 		  <li class="<?= $this->fetch('active.guests') ?>"><a href="<?php echo $this->Html->url(array('controller' => 'events', 'action' => 'guests', 'name' => $event['Event']['slug'])) ?>">Participants</a></li>
 		  <li class="<?= $this->fetch('active.about') ?>"><a href="<?php echo $this->Html->url(array('controller' => 'events', 'action' => 'about', 'name' => $event['Event']['slug'])) ?>">À propos</a></li>
 		  <li class="<?= $this->fetch('active.likes') ?>"><a href="<?php echo $this->Html->url(array('controller' => 'events', 'action' => 'likes', 'name' => $event['Event']['slug'])) ?>">Likes</a></li>
+		  <?php if($event['Author']['id'] == $auth['id']) : ?>
+		  <li class="<?= $this->fetch('settings.likes') ?>"><a href="<?php echo $this->Html->url(array('controller' => 'events', 'action' => 'settings', 'name' => $event['Event']['slug'])) ?>">Settings</a></li>
+		  <?php endif ?>
 		</ul>
 	</div>
 	<div class="col-md-9">
@@ -23,19 +26,10 @@ margin: -2px auto -6px auto;"><?= $event['Event']['date']->format('d') ?></span>
 		<div class="btn-group">
 		  <button type="button" class="btn btn-default" id="joinevent" data-id="<?= $event['Event']['id'] ?>" style="<?php if($isJoined) : ?>display: none;<?php endif ?>"><span class="glyphicon glyphicon-ok hidden"></span>Venir</button>
 		  <button type="button" class="btn btn-success" id="leaveevent" data-id="<?= $event['Event']['id'] ?>" style="<?php if(!$isJoined) : ?>display: none;<?php endif ?>"><span class="glyphicon glyphicon-ok hidden"></span>Participe</button>
-		  <button type="button" class="btn btn-sucess" id="likeevent" data-id="<?= $event['Event']['id'] ?>" style="<?php if(!$isLiked) : ?>display: none;<?php endif ?>">Like</button>
-		  <button type="button" class="btn btn-default" id="dislikeevent" data-id="<?= $event['Event']['id'] ?>" style="<?php if($isLiked) : ?>display: none;<?php endif ?>">Like</button>
+		  <button type="button" class="btn btn-success" id="dislikeevent" data-id="<?= $event['Event']['id'] ?>" style="<?php if(!$isLiked) : ?>display: none;<?php endif ?>">Like</button>
+		  <button type="button" class="btn btn-default" id="likeevent" data-id="<?= $event['Event']['id'] ?>" style="<?php if($isLiked) : ?>display: none;<?php endif ?>">Like</button>
 
-		  <div class="btn-group">
-		    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-		      Autre
-		      <span class="caret"></span>
-		    </button>
-		    <ul class="dropdown-menu">
-		      <li class="divider"></li>
-		      <li><a href="#">Report</a></li>
-		    </ul>
-		  </div>
+		  
 		</div>
 		
 		<hr />

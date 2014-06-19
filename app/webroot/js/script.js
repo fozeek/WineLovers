@@ -46,6 +46,52 @@ $(document).ready(function() {
 		});
 	});
 
+	$("#likeevent").on('click', function() {
+		var eventId = $(this).attr('data-id');
+			console.log('click');
+
+		var request = $.ajax({
+			url: "/me/like-event",
+			type: "POST",
+			data: {
+				id : eventId
+			},
+			dataType: "html"
+		});
+		
+		request.done(function( msg ) {
+			console.log('msg');
+			$("#likeevent").hide();
+			$("#dislikeevent").show();
+		});
+		
+		request.fail(function( jqXHR, textStatus ) {
+		  alert( "Request failed: " + textStatus );
+		});
+	});
+
+	$("#dislikeevent").on('click', function() {
+		var eventId = $(this).attr('data-id');
+
+		var request = $.ajax({
+			url: "/me/dislike-event",
+			type: "POST",
+			data: {
+				id : eventId
+			},
+			dataType: "html"
+		});
+		
+		request.done(function( msg ) {
+			$("#likeevent").show();
+			$("#dislikeevent").hide();
+		});
+		
+		request.fail(function( jqXHR, textStatus ) {
+		  alert( "Request failed: " + textStatus );
+		});
+	});
+
 	$('#addObjectToPost .tab input').on('keyup', function() {
 		var $that = $(this).parent();
 		var value = $(this).val();

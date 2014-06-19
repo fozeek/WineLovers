@@ -106,12 +106,52 @@ class WinesController extends AppController {
 	
 	}
 
+	public function add() {
+
+		if ($this->request->is('post')) {
+			$name = $this->request->data['Wine']['name'];
+			Inflector::slug($name, '-');
+			$count1 = $this->Wine->find('count', array(
+		        'conditions' => array('Wine.name' => $name)
+		    ));
+		    $count2 = $this->Wine->find('count', array(
+		        'conditions' => array('Wine.name' => $name)
+		    ));
+			if($count1 > 0 || $count2 >0) {
+		        $this->Session->setFlash('Ce vin existe déjà !', 'default', array("class" => "alert alert-danger"));
+			}
+			elseif(!array_key_exists('name', $this->request->data['Wine']['image']) || empty($this->request->data['Wine']['image']['name']) || empty($this->request->data['Wine']['name']) || empty($this->request->data['Wine']['description'])) {
+		        $this->Session->setFlash('Veuillez remplir tous les champs.', 'default', array("class" => "alert alert-danger"));
+			}
+			else {
+				$uniqId = uniqid();
+				$data = $this->request->data;
+				$data['Wine']['image'] = 'wine_'.$uniqId.strrchr($this->request->data['Wine']['image']['name'], '.');
+				$this->Wine->save($data);
+				$image = parent::uploadFile($this->request->data['Wine']['image'], 'wine_'.$uniqId);
+				if($image) {
+		        	$this->Session->setFlash('Vin créé avec succès', 'default', array("class" => "alert alert-success"));
+					$this->Wine->read(null, $this->Wine->id);
+					$this->redirect(array("controller" => "wines", "action" => "feeds", "name" => $this->Wine->data['Wine']['slug']));
+				}
+				else {
+		        	$this->Session->setFlash('Echec de l\'upload de l\'image', 'default', array("class" => "alert alert-danger"));
+					$this->Wine->read(null, $this->Wine->id);
+					$this->redirect(array("controller" => "wines", "action" => "feeds", "name" => $this->Wine->data['Wine']['slug']));
+				}
+			}
+		}
+
+		$this->render('/wines/add');
+	}
+
 	public function testimonials() {
 		$wine = $this->Wine->find('first', array(
                 'contain' => array(
                     'Reviews' => array(
                     	'Wine',
                     	'Author',
+                    	'order' => "Reviews.created DESC"
                     ),
                 ),
                 'conditions' => array(

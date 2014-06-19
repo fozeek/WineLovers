@@ -1,5 +1,38 @@
 $(document).ready(function() {
 
+
+	$('#addNote .star').on('click', function() {
+		$('#addNote .star').removeClass('glyphicon-star').addClass('glyphicon-star-empty');
+		for (var i = 1; i <= $(this).attr('data-val'); i++) {
+			$('#addNote .star-'+i).removeClass('glyphicon-star-empty').addClass('glyphicon-star');
+		};
+		$(this).parent().attr('data-val', $(this).attr('data-val'));
+	});
+	$('#addnotesubmit').on('click', function() {
+
+		var wineId = $('#addNote').find('.winename').attr('data-id');
+		var note = $('#addNote .star').parent().attr('data-val');
+		var comment = $('#addNote .comment').val();
+		var vintage = $('#addNote .vintage').val();
+
+		console.log(wineId, note, comment, vintage);
+
+		var request = $.ajax({
+			url: "/me/add-note",
+			type: "POST",
+			data: { wineId : wineId, note : note, comment : comment, vintage : vintage },
+			dataType: "html"
+		});
+		 
+		request.done(function( msg ) {
+   			window.location.reload();
+   		});
+		 
+		request.fail(function( jqXHR, textStatus ) {
+		  alert( "Request failed: " + textStatus );
+		});
+	});
+
 	var addWishlistWine = function() {
 
 		$('#addWishlistWine').mouseenter(function() {

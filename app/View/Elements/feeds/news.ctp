@@ -6,7 +6,7 @@
 	<div class="row">
 		<div class="col-md-1">
 			<a class="pull-left" href="#">
-    			<img class="media-object img-rounded" src="<?= 'http://www.gravatar.com/avatar/' . md5( strtolower( trim( $actu['LinkPost']['Author']['email'] ) ) ) . '?s=200' ?>" alt="..." style="width: 50px;">
+    			<img class="media-object img-rounded" src="<?php if(!empty($actu['FromUser']['image'])) : echo $actu['FromUser']['image']; else: ?>http://chicagoluvbiz.com/wp-content/uploads/2014/01/wine-icon.png<?php endif ?>" alt="..." style="width: 50px;">
   			</a>
 		</div>
 		<div class="col-md-11">
@@ -37,16 +37,23 @@
 	<div class="row">
 		<div class="col-md-1">
 			<a class="pull-left" href="#">
-    			<img class="media-object img-rounded" src="<?= 'http://www.gravatar.com/avatar/' . md5( strtolower( trim( $actu['FromUser']['email'] ) ) ) . '?s=200' ?>" alt="..." style="width: 50px;">
+    			<img class="media-object img-rounded" src="<?php if(!empty($actu['FromUser']['image'])) : echo $actu['FromUser']['image']; else: ?>http://chicagoluvbiz.com/wp-content/uploads/2014/01/wine-icon.png<?php endif ?>" alt="..." style="width: 50px;">
   			</a>
 		</div>
 		<div class="col-md-11">
+			<?php if(isset($event) && $actu['LinkEvent']['id'] == $event['Event']['id']) : ?>
 			<div >
-				<strong><?= $actu['FromUser']['name'] ?></strong> <?= $actu['News']['msg'] ?>
+				<strong><?= $actu['FromUser']['name'] ?></strong> a rejoins l'évènement.
+			</div>
+			<?php else: ?>
+			<div >
+				<strong><?= $actu['FromUser']['name'] ?></strong> a rejoins un évènement :
 			</div>
 			<hr style="margin-top: 7px;"/>
 
-	<?= $this->element('cards/posts/event', array('event' => $actu['LinkEvent'])) ?>
+				<?= $this->element('cards/posts/event', array('event' => $actu['LinkEvent'])) ?>
+			
+			<?php endif ?>
 
 		</div>
 	</div>
@@ -56,16 +63,23 @@
 	<div class="row">
 		<div class="col-md-1">
 			<a class="pull-left" href="#">
-    			<img class="media-object img-rounded" src="<?= 'http://www.gravatar.com/avatar/' . md5( strtolower( trim( $actu['FromUser']['email'] ) ) ) . '?s=200' ?>" alt="..." style="width: 50px;">
+    			<img class="media-object img-rounded" src="<?php if(!empty($actu['FromUser']['image'])) : echo $actu['FromUser']['image']; else: ?>http://chicagoluvbiz.com/wp-content/uploads/2014/01/wine-icon.png<?php endif ?>" alt="..." style="width: 50px;">
   			</a>
 		</div>
 		<div class="col-md-11">
+			<?php if(isset($wine) && $actu['LinkWine']['id'] == $wine['Wine']['id']) : ?>
 			<div >
-				<strong><?= $actu['FromUser']['name'] ?></strong> <?= $actu['News']['msg'] ?>
+				<strong><?= $actu['FromUser']['name'] ?></strong> a ajouté le vin à sa cave.
+			</div>
+			<?php else: ?>
+			<div>
+				<strong><?= $actu['FromUser']['name'] ?></strong> a ajouté un vin à sa cave : 
 			</div>
 			<hr style="margin-top: 7px;"/>
 
-	<?= $this->element('cards/posts/wine', array('wine' => $actu['LinkWine'])) ?>
+				<?= $this->element('cards/posts/wine', array('wine' => $actu['LinkWine'])) ?>
+
+			<?php endif ?>
 
 		</div>
 	</div>

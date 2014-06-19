@@ -50,6 +50,8 @@
 	Router::connect('/me/add-event', array('controller' => 'compte', 'action' => 'addEvent'));
 	Router::connect('/me/join-event', array('controller' => 'compte', 'action' => 'joinEvent', '[method]' => 'POST'));
 	Router::connect('/me/leave-event', array('controller' => 'compte', 'action' => 'leaveEvent', '[method]' => 'POST'));
+	Router::connect('/me/like-event', array('controller' => 'compte', 'action' => 'likeEvent', '[method]' => 'POST'));
+	Router::connect('/me/dislike-event', array('controller' => 'compte', 'action' => 'dislikeEvent', '[method]' => 'POST'));
 
 	Router::connect('/users', array('controller' => 'users', 'action' => 'index'));
 	Router::connect('/user/:pseudo', array('controller' => 'users', 'action' => 'feeds'), array('pseudo' => '[a-zA-Z0-9\-]+'));
@@ -65,6 +67,7 @@
 	Router::connect('/validation/:code', array('controller' => 'users', 'action' => 'validation'), array('code' => '[a-zA-Z0-9\-]+'));
 
 	Router::connect('/wines', array('controller' => 'wines', 'action' => 'index'));
+	Router::connect('/wines/add', array('controller' => 'wines', 'action' => 'add'));
 	Router::connect('/wine/:name', array('controller' => 'wines', 'action' => 'feeds'), array('name' => '[a-zA-Z0-9\-]+'));
 	Router::connect('/wine/:name/about', array('controller' => 'wines', 'action' => 'about'), array('name' => '[a-zA-Z0-9\-]+'));
 	Router::connect('/wine/:name/cellars', array('controller' => 'wines', 'action' => 'cellars'), array('name' => '[a-zA-Z0-9\-]+'));
@@ -76,6 +79,7 @@
 	Router::connect('/event/:name/about', array('controller' => 'events', 'action' => 'about'), array('name' => '[a-zA-Z0-9\-]+'));
 	Router::connect('/event/:name/guests', array('controller' => 'events', 'action' => 'guests'), array('name' => '[a-zA-Z0-9\-]+'));
 	Router::connect('/event/:name/likes', array('controller' => 'events', 'action' => 'likes'), array('name' => '[a-zA-Z0-9\-]+'));
+	Router::connect('/event/:name/settings', array('controller' => 'events', 'action' => 'settings'), array('name' => '[a-zA-Z0-9\-]+'));
 
 
 	Router::connect('/post/create-post', array('controller' => 'posts', 'action' => 'createPost'));

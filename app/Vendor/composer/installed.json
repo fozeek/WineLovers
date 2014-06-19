@@ -1,17 +1,17 @@
 [
     {
         "name": "composer/installers",
-        "version": "v1.0.8",
-        "version_normalized": "1.0.8.0",
+        "version": "v1.0.13",
+        "version_normalized": "1.0.13.0",
         "source": {
             "type": "git",
             "url": "https://github.com/composer/installers.git",
-            "reference": "c87cfc35882eb50df3eef1734bfa52fbcd6c782c"
+            "reference": "26d37e307f9aa6e2e81806a6525666f8ab5ba0ff"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/composer/installers/zipball/c87cfc35882eb50df3eef1734bfa52fbcd6c782c",
-            "reference": "c87cfc35882eb50df3eef1734bfa52fbcd6c782c",
+            "url": "https://api.github.com/repos/composer/installers/zipball/26d37e307f9aa6e2e81806a6525666f8ab5ba0ff",
+            "reference": "26d37e307f9aa6e2e81806a6525666f8ab5ba0ff",
             "shasum": ""
         },
         "replace": {
@@ -21,7 +21,7 @@
             "composer/composer": "1.0.*@dev",
             "phpunit/phpunit": "3.7.*"
         },
-        "time": "2013-12-24 18:04:46",
+        "time": "2014-04-09 16:12:43",
         "type": "composer-installer",
         "extra": {
             "class": "Composer\\Installers\\Installer",
@@ -43,20 +43,24 @@
             {
                 "name": "Kyle Robinson Young",
                 "email": "kyle@dontkry.com",
-                "homepage": "http://dontkry.com",
+                "homepage": "https://github.com/shama",
                 "role": "Developer"
             }
         ],
         "description": "A multi-framework Composer library installer",
         "homepage": "http://composer.github.com/installers/",
         "keywords": [
-            "TYPO3 CMS",
-            "TYPO3 Flow",
-            "TYPO3 Neos",
+            "Craft",
+            "Hurad",
+            "MODX Evo",
+            "OXID",
+            "WolfCMS",
             "agl",
+            "annotatecms",
             "cakephp",
             "codeigniter",
             "concrete5",
+            "croogo",
             "drupal",
             "elgg",
             "fuelphp",
@@ -64,38 +68,43 @@
             "joomla",
             "kohana",
             "laravel",
-            "li3",
             "lithium",
+            "magento",
             "mako",
+            "mediawiki",
             "modulework",
             "phpbb",
+            "piwik",
             "ppi",
+            "shopware",
             "silverstripe",
             "symfony",
+            "typo3",
             "wordpress",
-            "zend"
+            "zend",
+            "zikula"
         ]
     },
     {
         "name": "cakephp/debug_kit",
-        "version": "2.2.2",
-        "version_normalized": "2.2.2.0",
+        "version": "2.2.3",
+        "version_normalized": "2.2.3.0",
         "source": {
             "type": "git",
             "url": "https://github.com/cakephp/debug_kit.git",
-            "reference": "0dd9f6cf6250817052b6a7cf2cc0d2d8d7e26e90"
+            "reference": "fce9fca6e2e54469c4826d26392322d3f2e3cb9d"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/cakephp/debug_kit/zipball/0dd9f6cf6250817052b6a7cf2cc0d2d8d7e26e90",
-            "reference": "0dd9f6cf6250817052b6a7cf2cc0d2d8d7e26e90",
+            "url": "https://api.github.com/repos/cakephp/debug_kit/zipball/fce9fca6e2e54469c4826d26392322d3f2e3cb9d",
+            "reference": "fce9fca6e2e54469c4826d26392322d3f2e3cb9d",
             "shasum": ""
         },
         "require": {
             "composer/installers": "*",
             "php": ">=5.3.0"
         },
-        "time": "2013-11-07 18:15:29",
+        "time": "2014-02-01 21:15:24",
         "type": "cakephp-plugin",
         "extra": {
             "branch-alias": {
@@ -126,5 +135,37 @@
             "debug",
             "kit"
         ]
+    },
+    {
+        "name": "grafikart/cakephp-upload",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/Grafikart/CakePHP-Upload.git",
+            "reference": "d4f07fb4a182b94ae30a002007f80424a0452d06"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/Grafikart/CakePHP-Upload/zipball/d4f07fb4a182b94ae30a002007f80424a0452d06",
+            "reference": "d4f07fb4a182b94ae30a002007f80424a0452d06",
+            "shasum": ""
+        },
+        "require": {
+            "composer/installers": "*",
+            "php": ">=5.3.0"
+        },
+        "time": "2013-12-07 18:32:54",
+        "type": "cakephp-plugin",
+        "extra": {
+            "installer-name": "Upload"
+        },
+        "installation-source": "source",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "description": "A simple plugin to handle file upload easily",
+        "homepage": "https://github.com/Grafikart/CakePHP-Upload"
     }
 ]

@@ -7,5 +7,7 @@
 		'eventsPosts' => $eventsPosts,
 		'winesPosts' => $winesPosts,
 		'conditions' => $conditions,
-		'news' => $news
+		'news' => $news,
+		'id' => $auth['id'],
+		'object' => 'User'
 	)) ?>

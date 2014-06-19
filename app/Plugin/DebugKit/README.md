@@ -62,7 +62,7 @@ correct branch.
 * `2.2.0` is compatible with CakePHP 2.2.0 and greater. It will not work with
   older versions of CakePHP as this release uses new API's available in 2.2.
   You can also use the `master` branch to get the most recent updates.
-* `2.2.1` and `2.2.2` are compatible with CakePHP 2.2.0 and greater. It is a necessary
+* `2.2.x` are compatible with CakePHP 2.2.0 and greater. It is a necessary
   upgrade for people using CakePHP 2.4 as the naming conventions around loggers
   changed in that release.
 
@@ -70,10 +70,12 @@ correct branch.
 
 ## Toolbar Panels
 
-The DebugKit Toolbar is comprised of several panels. Each panel is comprised of
-a panel class and view element. Typically a panel handles the collection and
-display of a single type of information such as Logs or Request information.
-You can choose to panels from the toolbar or add you own custom panels.
+The DebugKit Toolbar is comprised of several panels, which are shown by clicking the
+CakePHP icon in the upper right-hand corner of your browser after DebugKit has been
+installed and loaded. Each panel is comprised of a panel class and view element.
+Typically a panel handles the collection and display of a single type of information
+such as Logs or Request information. You can choose to panels from the toolbar or add
+your own custom panels.
 
 ### Built-in Panels
 
@@ -228,3 +230,13 @@ By default DebugKit uses File as engine for internal cache, but if you want to u
 	);
 
 You can use any cache engine supported by CakePHP, the same you set in both core.php and bootstrap.php files with Cache::config() method.
+
+## Viewing the toolbar for ajax requests
+
+When doing Ajax requests, you will not be able to see an HTML version of the toolbar. However, if you have a browser extension that supports FirePHP, you can view
+the toolbar in your browser:
+
+- [FirePHP for chrome](https://chrome.google.com/webstore/detail/firephp4chrome/gpgbmonepdpnacijbbdijfbecmgoojma)
+- [FirePHP for firefox](https://addons.mozilla.org/en-US/firefox/addon/firephp/)
+
+Once you have installed the correct extension, you should see the toolbar data output on each ajax request.

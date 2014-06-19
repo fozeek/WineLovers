@@ -2,7 +2,7 @@
 <div class="row">
 	<div class="col-md-2">
 		<a href="<?php echo $this->Html->url(array('controller' => 'wines', 'action' => 'feeds', 'name' => $wine['slug'])); ?>">
-			<div style="width: 128px;height: 128px;margin: -14px;border: 1px solid #eee;border-right: none;background: #eee url(<?= $wine['image'] ?>) center center no-repeat;background-size: cover;-moz-background-size: cover;-webkit-background-size: cover;-o-background-size: cover;"></div>
+			<div style="width: 128px;height: 128px;margin: -14px;border: 1px solid #eee;border-right: none;background: #eee url(/img/upload/<?= $wine['image'] ?>) center center no-repeat;background-size: cover;-moz-background-size: cover;-webkit-background-size: cover;-o-background-size: cover;"></div>
 		</a>
 	</div>
 	<div class="col-md-10">

@@ -2,7 +2,7 @@
 	<div class="thumbnail" style="margin: 0px;" data-name="<?= $event['Event']['name'] ?>" data-image="calendar" data-object="event" data-id="<?= $event['Event']['id'] ?>">
 	  <div class="row">
 	    <div class="col-md-5">
-	      <img src="http://chicagoluvbiz.com/wp-content/uploads/2014/01/wine-icon.png" alt="..." class="img-responsive img-rounded">
+	      <img src="<?php if(!empty($event['Event']['image'])) : echo $event['Event']['image']; else: ?>http://www.iconpng.com/png/pictograms/serve-wine.png<?php endif ?>" alt="..." class="img-responsive img-rounded">
 	    </div> 
 	    <div class="col-md-7" style="padding: 0px;padding-right: 5px;"> 
 	      <div class="caption" style="padding: 0px;padding-right: 5px;">

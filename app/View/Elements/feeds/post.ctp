@@ -1,7 +1,7 @@
 <div style="padding-bottom: 20px;">	
 	<div class="media">
   		<a class="pull-left" href="<?= $this->Html->url(array('controller' => 'users', 'action' => 'feeds', 'pseudo' => $post['Author']['slug'])) ?>">
-    		<img class="media-object img-rounded" src="<?= 'http://www.gravatar.com/avatar/' . md5( strtolower( trim( $post['Author']['email'] ) ) ) . '?s=200' ?>" alt="..." style="width: 50px;">
+    		<img class="media-object img-rounded" src="<?php if(!empty($post['Author']['image'])) : echo $post['Author']['image']; else: ?>http://chicagoluvbiz.com/wp-content/uploads/2014/01/wine-icon.png<?php endif ?>" alt="..." style="width: 50px;">
   		</a>
   		<div class="media-body">
   			<div style="height: 50px;padding: 4px;">

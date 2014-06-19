@@ -107,6 +107,14 @@ class EventsController extends AppController {
 		
 	}
 
+	public function settings() {
+		$event = $this->Event->findBySlug($this->request->params['name']);
+		$this->set(compact('event'));
+		$this->testEvent($event);
+		$this->render('/events/settings');
+		
+	}
+
 	public function likes() {
 		$event = $this->Event->findBySlug($this->request->params['name']);
 		$this->set(compact('event'));

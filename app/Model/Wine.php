@@ -2,7 +2,9 @@
 
 class Wine extends AppModel {
 
-    public $actsAs = array('Containable');
+    public $actsAs = array(
+        'Containable'
+    );
 
 	public $displayField = 'name';
 

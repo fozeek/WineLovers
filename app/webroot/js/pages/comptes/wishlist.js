@@ -102,26 +102,39 @@ $(document).ready(function() {
 			$(this).css('border-color', 'blue');
 			$(this).css('background', '#cedefd');
 			$(this).find('h3').css('color', 'blue');
-			$('#ids').val($('#ids').val()+':'+$(this).attr('data-id'));
-			$('#names').val($('#names').val()+':'+$(this).attr('data-name'));
-			//ajout a la liste
-			var tpl = $('#addWine').find('.template').html();
-			var step2Html = $('#step2');
-			step2Html.append(tpl);
-		    step2Html.find('.new').find('.name').html($(this).attr('data-name'));
-		    step2Html.find('.new').attr('data-id', $(this).attr('data-id'));
-		    step2Html.find('.new').removeClass('new');
+			$('#addWine').find('.ids').val($('#addWine').find('.ids').val()+':'+$(this).attr('data-id'));
 		}
 		else {
 			$(this).removeClass('selected');
 			$(this).css('border-color', '#ddd');
 			$(this).css('background', 'white');
 			$(this).find('h3').css('color', 'rgb(128, 0, 0)');
-			$('#ids').val($('#ids').val().replace(':'+$(this).attr('data-id'), ''));
-			
-			var step2Html = $('#step2');
-			step2Html.find('div[data-id='+$(this).attr('data-id')+']').remove();
+			$('#addWine').find('.ids').val($('#addWine').find('.ids').val().replace(':'+$(this).attr('data-id'), ''));
 		}
+	});
+
+
+	$('#step1submit').on('click', function() {
+
+
+		var winesIds = $("#addWine").find('.ids').val();
+
+		var request = $.ajax({
+			url: "/me/add-wishlist-wine",
+			type: "POST",
+			data: { ids : winesIds },
+			dataType: "html"
+		});
+		 
+		request.done(function( msg ) {
+   			window.location.reload();
+   		});
+		 
+		request.fail(function( jqXHR, textStatus ) {
+		  alert( "Request failed: " + textStatus );
+		});
+
+
 	});
 
 
